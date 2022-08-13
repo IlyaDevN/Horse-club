@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 .wrapper {
+  
 }
 .intro{
   background-image:url(../img/newфон.png); 
@@ -67,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   /* background-size: cover; */
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   height: 948px;
 }
 .intro__container {
@@ -459,4 +460,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ourHorses__sliderCheckboxes{
 
+}
+.questions{
+  background-image: url(../img/questions/фон_вопросы_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  /* width: 1920px; */
+  position: relative;
+  margin-top: 140px;
+}
+.questions__container{
+
+}
+.questions__clouds_top{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
