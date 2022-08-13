@@ -1,1 +1,1 @@
-# Hourse-club
+# Horse-club
