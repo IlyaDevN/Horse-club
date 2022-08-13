@@ -66,10 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   background-image:url(../img/newфон.png); 
   background-position: center top;
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  width: 100%;
+  background-size: cover;
   height: 100vh;
-  height: 948px;
 }
 .intro__container {
   width: 100%;
@@ -402,14 +400,16 @@ h1, h2, h3, h4, h5, h6 {
   top: -20px;
 }
 .clubDirection__button {
-  margin: 30px auto 421px auto;
+  margin: 30px auto 261px auto;
 }
 .ourVisitors{
 }
 .ourVisitors__container{
+  
 }
 .ourVisitors__title{
   text-align: center;
+  margin-top: 152px;
 }
 .ourVisitors__photo{
 }
@@ -466,16 +466,39 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   height: 800px;
-  /* width: 1920px; */
+  width: 1920px;
   position: relative;
   margin-top: 140px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .questions__container{
 
 }
 .questions__clouds_top{
+  
+}
+.questions__clouds_bottom{
   position: absolute;
+  bottom: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
+  z-index: 20;
+}
+.questions__girl_with_horse{
+  position: absolute;
+  top: 156px;
+  left: 99px;
+  z-index: 10;
+}
+.questions__bush{
+  position: absolute;
+  top: 482px;
+  left: 1390px;
+  z-index: 15;
+}
+.questions__frame{
+  position: absolute;
+  top: 140px;
+  left: 1024px;
+  z-index: 12;
 }
