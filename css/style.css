@@ -339,9 +339,11 @@ h1, h2, h3, h4, h5, h6 {
 .galary__firstRow{
 
 }
-.firstRow__line {
+.row_line{
   display: flex;
   justify-content: space-between;
+}
+.firstRow__line {
   align-items: flex-start;
 }
 .line__card {
@@ -357,6 +359,9 @@ h1, h2, h3, h4, h5, h6 {
 .card__image {
   position: relative;
   top: -25px;
+}
+.card__image_galary{
+  margin-bottom: 20px;
 }
 .card__title {
   font-family: 'Roboto';
@@ -429,4 +434,29 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
+}
+.ourHorses__title{
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 95px;
+}
+.ourHorses__galary{
+  margin-bottom: 60px;
+}
+.galary__row_line{
+  width: 1920px;
+  margin: 0 auto;
+}
+.line__card_1{
+  position: relative;
+  top: -40px;
+  opacity: 0.4;
+}
+.line__card_5{
+  position: relative;
+  top: -40px;
+  opacity: 0.4;
+}
+.ourHorses__sliderCheckboxes{
+
 }
