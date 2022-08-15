@@ -271,14 +271,36 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 570px;
 }
 .whyChooseUs__container {
-  max-width: 1171px;
+  width: 1171px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 185px auto 200px auto;
 }
 .whyChooseUs__title {
-  margin-top: 185px;
   text-align: center;
+  margin: 0 auto 108px auto;
+}
+.whyChooseUs__benefits_row{
+  
+}
+.benefits__image_row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image__container{
+  width: 271px;
+  text-align: center;
+}
+.benefits__subtitle_row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+.benefits__text_row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
 }
 .whyChooseUs__benefits {
   margin-top: 119px;
@@ -291,13 +313,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 271px;
   margin-right: 29px;
 }
-.whyChooseUs__benefits_container:last-child{
-  margin-right: 0;
-}
-.benefits__image {
-  flex: 0 0 124px;
-  text-align: center;
-}
 .benefits__subtitle {
   margin-top: 7px;
   font-family: 'Roboto';
@@ -306,21 +321,21 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
   color: #0B0B0B;
   text-align: center;
+  width: 271px;
 }
 .benefits__text {
-  margin-top: 26px;
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 15px;
   line-height: 151.7%;
   color: #7E7E7E;
   text-align: center;
+  width: 271px;
 }
 .clubDirection{
   background-image: url(../img/newfon2.png);
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
 }
 .clubDirection__container {
   max-width: 1171px;
@@ -330,7 +345,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .clubDirection__title{
   text-align: center;
-  margin-top: 200px;
 }
 .clubDirection__galery{
   margin-top: 143px;
@@ -472,11 +486,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   overflow: hidden;
 }
-.questions__container{
-
-}
 .questions__clouds_top{
-  
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .questions__clouds_bottom{
   position: absolute;
@@ -498,7 +511,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 .questions__frame{
   position: absolute;
-  top: 140px;
+  top: 100px;
   left: 1024px;
   z-index: 12;
+}
+.questions__form{
+  position: absolute;
+  width: 470px;
+  top: 135px;
+  left: 1075px;
+  z-index: 13;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+}
+.form__header{
+  font-family: 'Philosopher';
+  font-size: 35px;
+  line-height: 35px;
+  color: #363434;
+  margin-top: 60px;
+}
+.form__description{
+  color: #7E7E7E;
+  margin: 15px 65px 30px 65px;
+}
+.form__input input{
+  font-size: 18px;
+  background: #FFF;
+  border: 1px solid #8F8F8F;
+  border-radius: 5px;
+  width: 330px;
+  height: 61px;
+  margin-bottom: 20px;
+  padding-left: 21px;
+}
+.form__button{
+  margin-bottom:30px;
+  width: 331px;
+}
+.form__input_checkbox{
+  line-height: 18px;
+  color: #8A8A8A;
+}
+.custom-checkbox{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox+label{
+  display: inline-flex;
 }
