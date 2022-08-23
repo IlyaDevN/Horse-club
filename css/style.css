@@ -226,6 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 40px;
   line-height: 36px;
   color: #363434;
+  text-align: center;
 }
 .about__content {
   display:flex;
@@ -279,8 +280,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 185px auto 100px auto;
 }
 .whyChooseUs__title {
-  text-align: center;
-  margin: 0 auto 108px auto;
+  margin-bottom: 108px;
 }
 .whyChooseUs__benefits{
   display: flex;
@@ -341,7 +341,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .clubDirection__title{
-  text-align: center;
   margin-top: 100px;
 }
 .clubDirection__galery{
@@ -461,7 +460,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 .ourHorses__title{
-  text-align: center;
   margin-top: 150px;
   margin-bottom: 95px;
 }
@@ -481,6 +479,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: -40px;
   opacity: 0.4;
+}
+.line__card > .card__text{
+  font-size: 15px;
 }
 .ourHorses__sliderCheckboxes{
 
@@ -595,4 +596,100 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form__checkbox_original:checked+label::before{
   background-image: url(../img/questions/checkbox/checkbox.svg);
+}
+.clientSpeakAboutUs {
+}
+.clientSpeakAboutUs__container {
+  width: 1920px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.clientSpeakAboutUs__title{
+  margin-top: 140px;
+  margin-bottom: 70px;
+}
+.clientSpeakAboutUs__feedbacks {
+  margin: 0 auto 60px;
+}
+.feedbacks__container {
+  display: flex;
+  position: relative;
+  left: -225px;
+}
+.feedbacks__card_container {
+  
+  margin-right: 30px;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+}
+.card__container_1{
+  position: relative;
+  top: -40px;
+  opacity: 0.4;
+}
+.card__container_4{
+  position: relative;
+  top: -40px;
+  margin-right: 0;
+  opacity: 0.4;
+}
+.card__container_inner{
+  margin: 38.5px 43.5px 33.5px 43.5px;
+  width: 480px;
+  min-height: 216px;
+}
+.card__container_inner > .card__text {
+  font-size: 15px;
+  line-height: 24px;
+  color: #363434;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.card__detailed_container {
+  margin: 0 auto;
+  width: 150px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+}
+.card__detailed_container > p {
+  padding-top: 8px;
+  padding-bottom: 6px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+  color: #008139;
+}
+.card__detailed_container > p::after{
+  content: url(../img/clientSpeakAboutUs/cardDetailed/unwrapIcon.png);
+  margin-left: 12px;
+}
+.card__author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 45px;
+}
+.author__photo {
+  margin-right: 20px;
+  /* margin-top: 4px; */
+}
+.author__name {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #101820;
+  margin-bottom: 10px;
+}
+.author__cocialNetworkLink {
+  flex: 1 1 auto;
+}
+.author__cocialNetworkLink > img{
+  margin-right: 10px;
+}
+.clientSpeakAboutUs__sliderCheckboxes{
+
 }
