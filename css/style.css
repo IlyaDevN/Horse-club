@@ -566,6 +566,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 331px;
   margin-bottom: 30px;
 }
+.form__checkbox_container{
+  width: 331px;
+  margin: 0 auto;
+  text-align: start;
+}
 .form__checkbox_original{
   position: absolute;
   z-index: -1;
