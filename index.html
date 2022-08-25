@@ -14,13 +14,13 @@
 		<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 
 	<body>
 		<div class="wrapper">
 			<div class="intro">
-				<div class="intro__container">
+				<div class="intro__container _container">
 					<header class="intro__header">
 						<div class="header__logo">
 							<a href="#"><img src="img/intro/introHeader/logo.svg" alt="Логотип"></a>
@@ -47,61 +47,69 @@
 						</button>
 					</div>
 				</div>
+				<div class="intro__image_container _ibg">
+					<img class="intro__image" src="img/intro/bg.png" alt="">
+				</div>
 			</div>
 			<div class="about">
-				<div class="about__container">
+				<div class="about__container _container">
 					<div class="about__title title_every">
 						<h2>О нашем клубе</h2>
 					</div>
 					<div class="about__content">
 						<div class="about__content_image">
-							<img src="img/about/jumping_horse.svg" alt="">
+							<picture>
+								<source srcset="img/about/x1920/JumpingHourse_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+								<source srcset="img/about/x1000/JumpingHourse_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+								<img src="img/about/x1920/JumpingHourse_x1920.jpg" alt="JumpingHourse">
+							</picture>
 						</div>
 						<div class="about__content_text">
-							<div class="text__bonus">
-								<div class="bonus__block bonus__block_1">
-									<div class="bonus__block_title">
-										1100+
-									</div>
-									<div class="bonus__block_text bonus__block_text_1">
-										Довольный посетителей за последний год
-									</div>
+							<div class="text__bonus_row bonus_row_1">
+								<div class="bonus__block">
+										<div class="bonus__block_title">
+											1100+
+										</div>
+										<div class="bonus__block_text">
+											Довольный посетителей за последний год
+										</div>
 								</div>
-								<div class="bonus__block bonus__block_2">
-									<div class="bonus__block_title">
-										50+
-									</div>
-									<div class="bonus__block_text bonus__block_text_2">
-										Проведенных мероприятий за 6 месяцев
-									</div>
+								<div class="bonus__block">
+										<div class="bonus__block_title">
+											50+
+										</div>
+										<div class="bonus__block_text">
+											Проведенных мероприятий за 6 месяцев
+										</div>
 								</div>
-								<div class="bonus__block bonus__block_3">
-									<div class="bonus__block_title">
-										20+
-									</div>
-									<div class="bonus__block_text bonus__block_text_3">
-										Выпущенных профессиональных спортсменов за 1 год
-									</div>
-								</div>
-								<div class="bonus__block bonus__block_4">
-									<div class="bonus__block_title">
-										15+
-									</div>
-									<div class="bonus__block_text bonus__block_text_4">
-										Регулярный занятий в неделю с профессиональными наставниками
-									</div>
-								</div>
-								
 							</div>
-							<div class="text__subtext">
-								Занятия проводятся индивидуально и в группах, стоимость также будет зависеть от ваших навыков и умений. Более выгодные условия предусмотрены для регулярных занятий при покупке абонементов.Для тех, кто хочет отточить своё мастерство, разработаны программы по специализации (конкур, выездка и другие), участие в соревнованиях и чемпионатах. Для самых маленьких любителей лошадей действуют пони-клубы, где ребята учатся ухаживать за животными и ездить на милых и добрых пони.
+							<div class="text__bonus_row bonus_row_2">
+								<div class="bonus__block">
+										<div class="bonus__block_title">
+											20+
+										</div>
+										<div class="bonus__block_text bonus__block_text_3">
+											Выпущенных профессиональных спортсменов за 1 год
+										</div>
+								</div>
+								<div class="bonus__block">
+										<div class="bonus__block_title">
+											15+
+										</div>
+										<div class="bonus__block_text">
+											Регулярный занятий в неделю с профессиональными наставниками
+										</div>
+								</div>
 							</div>
+						</div>
+						<div class="text__subtext">
+							Занятия проводятся индивидуально и в группах, стоимость также будет зависеть от ваших навыков и умений. Более выгодные условия предусмотрены для регулярных занятий при покупке абонементов.Для тех, кто хочет отточить своё мастерство, разработаны программы по специализации (конкур, выездка и другие), участие в соревнованиях и чемпионатах. Для самых маленьких любителей лошадей действуют пони-клубы, где ребята учатся ухаживать за животными и ездить на милых и добрых пони.
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="whyChooseUs">
-				<div class="whyChooseUs__container">
+				<div class="whyChooseUs__container _container">
 						<div class="whyChooseUs__title title_every">
 							Почему нас выбирают
 						</div>
@@ -130,7 +138,7 @@
 				</div>
 			</div>
 			<div class="clubDirection">
-				<div class="clubDirection__container">
+				<div class="clubDirection__container _container">
 					<div class="clubDirection__title title_every">
 						<h2>Направления клуба</h2>
 					</div>
@@ -221,22 +229,88 @@
 				</div>
 			</div>
 			<div class="ourVisitors">
-				<div class="ourVisitors__container">
+				<div class="ourVisitors__container _container">
 					<div class="ourVisitors__title title_every">
 						<h2>Наши посетители</h2>
 					</div>
 					<div class="ourVisitors__photo">
 						<div class="photo__container">
-							<div class="photo__item"><img class="photo" src="img/photo/photo1_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo2_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo3_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo4_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo5_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo6_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo7_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo8_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo9_x1.png" alt="photo"></div>
-							<div class="photo__item"><img class="photo" src="img/photo/photo10_x1.png" alt="photo"></div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo1_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo1_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo1_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo1_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo2_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo2_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo2_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo2_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo3_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo3_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo3_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo3_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo4_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo4_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo4_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo4_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo5_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo5_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo6_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo6_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo6_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo6_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo7_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo7_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo7_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo7_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo8_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo8_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo8_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo8_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo9_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<source srcset="img/ourVisitors/x1000/photo9_x1000.jpg" type="image/jpeg" media="(min-width:1000px)">
+									<source srcset="img/ourVisitors/x768/photo9_x768.jpg" type="image/jpeg" media="(min-width:768px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo9_x1920.jpg" alt="photo">
+								</picture>
+							</div>
+							<div class="photo__item">
+								<picture>
+									<source srcset="img/ourVisitors/x1920/photo10_x1920.jpg" type="image/jpeg" media="(min-width:1920px)">
+									<img class="photo" src="img/ourVisitors/x1920/photo10_x1920.jpg" alt="photo">
+								</picture>
+							</div>
 						</div>
 					</div>
 					<div class="ourVisitors__sliderCheckboxes">
@@ -252,7 +326,7 @@
 				</div>
 			</div>
 			<div class="ourHorses">
-				<div class="ourHorses__container">
+				<div class="ourHorses__container _container">
 					<div class="ourHorses__title title_every">
 						<h2>Наши лошади</h2>
 					</div>
@@ -333,7 +407,7 @@
 				</div>
 			</div>
 			<div class="questions">
-				<div class="questions__container">
+				<div class="questions__container _container">
 				<img class="questions__clouds_top" src="img/questions/облака_разделитель_вопросы_2.png" alt="">
 				<img class="questions__clouds_bottom" src="img/questions/облака_разделитель_вопросы_1.png" alt="">
 				<img class="questions__girl_with_horse" src="img/questions/Девочка_с_лошадью_1.png" alt="">
@@ -358,7 +432,7 @@
 				
 			</div>
 			<section class="clientSpeakAboutUs">
-				<div class="clientSpeakAboutUs__container">
+				<div class="clientSpeakAboutUs__container _container">
 					<div class="clientSpeakAboutUs__title title_every">
 						<h2>О нас говорят клиенты</h2>
 					</div>
