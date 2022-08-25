@@ -250,10 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .about__content {
-  /* display:flex; */
   margin-top: 89px;
-  /* flex-wrap: wrap;
-  justify-content: center; */
   position: relative;
 }
 .about__content_image {
@@ -312,9 +309,11 @@ h1, h2, h3, h4, h5, h6 {
   .about__container{
     max-width: 1000px;
   }
+  .about__title{
+    font-size: 30px;
+  }
   .about__content_text{
     justify-content:flex-start;
-    /* height: 313px; */
     width: 506px;
     position: relative;
     top: 40px;
@@ -329,14 +328,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
     width: 240px;
   }
-  .bonus__block_title{
-    
-  }
   .text__bonus_row {
     justify-content: space-between;
-  }
-  .bonus_row_1 {
-
   }
   .text__subtext {
     position: static;
@@ -357,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .benefits__card{
   width: 281px;
-  padding: 0 5px 0 5px;
+  padding: 0 5px;
 }
 .benefits__card:first-child{
   width: 276px;
@@ -369,7 +362,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .benefits__image_container{
   display: flex;
-  width: 271px;
+  /* width: 271px; */
   height: 124px;
   align-items: center;
   justify-content: center;
@@ -391,6 +384,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #7E7E7E;
   text-align: center;
   margin-top: 26px;
+}
+@media (min-width: 1000px) and (max-width: 1919.98px) {
+  .whyChooseUs__container{
+    max-width: 1000px;
+    margin: 120px auto 60px auto;
+  }
+  .whyChooseUs__title {
+    margin-bottom: 78px;
+    font-size: 30px;
+  }
+  .benefits__card{
+    width: 235px;
+    padding: 0 5px;
+  }
+  .benefits__card:first-child{
+    width: 230px;
+  }
+  .benefits__card:last-child{
+    width: 230px;
+  }
+  .benefits__image_container{
+    height: 110px;
+  }
+  .benefits__subtitle {
+    margin-top: -7px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .benefits__text {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 /*----------CLUB-DIRECTION----------------------------------------------*/
 .clubDirection{
