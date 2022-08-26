@@ -149,6 +149,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 107%;
   color: #000;
 }
+@media (max-width: 1919.98px){
+  .intro__invitation{
+    font-size: 47px;
+  }
+}
 .intro__advertising{
   position: relative;
   margin-top: 40px;
@@ -161,6 +166,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   line-height: 140%;
   color: #646464;
+}
+@media (max-width: 1919.98px){
+  .intro__advertising p{
+    font-size: 20px;
+  }
 }
 .intro__advertising p::before{
   content: "";
@@ -188,6 +198,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 4px 0px #C89C00;
   z-index: 100;
 }
+@media (max-width: 1919.98px){
+  .button {
+    width: 218px;
+    height: 60px;
+    font-size: 13px;
+  }
+}
 .button::before{
   content: "";
   position: absolute;
@@ -206,6 +223,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .intro__button{
   margin-top: 42px;
+}
+@media (max-width: 1919.98px){
+  .intro__button{
+    margin-top: 37px;
+  }
 }
 ._ibg {
 }
@@ -586,8 +608,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1919.98px){
   .clubDirection__button {
     margin: 40px auto 256px auto;
-    width: 218px;
-    height: 60px;
   }
 }
 .horse_left{
