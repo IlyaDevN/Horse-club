@@ -448,6 +448,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   z-index: 5;
 }
+@media (max-width: 1919.98px){
+  .clouds_botom{
+    bottom: 0;
+  }
+}
 .clubDirection__container {
   max-width: 1171px;
   display: flex;
@@ -493,8 +498,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
-  top: -20px;
+  margin-top: -20px;
 }
 @media (max-width: 1919.98px){
   .secondRow__line{
@@ -577,17 +581,36 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .clubDirection__button {
-  margin: 30px auto 277px auto;
+  margin: 50px auto 277px auto;
+}
+@media (max-width: 1919.98px){
+  .clubDirection__button {
+    margin: 40px auto 256px auto;
+    width: 218px;
+    height: 60px;
+  }
 }
 .horse_left{
   position: absolute;
   right: 1103px;
   top:1047px;
 }
+@media (max-width: 1919.98px){
+  .horse_left{
+    right: 800px;
+    top: 925px;
+  }
+}
 .horse_right{
   position: absolute;
   left: 1089px;
   top:1050px;
+}
+@media (max-width: 1919.98px){
+  .horse_right{
+    left: 776px;
+    top:925px;
+  }
 }
 /*----------OUR-VISITORS------------------------------------------------*/
 .ourVisitors{

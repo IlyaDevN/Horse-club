@@ -4,11 +4,8 @@
 <html lang="ru">
 
 	<head>
-		<!-- Заголовок страницы в браузере -->
 		<title>Horse club</title>
-		<!-- Подключаем CSS -->
 		<link rel="stylesheet" href="css/style.css" />
-		<!-- Кодировка страницы -->
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
@@ -171,7 +168,6 @@
 					<img class="clubDirection_bg_grass" src="img/clubDirection/clubDirectionBG/x1920/grass_x1920.png" alt="">
 					<img class="clouds_botom" src="img/clubDirection/clubDirectionBG/x1920/clouds_bottom_x1920.png" alt="">
 				</div>
-				
 				<div class="clubDirection__container _container">
 					<div class="clubDirection__title title_every">
 						<h2>Направления клуба</h2>
@@ -281,9 +277,20 @@
 					<button class="clubDirection__button button">
 						записаться
 					</button>
-
-					<div class="horse_left"><img src="img/clubDirection/clubDirectionBG/x1920/girlOnHorseLeft_x1920.png" alt=""></div>
-					<div class="horse_right"><img src="img/clubDirection/clubDirectionBG/x1920/boyOnHorseRight_x1920.png" alt=""></div>
+					<div class="horse_left">
+						<picture>
+							<source srcset="img/clubDirection/clubDirectionBG/x1920/girlOnHorseLeft_x1920.png" type="image/jpeg" media="(min-width:1920px)">
+							<source srcset="img/clubDirection/clubDirectionBG/x1000/girlOnHorseLeft_x1000.png" type="image/jpeg" media="(min-width:1000px)">
+							<img src="img/clubDirection/clubDirectionBG/x1920/girlOnHorseLeft_x1920.png" alt="">
+						</picture>
+					</div>
+					<div class="horse_right">
+						<picture>
+							<source srcset="img/clubDirection/clubDirectionBG/x1920/boyOnHorseRight_x1920.png" type="image/jpeg" media="(min-width:1920px)">
+							<source srcset="img/clubDirection/clubDirectionBG/x1000/boyOnHorseRight_x1000.png" type="image/jpeg" media="(min-width:1000px)">
+							<img src="img/clubDirection/clubDirectionBG/x1920/boyOnHorseRight_x1920.png" alt="">
+						</picture>
+					</div>
 				</div>
 			</div>
 			<div class="ourVisitors">
