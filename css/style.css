@@ -208,7 +208,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 42px;
 }
 ._ibg {
-  position: relative;
 }
 .intro__image_container {
   position: absolute;
@@ -217,15 +216,14 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
 }
-.intro__image{
-  position: absolute;
+.intro__image_bg{
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   object-fit: cover;
   object-position: right;
 }
+
+
 /*----------ABOUT-------------------------------------------------------*/
 .about {
   
@@ -308,6 +306,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1000px) and (max-width: 1919.98px) {
   .about__container{
     max-width: 1000px;
+    margin-top: 7px;
   }
   .about__title{
     font-size: 30px;
