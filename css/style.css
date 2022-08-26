@@ -549,9 +549,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 0 5px 0;
   }
 }
-@media(max-width:1919px) {
+@media(max-width:1919.98px) {
+  .ourVisitors__title{
+    margin-top: 107px;
+    font-size: 30px;
+  }
   .photo__container{
     width: 1000px;
+    margin: 40px auto 30px;
   }
   .photo__item{
     padding: 0 3px 3px 0;
@@ -566,17 +571,15 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
-.ourVisitors__sliderCheckboxes{
-  
-}
-.sliderCheckboxes__container{
-  display: flex;
-  width: 210px;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
+.sliderCheckbox{
+  text-align: center;
 }
 /*----------OUR-HORSES--------------------------------------------------*/
+.ourHorses__container{
+  width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 .ourHorses__title{
   margin-top: 150px;
   margin-bottom: 95px;
@@ -585,8 +588,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 60px;
 }
 .galary__row_line{
-  width: 1920px;
-  margin: 0 auto;
+  /* width: 1920px;
+  margin: 0 auto; */
 }
 .line__card_1{
   position: relative;
@@ -598,11 +601,48 @@ h1, h2, h3, h4, h5, h6 {
   top: -40px;
   opacity: 0.4;
 }
-.line__card > .card__text{
+.ourHorses__line_card > .card__text{
   font-size: 15px;
 }
-.ourHorses__sliderCheckboxes{
-
+@media (min-width: 1000px) and (max-width: 1919.98px){
+  .ourHorses__container{
+    width: 1000px;
+  }
+  .ourHorses__title{
+    margin-top: 120px;
+    margin-bottom: 65px;
+    font-size: 30px;
+  }
+  .ourHorses__galary{
+    margin-bottom: 40px;
+  }
+  .galary__row_line{
+    justify-content: start;
+  }
+  .ourHorses__line_card{
+    width: 293px;
+    margin-right: 20px;
+  }
+  .line__card_1{
+    position: static;
+    opacity: 1;
+  }
+  .line__card_5{
+    display: none;
+  }
+  .card__title_horses{
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .card__row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .ourHorses__line_card > .card__text{
+    font-size: 14px;
+    width: 260px;
+    margin-bottom: 35px;
+  }
 }
 /*----------QUESTIONS----------------------------------------------------*/
 .questions{
@@ -814,7 +854,4 @@ h1, h2, h3, h4, h5, h6 {
 }
 .author__cocialNetworkLink > img{
   margin-right: 10px;
-}
-.clientSpeakAboutUs__sliderCheckboxes{
-
 }
