@@ -460,8 +460,6 @@ h1, h2, h3, h4, h5, h6 {
 .clubDirection_bg_sky{
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 .clouds_botom{
   position: absolute;
@@ -699,8 +697,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 60px;
 }
 .galary__row_line{
-  /* width: 1920px;
-  margin: 0 auto; */
 }
 .line__card_1{
   position: relative;
@@ -757,29 +753,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*----------QUESTIONS----------------------------------------------------*/
 .questions{
-  background-image: url(../img/questions/фон_вопросы_1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  margin-top: 140px;
+  position: relative;
+}
+.questioons__bg_container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.question__bg_forest{
+  width: 100%;
+  height: 100%;
+}
+.question__bg_cloudsTop{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+.question__bg_cloudsBottom{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
 }
 .questions__container{
   position: relative;
   width: 1920px;
   height: 800px;
   margin: 0 auto;
-  overflow: hidden;
 }
-.questions__clouds_top{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.questions__clouds_bottom{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 20;
+@media (max-width: 1919.98px){
+  .questions__container{
+    width: 1000px;
+  }
 }
 .questions__girl_with_horse{
   position: absolute;
@@ -787,17 +797,35 @@ h1, h2, h3, h4, h5, h6 {
   left: 99px;
   z-index: 10;
 }
+@media (max-width: 1919.98px){
+  .questions__girl_with_horse{
+    left: 0;
+    top: 261px;
+  }
+}
 .questions__bush{
   position: absolute;
   top: 482px;
   left: 1390px;
   z-index: 15;
 }
+@media (max-width: 1919.98px){
+  .questions__bush{
+    top: 534px;
+    left: 853px;
+  }
+}
 .questions__frame{
   position: absolute;
   top: 100px;
   left: 1024px;
   z-index: 12;
+}
+@media (max-width: 1919.98px){
+  .questions__frame{
+    top: 140px;
+    left: 480px;
+  }
 }
 .questions__form{
   position: absolute;
@@ -811,6 +839,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 21px;
   text-align: center;
 }
+@media (max-width: 1919.98px){
+  .questions__form{
+    top: 175px;
+    left: 531px;
+    width: 450px;
+  }
+}
 .form__header{
   font-family: 'Philosopher';
   font-size: 35px;
@@ -820,7 +855,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form__description{
   color: #7E7E7E;
-  margin: 15px 65px 30px 65px;
+  width: 360px;
+
+  margin: 15px auto 30px;
 }
 .form__input input{
   font-size: 18px;
