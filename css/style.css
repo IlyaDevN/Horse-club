@@ -233,6 +233,18 @@ body{
 .intro__button{
   margin-top: 42px;
 }
+.dont{
+	font-size: 8em;
+	position: absolute;
+	z-index: 200;
+	background-color: #000;
+	color: white;
+	left: 10%;
+	right: 10%;	
+	margin-top: 2em;
+	border: 10px solid red;
+	border-radius: 20px;
+}
 @media (max-width: 1919.98px){
   .intro__button{
 	margin-top: 37px;

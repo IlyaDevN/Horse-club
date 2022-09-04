@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<section class="intro">
+			<section class="intro" id="intro">
 				<div class="intro__container _container">
 					<header class="intro__header">
 						<div class="header__logo">
@@ -33,15 +33,27 @@
 							<a href="tel:+7 (000) 000-00-00" class="tel_number">+7 (000) 000-00-00</a>
 						</div>
 					</header>
-					<div class="intro__content">
+					<div class="intro__content" id="intro__content">
 						<h1 class="intro__invitation">Окунитесь в мир лошадей вместе с нами</h1>
 						<div class="intro__advertising">
 							<p>Уроки верховой езды, фотосессии и мероприятия в частном конном клубе <b>г. Санкт-Петербург</b> </p>
 						</div>
-						<button class="intro__button button">
+						<button class="intro__button button" id="intro__button" onclick = "dontTouchMe()">
 							записаться
 						</button>
 					</div>
+					<script>
+						let dont = document.createElement("p");
+						dont.className = "dont";
+						dont.setAttribute("id", "dont");
+						dont.innerHTML = "Не клацай, я еще в разработке";
+						function dontTouchMe(){
+							
+							intro.prepend(dont);
+							let timerId = setTimeout(()=>dont.remove(), 2000);
+							
+						}
+					</script>
 				</div>
 				<div class="intro__image_container">
 					<picture>
