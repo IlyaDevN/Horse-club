@@ -168,7 +168,7 @@ body{
 		flex: 0 1 427px;
 	}
 }
-.nav__menu{
+.nav__menu_header{
 	display: flex;
 	justify-content: space-between;
 	text-transform: uppercase;
@@ -2602,7 +2602,7 @@ body{
 	}
 }
 .footer__container_inner {
-	padding: 30px 55px 18px;
+	padding: 30px 53px 18px;
 	margin: 0 auto;
 }
 @media (min-width: 480px){
