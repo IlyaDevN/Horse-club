@@ -1,0 +1,383 @@
+.clubDirection{
+	position: relative;
+}
+.clubDirection_bg_container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.clubDirection_bg_grass{
+	position: absolute;
+	bottom: 41px;
+	left: 0;
+	width: 100%;
+}
+@media (min-width: 480px){
+	.clubDirection_bg_grass{
+		bottom: 46px;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection_bg_grass{
+		bottom: 4px;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection_bg_grass{
+		bottom: 7px;
+	}
+}@media (min-width: 1920px){
+	.clubDirection_bg_grass{
+		bottom: 8px;
+	}
+}
+.clubDirection_bg_sky{
+	position: absolute;
+	bottom: 52px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media (min-width: 480px){
+	.clubDirection_bg_sky{
+		bottom: 58px;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection_bg_sky{
+		bottom: 68px;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection_bg_sky{
+		bottom: 91px;
+	}
+}
+.clubDirection_bg_clouds_botom{
+	position: absolute;
+	bottom: 39px;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+}
+@media (min-width: 480px){
+	.clubDirection_bg_clouds_botom{
+		bottom: 46px;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection_bg_clouds_botom{
+		bottom: 4px;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection_bg_clouds_botom{
+		bottom: 0;
+	}
+}
+.clubDirection__container {
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	position: relative;
+	overflow: visible;
+	/* padding: 0 15px; */
+}
+@media (min-width: 480px){
+	.clubDirection__container {
+		align-items:stretch;
+		max-width: 480px;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection__container {
+		max-width: 768px;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection__container {
+		max-width: 1000px;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection__container {
+		max-width: 1200px;
+		padding-top: 100px;
+	}
+}
+.clubDirection__galery{
+	margin-top: 80px;
+}
+@media (min-width: 480px){
+	.clubDirection__galery{
+		margin-top: 90px;
+		display: flex;
+		justify-content: space-around;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection__galery{
+		margin-top: 100px;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection__galery{
+		margin-top: 105px;
+		display: block;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection__galery{
+		margin-top: 143px;
+	}
+}
+@media (min-width: 1000px){
+	.firstRow__line{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		margin-bottom: 39px;
+	}
+}
+@media (min-width: 1920px){
+	.firstRow__line{
+		justify-content: space-between;
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1000px){
+	.secondRow__line{
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-around;
+	}
+}
+@media (min-width: 1920px){
+	.secondRow__line{
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: -20px;
+	}
+}
+.line__card {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #EAEAEA;
+	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.07);
+	border-radius: 5px;
+	margin-bottom: 60px;
+}
+.secondRow__line .line__card:last-child{
+	margin-bottom: 0;
+}
+@media (min-width: 480px){
+	.line__card {
+		box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
+		width: 230px;
+		height: 290px;
+		margin-bottom: 40px;
+	}
+	.line__card:last-child{
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 768px){
+	.line__card {
+		width: 354px;
+		height: 300px;
+		margin-bottom: 45px;
+	}
+}
+@media (min-width: 1000px){
+	.line__card {
+		width: 300px;
+		height: auto;
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1920px){
+	.line__card {
+		width: 370px;
+	}
+}
+.card__image_galary{
+	position: relative;
+	top: -20px;
+	margin: 0 auto;
+}
+/* @media (min-width: 480px){
+	.card__image_galary{
+		margin-bottom: 0;
+	}
+} */
+@media (min-width: 1920px){
+	.card__image_galary{
+		margin-bottom: 25px;
+	}
+}
+.clubDirection_card__title {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+	color: #363434;
+	width: 236px;
+	margin-top: -5px;
+}
+@media (min-width: 768px){
+	.clubDirection_card__title{
+	font-size: 15px;
+	line-height: 20px;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection_card__title{
+		line-height: 25px;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection_card__title{
+		font-size: 23px;
+		line-height: 27px;
+	}
+}
+.clubDirection_card__row {
+	background-color: #008139;
+	width: 26px;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+@media (min-width: 1000px){
+	.clubDirection_card__row{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection_card__row{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+}
+.clubDirection_card__text{
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+	color: #7E7E7E;
+	width: 275px;
+	margin-bottom: 33px;
+}
+@media (min-width: 480px){
+	.clubDirection_card__text{
+		margin-bottom: 0;
+		width: 205px;
+		text-align: start;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection_card__text{
+		width: 304px;
+		text-align: center;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection_card__text{
+		font-size: 13px;
+		line-height: 20px;
+		margin-bottom: 33px;
+		width: 250px;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection_card__text{
+		font-size: 16px;
+		line-height: 21px;
+		margin-bottom: 45px;
+		width: 280px;
+	}
+}
+.clubDirection__button {
+	margin: 30px auto 138px;
+}
+@media (min-width: 480px){
+	.clubDirection__button {
+		margin: 37px auto 172px;
+	}
+}
+@media (min-width: 768px){
+	.clubDirection__button {
+		margin: 40px auto 205px;
+	}
+}
+@media (min-width: 1000px){
+	.clubDirection__button {
+		margin: 40px auto 249px;
+	}
+}
+@media (min-width: 1920px){
+	.clubDirection__button {
+		margin: 50px auto 271px;
+	}
+}
+.horse_left{
+	position: absolute;
+	left: 0;
+	bottom: 69px;
+}
+@media (min-width: 480px){
+	.horse_left{
+		bottom: 66px;
+	}
+}
+@media (min-width: 768px){
+	.horse_left{
+		left: 7px;
+		bottom: 25px;
+	}
+}
+@media (min-width: 1000px){
+	.horse_left{
+		left: 0;
+		bottom: 20px;
+	}
+}
+@media (min-width: 1920px){
+	.horse_left{
+		left: -238px;
+		bottom: 39px;
+	}
+}
+.horse_right{
+	position: absolute;
+	right: 0;
+	bottom: 77px;
+}
+@media (min-width: 480px){
+	.horse_right{
+		bottom: 63px;
+	}
+}
+@media (min-width: 768px){
+	.horse_right{
+		bottom: 37px;
+	}
+}
+@media (min-width: 1000px){
+	.horse_right{
+		bottom: 28px;
+	}
+}
+@media (min-width: 1920px){
+	.horse_right{
+		right: -291px;
+		bottom: 30px;
+	}
+}
