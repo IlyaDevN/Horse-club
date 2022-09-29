@@ -1,6 +1,7 @@
 .ourVisitors__container{
 	margin: 29px auto 0;
 	width: 320px;
+	overflow: hidden;
 	/* padding: 0 15px; */
 }
 @media (min-width: 480px){
@@ -27,35 +28,70 @@
 		width: 1920px;
 	}
 }
+.ourVisitors__photo_container{
+	margin: 35px auto 30px;
+	display: flex;
+	/* flex-wrap: nowrap; */
+	width: 960px;
+	transition: margin 1s ease 0s;
+}
+@media (min-width: 480px){
+	.ourVisitors__photo_container{
+		margin: 40px auto 30px;
+		width: 1440px;
+		
+	}
+}
+@media (min-width: 768px){
+	.ourVisitors__photo_container{
+		margin: 40px auto 40px;
+		/* width: 1440px; */
+		
+	}
+}
+@media (min-width: 1000px){
+	.ourVisitors__photo_container{
+		margin: 40px auto 30px;
+		/* width: 1440px; */
+		
+	}
+}
+@media (min-width: 1920px){
+	.ourVisitors__photo_container{
+		margin: 40px auto 60px;
+		/* width: 1440px; */
+		
+	}
+}
 .ourVisitors__photo{
 	display: flex;
 	flex-wrap: wrap;
 	overflow:hidden;
 	justify-content: space-between;
-	margin: 35px auto 30px;
+	flex: 0 0 320px;
 }
-@media (min-width: 480px){
+/* @media (min-width: 480px){
 	.ourVisitors__photo{
 		margin: 40px auto 30px;
 	}
-}
-@media (min-width: 768px){
+} */
+/* @media (min-width: 768px){
 	.ourVisitors__photo{
 		margin: 40px auto 40px;
 	}
-}
-@media (min-width: 1000px){
+} */
+/* @media (min-width: 1000px){
 	.ourVisitors__photo{
 		margin: 40px auto 30px;
 	}
-}
-@media (min-width: 1920px){
+} */
+/* @media (min-width: 1920px){
 	.ourVisitors__photo{
 		margin: 70px auto 60px;
 	}
-}
+} */
 .photo__item{
-	padding: 0 0 1px;
+	padding: 0 0 2px;
 }
 .photo__item:nth-child(n+9){
 	display: none;
@@ -82,5 +118,27 @@
 	}
 }
 .sliderCheckbox{
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn_prev {
+}
+.slider_range {
+	appearance: none;
+	width: 96px;
+	height: 8px;
+	margin: 0 27px;
+	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
+	border-radius: 10px;
+	cursor: pointer;
+}
+.slider_range::-webkit-slider-thumb{
+	appearance: none;
+	width: 20px;
+	height: 8px;
+	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
+	border-radius: 10px;
+}
+.btn_next {
 }
