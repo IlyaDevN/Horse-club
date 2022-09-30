@@ -639,9 +639,9 @@
 						</div>
 					</div>
 					<div id="ourVisitors__sliderCheckbox" class="ourVisitors__sliderCheckbox sliderCheckbox">
-							<button id="btn_prev" class="btn_prev"><img src="img/sliderCheckboxes/prev.png" alt="button_previous"></button>
-							<input id="slider_range" class="slider_range" type="range" min="1" max="3" value="1">
-							<button id="btn_next" class="btn_next"><img src="img/sliderCheckboxes/next.png" alt="button_next"></button>
+							<button id="btn_prev_ourVis" class="btn_prev"><div class="arrow_prev"></div></button>
+							<input id="slider_range_ourVis" class="slider_range" type="range" min="1" max="3" value="1">
+							<button id="btn_next_ourVis" class="btn_next"><div class="arrow_next"></div></button>
 					</div>
 				</div>
 				<script>
@@ -652,18 +652,18 @@
 						let btn = event.target.closest("button");
 						
 						if(btn && btn.classList.contains("btn_prev")){
-							slider_range.value--;
-							if(slider_range.value <= 1) {
-								slider_range.value = 1;
+							slider_range_ourVis.value--;
+							if(slider_range_ourVis.value <= 1) {
+								slider_range_ourVis.value = 1;
 							}
 						}
 						if(btn && btn.classList.contains("btn_next")){
-							slider_range.value++;
-							if(slider_range.value >= 3) {
-								slider_range.value = 3;
+							slider_range_ourVis.value++;
+							if(slider_range_ourVis.value >= 3) {
+								slider_range_ourVis.value = 3;
 							}
 						}
-						switch (+slider_range.value) {
+						switch (+slider_range_ourVis.value) {
 							case 1:
 								ourVisitors__photo_container.style.marginLeft = "0px";
 								break;
@@ -773,9 +773,9 @@
 						</div>	
 					</div>
 					<div class="our-horses__sliderCheckbox sliderCheckbox">
-						<button class="btn_prev"><img src="img/sliderCheckboxes/prev.png" alt="button_previous"></button>
-						<input class="slider_range" type="range" min="1" max="3" value="1">
-						<button class="btn_next"><img src="img/sliderCheckboxes/next.png" alt="button_next"></button>
+						<button id="btn_prev_ourHor" class="btn_prev"><div class="arrow_prev"></div></button>
+						<input id="slider_range_ourHor" class="slider_range" type="range" min="1" max="3" value="1">
+						<button id="btn_next_ourHor" class="btn_next"><div class="arrow_next"></div></button>
 					</div>
 				</div>
 			</section>
@@ -852,8 +852,7 @@
 								<div class="card__text">Развивает силу, гибкость и координацию всадника; Выпрямляется осанка и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения.</div>
 								<div class="card__detailed_container"><p>Подробнее</p></div>
 								<div class="card__author">
-										<div class="author__photo"><img src="img/clientSpeakAboutUs/cardAuthor/photo/Syutkin.png" alt="author_photo"></div>
-										
+										<div class="author__photo"><img src="img/clientSpeakAboutUs/cardAuthor/photo/Syutkin.png" alt="author_photo"></div>										
 										<div class="author__cocialNetworkLink">
 											<div class="author__name">Константин Сюткин</div>
 											<img src="img/clientSpeakAboutUs/cardAuthor/cocialNetworkIcons/instagram.png" alt="instagram_icon">
@@ -894,8 +893,7 @@
 								<div class="card__text">Плюсов до безумия много! Реакция, общение с животным, любовь, понимание, взаимопонимание, терпение, здесь можно перечислять и перечислять очень много всего!</div>
 								<div class="card__detailed_container"><p>Подробнее</p></div>
 								<div class="card__author">
-									<div class="author__photo"><img src="img/clientSpeakAboutUs/cardAuthor/photo/Mirnaya.png" alt="author_photo"></div>
-										
+									<div class="author__photo"><img src="img/clientSpeakAboutUs/cardAuthor/photo/Mirnaya.png" alt="author_photo"></div>										
 									<div class="author__cocialNetworkLink">
 										<div class="author__name">Светлана Мирная</div>
 										<img src="img/clientSpeakAboutUs/cardAuthor/cocialNetworkIcons/instagram.png" alt="instagram_icon">
@@ -907,11 +905,9 @@
 						</div>
 					</div>
 					<div class="clientSpeakAboutUs__sliderCheckbox sliderCheckbox">
-						<picture>
-							<source srcset="img/sliderCheckboxes/navigation_x1920.png" type="image/png" media="(min-width:1920px)">
-							<source srcset="img/sliderCheckboxes/navigation.png" type="image/png" media="(max-width:1919.98px)">
-							<img class="photo" src="img/sliderCheckboxes/navigation.png" alt="photo">
-						</picture>
+						<button id="btn_prev_ourHor" class="btn_prev"><div class="arrow_prev"></div></button>
+						<input id="slider_range_ourHor" class="slider_range" type="range" min="1" max="3" value="1">
+						<button id="btn_next_ourHor" class="btn_next"><div class="arrow_next"></div></button>
 					</div>
 				</div>
 			</section>
