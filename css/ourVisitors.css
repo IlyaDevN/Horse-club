@@ -67,30 +67,6 @@
 	width: 100%;
 	flex-shrink: 0;
 }
-@media (min-width: 480px){
-	.ourVisitors__photo{
-		width: 100%;
-		flex-shrink: 0;
-	}
-}
-@media (min-width: 768px){
-	.ourVisitors__photo{
-		width: 100%;
-		flex-shrink: 0;
-	}
-}
-@media (min-width: 1000px){
-	.ourVisitors__photo{
-		width: 100%;
-		flex-shrink: 0;
-	}
-}
-@media (min-width: 1920px){
-	.ourVisitors__photo{
-		width: 100%;
-		flex-shrink: 0;
-	}
-}
 .photo__item{
 	padding: 1px 0px;
 }
@@ -114,69 +90,4 @@
 	.photo__item:nth-child(5n){
 		display: inline;
 	}
-}
-.sliderCheckbox{
-	display: flex;
-	justify-content: center; 
-	align-items: center;
-}
-.btn_prev {
-	width: 40px;
-	height: 40px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
-	box-shadow: 0px 1px 0px #C89C00;
-	transform: matrix(-1, 0, 0, 1, 0, 0);
-	border-radius: 50%;
-}
-.arrow_prev{
-	color: #6A5300;
-	width: 10px;
-	height: 10px;
-	border-top: 3px solid #6A5300;
-	border-right: 3px solid #6A5300;
-	margin-left: 13px;
-	margin-right: 13px;
-	box-sizing: border-box;
-	transform: rotate(45deg);
-}
-.btn_prev:hover{
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
-}
-.slider_range {
-	appearance: none;
-	width: 96px;
-	height: 8px;
-	margin: 0 27px;
-	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
-	border-radius: 10px;
-	pointer-events: none;
-}
-.slider_range::-webkit-slider-thumb{
-	appearance: none;
-	width: 20px;
-	height: 8px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
-	border-radius: 10px;
-}
-.btn_next {
-	width: 40px;
-	height: 40px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
-	box-shadow: 0px 1px 0px #C89C00;
-	transform: matrix(-1, 0, 0, 1, 0, 0);
-	border-radius: 50%;
-}
-.btn_next:hover{
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
-}
-.arrow_next{
-	color: #6A5300;
-	width: 10px;
-	height: 10px;
-	border-top: 3px solid #6A5300;
-	border-right: 3px solid #6A5300;
-	margin-left: 16px;
-	margin-right: 16px;
-	box-sizing: border-box;
-	transform: rotate(-135deg);
 }

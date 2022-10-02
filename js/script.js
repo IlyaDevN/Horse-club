@@ -1,33 +1,55 @@
 'use strict'
+
+/* ============================================================================
+				clubDirection galary
+=============================================================================*/
+
+clubDirection__galery.addEventListener("mouseover", function(event){
+
+	if(event.target.tagName != "IMG") return;
+	
+	event.target.style.transform = "scale(1.15)";
+})
+clubDirection__galery.addEventListener("mouseout", function(event){
+
+	if(event.target.tagName != "IMG") return;
+	
+	event.target.style.transform = "scale(1)";
+})
+
+
 /* ============================================================================
 				ourVisitors slider
 =============================================================================*/
 
-btn_prev_ourVis.addEventListener("click", function(){
+btn_prev_ourVisitors.addEventListener("click", function(){
 	
-	slider_range_ourVis.value--;
-	if(slider_range_ourVis.value <= 1) slider_range_ourVis.value = 1;
-	changeContainerPosition(slider_range_ourVis.value);
+	slider_range_ourVisitors.value--;
+	if(slider_range_ourVisitors.value <= 1) {
+		slider_range_ourVisitors.value = 1;
+	}
+	changeContainerPosition(slider_range_ourVisitors.value);
 })
-btn_next_ourVis.addEventListener("click", function(){
+btn_next_ourVisitors.addEventListener("click", function(){
 
-	slider_range_ourVis.value++;
-	if(slider_range_ourVis.value >= 3) slider_range_ourVis.value = 3;
-	changeContainerPosition(slider_range_ourVis.value);
+	slider_range_ourVisitors.value++;
+	if(slider_range_ourVisitors.value >= 3) {
+		slider_range_ourVisitors.value = 3;
+	}
+	changeContainerPosition(slider_range_ourVisitors.value);
 })
 
 function changeContainerPosition(sliderRangeValue){
-	let photoContainerCoords = ourVisitors__photo_container.getBoundingClientRect();
 	
 	switch (+sliderRangeValue) {
 		case 1:
 			ourVisitors__photo_container.style.marginLeft = "0px";
 			break;
 		case 2:
-			ourVisitors__photo_container.style.marginLeft = -photoContainerCoords.width + "px";
+			ourVisitors__photo_container.style.marginLeft = -ourVisitors__photo_container.offsetWidth + "px";
 			break;
 		case 3:
-			ourVisitors__photo_container.style.marginLeft = -photoContainerCoords.width*2 + "px";
+			ourVisitors__photo_container.style.marginLeft = -ourVisitors__photo_container.offsetWidth*2 + "px";
 			break;	
 	}
 }

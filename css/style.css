@@ -1,3 +1,4 @@
+@import url(components.css);
 @import url(intro.css);
 @import url(about.css);
 @import url(whyChooseUs.css);
@@ -6,7 +7,7 @@
 @import url(ourHorses.css);
 @import url(questions.css);
 @import url(clientsSpeakAboutUs.css);
-@import url(null.css);
+@import url(reset.css);
 @import url(contacts.css);
 @import url(footer.css);
 

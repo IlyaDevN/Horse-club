@@ -79,6 +79,7 @@
 }
 .clubDirection__container {
 	max-width: 320px;
+	height: 2328px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -91,22 +92,26 @@
 	.clubDirection__container {
 		align-items:stretch;
 		max-width: 480px;
+		height: 1321px;
 	}
 }
 @media (min-width: 768px){
 	.clubDirection__container {
 		max-width: 768px;
+		height: 1407px;
 	}
 }
 @media (min-width: 1000px){
 	.clubDirection__container {
 		max-width: 1000px;
+		height: 1223px;
 	}
 }
 @media (min-width: 1920px){
 	.clubDirection__container {
 		max-width: 1200px;
 		padding-top: 100px;
+		height: 1602px;
 	}
 }
 .clubDirection__galery{
@@ -212,15 +217,13 @@
 	top: -20px;
 	margin: 0 auto;
 }
-/* @media (min-width: 480px){
-	.card__image_galary{
-		margin-bottom: 0;
-	}
-} */
 @media (min-width: 1920px){
 	.card__image_galary{
 		margin-bottom: 25px;
 	}
+}
+.card__image_galary img{
+	transition: transform 0.5s;
 }
 .clubDirection_card__title {
 	font-weight: 500;
@@ -305,26 +308,26 @@
 	}
 }
 .clubDirection__button {
-	margin: 30px auto 138px;
+	margin: 30px auto 0;
 }
 @media (min-width: 480px){
 	.clubDirection__button {
-		margin: 37px auto 172px;
+		margin: 37px auto 0;
 	}
 }
 @media (min-width: 768px){
 	.clubDirection__button {
-		margin: 40px auto 205px;
+		margin: 40px auto 0;
 	}
 }
 @media (min-width: 1000px){
 	.clubDirection__button {
-		margin: 40px auto 249px;
+		margin: 40px auto 0;
 	}
 }
 @media (min-width: 1920px){
 	.clubDirection__button {
-		margin: 50px auto 271px;
+		margin: 50px auto 0;
 	}
 }
 .horse_left{
