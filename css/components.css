@@ -83,20 +83,18 @@
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 }
 .slider_range {
-	appearance: none;
 	width: 96px;
 	height: 8px;
 	margin: 0 27px;
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
-	pointer-events: none;
 }
-.slider_range::-webkit-slider-thumb{
-	appearance: none;
-	width: 20px;
+.slider_range_pointer {
+	/* width took from JS*/
 	height: 8px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
+	transition: margin-left 1s ease-in-out 0s;
 }
 .btn_next {
 	width: 40px;

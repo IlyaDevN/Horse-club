@@ -21,35 +21,47 @@ clubDirection__galery.addEventListener("mouseout", function(event){
 /* ============================================================================
 				ourVisitors slider
 =============================================================================*/
+let containersQuantity = ourVisitors__photo_container.querySelectorAll(".ourVisitors__photo").length;
+let sliderCurrentPosition = 1;
+let sliderMaxPossiblePosition = containersQuantity;
+let sliderRangeWidth = sliderRange.offsetWidth;
+let sliderRangePointerWidth = sliderRangeWidth/containersQuantity;
 
-btn_prev_ourVisitors.addEventListener("click", function(){
+sliderRangePointer.style.width = sliderRangePointerWidth + "px";
+
+
+btnPrevOurVisitors.addEventListener("click", function(){
 	
-	slider_range_ourVisitors.value--;
-	if(slider_range_ourVisitors.value <= 1) {
-		slider_range_ourVisitors.value = 1;
+	sliderCurrentPosition--;
+	if(sliderCurrentPosition <= 1) {
+		sliderCurrentPosition = 1;
 	}
-	changeContainerPosition(slider_range_ourVisitors.value);
+	changeContainerPosition(sliderCurrentPosition);
 })
-btn_next_ourVisitors.addEventListener("click", function(){
+btnNextOurVisitors.addEventListener("click", function(){
 
-	slider_range_ourVisitors.value++;
-	if(slider_range_ourVisitors.value >= 3) {
-		slider_range_ourVisitors.value = 3;
+	sliderCurrentPosition++;
+	if(sliderCurrentPosition >= sliderMaxPossiblePosition) {
+		sliderCurrentPosition = sliderMaxPossiblePosition;
 	}
-	changeContainerPosition(slider_range_ourVisitors.value);
+	changeContainerPosition(sliderCurrentPosition);
 })
 
-function changeContainerPosition(sliderRangeValue){
+function changeContainerPosition(sliderCurrentPosition){
 	
-	switch (+sliderRangeValue) {
+
+	switch (+sliderCurrentPosition) {
 		case 1:
 			ourVisitors__photo_container.style.marginLeft = "0px";
+			sliderRangePointer.style.marginLeft = "0px";
 			break;
 		case 2:
 			ourVisitors__photo_container.style.marginLeft = -ourVisitors__photo_container.offsetWidth + "px";
+			sliderRangePointer.style.marginLeft = sliderRangePointerWidth + "px";
 			break;
 		case 3:
 			ourVisitors__photo_container.style.marginLeft = -ourVisitors__photo_container.offsetWidth*2 + "px";
+			sliderRangePointer.style.marginLeft = sliderRangePointerWidth*2 + "px";
 			break;	
 	}
 }
