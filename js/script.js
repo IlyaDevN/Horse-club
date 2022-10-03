@@ -1,24 +1,6 @@
 'use strict'
 
 /* ============================================================================
-				clubDirection galary
-=============================================================================*/
-
-clubDirection__galery.addEventListener("mouseover", function(event){
-
-	if(event.target.tagName != "IMG") return;
-	
-	event.target.style.transform = "scale(1.15)";
-})
-clubDirection__galery.addEventListener("mouseout", function(event){
-
-	if(event.target.tagName != "IMG") return;
-	
-	event.target.style.transform = "scale(1)";
-})
-
-
-/* ============================================================================
 				ourVisitors slider
 =============================================================================*/
 let containersQuantity = ourVisitors__photo_container.querySelectorAll(".ourVisitors__photo").length;
