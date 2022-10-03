@@ -225,6 +225,9 @@
 .card__image_galary img{
 	transition: transform 0.5s;
 }
+.card__image_galary img:hover{
+	transform: scale(1.15);
+}
 .clubDirection_card__title {
 	font-weight: 500;
 	font-size: 14px;
