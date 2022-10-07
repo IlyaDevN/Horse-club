@@ -89,7 +89,7 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 }
-.slider_range_pointer {
+.slider_thumb {
 	/* width took from JS*/
 	height: 8px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);

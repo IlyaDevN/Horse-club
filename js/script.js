@@ -7,9 +7,9 @@ let containersQuantity = ourVisitors__photo_container.querySelectorAll(".ourVisi
 let sliderCurrentPosition = 1;
 let sliderMaxPossiblePosition = containersQuantity;
 let sliderRangeWidth = sliderRange.offsetWidth;
-let sliderRangePointerWidth = sliderRangeWidth/containersQuantity;
+let sliderThumbWidth = sliderRangeWidth/containersQuantity;
 
-sliderRangePointer.style.width = sliderRangePointerWidth + "px";
+sliderThumb.style.width = sliderThumbWidth + "px";
 
 
 btnPrevOurVisitors.addEventListener("click", function(){
@@ -35,15 +35,15 @@ function changeContainerPosition(sliderCurrentPosition){
 	switch (+sliderCurrentPosition) {
 		case 1:
 			ourVisitors__photo_container.style.marginLeft = "0px";
-			sliderRangePointer.style.marginLeft = "0px";
+			sliderThumb.style.marginLeft = "0px";
 			break;
 		case 2:
 			ourVisitors__photo_container.style.marginLeft = -ourVisitors__photo_container.offsetWidth + "px";
-			sliderRangePointer.style.marginLeft = sliderRangePointerWidth + "px";
+			sliderThumb.style.marginLeft = sliderThumbWidth + "px";
 			break;
 		case 3:
 			ourVisitors__photo_container.style.marginLeft = -ourVisitors__photo_container.offsetWidth*2 + "px";
-			sliderRangePointer.style.marginLeft = sliderRangePointerWidth*2 + "px";
+			sliderThumb.style.marginLeft = sliderThumbWidth*2 + "px";
 			break;	
 	}
 }

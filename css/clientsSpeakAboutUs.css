@@ -152,7 +152,6 @@
 		  margin-right: 0;
 	  }
   }
-  
   .feedbacks__card_container > .card__text {
 	  font-size: 13px;
 	  line-height: 21px;
@@ -250,7 +249,7 @@
   .author__cocialNetworkLink {
 	  flex: 1 1 auto;
   }
-  .author__cocialNetworkLink > img{
+  .author__cocialNetworkLink > a > img{
 	  margin-right: 10px;
   }
   
