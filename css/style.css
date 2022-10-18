@@ -10,6 +10,7 @@
 @import url(reset.css);
 @import url(contacts.css);
 @import url(footer.css);
+@import url(swiper-bundle.min.css);
 
 body{
 	font-family: 'Roboto', sans-serif;
