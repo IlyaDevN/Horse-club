@@ -56,6 +56,9 @@
 .button:hover::before{
 	opacity: 1;
 }
+/* ============================================================================
+		slider (ourVisitors)
+=============================================================================*/
 .sliderCheckbox{
 	display: flex;
 	justify-content: center; 
@@ -116,4 +119,25 @@
 	margin-right: 14px;
 	box-sizing: border-box;
 	transform: rotate(45deg);
+}
+/* ============================================================================
+		 slider SWIPER (ourHorses)
+=============================================================================*/
+#scrollBar{
+	position: static;
+	width: 96px;
+	height: 8px;
+	margin: 0 27px;
+	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
+	border-radius: 10px;
+}
+div .swiper-scrollbar-drag{
+	/* width took from JS*/
+	height: 8px;
+	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
+	border-radius: 10px;
+}
+.extremeSlides {
+	transform: translateY(0);
+	opacity: 1;
 }
