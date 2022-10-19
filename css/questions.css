@@ -59,7 +59,7 @@
 }
 @media (min-width: 1920px){
 	.questions__container{
-		width: 1920px;
+		width: 1900px;
 		overflow: visible;
 		margin: 49px auto 0;
 	}
