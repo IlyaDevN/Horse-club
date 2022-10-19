@@ -102,22 +102,22 @@ if(viewportWidth >= 1920){
 	let currentSecondSlide = slideCollection[swiper.realIndex+1];
 	let currentThirdSlide = slideCollection[swiper.realIndex+2];
 	let currentFourthSlide = slideCollection[swiper.realIndex+3];
-	currentSecondSlide.classList.add("extremeSlides");
-	currentThirdSlide.classList.add("extremeSlides");
-	currentFourthSlide.classList.add("extremeSlides");
+	currentSecondSlide.classList.add("centralSlides");
+	currentThirdSlide.classList.add("centralSlides");
+	currentFourthSlide.classList.add("centralSlides");
 
 	swiper.on("slideChange", function(){
 		let secondSlide = slideCollection[swiper.realIndex+1];
 		let thirdSlide = slideCollection[swiper.realIndex+2];
 		let fourthSlide = slideCollection[swiper.realIndex+3];
 	
-		currentSecondSlide.classList.remove("extremeSlides");
-		currentThirdSlide.classList.remove("extremeSlides");
-		currentFourthSlide.classList.remove("extremeSlides");
+		currentSecondSlide.classList.remove("centralSlides");
+		currentThirdSlide.classList.remove("centralSlides");
+		currentFourthSlide.classList.remove("centralSlides");
 	
-		secondSlide.classList.add("extremeSlides");
-		thirdSlide.classList.add("extremeSlides");
-		fourthSlide.classList.add("extremeSlides");
+		secondSlide.classList.add("centralSlides");
+		thirdSlide.classList.add("centralSlides");
+		fourthSlide.classList.add("centralSlides");
 	
 		currentSecondSlide = secondSlide;
 		currentThirdSlide = thirdSlide;
