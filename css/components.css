@@ -132,12 +132,7 @@
 	border-radius: 10px;
 }
 div .swiper-scrollbar-drag{
-	/* width took from JS*/
 	height: 8px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
-}
-.centralSlides {
-	transform: translateY(0);
-	opacity: 1;
 }

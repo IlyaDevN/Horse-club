@@ -126,14 +126,3 @@ if(viewportWidth >= 1920){
 	});
 }
 
-let slidesOurHorsesQuantity = galaryRow.querySelectorAll(".galary__item").length;
-//SLIDER RANGE Variables
-let sliderRangeOurHorsesWidth = sliderRangeOurHorses.offsetWidth;
-let sliderThumbOurHorsesWidth = sliderRangeOurHorsesWidth/slidesOurHorsesQuantity;
-
-/* Устанавливаем ширину ползунка в зависимости от количества слайдов и 
-количества выводимых на экран слайдов*/
-swiper.scrollbar.dragEl.style.width = sliderThumbOurHorsesWidth*swiper.params.slidesPerView + "px";
-
-
-
