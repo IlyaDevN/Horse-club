@@ -50,30 +50,28 @@ sliderThumbCurrentPosition += sliderThumbWidth;
 	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
 });
 
+
+
 /* ============================================================================
 				ourHorses slider SWIPER
 =============================================================================*/
+
 
 let swiper = new Swiper(".swiper-container", {
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev"
 	},
-	scrollbar: {
-		el: ".swiper-scrollbar",
-		draggable: true
-	},
+	// scrollbar: {
+	// 	el: ".swiper-scrollbar",
+	// 	draggable: true
+	// },
 	navigation: {
 		nextEl: '.swiper-next',
 		prevEl: '.swiper-prev',
 	},
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'progressbar',
-	},
 	autoplay: {
-		delay: 1000,
-		reverseDirection: false
+		delay: 2500,
 	},
 	speed: 1000,
 	breakpoints: {
@@ -81,7 +79,6 @@ let swiper = new Swiper(".swiper-container", {
 			slidesPerView: 1,
 			slidesPerGroup: 1,
 			spaceBetween: 10,
-			speed: 500,
 		},
 		480: {
 			slidesPerView: 2,
@@ -92,7 +89,6 @@ let swiper = new Swiper(".swiper-container", {
 			slidesPerView: 3,
 			spaceBetween: 20,
 			slidesPerGroup: 1,
-			speed: 1000,
 		},
 		1920: {
 			slidesPerView: 5,
@@ -130,11 +126,48 @@ if(viewportWidth >= 1920){
 		currentSecondSlide = secondSlide;
 		currentThirdSlide = thirdSlide;
 		currentFourthSlide = fourthSlide;
+		
 	});
-	swiper.on("reachEnd", function(){
-		swiper.reverseDirection = !swiper.reverseDirection;
-		swiper.update();
-	})
+	
 }
+
+
+let slidesOurHorsesQuantity = galaryRow.querySelectorAll(".galary__item").length;
+//SLIDER RANGE Variables
+let sliderRangeOurHorsesWidth = sliderRangeOurHorses.offsetWidth;
+let sliderThumbOurHorsesWidth = sliderRangeOurHorsesWidth/slidesOurHorsesQuantity;
+let sliderThumbOurHorsesCurrentPosition = 0;
+let sliderThumbOurHorsesMinPossiblePosition = 0;
+let sliderThumbOurHorsesMaxPossiblePosition = (slidesOurHorsesQuantity - 1)*sliderThumbOurHorsesWidth;
+
+// Устанавливаем ширину ползунка в зависимости от количества слайдов
+sliderThumbOurHorses.style.width = sliderThumbOurHorsesWidth*swiper.params.slidesPerView + "px"; 
+
+let currentSlide = 0;
+swiper.on("slideChange", function(){
+
+	if(swiper.realIndex < currentSlide){
+		console.log(swiper.realIndex);
+		console.log(currentSlide);
+		sliderThumbOurHorsesCurrentPosition -= sliderThumbOurHorsesWidth;
+		if(sliderThumbOurHorsesCurrentPosition <= sliderThumbOurHorsesMinPossiblePosition){
+			sliderThumbOurHorsesCurrentPosition = sliderThumbOurHorsesMinPossiblePosition;
+		}
+	sliderThumbOurHorses.style.marginLeft = sliderThumbOurHorsesCurrentPosition + "px";
+	currentSlide = swiper.realIndex;
+	}
+	if(swiper.realIndex > currentSlide){
+		console.log(swiper.realIndex);
+		console.log(currentSlide);
+		sliderThumbOurHorsesCurrentPosition += sliderThumbOurHorsesWidth;
+		if(sliderThumbOurHorsesCurrentPosition >= sliderThumbOurHorsesMaxPossiblePosition){
+			sliderThumbOurHorsesCurrentPosition = sliderThumbOurHorsesMaxPossiblePosition;
+		}
+	sliderThumbOurHorses.style.marginLeft = sliderThumbOurHorsesCurrentPosition + "px";
+	currentSlide = swiper.realIndex;
+	}
+	
+})
+
 
 
