@@ -25,49 +25,39 @@ sliderThumb.style.width = sliderThumbWidth + "px";
 
 btnPrevOurVisitors.addEventListener("click", function(){
 
-	(function sliderMove(){
-		sliderCurrentPosition += slideWidth;
-		if(sliderCurrentPosition >= sliderMaxPossiblePosition){
-			sliderCurrentPosition = sliderMaxPossiblePosition;
-		}
-		ourVisitors__photo_container.style.marginLeft = sliderCurrentPosition + "px";
-	})();
-	
-	(function thumbMove(){
-		sliderThumbCurrentPosition -= sliderThumbWidth;
-		if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
-			sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
-		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-	})();
-	
+	sliderCurrentPosition += slideWidth;
+	if(sliderCurrentPosition >= sliderMaxPossiblePosition){
+		sliderCurrentPosition = sliderMaxPossiblePosition;
+	}
+	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
+
+	sliderThumbCurrentPosition -= sliderThumbWidth;
+	if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
+		sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
+	}
+	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";	
 });
 
 btnNextOurVisitors.addEventListener("click", function(){
 
-	(function sliderMove(){
-		sliderCurrentPosition -= slideWidth;
-		if(sliderCurrentPosition <= sliderMinPossiblePosition){
-			sliderCurrentPosition = sliderMinPossiblePosition;
-		}
-		ourVisitors__photo_container.style.marginLeft = sliderCurrentPosition + "px";
-	})();
-	
-	(function thumbMove(){
-		sliderThumbCurrentPosition += sliderThumbWidth;
-		if(sliderThumbCurrentPosition >= sliderThumbMaxPossiblePosition){
-			sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
-		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-	})();
+	sliderCurrentPosition -= slideWidth;
+	if(sliderCurrentPosition <= sliderMinPossiblePosition){
+		sliderCurrentPosition = sliderMinPossiblePosition;
+	}
+	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
 
+	sliderThumbCurrentPosition += sliderThumbWidth;
+	if(sliderThumbCurrentPosition >= sliderThumbMaxPossiblePosition){
+		sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
+	}
+	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
 });
 
 /* ============================================================================
 				ourHorses slider SWIPER
 =============================================================================*/
 
-let swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".swiper-container", {
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev"
@@ -82,6 +72,9 @@ let swiper = new Swiper(".swiper-container", {
 	},
 	autoplay: {
 		delay: 2500,
+		disableOnInteraction: false,
+		pauseOnMouseEnter: true,
+		reverseDirection: false,
 	},
 	speed: 1000,
 	breakpoints: {
@@ -110,33 +103,50 @@ let swiper = new Swiper(".swiper-container", {
 
 let viewportWidth = window.innerWidth;
 const screenResolution = 1920;
+const galaryRow = document.getElementById("galary_row");
+
 if(viewportWidth >= screenResolution){
-
-	let slideCollection = galaryRow.querySelectorAll(".galary__item");
-	let currentSecondSlide = slideCollection[swiper.realIndex+1];
-	let currentThirdSlide = slideCollection[swiper.realIndex+2];
-	let currentFourthSlide = slideCollection[swiper.realIndex+3];
-	currentSecondSlide.classList.add("centralSlides");
-	currentThirdSlide.classList.add("centralSlides");
-	currentFourthSlide.classList.add("centralSlides");
-
+	liftUpSlides(swiper, "extremeSlides");
+	
 	swiper.on("slideChange", function(){
-		let secondSlide = slideCollection[swiper.realIndex+1];
-		let thirdSlide = slideCollection[swiper.realIndex+2];
-		let fourthSlide = slideCollection[swiper.realIndex+3];
-	
-		currentSecondSlide.classList.remove("centralSlides");
-		currentThirdSlide.classList.remove("centralSlides");
-		currentFourthSlide.classList.remove("centralSlides");
-	
-		secondSlide.classList.add("centralSlides");
-		thirdSlide.classList.add("centralSlides");
-		fourthSlide.classList.add("centralSlides");
-	
-		currentSecondSlide = secondSlide;
-		currentThirdSlide = thirdSlide;
-		currentFourthSlide = fourthSlide;
-		
+		liftUpSlides(swiper, "extremeSlides");
 	});
 }
+swiper.on("reachEnd", function(){
+	swiper.params.autoplay.reverseDirection = !swiper.params.autoplay.reverseDirection;
+})
+swiper.on("reachBeginning", function(){
+	swiper.params.autoplay.reverseDirection = !swiper.params.autoplay.reverseDirection;
+});
+
+function liftUpSlides(slider, className){
+	const slidesToLiftUpIndexes = defineSlidesToLiftUpIndexes(slider);
+	const slideCollection = slider.slides;
+	
+	slideCollection.forEach(function(elem, index) {
+		if(slidesToLiftUpIndexes.includes(index)){
+			elem.classList.add(className);
+		} else {
+			elem.classList.remove(className);
+		}
+	});
+}
+
+function defineSlidesToLiftUpIndexes(slider){
+	const slideCollection = slider.slides;
+	const slideBeforeFirst = slideCollection[slider.realIndex - 1];
+	const firstSlide = slideCollection[slider.realIndex];
+	const lastSlide = slideCollection[slider.realIndex + slider.params.slidesPerView-1];
+	const slideAfterLast = slideCollection[slider.realIndex + slider.params.slidesPerView];
+
+	const slideBeforeFirstIndex = slideCollection.indexOf(slideBeforeFirst);
+	const firstSlideIndex = slideCollection.indexOf(firstSlide);
+	const lastSlideIndex = slideCollection.indexOf(lastSlide);
+	const slideAfterLastIndex = slideCollection.indexOf(slideAfterLast);
+
+	const slidesToLiftUpIndexes = [slideBeforeFirstIndex, firstSlideIndex, lastSlideIndex, slideAfterLastIndex];
+	
+	return slidesToLiftUpIndexes;
+}
+
 
