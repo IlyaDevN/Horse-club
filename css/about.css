@@ -1,5 +1,5 @@
 .about__container {
-	max-width: 300px;
+	max-width: 320px;
 	width: 100%;
 	margin: 56px auto 0;
 	padding: 0 10px;
@@ -7,7 +7,7 @@
 @media (min-width: 480px){
 	.about__container {
 		margin-top: 49px;
-		max-width: 460px;
+		max-width: 480px;
 	}
 }
 @media (min-width: 768px){

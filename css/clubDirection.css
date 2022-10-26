@@ -78,7 +78,7 @@
 	}
 }
 .clubDirection__container {
-	max-width: 300px;
+	max-width: 320px;
 	height: 2328px;
 	display: flex;
 	flex-direction: column;
@@ -90,7 +90,7 @@
 @media (min-width: 480px){
 	.clubDirection__container {
 		align-items:stretch;
-		max-width: 460px;
+		max-width: 480px;
 		height: 1321px;
 	}
 }

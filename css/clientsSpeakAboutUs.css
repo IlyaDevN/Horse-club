@@ -1,11 +1,11 @@
 .clientSpeakAboutUs__container {
-	width: 300px;
+	width: 320px;
 	overflow: hidden;
 	margin: 0 auto;
   }
   @media (min-width: 480px){
 	  .clientSpeakAboutUs__container {
-	  width: 460px;
+	  width: 480px;
 	  }
   }
   @media (min-width: 768px){
@@ -66,32 +66,10 @@
   }
   .feedbacks__container {
 	  display: flex;
-	  /* justify-content: center; */
-  }
-  @media (min-width: 480px){
-	  .feedbacks__container {
-		  /* justify-content: flex-start; */
-	  }
-  }
-  @media (min-width: 768px){
-	  .feedbacks__container {
-		  /* justify-content: space-around; */
-	  }
-  }
-  @media (min-width: 1000px){
-	  .feedbacks__container {
-		  /* justify-content: flex-start; */
-	  }
-  }
-  @media (min-width: 1920px){
-	  .feedbacks__container {
-		  /* position: relative; */
-		  /* left: -225px; */
-	  }
   }
   .feedbacks__card_container {
 	  padding: 18.5px;
-	  width: 300px;
+	  width: 320px;
 	  border: 1px solid #EAEAEA;
 	  box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
 	  border-radius: 5px;
