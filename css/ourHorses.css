@@ -11,7 +11,7 @@
 }
 @media (min-width: 768px){
 	.our-horses__container{
-		width: 768px;
+		width: 748px;
 	}
 }
 @media (min-width: 1000px){
@@ -88,7 +88,7 @@
 	border: 1px solid #EAEAEA;
 	box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
 	border-radius: 5px;
-	transition: all 1s;
+	transition: all 1s !important;
 }
 @media (min-width: 480px){
 	.galary__item{
@@ -189,7 +189,4 @@
 		margin-bottom: 45px;
 	}
 }
-.galary__item.extremeSlides {
-	transform: translateY(-40px);
-	opacity: 0.4;
-}
+

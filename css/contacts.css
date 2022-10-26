@@ -18,20 +18,20 @@
 	}
 }
 .contacts__container {
-	max-width: 320px;
+	max-width: 300px;
 	margin: 70px auto 0;
 	position: relative;
 	overflow: hidden;
 }
 @media (min-width: 480px){
 	.contacts__container{
-		max-width: 480px;
+		max-width: 460px;
 		margin: 100px auto 0;
 	}
 }
 @media (min-width: 768px){
 	.contacts__container{
-		max-width: 768px;
+		max-width: 748px;
 		margin: 90px auto 0;
 	}
 }
@@ -43,7 +43,7 @@
 }
 @media (min-width: 1920px){
 	.contacts__container{
-		max-width: 1920px;
+		max-width: 1900px;
 		margin: 150px auto 0;
 	}
 }

@@ -136,3 +136,7 @@ div .swiper-scrollbar-drag{
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
 }
+.extremeSlides {
+	transform: translateY(-40px) !important;
+	opacity: 0.4 !important;
+}
