@@ -48,12 +48,30 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: linear-gradient(180deg, #7EB2FF 0%, #0057FF 100%);
+	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
 	z-index: -100;
 }
+
 .button:hover::before{
+	opacity: 1;
+}
+.button::after{
+	content: "";
+	position: absolute;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+	transform: matrix(1, 0, 0, -1, 0, 0);
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	z-index: -100;
+}
+.button:active::after{
 	opacity: 1;
 }
 /* ============================================================================
@@ -65,11 +83,29 @@
 	align-items: center;
 }
 .btn_prev {
+	position: relative;
 	width: 40px;
 	height: 40px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
 	/* box-shadow: 0px 1px 0px #C89C00; */
 	border-radius: 50%;
+
+}
+.btn_prev::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	opacity: 0;
+	/* z-index: -100; */
+	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+	transition: opacity 0.5s ease-in-out;
+}
+.btn_prev:hover::before{
+	opacity: 1;
 }
 .arrow_prev{
 	color: #6A5300;
@@ -81,9 +117,6 @@
 	margin-right: 16px;
 	box-sizing: border-box;
 	transform: rotate(-135deg);
-}
-.btn_prev:hover{
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 }
 .slider_range {
 	width: 96px;
@@ -100,14 +133,28 @@
 	transition: margin-left 1s ease-in-out 0s;
 }
 .btn_next {
+	position: relative;
 	width: 40px;
 	height: 40px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
 	/* box-shadow: 0px 1px 0px #C89C00; */
 	border-radius: 50%;
 }
-.btn_next:hover{
+.btn_next::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	opacity: 0;
+	/* z-index: -100; */
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+	transition: opacity 0.5s ease-in-out;
+}
+.btn_next:hover::before{
+	opacity: 1;
 }
 .arrow_next{
 	color: #6A5300;
