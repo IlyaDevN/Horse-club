@@ -205,3 +205,43 @@ function defineSlidesToLiftUpIndexes(slider){
 	}
 	
 })();
+
+(function changeContactsMapSize(){
+
+	let screenResolution = document.documentElement.clientWidth;
+	let fullScreenResolution = window.innerWidth;
+	let map = document.querySelector(".contacts__bg_map");
+	map.width = screenResolution;
+	if(fullScreenResolution < 480) {
+		map.height = 748;
+	}
+	if(fullScreenResolution >= 480 && fullScreenResolution < 768) {
+		map.height = 786;
+	}
+	if(fullScreenResolution >= 768 && fullScreenResolution < 1000) {
+		map.height = 510;
+	}
+	if(fullScreenResolution >= 1000) {
+		map.height = 650;
+	}
+
+	window.addEventListener("resize", function(){
+	
+		screenResolution = document.documentElement.clientWidth;
+		fullScreenResolution = window.innerWidth;
+		map.width = screenResolution;
+		if(fullScreenResolution < 480) {
+			map.height = 748;
+		}
+		if(fullScreenResolution >= 480 && fullScreenResolution < 768) {
+			map.height = 786;
+		}
+		if(fullScreenResolution >= 768 && fullScreenResolution < 1000) {
+			map.height = 510;
+		}
+		if(fullScreenResolution >= 1000) {
+			map.height = 650;
+		}
+	})
+
+})()
