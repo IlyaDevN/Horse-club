@@ -68,7 +68,7 @@
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 	transform: matrix(1, 0, 0, -1, 0, 0);
 	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
 	z-index: -100;
 }
 .button:active::after{
@@ -183,7 +183,7 @@ div .swiper-scrollbar-drag{
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
 }
-.extremeSlides {
+.activeSlides {
 	transform: translateY(-40px) !important;
 	opacity: 0.4 !important;
 }

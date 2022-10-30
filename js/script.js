@@ -63,12 +63,12 @@
 			el: ".swiper-scrollbar-1",
 			draggable: true,
 		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-			reverseDirection: false,
-		},
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// 	reverseDirection: false,
+		// },
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -98,10 +98,13 @@
 	const screenResolution = 1920;
 
 	if(viewportWidth >= screenResolution){
-		liftUpSlides(swiper, "extremeSlides");
+		for(let slide of swiper.slides){
+			slide.classList.add("activeSlides");
+		}
+		setSlidesState(swiper, "activeSlides");
 		
 		swiper.on("slideChange", function(){
-			liftUpSlides(swiper, "extremeSlides");
+			setSlidesState(swiper, "activeSlides");
 		});
 	}
 	swiper.on("reachBeginning", function(){
@@ -110,39 +113,43 @@
 	swiper.on("reachEnd", function(){
 		swiper.params.autoplay.reverseDirection = !swiper.params.autoplay.reverseDirection;
 	})
-	
-	
 
 })();
 
-function liftUpSlides(slider, className){
-	const slidesToLiftUpIndexes = defineSlidesToLiftUpIndexes(slider);
+function setSlidesState(slider, className){
+	const activeIndexes = getActiveIndexes(slider, slider.realIndex);
 	const slideCollection = slider.slides;
 	
 	slideCollection.forEach(function(elem, index) {
-		if(slidesToLiftUpIndexes.includes(index)){
-			elem.classList.add(className);
-		} else {
+		if(activeIndexes.includes(index)){
 			elem.classList.remove(className);
+		}
+		else{
+			elem.classList.add(className);
 		}
 	});
 }
 
-function defineSlidesToLiftUpIndexes(slider){
-	const slideCollection = slider.slides;
-	const slideBeforeFirst = slideCollection[slider.realIndex - 1];
-	const firstSlide = slideCollection[slider.realIndex];
-	const lastSlide = slideCollection[slider.realIndex + slider.params.slidesPerView-1];
-	const slideAfterLast = slideCollection[slider.realIndex + slider.params.slidesPerView];
-
-	const slideBeforeFirstIndex = slideCollection.indexOf(slideBeforeFirst);
-	const firstSlideIndex = slideCollection.indexOf(firstSlide);
-	const lastSlideIndex = slideCollection.indexOf(lastSlide);
-	const slideAfterLastIndex = slideCollection.indexOf(slideAfterLast);
-
-	const slidesToLiftUpIndexes = [slideBeforeFirstIndex, firstSlideIndex, lastSlideIndex, slideAfterLastIndex];
-	
-	return slidesToLiftUpIndexes;
+function getActiveIndexes(slider, realIndex){
+	let activeIndexes = [];
+	let activeIndex = realIndex;
+	if(realIndex == 0){
+		for(let i = 0; i < slider.params.slidesPerView; i++){
+			activeIndexes.push(i);
+		}
+	}
+	if(realIndex == slider.slides.length - slider.params.slidesPerView){
+		for(let i = realIndex; i < slider.slides.length; i++){
+			activeIndexes.push(i);
+		}
+	} 
+	else {
+		const quantityOfActiveIndexes = slider.params.slidesPerView - 2;
+		for(let i = 0; i < quantityOfActiveIndexes; i++){
+			activeIndexes.push(++activeIndex);
+		}
+	}
+	return activeIndexes;
 }
 
 (function initializeClientsSpeakAboutUsSlider(){
@@ -157,12 +164,12 @@ function defineSlidesToLiftUpIndexes(slider){
 			el: ".swiper-scrollbar-2",
 			draggable: true,
 		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-			reverseDirection: false,
-		},
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// 	reverseDirection: false,
+		// },
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -197,10 +204,13 @@ function defineSlidesToLiftUpIndexes(slider){
 	const screenResolution = 1920;
 	
 	if(viewportWidth >= screenResolution){
-		liftUpSlides(swiperComments, "extremeSlides");
+		for(let slide of swiperComments.slides){
+			slide.classList.add("activeSlides");
+		}
+		setSlidesState(swiperComments, "activeSlides");
 		
 		swiperComments.on("slideChange", function(){
-			liftUpSlides(swiperComments, "extremeSlides");
+			setSlidesState(swiperComments, "activeSlides");
 		});
 	}
 	
@@ -244,4 +254,5 @@ function defineSlidesToLiftUpIndexes(slider){
 		}
 	})
 
-})()
+})();
+
