@@ -1,121 +1,5 @@
 // 'use strict'
 
-(function initializeOurVisitorsSlider(){
-
-	const slidesContainer = document.getElementById("ourVisitors__photo_container");
-	const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
-	const slideWidth = slidesContainer.querySelector(".ourVisitors__photo").offsetWidth;
-	const sliderMinPossiblePosition = -(slidesQuantity - 1)*slideWidth;
-	const sliderMaxPossiblePosition = 0;
-	let sliderCurrentPosition = 0;
-
-	const sliderRangeWidth = document.getElementById("slider_range").offsetWidth;
-	const sliderThumb = document.getElementById("slider_thumb");
-	const sliderThumbWidth = sliderRangeWidth/slidesQuantity;
-	const sliderThumbMinPossiblePosition = 0;
-	const sliderThumbMaxPossiblePosition = (slidesQuantity - 1)*sliderThumbWidth;
-	let sliderThumbCurrentPosition = 0;
-
-	const btnPrevOurVisitors = document.getElementById("btn_prev_ourVisitors");
-	const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
-
-	sliderThumb.style.width = sliderThumbWidth + "px"; 
-
-	btnPrevOurVisitors.addEventListener("click", function(){
-
-		sliderCurrentPosition += slideWidth;
-		if(sliderCurrentPosition >= sliderMaxPossiblePosition){
-			sliderCurrentPosition = sliderMaxPossiblePosition;
-		}
-		slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
-
-		sliderThumbCurrentPosition -= sliderThumbWidth;
-		if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
-			sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
-		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";	
-	});
-
-	btnNextOurVisitors.addEventListener("click", function(){
-
-		sliderCurrentPosition -= slideWidth;
-		if(sliderCurrentPosition <= sliderMinPossiblePosition){
-			sliderCurrentPosition = sliderMinPossiblePosition;
-		}
-		slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
-
-		sliderThumbCurrentPosition += sliderThumbWidth;
-		if(sliderThumbCurrentPosition >= sliderThumbMaxPossiblePosition){
-			sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
-		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-	});
-})();
-
-(function initializeOurHorsesSlider(){
-
-	const swiper = new Swiper(".swiper-container-1", {
-		navigation: {
-			nextEl: '.swiper_btn_next_1',
-			prevEl: '.swiper_btn_prev_1',
-		},
-		scrollbar: {
-			el: ".swiper_scrollbar_1",
-			draggable: true,
-		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-			reverseDirection: false,
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 10,
-			},
-			480: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-				slidesPerGroup: 2,
-			}, 
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-				slidesPerGroup: 1,
-			},
-			1920: {
-				slidesPerView: 5,
-				spaceBetween: 30,
-				slidesPerGroup: 1
-			}
-		},
-		speed: 1000,
-	});
-
-	let viewportWidth = window.innerWidth;
-	const screenResolution = 1920;
-
-	if(viewportWidth >= screenResolution){
-		for(let slide of swiper.slides){
-			slide.classList.add("activeSlides");
-		}
-		setSlidesState(swiper, "activeSlides");
-		
-		swiper.on("slideChange", function(){
-			setSlidesState(swiper, "activeSlides");
-		});
-	}
-	swiper.on("reachBeginning", function(){
-		swiper.params.autoplay.reverseDirection = !swiper.params.autoplay.reverseDirection;
-	});
-	swiper.on("reachEnd", function(){
-		swiper.params.autoplay.reverseDirection = !swiper.params.autoplay.reverseDirection;
-	})
-
-})();
-
 function setSlidesState(slider, className){
 	const activeIndexes = getActiveIndexes(slider, slider.realIndex);
 	const slideCollection = slider.slides;
@@ -151,70 +35,6 @@ function getActiveIndexes(slider, realIndex){
 	}
 	return activeIndexes;
 }
-
-(function initializeClientsSpeakAboutUsSlider(){
-
-	const swiperComments = new Swiper(".swiper-container-2", {
-	
-		navigation: {
-			nextEl: '.swiper_btn_next_2',
-			prevEl: '.swiper_btn_prev_2',
-		},
-		scrollbar: {
-			el: ".swiper_scrollbar_2",
-			draggable: true,
-		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-			reverseDirection: false,
-		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 10,
-			},
-			480: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 10,
-			}, 
-			768: {
-				slidesPerView: 2,
-				slidesPerGroup: 1,
-				spaceBetween: 10,
-			},
-			1920: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-				slidesPerGroup: 1
-			}
-		},
-		speed: 1000,
-	})
-	swiperComments.on("reachBeginning", function(){
-		swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
-	});
-	swiperComments.on("reachEnd", function(){
-		swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
-	})
-	let viewportWidth = window.innerWidth;
-	const screenResolution = 1920;
-	
-	if(viewportWidth >= screenResolution){
-		for(let slide of swiperComments.slides){
-			slide.classList.add("activeSlides");
-		}
-		setSlidesState(swiperComments, "activeSlides");
-		
-		swiperComments.on("slideChange", function(){
-			setSlidesState(swiperComments, "activeSlides");
-		});
-	}
-	
-})();
 
 (function changeContactsMapSize(){
 
@@ -256,3 +76,24 @@ function getActiveIndexes(slider, realIndex){
 
 })();
 
+(function questionsValidation(){
+
+	let button = document.querySelector(".form__button");
+	let checkbox = document.querySelector(".form__checkbox_original");
+	let checkboxContainer = document.querySelector(".form__checkbox_container");
+
+	button.addEventListener("click", function(){
+		let label = document.querySelector(".form__label_checkbox")
+		console.dir(label);
+		if(!checkbox.checked){
+			let tooltip = document.createElement("div");
+			tooltip.innerHTML = "Подтвердите согласие";
+			tooltip.classList.add("tooltip");
+			if(checkboxContainer.querySelector(".tooltip")) {
+				return;
+			}
+			checkboxContainer.append(tooltip);
+			setTimeout(() => tooltip.remove(), 4000);
+		}
+	});
+})();
