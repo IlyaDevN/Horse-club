@@ -56,19 +56,19 @@
 
 	const swiper = new Swiper(".swiper-container-1", {
 		navigation: {
-			nextEl: '.btn_next',
-			prevEl: '.btn_prev',
+			nextEl: '.swiper_btn_next_1',
+			prevEl: '.swiper_btn_prev_1',
 		},
 		scrollbar: {
-			el: ".swiper-scrollbar-1",
+			el: ".swiper_scrollbar_1",
 			draggable: true,
 		},
-		// autoplay: {
-		// 	delay: 2500,
-		// 	disableOnInteraction: false,
-		// 	pauseOnMouseEnter: true,
-		// 	reverseDirection: false,
-		// },
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+			reverseDirection: false,
+		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -157,19 +157,19 @@ function getActiveIndexes(slider, realIndex){
 	const swiperComments = new Swiper(".swiper-container-2", {
 	
 		navigation: {
-			nextEl: '.btn_next',
-			prevEl: '.btn_prev',
+			nextEl: '.swiper_btn_next_2',
+			prevEl: '.swiper_btn_prev_2',
 		},
 		scrollbar: {
-			el: ".swiper-scrollbar-2",
+			el: ".swiper_scrollbar_2",
 			draggable: true,
 		},
-		// autoplay: {
-		// 	delay: 2500,
-		// 	disableOnInteraction: false,
-		// 	pauseOnMouseEnter: true,
-		// 	reverseDirection: false,
-		// },
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+			reverseDirection: false,
+		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
