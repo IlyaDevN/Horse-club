@@ -54,12 +54,15 @@
 .header__logo {
 	flex: 1 1 auto;
 }
-.header__nav {	
-	display: none;
+/* .menu-btn{
+
+} */
+.header__nav {
+	/* display: none; */
 }
 @media (min-width: 480px){
 	.header__nav {
-		display: none;
+		/* display: none; */
 	}
 }
 @media (min-width: 768px){
@@ -76,8 +79,14 @@
 }
 .nav__menu_header{
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	text-transform: uppercase;
+}
+@media (min-width: 768px){
+	.nav__menu_header{
+		flex-direction: row;
+	}
 }
 .menu__link_header{
 	font-size: 11px;

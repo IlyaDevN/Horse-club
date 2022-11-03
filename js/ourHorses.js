@@ -23,18 +23,19 @@
 			},
 			480: {
 				slidesPerView: 2,
+				slidesPerGroup: 1,
 				spaceBetween: 10,
-				slidesPerGroup: 2,
+				
 			}, 
 			768: {
 				slidesPerView: 3,
-				spaceBetween: 20,
 				slidesPerGroup: 1,
+				spaceBetween: 20,
 			},
 			1920: {
 				slidesPerView: 5,
+				slidesPerGroup: 1,
 				spaceBetween: 30,
-				slidesPerGroup: 1
 			}
 		},
 		speed: 1000,

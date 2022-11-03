@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Philosopher-Regular';
+  src: url('Philosopher-Regular.eot');
+  src: url('Philosopher-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Philosopher-Regular.svg#Philosopher-Regular') format('svg'),
+       url('Philosopher-Regular.ttf') format('truetype'),
+       url('Philosopher-Regular.woff') format('woff'),
+       url('Philosopher-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

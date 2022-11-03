@@ -35,7 +35,7 @@
 }
 @media (min-width: 480px){
 	.questions__container{
-		width: 480px;
+		width: 460px;
 		height: 1061px;
 		margin: 61px auto 0;
 	}

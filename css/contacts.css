@@ -48,7 +48,24 @@
 }
 .contacts__bg_map{
 	position: absolute;
+	width: 100%;
 	z-index: -1000;
+	height: 748px;
+}
+@media (min-width: 480px){
+	.contacts__bg_map{
+		height: 786px;
+	}
+}
+@media (min-width: 768px){
+	.contacts__bg_map{
+		height: 510px;
+	}
+}
+@media (min-width: 1000px){
+	.contacts__bg_map{
+		height: 650px;
+	}
 }
 .contacts__bg_leftTree{
 	display: none;

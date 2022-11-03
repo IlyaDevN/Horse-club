@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light/Roboto-Light.eot');
+	src: url('../fonts/Roboto-Light/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto-Light/Roboto-Light.ttf') format('truetype'),
+		 url('../fonts/Roboto-Light/Roboto-Light.woff') format('woff'),
+		 url('../fonts/Roboto-Light/Roboto-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
+	src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype'),
+		 url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+		 url('../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium/Roboto-Medium.eot');
+	src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype'),
+		 url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
+		 url('../fonts/Roboto-Medium/Roboto-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
+	src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype'),
+		 url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
+		 url('../fonts/Roboto-Bold/Roboto-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black/Roboto-Black.eot');
+	src: url('../fonts/Roboto-Black/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Roboto-Black/Roboto-Black.ttf') format('truetype'),
+		 url('../fonts/Roboto-Black/Roboto-Black.woff') format('woff'),
+		 url('../fonts/Roboto-Black/Roboto-Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Philosopher';
+	src: url('../fonts/Philosopher-Regular/Philosopher-Regular.eot');
+	src: url('../fonts/Philosopher-Regular/Philosopher-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Philosopher-Regular/Philosopher-Regular.ttf') format('truetype'),
+		 url('../fonts/Philosopher-Regular/Philosopher-Regular.woff') format('woff'),
+		 url('../fonts/Philosopher-Regular/Philosopher-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Philosopher';
+	src: url('../fonts/Philosopher-Bold/Philosopher-Bold.eot');
+	src: url('../fonts/Philosopher-Bold/Philosopher-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Philosopher-Bold/Philosopher-Bold.ttf') format('truetype'),
+		 url('../fonts/Philosopher-Bold/Philosopher-Bold.woff') format('woff'),
+		 url('../fonts/Philosopher-Bold/Philosopher-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot');
+	src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.ttf') format('truetype'),
+		 url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff') format('woff'),
+		 url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Alegreya Sans';
+	src: url('../fonts/AlegreyaSans-Regular/AlegreyaSans-Regular.eot');
+	src: url('../fonts/AlegreyaSans-Regular/AlegreyaSans-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AlegreyaSans-Regular/AlegreyaSans-Regular.ttf') format('truetype'),
+		 url('../fonts/AlegreyaSans-Regular/AlegreyaSans-Regular.woff') format('woff'),
+		 url('../fonts/AlegreyaSans-Regular/AlegreyaSans-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Alegreya Sans';
+	src: url('../fonts/AlegreyaSans-Bold/AlegreyaSans-Bold.eot');
+	src: url('../fonts/AlegreyaSans-Bold/AlegreyaSans-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AlegreyaSans-Bold/AlegreyaSans-Bold.ttf') format('truetype'),
+		 url('../fonts/AlegreyaSans-Bold/AlegreyaSans-Bold.woff') format('woff'),
+		 url('../fonts/AlegreyaSans-Bold/AlegreyaSans-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+
