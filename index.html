@@ -17,29 +17,32 @@
 				<div class="intro__container _container">
 					<header class="intro__header">
 						<div class="header__logo">
-							<a href="#">
-								<picture>
-									<source srcset="img/intro/introHeader/x1000/logo_x1000.svg" type="image/jpeg" media="(min-width:1000px)">
-									<source srcset="img/intro/introHeader/x768/logo_x768.svg" type="image/jpeg" media="(min-width:768px)">
-									<img src="img/intro/introHeader/x320/logo_x320.svg" alt="logo">
-								</picture>
-							</a>
+									<a href="#">
+										<picture>
+											<source srcset="img/intro/introHeader/x1000/logo_x1000.svg" type="image/jpeg" media="(min-width:1000px)">
+											<source srcset="img/intro/introHeader/x768/logo_x768.svg" type="image/jpeg" media="(min-width:768px)">
+											<img src="img/intro/introHeader/x320/logo_x320.svg" alt="logo">
+										</picture>
+									</a>
 						</div>
-						<!-- <div class="menu-btn">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div> -->
+						<div class="menu_burger">
+							<div class="menu_burger_btn">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="menu_burger_name">Menu</div>
+						</div>	
 						<nav class="header__nav">
-							<ul class="nav__menu_header">
-								<li><a class="menu__link_header" href="#">О нас</a></li>
-								<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
-								<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
-								<li><a class="menu__link_header" href="#">Контакты</a></li>
-							</ul>
+									<ul class="nav__menu_header">
+										<li><a class="menu__link_header" href="#">О нас</a></li>
+										<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
+										<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
+										<li><a class="menu__link_header" href="#">Контакты</a></li>
+									</ul>
 						</nav>
 						<div class="header__contacts">
-							<a href="tel:+7 (000) 000-00-00" class="tel_number">+7 (000) 000-00-00  </a>
+									<a href="tel:+7 (000) 000-00-00" class="tel_number">+7 (000) 000-00-00  </a>
 						</div>
 					</header>
 					<div class="intro__content" id="intro__content">
@@ -995,11 +998,11 @@
 					</picture>
 				
 				<div class="questions__form">
-					<form name="visitor_contacts" action="" enctype="text/plain">
+					<form name="visitor_contacts" id="form" action="" enctype="text/plain">
 						<p class="form__header">Отвечаем на вопросы</p>
 						<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете записаться на <b>бесплатное</b> пробное занятие</p>
-						<p class="form__input"><input name="your_name" type="text" placeholder="Ваше имя"></p>
-						<p class="form__input"><input name="your_phone" type="text" placeholder="Ваш телефон"></p>
+						<input name="user_name" class="form__input" id="userName" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$">
+						<input name="user_phone" class="form__input" id="userPhone" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}">
 						<button class="form__button button" type="button">Задать вопрос</button>
 						<div class="form__checkbox_container">
 							<input class="form__checkbox_original" id="form__check_original_id" type="checkbox" name="checkbox" value="agreement" required>
@@ -1202,9 +1205,11 @@
 			</footer>
 		</div>
 		<script src="js/script.js"></script>
+		<script src="js/intro.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/ourVisitors.js"></script>
 		<script src="js/ourHorses.js"></script>
+		<script src="js/questions.js"></script>
 		<script src="js/clientsSpeakAboutUs.js"></script>
 	</body>
 </html>

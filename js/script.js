@@ -35,26 +35,3 @@ function getActiveIndexes(slider, realIndex){
 	}
 	return activeIndexes;
 }
-
-
-
-(function questionsValidation(){
-
-	let button = document.querySelector(".form__button");
-	let checkbox = document.querySelector(".form__checkbox_original");
-	let checkboxContainer = document.querySelector(".form__checkbox_container");
-
-	button.addEventListener("click", function(){
-		let label = document.querySelector(".form__label_checkbox")
-		if(!checkbox.checked){
-			if(checkboxContainer.querySelector(".tooltip")) {
-				return;
-			}
-			let tooltip = document.createElement("div");
-			tooltip.innerHTML = "Подтвердите согласие";
-			tooltip.classList.add("tooltip");
-			checkboxContainer.append(tooltip);
-			setTimeout(() => tooltip.remove(), 4000);
-		}
-	});
-})();

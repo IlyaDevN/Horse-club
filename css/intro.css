@@ -37,32 +37,97 @@
 	}
 }
 .intro__header {
+	margin: 15px auto 0;
+	width: 290px;
 	display: flex;
+	align-items: center;
 	flex-wrap: wrap;
-	margin-top: 15px;
 }
 @media (min-width: 480px){
 	.intro__header {
 		margin-top: 15px;
+		width: 450px;
 	}
 }
 @media (min-width: 768px){
 	.intro__header {
 		margin-top: 10px;
+		width: 708px;
+	}
+}
+@media (min-width: 1000px){
+	.intro__header {
+		width: 970px;
+	}
+}
+@media (min-width: 1920px){
+	.intro__header {
+		width: 1170px;
 	}
 }
 .header__logo {
 	flex: 1 1 auto;
 }
-/* .menu-btn{
-
-} */
-.header__nav {
-	/* display: none; */
+@media (min-width: 480px){
+	.header__logo {
+		flex: 0 0 auto;
+		margin-right: 24px;
+	}
+}
+@media (min-width: 768px){
+	.header__logo {
+		margin-right: 0;
+		flex: 1 1 auto;
+	}
+}
+.menu_burger{
+	width: 77px;
+	height: 29px;
+	border: 1px solid #008139;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	cursor: pointer;
+}
+@media (min-width: 768px){
+	.menu_burger{
+		display: none;
+	}
+}
+.menu_burger_name{
+	font-size: 15px;
+	line-height: 15px;
+	color: #202020;
+}
+.menu_burger_btn{
+	position: relative;
 }
 @media (min-width: 480px){
-	.header__nav {
-		/* display: none; */
+	.menu_burger_btn{
+	}
+}
+.menu_burger_btn span{
+	width: 10px;
+	height: 2px;
+	background-color: #008139;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(0, -2px);
+}
+.menu_burger_btn span:nth-of-type(2) {
+	top: calc(50% - 4px);
+}
+.menu_burger_btn span:nth-of-type(3) {
+	top: calc(50% + 4px);
+}
+.header__nav {
+	display: none;
+}
+@media (min-width: 480px){
+.header__nav {
+		display: none;
 	}
 }
 @media (min-width: 768px){
@@ -86,6 +151,7 @@
 @media (min-width: 768px){
 	.nav__menu_header{
 		flex-direction: row;
+		display: flex;
 	}
 }
 .menu__link_header{
@@ -116,6 +182,7 @@
 @media (min-width: 480px){
 	.header__contacts {
 		display: block;
+		margin-left: auto;
 	}
 }
 @media (min-width: 768px){
@@ -282,7 +349,7 @@
 	font-size: 13px;
 	line-height: 18px;
 	color: #646464;
-	margin-top: 31px;
+	margin: 31px auto 0;
 	max-width: 265px;
 	text-align: center;
 }
