@@ -315,33 +315,13 @@
 	margin-right: 13px;
 	width: 32px;
 	height: 32px;
-}	
+	opacity: 0.8;
+}
+.icon:hover{
+	opacity: 1;
+}
 .icon:last-child{
 	margin-right: 0;
-}
-.icon_instagram{
-	background: url(../img/contacts/icons/usual/instagram.svg);
-}
-.icon_instagram:hover{
-	background: url(../img/contacts/icons/hover/instagram.svg);
-}
-.icon_youtube{
-	background: url(../img/contacts/icons/usual/youtube.svg);
-}
-.icon_youtube:hover{
-	background: url(../img/contacts/icons/hover/youtube.svg);
-}
-.icon_watsUp{
-	background: url(../img/contacts/icons/usual/whatsUp.svg);
-}
-.icon_watsUp:hover{
-	background: url(../img/contacts/icons/hover/whatsUp.svg);
-}
-.icon_vk{
-	background: url(../img/contacts/icons/usual/vk.svg);
-}
-.icon_vk:hover{
-	background: url(../img/contacts/icons/hover/vk.svg);
 }
 .contacts__map_pont{
 	position: absolute;
