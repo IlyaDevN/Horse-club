@@ -18,3 +18,9 @@ body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
+.body_modal{
+	height: 100vh;
+	overflow-y: hidden;
+	/* padding-right: 17px; */
+	position: fixed;
+}
