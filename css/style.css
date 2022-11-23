@@ -20,7 +20,6 @@ body{
 }
 .body_modal{
 	height: 100vh;
-	overflow-y: hidden;
 	/* padding-right: 17px; */
 	position: fixed;
 }

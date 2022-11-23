@@ -117,7 +117,7 @@
 @media (min-width: 768px){
 	.header__nav {
 		display: block;
-		margin-top: 19px;
+		margin-top: 16px;
 		flex: 0 1 345px;
 	}
 }
@@ -481,9 +481,9 @@
 		display: none;
 	}
 }
-.modal_showed{
+/* .modal_showed{
 	transform: translateX(0);
-}
+} */
 .moving_frame{
 	background-color: #0D0D0D;
 	opacity: 0.95;
@@ -500,15 +500,6 @@
 		width: 230px;
 	}
 }
-/* .nav__menu_header_modal{
-	z-index: 110;
-	font-size: 15px;
-	line-height: 50px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-top: 50px;
-} */
-
 .modal_close_btn{
 	z-index: 110;
 	position: absolute;
