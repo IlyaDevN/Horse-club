@@ -1,8 +1,6 @@
 (function burger (){
 
 	const burgerBtn = document.getElementById("menu_burger");
-	const nav = document.getElementById("nav__menu_header");
-	const movingFrame = document.getElementById("moving_frame");
 	const modalCloseBtn = document.getElementById("modal_close_btn");
 	const modal = document.getElementById("modal");
 	const tabletInnerWidth = 768;
