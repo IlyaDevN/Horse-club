@@ -1,55 +1,70 @@
-(function checkboxInputValidation(){
+(function inputValidation(){
 
+	const form = document.getElementById("form");
 	const userName 	= document.getElementById("userName");
 	const userPhone = document.getElementById("userPhone");
-	const userNameNotification = document.createElement('div');
-	const userPhoneNotification = document.createElement('div');
+	const userNameTooltip = document.createElement('div');
+	const userPhoneTooltip = document.createElement('div');
+	const tooltipTimeout = form.getAttribute("tooltipTimeout");
+	const indent = 15;
 
-	userNameNotification.innerHTML = "Вводите буквы";
-	userPhoneNotification.innerHTML = "Вводите цифры";
+	userNameTooltip.innerHTML = userName.getAttribute("invalidTooltip");
+	userPhoneTooltip.innerHTML = userPhone.getAttribute("invalidTooltip");
 
-	addNotification(userName, userNameNotification);
-	addNotification(userPhone, userPhoneNotification);
+	addTooltip(userName, userNameTooltip);
+	addTooltip(userPhone, userPhoneTooltip);
 
-	function addNotification(elem, notification){
+	function addTooltip(elem, tooltip){
 		elem.addEventListener("input", function(){
 			elem.classList.remove("form__input_invalid");
-			notification.remove();
+			tooltip.remove();
 			elem.checkValidity();
 		})
 		
 		elem.addEventListener("invalid", function(event){
 			event.preventDefault();
-			notification.classList.add("notification");
+			tooltip.classList.add("inputTooltip");
 			elem.classList.add("form__input_invalid");
-			notification.style.left = elem.offsetLeft + "px";
-			notification.style.top = elem.offsetTop - 15 + "px";
-			elem.before(notification);
+			tooltip.style.left = elem.offsetLeft + "px";
+			tooltip.style.top = elem.offsetTop - indent + "px";
+			elem.before(tooltip);
+
+			setTimeout(()=>{
+				elem.classList.remove("form__input_invalid");
+				tooltip.remove();
+			}, tooltipTimeout);
 		})
+
 	}
 })();
 
 (function checkboxQuestionsValidation(){
 
-	let button = document.querySelector(".form__button");
-	let checkbox = document.querySelector(".form__checkbox_original");
-	let checkboxContainer = document.querySelector(".form__checkbox_container");
+	const form = document.getElementById("form");
+	const button = document.querySelector(".form__button");
+	const checkbox = document.querySelector(".form__checkbox_original");
+	const checkboxContainer = document.querySelector(".form__checkbox_container");
+	const tooltipTimeout = form.getAttribute("tooltipTimeout");
+
+	checkbox.addEventListener("invalid", function(event){
+		event.preventDefault();
+	})
 
 	button.addEventListener("click", function(){
-		let label = document.querySelector(".form__label_checkbox")
+		
 		if(!checkbox.checked){
 			if(checkboxContainer.querySelector(".tooltip")) {
 				return;
 			}
-			let tooltip = document.createElement("div");
-			tooltip.innerHTML = "Подтвердите согласие";
+			const tooltip = document.createElement("div");
+			tooltip.innerHTML = checkboxContainer.getAttribute("invalidTooltip");
 			tooltip.classList.add("tooltip");
 			checkboxContainer.append(tooltip);
 			document.documentElement.style.setProperty('--checkbox-color', '#FF5C00');
 			setTimeout(() => {
 				tooltip.remove();
 				document.documentElement.style.setProperty('--checkbox-color', '#FFC700');
-			}, 4000);
+			}, tooltipTimeout);
 		}
 	});
 })();

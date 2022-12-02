@@ -1012,13 +1012,13 @@
 					</picture>
 				
 				<div class="questions__form">
-					<form name="visitor_contacts" id="form" action="" enctype="text/plain">
+					<form name="visitor_contacts" id="form" action="" enctype="text/plain" tooltipTimeout = "2000">
 						<p class="form__header">Отвечаем на вопросы</p>
 						<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете записаться на <b>бесплатное</b> пробное занятие</p>
-						<input name="user_name" class="form__input" id="userName" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$">
-						<input name="user_phone" class="form__input" id="userPhone" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}">
-						<button class="form__button button" type="button">Задать вопрос</button>
-						<div class="form__checkbox_container">
+						<input name="user_name" class="form__input" id="userName" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$" invalidTooltip = "Вводите буквы" required>
+						<input name="user_phone" class="form__input" id="userPhone" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" invalidTooltip = "Вводите цифры" required>
+						<button class="form__button button" type="submit">Задать вопрос</button>
+						<div class="form__checkbox_container" invalidTooltip = "Подтвердите согласие">
 							<input class="form__checkbox_original" id="form__check_original_id" type="checkbox" name="checkbox" value="agreement" required>
 							<label class="form__label_checkbox" for="form__check_original_id">Даю согласие на обработку данных</label>
 						</div>

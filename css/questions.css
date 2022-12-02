@@ -229,7 +229,7 @@
 .form__input_invalid{
 	border: 1px solid #FF5C00;
 }
-.notification{
+.inputTooltip{
 	position: absolute;
 	font-size: 10px;
 	line-height: 10px;
