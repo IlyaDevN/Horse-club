@@ -41,7 +41,7 @@
 		speed: 1000,
 	});
 
-	let viewportWidth = window.innerWidth;
+	const viewportWidth = window.innerWidth;
 	const screenResolution = 1920;
 
 	if(viewportWidth >= screenResolution){
