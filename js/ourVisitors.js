@@ -18,6 +18,7 @@
 	const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
 
 	sliderThumb.style.width = sliderThumbWidth + "px"; 
+	changeButtonView();
 
 	btnPrevOurVisitors.addEventListener("click", function(){
 
@@ -31,7 +32,8 @@
 		if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
 			sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
 		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";	
+		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
+		changeButtonView();
 	});
 
 	btnNextOurVisitors.addEventListener("click", function(){
@@ -47,5 +49,22 @@
 			sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
 		}
 		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
+		changeButtonView();
 	});
+
+	function changeButtonView(){
+		if(sliderCurrentPosition == 0){
+			btnPrevOurVisitors.style.opacity = "0.4";
+		}
+		if(sliderCurrentPosition != 0){
+			btnPrevOurVisitors.style.opacity = "1";
+		}
+		if(sliderCurrentPosition == sliderMinPossiblePosition){
+			btnNextOurVisitors.style.opacity = "0.4";
+		}
+		if(sliderCurrentPosition != sliderMinPossiblePosition){
+			btnNextOurVisitors.style.opacity = "1";
+		}
+	}
+	
 })();

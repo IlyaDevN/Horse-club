@@ -10,12 +10,12 @@
 			el: ".swiper_scrollbar_2",
 			draggable: true,
 		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-			reverseDirection: false,
-		},
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// 	reverseDirection: false,
+		// },
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -40,12 +40,12 @@
 		},
 		speed: 1000,
 	})
-	swiperComments.on("reachBeginning", function(){
-		swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
-	});
-	swiperComments.on("reachEnd", function(){
-		swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
-	})
+	// swiperComments.on("reachBeginning", function(){
+	// 	swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
+	// });
+	// swiperComments.on("reachEnd", function(){
+	// 	swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
+	// })
 	let viewportWidth = window.innerWidth;
 	const screenResolution = 1920;
 	
