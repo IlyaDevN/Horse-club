@@ -162,6 +162,10 @@
 	box-sizing: border-box;
 	transform: rotate(45deg);
 }
+.slider_button_disabled{
+	opacity: 0.4;
+	cursor: auto;
+}
 /* ============================================================================
 		 slider SWIPER (ourHorses)
 =============================================================================*/

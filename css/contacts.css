@@ -20,30 +20,34 @@
 .contacts__container {
 	max-width: 320px;
 	height: 748px;
-	margin:0 auto;
+	margin:70px auto 0;
 	position: relative;
 }
 @media (min-width: 480px){
 	.contacts__container{
 		max-width: 480px;
 		height: 786px;
+		margin:100px auto 0;
 	}
 }
 @media (min-width: 768px){
 	.contacts__container{
 		max-width: 748px;
 		height: 510px;
+		margin:90px auto 0;
 	}
 }
 @media (min-width: 1000px){
 	.contacts__container{
 		max-width: 1000px;
 		height: 650px;
+		margin:120px auto 0;
 	}
 }
 @media (min-width: 1920px){
 	.contacts__container{
 		max-width: 1900px;
+		margin:50px auto 0;
 	}
 }
 .contacts__bg_map{

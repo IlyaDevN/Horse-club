@@ -54,16 +54,20 @@
 
 	function changeButtonView(){
 		if(sliderCurrentPosition == 0){
-			btnPrevOurVisitors.style.opacity = "0.4";
+			btnPrevOurVisitors.classList.add("slider_button_disabled");
+			btnPrevOurVisitors.tabIndex = "-1";
 		}
 		if(sliderCurrentPosition != 0){
-			btnPrevOurVisitors.style.opacity = "1";
+			btnPrevOurVisitors.classList.remove("slider_button_disabled");
+			btnPrevOurVisitors.tabIndex = "0";
 		}
 		if(sliderCurrentPosition == sliderMinPossiblePosition){
-			btnNextOurVisitors.style.opacity = "0.4";
+			btnNextOurVisitors.classList.add("slider_button_disabled");
+			btnNextOurVisitors.tabIndex = "-1";
 		}
 		if(sliderCurrentPosition != sliderMinPossiblePosition){
-			btnNextOurVisitors.style.opacity = "1";
+			btnNextOurVisitors.classList.remove("slider_button_disabled");
+			btnNextOurVisitors.tabIndex = "0";
 		}
 	}
 	
