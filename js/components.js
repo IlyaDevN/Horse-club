@@ -3,7 +3,6 @@
 function setSlidesState(slider, className){
 	const activeIndexes = getActiveIndexes(slider, slider.realIndex);
 	const slideCollection = slider.slides;
-	changeButtonAppearance(slider);
 	
 	slideCollection.forEach(function(elem, index) {
 		if(activeIndexes.includes(index)){
@@ -39,20 +38,19 @@ function getActiveIndexes(slider, realIndex){
 
 function changeButtonAppearance(slider){
 
-	if(slider.navigation.prevEl.classList.contains("swiper-button-disabled")){
-		slider.navigation.prevEl.style.opacity = "0.4";
-		slider.navigation.prevEl.style.cursor = "auto";
+	const btnPrev = slider.navigation.prevEl;
+	const btnNext = slider.navigation.nextEl;
+
+	if(btnPrev.classList.contains("swiper-button-disabled")){
+		btnPrev.classList.add("slider_button_disabled");
 	}
-	if(!slider.navigation.prevEl.classList.contains("swiper-button-disabled")){
-		slider.navigation.prevEl.style.opacity = "1";
-		slider.navigation.prevEl.style.cursor = "pointer";
+	if(!btnPrev.classList.contains("swiper-button-disabled")){
+		btnPrev.classList.remove("slider_button_disabled");
 	}
-	if(slider.navigation.nextEl.classList.contains("swiper-button-disabled")){
-		slider.navigation.nextEl.style.opacity = "0.4";
-		slider.navigation.nextEl.style.cursor = "auto";
+	if(btnNext.classList.contains("swiper-button-disabled")){
+		btnNext.classList.add("slider_button_disabled");
 	}
-	if(!slider.navigation.nextEl.classList.contains("swiper-button-disabled")){
-		slider.navigation.nextEl.style.opacity = "1";
-		slider.navigation.nextEl.style.cursor = "pointer";
+	if(!btnNext.classList.contains("swiper-button-disabled")){
+		btnNext.classList.remove("slider_button_disabled");
 	}
 }

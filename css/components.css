@@ -77,6 +77,10 @@
 /* ============================================================================
 		slider (ourVisitors)
 =============================================================================*/
+/* :root{
+	--opacity-btnPrev: 1;
+	--opacity-btnNext: 1;
+} */
 .sliderCheckbox{
 	display: flex;
 	justify-content: center; 
@@ -102,7 +106,7 @@
 	transition: opacity 0.2s ease-in-out;
 }
 .btn_prev:hover::before{
-	opacity: 1;
+	opacity: var(--opacity-btnPrev);
 }
 .arrow_prev{
 	color: #6A5300;
@@ -149,7 +153,7 @@
 	transition: opacity 0.2s ease-in-out;
 }
 .btn_next:hover::before{
-	opacity: 1;
+	opacity: var(--opacity-btnNext);
 }
 .arrow_next{
 	color: #6A5300;
@@ -165,6 +169,8 @@
 .slider_button_disabled{
 	opacity: 0.4;
 	cursor: auto;
+	--opacity-btnPrev: 0;
+	--opacity-btnNext: 0;
 }
 /* ============================================================================
 		 slider SWIPER (ourHorses)

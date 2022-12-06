@@ -44,6 +44,9 @@
 	const viewportWidth = window.innerWidth;
 	const screenResolution = 1920;
 
+	changeButtonAppearance(swiper);
+	swiper.on("slideChange", changeButtonAppearance);
+
 	if(viewportWidth >= screenResolution){
 		for(let slide of swiper.slides){
 			slide.classList.add("activeSlides");
@@ -60,5 +63,4 @@
 	// swiper.on("reachEnd", function(){
 	// 	swiper.params.autoplay.reverseDirection = !swiper.params.autoplay.reverseDirection;
 	// })
-
 })();

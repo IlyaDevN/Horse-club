@@ -40,15 +40,13 @@
 		},
 		speed: 1000,
 	})
-	// swiperComments.on("reachBeginning", function(){
-	// 	swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
-	// });
-	// swiperComments.on("reachEnd", function(){
-	// 	swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
-	// })
+	
 	let viewportWidth = window.innerWidth;
 	const screenResolution = 1920;
-	
+
+	changeButtonAppearance(swiperComments);
+	swiperComments.on("slideChange", changeButtonAppearance);
+
 	if(viewportWidth >= screenResolution){
 		for(let slide of swiperComments.slides){
 			slide.classList.add("activeSlides");
@@ -59,5 +57,10 @@
 			setSlidesState(swiperComments, "activeSlides");
 		});
 	}
-	
+	// swiperComments.on("reachBeginning", function(){
+	// 	swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
+	// });
+	// swiperComments.on("reachEnd", function(){
+	// 	swiperComments.params.autoplay.reverseDirection = !swiperComments.params.autoplay.reverseDirection;
+	// })
 })();

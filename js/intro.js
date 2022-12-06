@@ -15,14 +15,14 @@
 		
 		burgerBtn.addEventListener("click", function(){
 
-			modal.classList.add("modal_showed");
+			// modal.classList.add("modal_showed");
 			document.body.classList.add("body_modal");
 			modal.style.transform = `translateX(0)`;
 		});
 
 		modalCloseBtn.addEventListener("click", function(){
 
-			modal.classList.remove("modal_showed");
+			// modal.classList.remove("modal_showed");
 			document.body.classList.remove("body_modal");
 			modal.style.transform = `translateX(-${window.innerWidth}px)`;
 		})
