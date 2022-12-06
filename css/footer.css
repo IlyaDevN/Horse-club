@@ -168,8 +168,8 @@
 	}
 }
 .privacy_policy {
-	font-size: 9px;
-	line-height: 11px;
+	font-size: 10px;
+	line-height: 12px;
 	text-decoration-line: underline;
 	color: #7D808A;
 	display: block;
@@ -180,12 +180,6 @@
 }
 .privacy_policy:nth-child(2){
 	margin: 0 0 93px;
-}
-@media (min-width: 480px){
-	.privacy_policy{
-		font-size: 9px;
-		line-height: 11px;
-	}
 }
 @media (min-width: 768px){
 	.privacy_policy{
@@ -213,8 +207,8 @@
 	}
 }
 .year{
-	font-size: 10px;
-	line-height: 12px;
+	font-size: 12px;
+	line-height: 14px;
 	color: #FFFFFF;
 	text-align: center;
 }
