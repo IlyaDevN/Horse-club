@@ -56,7 +56,7 @@
 							</ul>
 						</nav>
 						<div class="header__contacts">
-									<a href="tel:+7 (000) 000-00-00" class="tel_number">+7 (000) 000-00-00  </a>
+									<a href="tel:+38 (000) 000-00-00" class="tel_number">+38 (000) 000-00-00  </a>
 						</div>
 					</header>
 					<div class="intro__content" id="intro__content">
@@ -1125,7 +1125,7 @@
 				</div>
 			</section>
 			<section class="contacts">
-				<iframe class="contacts__bg_map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2569.944986176342!2d36.21953096462164!3d49.89983614960911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1666811284735!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<div id="contactsBgMap" class="contacts__bg_map"></div>
 				<div class="contacts__bg_leftTree">
 					<img src="img/contacts/bg/x1920/leftTree_x1920.png" alt="left_tree">
 				</div>
@@ -1143,7 +1143,7 @@
 									<source srcset="img/contacts/icons/x768/pin_x768.svg" type="image/jpeg" media="(min-width:768px)">
 									<img src="img/contacts/icons/x1000/pin_x1000.svg" alt="map_pin">
 								</picture>
-								<a href="#" class="item__map item_every">ул. Ленина, 25, офис 65</a>
+								<a href="#" class="item__map item_every">ул. Грушевского, 5</a>
 							</div>
 							<div class="square__item_tel">
 								<picture>
@@ -1151,7 +1151,7 @@
 									<source srcset="img/contacts/icons/x768/phone_x768.svg" type="image/jpeg" media="(min-width:768px)">
 									<img src="img/contacts/icons/x1000/phone_x1000.svg" alt="phone">
 								</picture>
-								<a href="tel:+7 (495) 000-00-00" class="item__tel item_every">+7 (495) 000-00-00</a>
+								<a href="tel:+38 (000) 000-00-00" class="item__tel item_every">+38 (000) 000-00-00</a>
 							</div>
 							<div class="square__item_mail">
 								<picture>
@@ -1177,13 +1177,7 @@
 							</div>
 						</div>
 					</div>
-					<picture>
-						<source srcset="img/contacts/icons/x1000/pinGreen_x1000.svg" type="image/jpeg" media="(min-width:1000px)">
-						<source srcset="img/contacts/icons/x768/pinGreen_x768.svg" type="image/jpeg" media="(min-width:768px)">
-						<img class="contacts__map_pont" src="img/contacts/icons/x1000/pinGreen_x1000.svg" alt="point_on_a_map">
-					</picture>
 				</div>
-				
 			</section>
 			<footer class="footer">
 				<div class="footer__container _container">
@@ -1212,12 +1206,13 @@
 						<div class="footer__inner_row_2">
 							<a href="agreement.html" class="privacy_policy" target="_blank">Соглашение на обработку персональных данных</a>
 							<a href="privacy.html" class="privacy_policy" target="_blank">Политика конфенденциальности</a>
-							<p class="year">&#169 2022 Nevedrov and his brother</p>
+							<p class="year">&#169 2022 Nevedrov</p>
 						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmG1etT32VWFNUpBDm_VF648uvsnDFxco&callback=initMap"></script>
 		<script src="js/script.js"></script>
 		<script src="js/components.js"></script>
 		<script src="js/intro.js"></script>

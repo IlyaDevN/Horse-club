@@ -54,3 +54,33 @@ function changeButtonAppearance(slider){
 		btnNext.classList.remove("slider_button_disabled");
 	}
 }
+
+function initMap() {
+	const viewportWidth = window.innerWidth;
+	const screenResolutionTab = 768;
+	
+	// const centerOfTheMap = { lat: 50.447, lng: 30.531 };
+	const markerOnTheMap = { lat: 50.4475, lng: 30.5369 };
+	let centerOfTheMap = {};
+
+	const markerImage = "img/contacts/icons/x768/pinGreen_x768.svg";
+
+	if(viewportWidth < screenResolutionTab){
+		centerOfTheMap = { lat: 50.4445, lng: 30.537 };
+	}
+	else {
+		centerOfTheMap = { lat: 50.447, lng: 30.531 };
+	}
+
+	const map = new google.maps.Map(document.getElementById("contactsBgMap"), {
+		zoom: 16,
+		center: centerOfTheMap,
+		disableDefaultUI: true,
+	});
+
+	const marker = new google.maps.Marker({
+		position: markerOnTheMap,
+		map: map,
+		icon: markerImage,
+	});
+}
