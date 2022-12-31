@@ -55,6 +55,43 @@ function changeButtonAppearance(slider){
 	}
 }
 
+(function register(){
+
+	const body = document.querySelector("body");
+	const popupLinks = document.querySelectorAll(".popup-link");
+	const registerModalOverlay = document.querySelector(".register__modal_overlay");
+	const registerModalContent = document.querySelector(".register__modal_content");
+
+	if(popupLinks.length > 0){
+		for(let index = 0; index <popupLinks.length; index++){
+			const popupLink = popupLinks[index];
+			popupLink.addEventListener("click", function(){
+				
+				popupOpen(registerModalOverlay, registerModalContent);
+			})
+			
+		}
+	}
+	
+	function popupOpen(currentPopup, popupContent){
+		currentPopup.classList.add("open");
+		popupContent.classList.add("open");
+		body.style.overflowY = "hidden";
+		
+		currentPopup.addEventListener("click", function(e){
+			if(!e.target.closest(".register__modal_content")){
+				popupClose(currentPopup, popupContent);
+			}
+		})
+	}
+	function popupClose(currentPopup, popupContent){
+		currentPopup.classList.remove("open");
+		popupContent.classList.remove("open");
+		body.style.overflowY = "";
+	}
+
+})()
+
 function initMap() {
 	const viewportWidth = window.innerWidth;
 	const screenResolutionTab = 768;
