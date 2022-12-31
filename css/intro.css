@@ -127,7 +127,7 @@
 	}
 }
 .nav__menu_header{
-	z-index: 110;
+	/* z-index: 110; */
 	text-transform: uppercase;
 	text-align: center;
 	margin-top: 50px;
@@ -466,37 +466,6 @@
 	bottom: 0;
 	z-index: 5;
 }
-.modal{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 99;
-	transform: translateX( -768px);
-	transition: all ease-in-out 1s;
-}
-@media (min-width: 768px){
-	.modal{
-		display: none;
-	}
-}
-.moving_frame{
-	background-color: #0D0D0D;
-	opacity: 0.95;
-	border-right: 5px solid #008139;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-}
-@media (min-width: 480px){
-	.moving_frame{
-		width: 230px;
-	}
-}
 .modal_close_btn{
 	z-index: 110;
 	position: absolute;
@@ -516,4 +485,33 @@
 }
 .modal_close_btn span:nth-child(1){
 	transform: rotate(-135deg);
+}
+.modal_overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 110;
+	visibility: hidden;
+}
+.modal_body{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 111;
+	background-color: #0D0D0D;
+	border-right: 5px solid #008139;
+	transform: translateX(-100%);
+	transition: all 1s ease 0s;
+}
+@media (min-width: 480px){
+	.modal_body{
+		width: 230px;
+	}
+}
+.modal_content{
+	position: relative;
 }

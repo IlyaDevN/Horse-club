@@ -58,8 +58,7 @@ function changeButtonAppearance(slider){
 function initMap() {
 	const viewportWidth = window.innerWidth;
 	const screenResolutionTab = 768;
-	
-	// const centerOfTheMap = { lat: 50.447, lng: 30.531 };
+
 	const markerOnTheMap = { lat: 50.4475, lng: 30.5369 };
 	let centerOfTheMap = {};
 

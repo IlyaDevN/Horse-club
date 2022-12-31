@@ -12,18 +12,20 @@
 		
 	</head>
 	<body>
-		<div id="modal" class="modal">
-			<div class="moving_frame">
-				<div id="modal_close_btn" class="modal_close_btn">
-					<span></span>
-					<span></span>
+		<div id="modalOverlay" class="modal_overlay">
+			<div class="modal_body">
+				<div class="modal_content">
+					<div id="modal_close_btn" class="modal_close_btn">
+						<span></span>
+						<span></span>
+					</div>
+					<ul class="nav__menu_header">
+						<li><a class="menu__link_header" href="#">О нас</a></li>
+						<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
+						<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
+						<li><a class="menu__link_header" href="#">Контакты</a></li>
+					</ul>
 				</div>
-				<ul class="nav__menu_header">
-					<li><a class="menu__link_header" href="#">О нас</a></li>
-					<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
-					<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
-					<li><a class="menu__link_header" href="#">Контакты</a></li>
-				</ul>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -62,7 +64,7 @@
 					<div class="intro__content" id="intro__content">
 						<h1 class="intro__invitation">Окунитесь в мир лошадей вместе с нами</h1>
 						<div class="intro__advertising">
-							<p>Уроки верховой езды, фотосессии и мероприятия в частном конном клубе <b>г. Санкт-Петербург</b> </p>
+							<p>Уроки верховой езды, фотосессии и мероприятия в частном конном клубе <b>г. Киев</b> </p>
 						</div>
 						<button class="intro__button button">
 							записаться
@@ -1211,6 +1213,13 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+		<div class="register__modal_overlay">
+			<div class="register__modal_body">
+				<div class="register__modal_content">
+					
+				</div>
+			</div>
 		</div>
 		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmG1etT32VWFNUpBDm_VF648uvsnDFxco&callback=initMap"></script>
 		<script src="js/script.js"></script>
