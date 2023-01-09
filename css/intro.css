@@ -466,8 +466,8 @@
 	bottom: 0;
 	z-index: 5;
 }
-.modal_close_btn{
-	z-index: 110;
+/*============================================================*/
+.menu_close_btn{
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -475,7 +475,7 @@
 	right: 21px;
 	cursor: pointer;
 }
-.modal_close_btn span{
+.menu_close_btn span{
 	position: absolute;
 	top: 50%;
 	width: 17px;
@@ -483,10 +483,10 @@
 	background-color: #FFF;
 	transform: rotate(135deg);
 }
-.modal_close_btn span:nth-child(1){
+.menu_close_btn span:nth-child(1){
 	transform: rotate(-135deg);
 }
-.modal_overlay{
+.menu_overlay{
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -495,7 +495,7 @@
 	z-index: 110;
 	visibility: hidden;
 }
-.modal_body{
+.menu_body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -508,10 +508,10 @@
 	transition: all 1s ease 0s;
 }
 @media (min-width: 480px){
-	.modal_body{
+	.menu_body{
 		width: 230px;
 	}
 }
-.modal_content{
+.menu_content{
 	position: relative;
 }

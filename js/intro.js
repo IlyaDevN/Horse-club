@@ -1,23 +1,23 @@
 (function burger (){
 
 	const burgerBtn = document.getElementById("menu_burger");
-	const modalCloseBtn = document.getElementById("modal_close_btn");
-	const modalOverlay = document.getElementById("modalOverlay");
-	const modalBody = document.querySelector(".modal_body");
+	const menuCloseBtn = document.getElementById("menu_close_btn");
+	const menuOverlay = document.getElementById("menuOverlay");
+	const menuBody = document.querySelector(".menu_body");
 	const body = document.querySelector("body");
 		
 		burgerBtn.addEventListener("click", function(){
 
-			modalOverlay.style.visibility = "visible";
-			modalBody.style.transform = `translateX(0%)`;
+			menuOverlay.style.visibility = "visible";
+			menuBody.style.transform = `translateX(0%)`;
 			body.style.overflowY = "hidden";
 			
 		});
 
-		modalCloseBtn.addEventListener("click", function(){
+		menuCloseBtn.addEventListener("click", function(){
 
-			modalOverlay.style.visibility = "hidden";
-			modalBody.style.transform = `translateX(-100%)`;
+			menuOverlay.style.visibility = "hidden";
+			menuBody.style.transform = `translateX(-100%)`;
 			body.style.overflowY = "";
 		})
 

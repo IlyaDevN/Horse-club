@@ -61,6 +61,14 @@ function changeButtonAppearance(slider){
 	const popupLinks = document.querySelectorAll(".popup-link");
 	const registerModalOverlay = document.querySelector(".register__modal_overlay");
 	const registerModalContent = document.querySelector(".register__modal_content");
+	const registerModalGratitude = document.querySelector(".register__modal_gratitude");
+	const closeBtn = document.querySelector(".register__close_btn");
+	const form = document.querySelector(".register__form");
+	const modalSubmitBtn = document.querySelector(".frm__btn");
+	const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+	const timeout = 800;
+	const closeTimeout = 3000;
+	let unlock = true;
 
 	if(popupLinks.length > 0){
 		for(let index = 0; index <popupLinks.length; index++){
@@ -68,26 +76,63 @@ function changeButtonAppearance(slider){
 			popupLink.addEventListener("click", function(){
 				
 				popupOpen(registerModalOverlay, registerModalContent);
+				addButtonContent(popupLink);
 			})
-			
 		}
 	}
 	
 	function popupOpen(currentPopup, popupContent){
+		if(!unlock) return;
+		
 		currentPopup.classList.add("open");
 		popupContent.classList.add("open");
-		body.style.overflowY = "hidden";
-		
+		body.classList.add("scroll_Y_lock");
+		body.style.paddingRight = scrollBarWidth + "px";
+		unlock = false;
+
 		currentPopup.addEventListener("click", function(e){
 			if(!e.target.closest(".register__modal_content")){
 				popupClose(currentPopup, popupContent);
 			}
 		})
+		closeBtn.addEventListener("click", function(){
+			popupClose(currentPopup, popupContent);
+		})
+		document.addEventListener("keydown", function(e){
+			if(e.code === "Escape"){
+				popupClose(currentPopup, popupContent);
+			}
+		})
+		setTimeout(() => unlock = true, timeout);
+
+		form.addEventListener("submit", function(e){
+			e.preventDefault();
+			registerModalContent.classList.remove("open");
+			registerModalGratitude.classList.add("open");
+			unlock = false;
+			setTimeout(()=>{
+				unlock = true;
+				popupClose(registerModalOverlay, registerModalGratitude);
+			}, closeTimeout);
+		});
 	}
+
 	function popupClose(currentPopup, popupContent){
+		if(!unlock) return;
+
 		currentPopup.classList.remove("open");
 		popupContent.classList.remove("open");
-		body.style.overflowY = "";
+		
+		setTimeout(()=>{
+			body.classList.remove("scroll_Y_lock");
+			body.style.paddingRight = "";
+			unlock = true;
+		}, timeout);
+		
+	}
+
+	function addButtonContent(popupLink){
+		modalSubmitBtn.innerHTML = popupLink.dataset.btnContent;
 	}
 
 })()
@@ -120,3 +165,74 @@ function initMap() {
 		icon: markerImage,
 	});
 }
+
+(function modalValidation(){
+	const elemsToСheck = document.querySelectorAll(".validate");
+	const errorTimeout = 3000;
+	
+
+	if(elemsToСheck.length > 0){
+		for(let elem of elemsToСheck){
+			if(elem.tagName === "INPUT"){
+				elem.addEventListener("invalid", function(event){
+					event.preventDefault();
+					if(event.target.getAttribute("errorLock") === "true") {
+						return;
+					}
+					showError(event.target);
+					setTimeout(hideError, errorTimeout, event.target);
+				})
+
+
+				
+			}
+		}
+	}
+	function showError(invalidElem){
+
+		showTooltips();
+		lightUpBorder();
+
+		invalidElem.setAttribute("errorLock", true);
+
+		function showTooltips(){
+			invalidElem.previousElementSibling.classList.add("active");
+		}
+		function lightUpBorder(){
+			if(invalidElem.type === "checkbox"){
+				document.documentElement.style.setProperty('--checkboxReg-color', '#FF5C00');
+			} else{
+				invalidElem.classList.add("active");
+			}
+		}
+	}
+	function hideError(invalidElem){
+
+		hideTooltips();
+		lightDownBorder();
+
+		invalidElem.setAttribute("errorLock", false);
+
+		function hideTooltips(){
+			invalidElem.previousElementSibling.classList.remove("active");
+		}
+		function lightDownBorder (){
+			if(invalidElem.type === "checkbox"){
+				document.documentElement.style.setProperty('--checkboxReg-color', '#FFC700');
+			} else{
+				invalidElem.classList.remove("active");
+			}
+		}
+	}
+	
+	
+
+	
+	
+	
+})();
+
+
+
+
+	

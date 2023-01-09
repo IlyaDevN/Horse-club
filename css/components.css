@@ -39,7 +39,7 @@
 		height: 70px;
 		font-size: 15px;
 	}
-  }
+}
 .button::before{
 	content: "";
 	position: absolute;
@@ -193,7 +193,9 @@ div .swiper-scrollbar-drag{
 	opacity: 0.4 !important;
 }
 
-/*===================================================================*/
+/* ============================================================================
+		registration modal window
+=============================================================================*/
 
 .register__modal_overlay{
 	position: fixed;
@@ -206,6 +208,10 @@ div .swiper-scrollbar-drag{
 	transition: all 0.8s;
 	opacity: 0;
 	visibility: hidden;
+}
+.register__modal_overlay.open{
+	opacity: 1;
+	visibility: visible;
 }
 .register__modal_body{
 	min-height: 100%;
@@ -221,31 +227,53 @@ div .swiper-scrollbar-drag{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transform: perspective(600px) translateY(-100%) rotateX(45deg);
+	transform: perspective(300px) translateY(-100%) rotateX(45deg);
 	transition: all 0.8s;
-}
-.register__modal_content.open{
-	transform: perspective(600px) translateY(0%) rotateX(0deg);
 }
 @media (min-width: 480px){
 	.register__modal_content{
 		width: 375px;
 		height: 375px;
+		transform: perspective(375px) translateY(-100%) rotateX(45deg);
 	}
 }
 @media (min-width: 1000px){
 	.register__modal_content{
 		width: 405px;
-		height: 381px;
+		height: 380px;
+		transform: perspective(380px) translateY(-100%) rotateX(45deg);
 	}
 }
-.register__modal_overlay.open{
-	opacity: 1;
-	visibility: visible;
+.register__modal_content.open{
+	transform: perspective(380px) translateY(0) rotateX(0);
+}
+.register__close_btn{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+.register__close_btn span{
+	position: absolute;
+	top: 50%;
+	width: 17px;
+	height: 1px;
+	background-color: #000;
+	transform: rotate(135deg);
+	transition: all 0.3s;
+}
+.register__close_btn:hover span{
+	background-color: red;
+}
+.register__close_btn span:nth-child(1){
+	transform: rotate(-135deg);
 }
 .register__form{
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 .register__form input{
 	background: #FFF;
@@ -253,7 +281,7 @@ div .swiper-scrollbar-drag{
 	border-radius: 5px;
 	font-size: 13px;
 	line-height: 13px;
-	width: 225px;
+	width: 245px;
 	height: 50px;
 	margin-bottom: 15px;
 	padding-left: 14px;
@@ -275,5 +303,211 @@ div .swiper-scrollbar-drag{
 		height: 61px;
 		margin-bottom: 20px;
 		padding-left: 21px;
+	}
+}
+.frm__btn{
+	width: 245px;
+	height: 45px;
+	font-size: 10px;
+	line-height: 10px;
+	margin-bottom: 25px;
+	display: inline-block;
+}
+@media (min-width: 480px){
+	.frm__btn{
+		width: 300px;
+		height: 64px;
+		font-size: 13px;
+		line-height: 15px;
+		margin-bottom: 30px;
+	}
+}
+@media (min-width: 768px){
+	.frm__btn{
+		font-size: 15px;
+	}
+}
+@media (min-width: 1000px){
+	.frm__btn{
+		width: 330px;
+		height: 70px;
+	}
+}
+.frm__checkbox_container{
+	width: 245px;
+	margin: 0 auto;
+	text-align: start;
+}
+@media (min-width: 480px){
+	.frm__checkbox_container{
+		width: 300px;
+	}
+}
+@media (min-width: 1000px){
+	.frm__checkbox_container{
+		width: 330px;
+	}
+}
+input.frm__checkbox_original{
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	width: 1.5em;
+	height: 1.5em;
+}
+.frm__label_checkbox{
+	font-size: 13px;
+	line-height: 15px;
+	color: #8A8A8A;
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+@media (min-width: 480px){
+	.frm__label_checkbox{
+		font-size: 15px;
+		line-height: 18px;
+	}
+}
+:root{
+	--checkboxReg-color: #FFC700;
+}
+.frm__label_checkbox::before{
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 2px solid;
+	border-color: var(--checkboxReg-color);
+	border-radius: 2px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+@media (min-width: 480px){
+	.frm__label_checkbox::before{
+		width: 1.3333em;
+		height: 1.3333em;
+	}
+}
+.frm__checkbox_original:checked+label::before{
+	background-image: url(../img/questions/checkbox/x320/checkbox_x320.svg);
+}
+@media (min-width: 480px){
+	.frm__checkbox_original:checked+label::before{
+		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
+	}
+}
+.valid_tooltip{
+	position: absolute;
+	color: #FF5C00;
+	font-size: 10px;
+	line-height: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.valid_tooltip.active{
+	visibility: visible;
+	opacity: 1;
+}
+.letters{
+	top: -13px;
+}
+@media (min-width: 480px){
+	.letters{
+		top: -13px;
+	}
+}
+@media (min-width: 1000px){
+	.letters{
+		top: -15px;
+	}
+}
+.figures{
+	top: 52px;
+}
+@media (min-width: 480px){
+	.figures{
+		top: 57px;
+	}
+}
+@media (min-width: 1000px){
+	.figures{
+		top: 66px;
+	}
+}
+.checkes{
+	top: 220px;
+}
+@media (min-width: 480px){
+	.checkes{
+		top: 260px;
+	}
+}
+@media (min-width: 1000px){
+	.checkes{
+		top: 290px;
+	}
+}
+.validate.active{
+	border-color: #FF5C00;
+}
+.register__modal_gratitude{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: perspective(600px) translateY(100%) rotateX(45deg);
+	transition: all 0.8s;
+	visibility: hidden;
+	opacity: 0;
+}
+@media (min-width: 480px){
+	.register__modal_gratitude{
+		width: 375px;
+		height: 375px;
+	}
+}
+@media (min-width: 1000px){
+	.register__modal_gratitude{
+		width: 380px;
+		height: 380px;
+	}
+}
+.register__modal_gratitude.open{
+	position: absolute;
+	visibility: visible;
+	opacity: 1;
+	transform: perspective(600px) translateY(0) rotateX(0);
+}
+.register__modal_gratitude :nth-child(1){
+	font-size: 40px;
+	line-height: 50px;
+	text-align: center;
+}
+@media (min-width: 480px){
+	.register__modal_gratitude :nth-child(1){
+		font-size: 50px;
+		line-height: 60px;
+		text-align: center;
+	}
+}
+.register__modal_gratitude :nth-child(2){
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+@media (min-width: 480px){
+	.register__modal_gratitude :nth-child(2){
+		font-size: 30px;
+		line-height: 50px;
+		text-align: center;
 	}
 }
