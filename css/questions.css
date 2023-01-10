@@ -83,7 +83,7 @@
 	z-index: 15;
 	display: none;
 }
-@media (min-width: 1000px){
+@media (min-width: 1151px){
 	.questions__bush{
 		top: 534px;
 		left: 853px;
