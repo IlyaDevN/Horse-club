@@ -511,3 +511,15 @@ input.frm__checkbox_original{
 		text-align: center;
 	}
 }
+.gratitude_image{
+	width: 250px;
+}
+@media(min-width: 480px){
+	.gratitude_image{
+		width: 270px;
+	}
+}
+.gratitude_image img{
+	width: 100%;
+	object-fit: contain;
+}
