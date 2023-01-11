@@ -224,15 +224,40 @@ function initMap() {
 			}
 		}
 	}
-	
-	
-
-	
-	
-	
 })();
 
+(function loadMap(){
 
+	let isLocked = true;
+	let isLoaded = false;
+	const timeout = 100;
+	const scrollToMap = 6000; 
+	const mapSrc = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAmG1etT32VWFNUpBDm_VF648uvsnDFxco&callback=initMap"
+	
+	window.addEventListener("scroll", function(){
+		
+		if(!isLocked) return;
+		
+		if(scrollY >= scrollToMap && !isLoaded){
+			addScript(mapSrc);
+			isLoaded = true;	
+		}
+		
+		isLocked = false;
+
+		setTimeout(()=>{
+			isLocked = true;
+		}, timeout);
+		
+	})
+
+	function addScript(src){
+		const script = document.createElement("script");
+		script.src = src;
+		document.body.append(script);
+	}
+
+})()
 
 
 	
