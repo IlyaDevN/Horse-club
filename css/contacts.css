@@ -317,7 +317,6 @@
 }
 .icon{
 	display: inline-block;
-	gap: 13px 0;
 	width: 32px;
 	height: 32px;
 	opacity: 0.8;
