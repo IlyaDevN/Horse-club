@@ -308,6 +308,7 @@
 .social_network_icons {
 	display: flex;
 	justify-content: space-between;
+	gap: 13px;
 }
 @media (min-width: 480px){
 	.social_network_icons {
@@ -316,14 +317,11 @@
 }
 .icon{
 	display: inline-block;
-	margin-right: 13px;
+	gap: 13px 0;
 	width: 32px;
 	height: 32px;
 	opacity: 0.8;
 }
 .icon:hover{
 	opacity: 1;
-}
-.icon:last-child{
-	margin-right: 0;
 }
