@@ -86,7 +86,7 @@ function changeButtonAppearance(slider){
 		
 		currentPopup.classList.add("open");
 		popupContent.classList.add("open");
-		body.classList.add("scroll_Y_lock");
+		body.classList.add("stopPageScroll");
 		body.style.paddingRight = scrollBarWidth + "px";
 		unlock = false;
 
@@ -124,7 +124,7 @@ function changeButtonAppearance(slider){
 		popupContent.classList.remove("open");
 		
 		setTimeout(()=>{
-			body.classList.remove("scroll_Y_lock");
+			body.classList.remove("stopPageScroll");
 			body.style.paddingRight = "";
 			unlock = true;
 		}, timeout);
@@ -228,27 +228,31 @@ function initMap() {
 
 (function loadMap(){
 
-	let isLocked = true;
+	let isScrollIgnored = false;
 	let isLoaded = false;
 	const timeout = 100;
-	const scrollToMap = 6000; 
-	const mapSrc = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAmG1etT32VWFNUpBDm_VF648uvsnDFxco&callback=initMap"
+	const loadPoint = document.querySelector(".contacts__container");
+	const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
 	
-	window.addEventListener("scroll", function(){
+	window.addEventListener("load", function(){
+		const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
 		
-		if(!isLocked) return;
+		window.addEventListener("scroll", function(){
 		
-		if(scrollY >= scrollToMap && !isLoaded){
-			addScript(mapSrc);
-			isLoaded = true;	
-		}
-		
-		isLocked = false;
-
-		setTimeout(()=>{
-			isLocked = true;
-		}, timeout);
-		
+			if(isScrollIgnored) return;
+			
+			if(window.scrollY >= loadPointCoords && !isLoaded){
+				addScript(mapSrc);
+				isLoaded = true;
+			}
+			
+			isScrollIgnored = true;
+	
+			setTimeout(()=>{
+				isScrollIgnored = false;
+			}, timeout);
+			
+		})
 	})
 
 	function addScript(src){

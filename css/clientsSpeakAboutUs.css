@@ -25,173 +25,201 @@
 		width: 1900px;
 	}
 }
-  .clientSpeakAboutUs__title{
-	  margin: 70px 0 30px;
-  }
-  @media (min-width: 480px){
-	  .clientSpeakAboutUs__title{
-		  margin: 100px 0 40px;
-	  }
-  }
-  @media (min-width: 768px){
-	  .clientSpeakAboutUs__title{
-		  margin: 80px 0 40px;
-	  }
-  }
-  @media (min-width: 1000px){
-	  .clientSpeakAboutUs__title{
-		  margin: 140px 0 70px;
-	  }
-  }
-  @media (min-width: 1920px){
-	  .clientSpeakAboutUs__title{
-		  margin: 120px 0 40px;
-	  }
-  }
-  .clientSpeakAboutUs__feedbacks {
-	  margin: 0 auto 30px;
-  }
-  @media (min-width: 480px){
-	  .clientSpeakAboutUs__feedbacks {
-		  margin: 0 auto 40px;
-	  }
-  }
-  @media (min-width: 768px){
-	  .clientSpeakAboutUs__feedbacks {
-		  margin: 0 auto 40px;
-	  }
-  }
-  @media (min-width: 1920px){
-	  .clientSpeakAboutUs__feedbacks {
-		  margin: 0 auto 60px;
-	  }
-  }
-  .feedbacks__container {
-	  display: flex;
-  }
-  .feedbacks__card_container {
-	  padding: 18.5px;
-	  width: 320px;
-	  border: 1px solid #EAEAEA;
-	  box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
-	  border-radius: 5px;
-	  transition: all 1s !important;
-  }
-  @media (min-width: 480px){
-	  .feedbacks__card_container {
-		  width: 354px;
-	  }
-  }
-  @media (min-width: 1000px){
-	  .feedbacks__card_container {
-		  padding: 28.5px;
-		  width: 440px;
-	  }
-  }
-  @media (min-width: 1920px){
-	  .feedbacks__card_container {
-		  padding: 38.5px 43.5px 33.5px;
-		  width: 570px;
-	  }
-  }
-  .feedbacks__card_container > .card__text {
-	  font-size: 13px;
-	  line-height: 21px;
-	  color: #363434;
-	  text-align: left;
-	  min-width: 250px;
-	  margin-bottom: 10px;
-  }
-  @media (min-width: 480px){
-	  .feedbacks__card_container > .card__text {
-		  font-size: 13px;
-		  line-height: 24px;
-		  min-width: 314px;
-		  margin-bottom: 10px;
-	  }
-  }
-  @media (min-width: 1000px){
-	  .feedbacks__card_container > .card__text {
-		  font-size: 13px;
-		  line-height: 24px;
-		  min-width: 380px;
-		  margin-bottom: 15px;
-	  }
-  }
-  @media (min-width: 1920px){
-	  .feedbacks__card_container > .card__text {
-		  font-size: 15px;
-		  /* min-width: 480px; */
-	  }
-  }
-  .card__detailed_container {
-	  margin: 0 auto;
-	  width: 130px;
-	  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
-	  border-radius: 5px;
-	  padding: 4px 0 3px;
-	  font-size: 13px;
-	  line-height: 13px;
-	  text-align: center;
-	  color: #008139;
-  }
-  @media (min-width: 480px){
-	  .card__detailed_container {
-		  line-height: 23px;
-		  padding: 4px 0 3px;
-	  }
-  }
-  @media (min-width: 1920px){
-	  .card__detailed_container {
-		  width: 150px;
-		  font-size: 15px;
-		  line-height: 21px;
-		  padding: 8px 0 6px;
-	  }
-  }
-  .card__detailed_container > p::after{
-	  content: url(../img/clientSpeakAboutUs/cardDetailed/unwrapIcon.png);
-	  margin-left: 12px;
-  }
-  .card__author {
-	  display: flex;
-	  justify-content: flex-start;
-	  align-items: flex-end;
-	  margin-top: 24px;
-  }
-  @media (min-width: 480px){
-	  .card__author {
-		  margin-top: 34px;
-	  }
-  }
-  @media (min-width: 1920px){
-	  .card__author {
-		  margin-top: 45px;
-	  }
-  }
-  .author__photo {
-	  margin-right: 10px;
-  }
-  @media (min-width: 1920px){
-	  .author__photo {
-		  margin-right: 20px;
-	  }
-  }
-  .author__name {
-	  font-size: 14px;
-	  line-height: 21px;
-	  color: #101820;
-	  margin-bottom: 10px;
-  }
-  @media (min-width: 1920px){
-	  .author__name {
-		  font-size: 16px;
-	  }
-  }
-  .author__cocialNetworkLink {
-	  flex: 1 1 auto;
-  }
-  .author__cocialNetworkLink > a > img{
-	  margin-right: 10px;
-  }
-  
+.clientSpeakAboutUs__title{
+	margin: 70px 0 30px;
+}
+@media (min-width: 480px){
+	.clientSpeakAboutUs__title{
+		margin: 100px 0 40px;
+	}
+}
+@media (min-width: 768px){
+	.clientSpeakAboutUs__title{
+		margin: 80px 0 40px;
+	}
+}
+@media (min-width: 1000px){
+	.clientSpeakAboutUs__title{
+		margin: 140px 0 70px;
+	}
+}
+@media (min-width: 1920px){
+	.clientSpeakAboutUs__title{
+		margin: 120px 0 40px;
+	}
+}
+.clientSpeakAboutUs__feedbacks {
+	margin: 0 auto 30px;
+}
+@media (min-width: 480px){
+	.clientSpeakAboutUs__feedbacks {
+		margin: 0 auto 40px;
+	}
+}
+@media (min-width: 768px){
+	.clientSpeakAboutUs__feedbacks {
+		margin: 0 auto 40px;
+	}
+}
+@media (min-width: 1920px){
+	.clientSpeakAboutUs__feedbacks {
+		margin: 0 auto 60px;
+	}
+}
+.feedbacks__container {
+	display: flex;
+}
+.feedbacks__card_container {
+	padding: 18.5px;
+	width: 320px;
+	border: 1px solid #EAEAEA;
+	box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
+	border-radius: 5px;
+	transition: all 1s !important;
+}
+@media (min-width: 480px){
+	.feedbacks__card_container {
+		width: 354px;
+	}
+}
+@media (min-width: 1000px){
+	.feedbacks__card_container {
+		padding: 28.5px;
+		width: 440px;
+	}
+}
+@media (min-width: 1920px){
+	.feedbacks__card_container {
+		padding: 38.5px 43.5px 33.5px;
+		width: 570px;
+	}
+}
+.card__text {
+	font-size: 13px;
+	line-height: 21px;
+	color: #363434;
+	text-align: left;
+	min-width: 250px;
+	margin-bottom: 10px;
+	height: 110px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	transition: height 0.5s;
+}
+@media (min-width: 480px){
+	.card__text {
+		line-height: 22px;
+		min-width: 314px;
+		margin-bottom: 10px;
+		height: 88px;
+		-webkit-line-clamp: 4;
+	}
+}
+@media (min-width: 768px){
+	.card__text {
+		line-height: 23px;
+		height: 92px;
+	}
+}
+@media (min-width: 1000px){
+	.card__text {
+		line-height: 24px;
+		min-width: 380px;
+		margin-bottom: 15px;
+		height: 72px;
+		-webkit-line-clamp: 3;
+	}
+}
+@media (min-width: 1920px){
+	.card__text {
+		font-size: 15px;
+	}
+}
+:root{
+	--height: ;
+}
+.card__text.open{
+	height: var(--height);
+	display: block;
+}
+.card__detailed_container {
+	display: block;
+	margin: 0 auto;
+	width: 130px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+	border-radius: 5px;
+	padding: 4px 0 3px;
+	font-size: 13px;
+	line-height: 13px;
+	text-align: center;
+	color: #008139;
+	visibility: hidden;
+}
+.card__detailed_container.calculated{
+	visibility: visible;
+}
+@media (min-width: 480px){
+	.card__detailed_container {
+		line-height: 23px;
+		padding: 4px 0 3px;
+	}
+}
+@media (min-width: 1920px){
+	.card__detailed_container {
+		width: 150px;
+		font-size: 15px;
+		line-height: 21px;
+		padding: 8px 0 6px;
+	}
+}
+.card__detailed_container > p::after{
+	content: url(../img/clientSpeakAboutUs/cardDetailed/wrapIcon.png);
+	margin-left: 12px;
+}
+.card__detailed_container.open > p::after{
+	content: url(../img/clientSpeakAboutUs/cardDetailed/unwrapIcon.png);
+	margin-left: 12px;
+}
+.card__author {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	margin-top: 24px;
+}
+@media (min-width: 480px){
+	.card__author {
+		margin-top: 34px;
+	}
+}
+@media (min-width: 1920px){
+	.card__author {
+		margin-top: 45px;
+	}
+}
+.author__photo {
+	margin-right: 10px;
+}
+@media (min-width: 1920px){
+	.author__photo {
+		margin-right: 20px;
+	}
+}
+.author__name {
+	font-size: 14px;
+	line-height: 21px;
+	color: #101820;
+	margin-bottom: 10px;
+}
+@media (min-width: 1920px){
+	.author__name {
+		font-size: 16px;
+	}
+}
+.author__cocialNetworkLink {
+	flex: 1 1 auto;
+}
+.author__cocialNetworkLink > a > img{
+	margin-right: 10px;
+}

@@ -18,6 +18,6 @@ body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
-body.scroll_Y_lock{
+body.stopPageScroll{
 	overflow-y: hidden;
 }
