@@ -44,8 +44,8 @@
 	const viewportWidth = window.innerWidth;
 	const screenResolution = 1920;
 
-	changeButtonAppearance(swiper);
-	swiper.on("slideChange", changeButtonAppearance);
+	navigationButtonAppearance(swiper);
+	swiper.on("slideChange", navigationButtonAppearance);
 
 	if(viewportWidth >= screenResolution){
 		for(let slide of swiper.slides){

@@ -36,7 +36,7 @@ function getActiveIndexes(slider, realIndex){
 	return activeIndexes;
 }
 
-function changeButtonAppearance(slider){
+function navigationButtonAppearance(slider){
 
 	const btnPrev = slider.navigation.prevEl;
 	const btnNext = slider.navigation.nextEl;

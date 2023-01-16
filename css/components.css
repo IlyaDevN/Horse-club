@@ -191,6 +191,7 @@ div .swiper-scrollbar-drag{
 .activeSlides {
 	transform: translateY(-40px) !important;
 	opacity: 0.4 !important;
+	pointer-events: none;
 }
 
 /* ============================================================================
