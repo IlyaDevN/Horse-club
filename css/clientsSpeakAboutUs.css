@@ -22,7 +22,7 @@
 }
 @media (min-width: 1920px){
 	.clientSpeakAboutUs__container {
-		width: 1900px;
+		width: 1870px;
 	}
 }
 .clientSpeakAboutUs__title{
@@ -138,14 +138,16 @@
 	}
 }
 :root{
-	--height: ;
+	--cardText-height: ;
 }
 .card__text.open{
-	height: var(--height);
+	height: var(--cardText-height);
 	display: block;
 }
-.card__detailed_container {
-	display: block;
+.card__unwrap_btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto;
 	width: 130px;
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
@@ -157,30 +159,41 @@
 	color: #008139;
 	visibility: hidden;
 }
-.card__detailed_container.calculated{
+.card__unwrap_btn.calculated{
 	visibility: visible;
 }
 @media (min-width: 480px){
-	.card__detailed_container {
+	.card__unwrap_btn {
 		line-height: 23px;
 		padding: 4px 0 3px;
 	}
 }
 @media (min-width: 1920px){
-	.card__detailed_container {
+	.card__unwrap_btn {
 		width: 150px;
 		font-size: 15px;
 		line-height: 21px;
 		padding: 8px 0 6px;
 	}
 }
-.card__detailed_container > p::after{
-	content: url(../img/clientSpeakAboutUs/cardDetailed/wrapIcon.png);
-	margin-left: 12px;
+.card__unwrap_btn span{
+	display: inline-block;
+	height: 1px;
+	width: 10px;
+	background-color: #008139;
+	transition: all 0.5s;
 }
-.card__detailed_container.open > p::after{
-	content: url(../img/clientSpeakAboutUs/cardDetailed/unwrapIcon.png);
-	margin-left: 12px;
+.card__unwrap_btn span:first-of-type{
+	transform: translate(2px, 1px) rotate(45deg);
+}
+.card__unwrap_btn span:last-of-type{
+	transform: translate(-1px, 1px) rotate(-45deg);
+}
+.card__unwrap_btn.open span:first-of-type{
+	transform: translate(2px, 1px) rotate(-45deg);
+}
+.card__unwrap_btn.open span:last-of-type{
+	transform: translate(-1px, 1px) rotate(45deg);
 }
 .card__author {
 	display: flex;
