@@ -38,6 +38,7 @@
 	
 	swiperComments.on("slideChange", navigationButtonAppearance);
 	swiperComments.on("slideChange", closeComments);
+
 	navigationButtonAppearance(swiperComments);
 
 	const handler = function(){
@@ -123,7 +124,12 @@ function closeComments(slideNotToClose){
 }
 
 function changeUnwrapBtnVisibility(){
-	window.addEventListener("load", changeBtnVisibility);
+
+	const btnAppearanceDelay = 1000;
+	setTimeout(()=>{
+		changeBtnVisibility();
+		console.log("changeBtnVisibility");
+	}, btnAppearanceDelay);
 
 	const delay = 250;
 	let isThrottled = false;
@@ -145,6 +151,7 @@ function changeUnwrapBtnVisibility(){
 		slides.forEach(slide => {
 			const cardText = slide.querySelector(".card__text");
 			const cardBtn = slide.querySelector(".card__unwrap_btn");
+
 			if(cardText.scrollHeight > cardText.clientHeight){
 				cardBtn.classList.add("calculated");
 			}
