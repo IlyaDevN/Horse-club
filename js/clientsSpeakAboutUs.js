@@ -36,19 +36,20 @@
 		
 	});
 	
-	swiperComments.on("slideChange", navigationButtonAppearance);
-	swiperComments.on("slideChange", closeComments);
-
-	navigationButtonAppearance(swiperComments);
-
 	const handler = function(){
 		setSlidesState(swiperComments, "activeSlides");
 	}
 
+	swiperComments.on("slideChange", navigationButtonAppearance);
+	swiperComments.on("slideChange", closeComments);
+	swiperComments.on("slideChange", handler);
+
+	navigationButtonAppearance(swiperComments);
+
 	const mqLess1920 = window.matchMedia("(max-width: 1919px)");
 	mqLess1920.addEventListener("change", function(){
-		if(mqLess1920.matches){
 
+		if(mqLess1920.matches){
 			swiperComments.off("slideChange", handler);
 
 			swiperComments.slides.forEach(slide => {
@@ -60,9 +61,8 @@
 
 	const mqOver1920 = window.matchMedia("(min-width: 1920px)");
 	mqOver1920.addEventListener("change", function(){
-		if(mqOver1920.matches){
-			swiperComments.allowTouchMove = false;
 
+		if(mqOver1920.matches){
 			swiperComments.on("slideChange", handler);
 			navigationButtonAppearance(swiperComments);
 		}
@@ -128,7 +128,6 @@ function changeUnwrapBtnVisibility(){
 	const btnAppearanceDelay = 1000;
 	setTimeout(()=>{
 		changeBtnVisibility();
-		console.log("changeBtnVisibility");
 	}, btnAppearanceDelay);
 
 	const delay = 250;
