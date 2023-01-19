@@ -167,12 +167,12 @@ function initMap() {
 }
 
 (function modalValidation(){
-	const elemsToСheck = document.querySelectorAll(".validate");
+	const elemsToCheck = document.querySelectorAll(".validate");
 	const errorTimeout = 3000;
 	
 
-	if(elemsToСheck.length > 0){
-		for(let elem of elemsToСheck){
+	if(elemsToCheck.length > 0){
+		for(let elem of elemsToCheck){
 			if(elem.tagName === "INPUT"){
 				elem.addEventListener("invalid", function(event){
 					event.preventDefault();
@@ -229,38 +229,36 @@ function initMap() {
 (function loadMap(){
 
 	let isScrollIgnored = false;
-	let isLoaded = false;
-	const timeout = 100;
+	const delay = 250;
 	const loadPoint = document.querySelector(".contacts__container");
 	const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
 	
 	window.addEventListener("load", function(){
 		const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
 		
-		window.addEventListener("scroll", function(){
+		window.addEventListener("scroll", function scrollHandler(){
 		
 			if(isScrollIgnored) return;
 			
-			if(window.scrollY >= loadPointCoords && !isLoaded){
-				addScript(mapSrc);
-				isLoaded = true;
+			if(window.scrollY >= loadPointCoords){
+				loadScript(mapSrc);
+				window.removeEventListener("scroll", scrollHandler);
 			}
 			
 			isScrollIgnored = true;
 	
 			setTimeout(()=>{
 				isScrollIgnored = false;
-			}, timeout);
+			}, delay);
 			
-		})
-	})
+		});
+	}, {once: true});
 
-	function addScript(src){
+	function loadScript(src){
 		const script = document.createElement("script");
 		script.src = src;
 		document.body.append(script);
 	}
-
 })()
 
 
