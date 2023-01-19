@@ -36,13 +36,13 @@
 		
 	});
 	
-	const handler = function(){
+	const slideStateHandler = function(){
 		setSlidesState(swiperComments, "activeSlides");
 	}
 
 	swiperComments.on("slideChange", navigationButtonAppearance);
 	swiperComments.on("slideChange", closeComments);
-	swiperComments.on("slideChange", handler);
+	swiperComments.on("slideChange", slideStateHandler);
 
 	navigationButtonAppearance(swiperComments);
 
@@ -50,7 +50,7 @@
 	mqLess1920.addEventListener("change", function(){
 
 		if(mqLess1920.matches){
-			swiperComments.off("slideChange", handler);
+			swiperComments.off("slideChange", slideStateHandler);
 
 			swiperComments.slides.forEach(slide => {
 				slide.classList.remove("activeSlides");
@@ -63,7 +63,7 @@
 	mqOver1920.addEventListener("change", function(){
 
 		if(mqOver1920.matches){
-			swiperComments.on("slideChange", handler);
+			swiperComments.on("slideChange", slideStateHandler);
 			navigationButtonAppearance(swiperComments);
 		}
 	})
