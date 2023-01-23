@@ -1,4 +1,4 @@
-(function burger (){
+export default function handleBurgerButtons (){
 
 	const burgerBtn = document.getElementById("menu_burger");
 	const menuCloseBtn = document.getElementById("menu_close_btn");
@@ -20,6 +20,4 @@
 			menuBody.style.transform = `translateX(-100%)`;
 			body.style.overflowY = "";
 		})
-
-})()
-
+}
