@@ -6,3 +6,6 @@ popupRegistration();
 
 import initializeOurHorsesSlider from "./modules/swiperOurHorsesFunctionality.js";
 initializeOurHorsesSlider();
+
+import initializeClientsSpeakAboutUsSlider from "./modules/swiperCommentsFunctionality.js";
+initializeClientsSpeakAboutUsSlider();
