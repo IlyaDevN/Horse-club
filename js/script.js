@@ -15,3 +15,7 @@ initializeOurVisitorsSlider();
 
 import popupRegistrationValidation from "./modules/popupRegistrationValidation.js";
 popupRegistrationValidation();
+
+import questionFormValidation from "./modules/questionFormValidation.js";
+questionFormValidation();
+
