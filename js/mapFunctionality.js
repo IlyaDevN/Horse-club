@@ -1,4 +1,3 @@
-// 'use strict'
 
 function initMap() {
 	const viewportWidth = window.innerWidth;
@@ -63,6 +62,3 @@ function initMap() {
 		document.body.append(script);
 	}
 })()
-
-
-	

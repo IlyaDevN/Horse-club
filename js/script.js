@@ -18,4 +18,3 @@ popupRegistrationValidation();
 
 import questionFormValidation from "./modules/questionFormValidation.js";
 questionFormValidation();
-
