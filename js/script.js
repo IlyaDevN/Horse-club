@@ -9,3 +9,6 @@ initializeOurHorsesSlider();
 
 import initializeClientsSpeakAboutUsSlider from "./modules/swiperCommentsFunctionality.js";
 initializeClientsSpeakAboutUsSlider();
+
+import initializeOurVisitorsSlider from "./modules/sliderOurVisitors.js";
+initializeOurVisitorsSlider();

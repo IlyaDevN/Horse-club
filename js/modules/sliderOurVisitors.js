@@ -1,4 +1,4 @@
-(function initializeOurVisitorsSlider(){
+export default function initializeOurVisitorsSlider(){
 
 	const slidesContainer = document.getElementById("ourVisitors__photo_container");
 	const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
@@ -70,5 +70,4 @@
 			btnNextOurVisitors.tabIndex = "0";
 		}
 	}
-	
-})();
+}
