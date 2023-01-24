@@ -12,3 +12,6 @@ initializeClientsSpeakAboutUsSlider();
 
 import initializeOurVisitorsSlider from "./modules/sliderOurVisitors.js";
 initializeOurVisitorsSlider();
+
+import popupRegistrationValidation from "./modules/popupRegistrationValidation.js";
+popupRegistrationValidation();
