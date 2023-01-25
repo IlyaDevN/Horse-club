@@ -4,7 +4,7 @@ export default function popupRegistrationValidation(){
 	
 
 	if(elemsToCheck.length > 0){
-		for(let elem of elemsToCheck){
+		elemsToCheck.forEach(elem => {
 			if(elem.tagName === "INPUT"){
 				elem.addEventListener("invalid", function(event){
 					event.preventDefault();
@@ -15,7 +15,7 @@ export default function popupRegistrationValidation(){
 					setTimeout(hideError, errorTimeout, event.target);
 				})
 			}
-		}
+		})
 	}
 
 	function showError(invalidElem){
