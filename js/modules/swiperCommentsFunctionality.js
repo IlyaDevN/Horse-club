@@ -38,21 +38,19 @@ export default function initializeClientsSpeakAboutUsSlider(){
 		focufocusableElements: "button",
 		
 	});
-	
+	swiperComments.on("slideChange", navigationButtonAppearance);
+	swiperComments.on("slideChange", closeComments);
+
+	navigationButtonAppearance(swiperComments);
+
 	const slideStateHandler = function(){
 		setSlidesState(swiperComments, "activeSlides");
 	}
 
-	swiperComments.on("slideChange", navigationButtonAppearance);
-	swiperComments.on("slideChange", closeComments);
-	swiperComments.on("slideChange", slideStateHandler);
+	const mqlLess1920 = window.matchMedia("(max-width: 1919px)");
+	mqlLess1920.addEventListener("change", function(){
 
-	navigationButtonAppearance(swiperComments);
-
-	const mqLess1920 = window.matchMedia("(max-width: 1919px)");
-	mqLess1920.addEventListener("change", function(){
-
-		if(mqLess1920.matches){
+		if(mqlLess1920.matches){
 			swiperComments.off("slideChange", slideStateHandler);
 
 			swiperComments.slides.forEach(slide => {
@@ -62,15 +60,19 @@ export default function initializeClientsSpeakAboutUsSlider(){
 		}
 	})
 
-	const mqOver1920 = window.matchMedia("(min-width: 1920px)");
-	mqOver1920.addEventListener("change", function(){
+	const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
+	if(mqlOver1920.matches){
+		slideStateHandler();
+		swiperComments.on("slideChange", slideStateHandler);
+	}
 
-		if(mqOver1920.matches){
+	mqlOver1920.addEventListener("change", function(){
+
+		if(mqlOver1920.matches){
 			swiperComments.on("slideChange", slideStateHandler);
 			navigationButtonAppearance(swiperComments);
 		}
 	})
-
 }
 
 unwrapCommentsButtons();
