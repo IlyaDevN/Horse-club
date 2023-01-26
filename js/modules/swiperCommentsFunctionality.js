@@ -1,5 +1,4 @@
-import { navigationButtonAppearance } from "./swiperGlobalFunctionality.js";
-import { setSlidesState } from "./swiperGlobalFunctionality.js";
+import { navigationButtonAppearance, setSlidesState } from "./swiperGlobalFunctionality.js";
 
 export default function initializeClientsSpeakAboutUsSlider(){
 
