@@ -1,9 +1,9 @@
-export default function questionFormValidation(){
+export default function validateQuestionForm(){
 	
-	inputValidation();
-	checkboxQuestionsValidation();
+	validateInput();
+	validateCheckbox();
 
-	function inputValidation(){
+	function validateInput(){
 
 		const form = document.getElementById("form");
 		const userName 	= document.getElementById("userName");
@@ -43,7 +43,7 @@ export default function questionFormValidation(){
 		}
 	}
 
-	function checkboxQuestionsValidation(){
+	function validateCheckbox(){
 
 		const form = document.getElementById("form");
 		const button = document.querySelector(".form__button");

@@ -1,4 +1,4 @@
-export default function popupRegistration(){
+export default function providePopupRegistration(){
 
 	const body = document.querySelector("body");
 	const popupLinks = document.querySelectorAll(".popup-link");

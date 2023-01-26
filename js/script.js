@@ -1,8 +1,8 @@
 import handleBurgerButtons from "./modules/handleBurgerButtons.js";
 handleBurgerButtons();
 
-import popupRegistration from "./modules/popupRegistration.js";
-popupRegistration();
+import providePopupRegistration from "./modules/popupRegistration.js";
+providePopupRegistration();
 
 import initializeOurHorsesSlider from "./modules/swiperOurHorsesFunctionality.js";
 initializeOurHorsesSlider();
@@ -13,8 +13,8 @@ initializeClientsSpeakAboutUsSlider();
 import initializeOurVisitorsSlider from "./modules/sliderOurVisitors.js";
 initializeOurVisitorsSlider();
 
-import popupRegistrationValidation from "./modules/popupRegistrationValidation.js";
-popupRegistrationValidation();
+import validatePopupRegistration from "./modules/popupRegistrationValidation.js";
+validatePopupRegistration();
 
-import questionFormValidation from "./modules/questionFormValidation.js";
-questionFormValidation();
+import validateQuestionForm from "./modules/questionFormValidation.js";
+validateQuestionForm();

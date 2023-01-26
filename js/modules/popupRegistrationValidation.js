@@ -1,4 +1,4 @@
-export default function popupRegistrationValidation(){
+export default function validatePopupRegistration(){
 	const elemsToCheck = document.querySelectorAll(".validate");
 	const errorTimeout = 3000;
 	
