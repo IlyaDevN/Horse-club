@@ -28,7 +28,9 @@ function initMap() {
 	});
 }
 
-(function loadMap(){
+window.initMap = initMap;
+
+export default function loadMap(){
 
 	let isScrollIgnored = false;
 	const delay = 250;
@@ -61,4 +63,4 @@ function initMap() {
 		script.src = src;
 		document.body.append(script);
 	}
-})()
+}

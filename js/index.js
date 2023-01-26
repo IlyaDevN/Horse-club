@@ -18,3 +18,6 @@ validatePopupRegistration();
 
 import validateQuestionForm from "./modules/questionFormValidation.js";
 validateQuestionForm();
+
+import loadMap from "./modules/mapFunctionality.js";
+loadMap();
