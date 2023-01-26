@@ -1,21 +1,8 @@
 import "./modules/handleBurgerButtons.js";
-
-import providePopupRegistration from "./modules/popupRegistration.js";
-providePopupRegistration();
-
-import initializeOurHorsesSlider from "./modules/swiperOurHorsesFunctionality.js";
-initializeOurHorsesSlider();
-
-import initializeClientsSpeakAboutUsSlider from "./modules/swiperCommentsFunctionality.js";
-initializeClientsSpeakAboutUsSlider();
-
-import initializeOurVisitorsSlider from "./modules/sliderOurVisitors.js";
-initializeOurVisitorsSlider();
-
-import validatePopupRegistration from "./modules/popupRegistrationValidation.js";
-validatePopupRegistration();
-
-import validateQuestionForm from "./modules/questionFormValidation.js";
-validateQuestionForm();
-
+import "./modules/popupRegistration.js";
+import "./modules/swiperOurHorsesFunctionality.js";
+import "./modules/swiperCommentsFunctionality.js";
+import "./modules/sliderOurVisitors.js";
+import "./modules/popupRegistrationValidation.js";;
+import "./modules/questionFormValidation.js";
 import "./modules/mapFunctionality.js";

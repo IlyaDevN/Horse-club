@@ -1,73 +1,70 @@
-export default function initializeOurVisitorsSlider(){
+const slidesContainer = document.getElementById("ourVisitors__photo_container");
+const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
+const slideWidth = slidesContainer.querySelector(".ourVisitors__photo").offsetWidth;
+const sliderMinPossiblePosition = -(slidesQuantity - 1)*slideWidth;
+const sliderMaxPossiblePosition = 0;
+let sliderCurrentPosition = 0;
 
-	const slidesContainer = document.getElementById("ourVisitors__photo_container");
-	const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
-	const slideWidth = slidesContainer.querySelector(".ourVisitors__photo").offsetWidth;
-	const sliderMinPossiblePosition = -(slidesQuantity - 1)*slideWidth;
-	const sliderMaxPossiblePosition = 0;
-	let sliderCurrentPosition = 0;
+const sliderRangeWidth = document.getElementById("slider_range").offsetWidth;
+const sliderThumb = document.getElementById("slider_thumb");
+const sliderThumbWidth = sliderRangeWidth/slidesQuantity;
+const sliderThumbMinPossiblePosition = 0;
+const sliderThumbMaxPossiblePosition = (slidesQuantity - 1)*sliderThumbWidth;
+let sliderThumbCurrentPosition = 0;
 
-	const sliderRangeWidth = document.getElementById("slider_range").offsetWidth;
-	const sliderThumb = document.getElementById("slider_thumb");
-	const sliderThumbWidth = sliderRangeWidth/slidesQuantity;
-	const sliderThumbMinPossiblePosition = 0;
-	const sliderThumbMaxPossiblePosition = (slidesQuantity - 1)*sliderThumbWidth;
-	let sliderThumbCurrentPosition = 0;
+const btnPrevOurVisitors = document.getElementById("btn_prev_ourVisitors");
+const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
 
-	const btnPrevOurVisitors = document.getElementById("btn_prev_ourVisitors");
-	const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
+sliderThumb.style.width = sliderThumbWidth + "px"; 
+changeButtonView();
 
-	sliderThumb.style.width = sliderThumbWidth + "px"; 
+btnPrevOurVisitors.addEventListener("click", function(){
+
+	sliderCurrentPosition += slideWidth;
+	if(sliderCurrentPosition >= sliderMaxPossiblePosition){
+		sliderCurrentPosition = sliderMaxPossiblePosition;
+	}
+	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
+
+	sliderThumbCurrentPosition -= sliderThumbWidth;
+	if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
+		sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
+	}
+	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
 	changeButtonView();
+});
 
-	btnPrevOurVisitors.addEventListener("click", function(){
+btnNextOurVisitors.addEventListener("click", function(){
 
-		sliderCurrentPosition += slideWidth;
-		if(sliderCurrentPosition >= sliderMaxPossiblePosition){
-			sliderCurrentPosition = sliderMaxPossiblePosition;
-		}
-		slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
+	sliderCurrentPosition -= slideWidth;
+	if(sliderCurrentPosition <= sliderMinPossiblePosition){
+		sliderCurrentPosition = sliderMinPossiblePosition;
+	}
+	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
 
-		sliderThumbCurrentPosition -= sliderThumbWidth;
-		if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
-			sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
-		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-		changeButtonView();
-	});
+	sliderThumbCurrentPosition += sliderThumbWidth;
+	if(sliderThumbCurrentPosition >= sliderThumbMaxPossiblePosition){
+		sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
+	}
+	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
+	changeButtonView();
+});
 
-	btnNextOurVisitors.addEventListener("click", function(){
-
-		sliderCurrentPosition -= slideWidth;
-		if(sliderCurrentPosition <= sliderMinPossiblePosition){
-			sliderCurrentPosition = sliderMinPossiblePosition;
-		}
-		slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
-
-		sliderThumbCurrentPosition += sliderThumbWidth;
-		if(sliderThumbCurrentPosition >= sliderThumbMaxPossiblePosition){
-			sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
-		}
-		sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-		changeButtonView();
-	});
-
-	function changeButtonView(){
-		if(sliderCurrentPosition == 0){
-			btnPrevOurVisitors.classList.add("slider_button_disabled");
-			btnPrevOurVisitors.tabIndex = "-1";
-		}
-		if(sliderCurrentPosition != 0){
-			btnPrevOurVisitors.classList.remove("slider_button_disabled");
-			btnPrevOurVisitors.tabIndex = "0";
-		}
-		if(sliderCurrentPosition == sliderMinPossiblePosition){
-			btnNextOurVisitors.classList.add("slider_button_disabled");
-			btnNextOurVisitors.tabIndex = "-1";
-		}
-		if(sliderCurrentPosition != sliderMinPossiblePosition){
-			btnNextOurVisitors.classList.remove("slider_button_disabled");
-			btnNextOurVisitors.tabIndex = "0";
-		}
+function changeButtonView(){
+	if(sliderCurrentPosition == 0){
+		btnPrevOurVisitors.classList.add("slider_button_disabled");
+		btnPrevOurVisitors.tabIndex = "-1";
+	}
+	if(sliderCurrentPosition != 0){
+		btnPrevOurVisitors.classList.remove("slider_button_disabled");
+		btnPrevOurVisitors.tabIndex = "0";
+	}
+	if(sliderCurrentPosition == sliderMinPossiblePosition){
+		btnNextOurVisitors.classList.add("slider_button_disabled");
+		btnNextOurVisitors.tabIndex = "-1";
+	}
+	if(sliderCurrentPosition != sliderMinPossiblePosition){
+		btnNextOurVisitors.classList.remove("slider_button_disabled");
+		btnNextOurVisitors.tabIndex = "0";
 	}
 }

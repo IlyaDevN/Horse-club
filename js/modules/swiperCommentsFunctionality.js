@@ -1,79 +1,77 @@
 import { navigationButtonAppearance, setSlidesState } from "./swiperGlobalFunctionality.js";
 import Swiper from "./swiper-bundle.esm.browser.min.js";
 
-export default function initializeClientsSpeakAboutUsSlider(){
+const swiperComments = new Swiper(".swiper-container-2", {
 
-	const swiperComments = new Swiper(".swiper-container-2", {
-
-		navigation: {
-			nextEl: '.swiper_btn_next_2',
-			prevEl: '.swiper_btn_prev_2',
+	navigation: {
+		nextEl: '.swiper_btn_next_2',
+		prevEl: '.swiper_btn_prev_2',
+	},
+	scrollbar: {
+		el: ".swiper_scrollbar_2",
+		draggable: true,
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+			spaceBetween: 10,
 		},
-		scrollbar: {
-			el: ".swiper_scrollbar_2",
-			draggable: true,
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 10,
 		},
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-			},
-			1000: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-				allowTouchMove: false,
-			},
-			1920: {
-				slidesPerView: 4,
-				spaceBetween: 15,
-				allowTouchMove: false,
-			}
+		1000: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+			allowTouchMove: false,
 		},
-		speed: 1000,
-		focufocusableElements: "button",
-		
-	});
-	swiperComments.on("slideChange", navigationButtonAppearance);
-	swiperComments.on("slideChange", closeComments);
-
-	navigationButtonAppearance(swiperComments);
-
-	const slideStateHandler = function(){
-		setSlidesState(swiperComments, "activeSlides");
-	}
-
-	const mqlLess1920 = window.matchMedia("(max-width: 1919px)");
-	mqlLess1920.addEventListener("change", function(){
-
-		if(mqlLess1920.matches){
-			swiperComments.off("slideChange", slideStateHandler);
-
-			swiperComments.slides.forEach(slide => {
-				slide.classList.remove("activeSlides");
-			});
-			navigationButtonAppearance(swiperComments);
+		1920: {
+			slidesPerView: 4,
+			spaceBetween: 15,
+			allowTouchMove: false,
 		}
-	})
+	},
+	speed: 1000,
+	focufocusableElements: "button",
 
-	const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
-	if(mqlOver1920.matches){
-		slideStateHandler();
-		swiperComments.on("slideChange", slideStateHandler);
-	}
+});
+swiperComments.on("slideChange", navigationButtonAppearance);
+swiperComments.on("slideChange", closeComments);
 
-	mqlOver1920.addEventListener("change", function(){
+navigationButtonAppearance(swiperComments);
 
-		if(mqlOver1920.matches){
-			swiperComments.on("slideChange", slideStateHandler);
-			navigationButtonAppearance(swiperComments);
-		}
-	})
+const slideStateHandler = function(){
+	setSlidesState(swiperComments, "activeSlides");
 }
+
+const mqlLess1920 = window.matchMedia("(max-width: 1919px)");
+mqlLess1920.addEventListener("change", function(){
+
+	if(mqlLess1920.matches){
+		swiperComments.off("slideChange", slideStateHandler);
+
+		swiperComments.slides.forEach(slide => {
+			slide.classList.remove("activeSlides");
+		});
+		navigationButtonAppearance(swiperComments);
+	}
+})
+
+const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
+if(mqlOver1920.matches){
+	slideStateHandler();
+	swiperComments.on("slideChange", slideStateHandler);
+}
+
+mqlOver1920.addEventListener("change", function(){
+
+	if(mqlOver1920.matches){
+		swiperComments.on("slideChange", slideStateHandler);
+		navigationButtonAppearance(swiperComments);
+	}
+})
+
 
 unwrapCommentsButtons();
 changeUnwrapBtnVisibility();
