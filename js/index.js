@@ -1,5 +1,4 @@
-import handleBurgerButtons from "./modules/handleBurgerButtons.js";
-handleBurgerButtons();
+import "./modules/handleBurgerButtons.js";
 
 import providePopupRegistration from "./modules/popupRegistration.js";
 providePopupRegistration();
@@ -19,5 +18,4 @@ validatePopupRegistration();
 import validateQuestionForm from "./modules/questionFormValidation.js";
 validateQuestionForm();
 
-import loadMap from "./modules/mapFunctionality.js";
-loadMap();
+import "./modules/mapFunctionality.js";

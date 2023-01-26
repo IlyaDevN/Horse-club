@@ -1,4 +1,3 @@
-
 function initMap() {
 	const viewportWidth = window.innerWidth;
 	const screenResolutionTab = 768;
@@ -30,37 +29,36 @@ function initMap() {
 
 window.initMap = initMap;
 
-export default function loadMap(){
+let isScrollIgnored = false;
+const delay = 250;
+const loadPoint = document.querySelector(".contacts__container");
+const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
 
-	let isScrollIgnored = false;
-	const delay = 250;
-	const loadPoint = document.querySelector(".contacts__container");
-	const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
-	
-	window.addEventListener("load", function(){
-		const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
-		
-		window.addEventListener("scroll", function scrollHandler(){
-		
-			if(isScrollIgnored) return;
-			
-			if(window.scrollY >= loadPointCoords){
-				loadScript(mapSrc);
-				window.removeEventListener("scroll", scrollHandler);
-			}
-			
-			isScrollIgnored = true;
-	
-			setTimeout(()=>{
-				isScrollIgnored = false;
-			}, delay);
-			
-		});
-	}, {once: true});
+window.addEventListener("load", function(){
 
-	function loadScript(src){
-		const script = document.createElement("script");
-		script.src = src;
-		document.body.append(script);
-	}
+	const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
+
+	window.addEventListener("scroll", function scrollHandler(){
+
+		if(isScrollIgnored) return;
+
+		if(window.scrollY >= loadPointCoords){
+			loadScript(mapSrc);
+			window.removeEventListener("scroll", scrollHandler);
+		}
+
+		isScrollIgnored = true;
+
+		setTimeout(()=>{
+			isScrollIgnored = false;
+		}, delay);
+
+	});
+
+}, {once: true});
+
+function loadScript(src){
+	const script = document.createElement("script");
+	script.src = src;
+	document.body.append(script);
 }
