@@ -25,6 +25,8 @@ if(popupLinks.length > 0){
 function popupOpen(currentPopup, popupContent){
 	if(!unlock) return;
 
+	const btnEsc = "Escape";
+
 	currentPopup.classList.add("open");
 	popupContent.classList.add("open");
 	body.classList.add("stopPageScroll");
@@ -40,7 +42,7 @@ function popupOpen(currentPopup, popupContent){
 		popupClose(currentPopup, popupContent);
 	})
 	document.addEventListener("keydown", function(e){
-		if(e.code === "Escape"){
+		if(e.code === btnEsc){
 			popupClose(currentPopup, popupContent);
 		}
 	})
