@@ -1,4 +1,5 @@
 import { navigationButtonAppearance, setSlidesState } from "./swiperGlobalFunctionality.js";
+import Swiper from "./swiper-bundle.esm.browser.min.js";
 
 export default function initializeClientsSpeakAboutUsSlider(){
 
