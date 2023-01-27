@@ -973,7 +973,7 @@
 						<img class="question__bg_cloudsBottom" src="img/questions/bg/x320/cloudsBottom_x320.png" alt="clouds-bottom">
 					</picture>
 				</div>
-				<div class="questions__container _container">
+				<div class="questions__container">
 					<picture>
 						<source srcset="img/questions/bg_elements/x1920/girlWithHorse_x1920.png" type="image/jpeg" media="(min-width:1920px)">
 						<source srcset="img/questions/bg_elements/x1000/girlWithHorse_x1000.png" type="image/jpeg" media="(min-width:1000px)">
@@ -993,22 +993,26 @@
 						<source srcset="img/questions/bg_elements/x480/frame_x480.png" type="image/jpeg" media="(min-width:480px)">
 						<img class="questions__frame" src="img/questions/bg_elements/x320/frame_x320.png" alt="frame">
 					</picture>
-				
-				<div class="questions__form">
-					<form name="visitor_contacts" id="form" action="" enctype="text/plain" tooltipTimeout = "2000">
-						<p class="form__header">Отвечаем на вопросы</p>
-						<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете записаться на <b>бесплатное</b> пробное занятие</p>
-						<input name="user_name" class="form__input" id="userName" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$" invalidTooltip = "Вводите буквы" required>
-						<input name="user_phone" class="form__input" id="userPhone" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" invalidTooltip = "Вводите цифры" required>
-						<button class="form__button button" type="submit">Задать вопрос</button>
-						<div class="form__checkbox_container" invalidTooltip = "Подтвердите согласие">
-							<input class="form__checkbox_original" id="form__check_original_id" type="checkbox" name="checkbox" value="agreement" required>
-							<label class="form__label_checkbox" for="form__check_original_id">Даю согласие на обработку данных</label>
-						</div>
-						
-					</form>
-					
-				</div>
+					<div class="questions__form_container">
+						<form class="questions__form" name="visitor_contacts" id="form" action="" enctype="text/plain" tooltipTimeout = "2000">
+							<p class="form__header">Отвечаем на вопросы</p>
+							<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете записаться на <b>бесплатное</b> пробное занятие</p>
+							<div class="isValid">
+								<p class="valid_tooltip write_letters">Вводите буквы</p>
+								<input name="user_name" class="form__input validate" id="userName" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$" invalidTooltip = "Вводите буквы" required>
+							</div>
+							<div class="isValid">
+								<p class="valid_tooltip write_figures">Вводите цифры</p>
+								<input name="user_phone" class="form__input validate" id="userPhone" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" invalidTooltip = "Вводите цифры" required>
+							</div>
+							<button class="form__button button" type="submit">Задать вопрос</button>
+							<div class="form__checkbox_container isValid" invalidTooltip = "Подтвердите согласие">
+								<p class="valid_tooltip confirm_agreement">Подтвердите согласие</p>
+								<input class="form__checkbox_original validate" id="form__check_original_id" type="checkbox" name="checkbox" value="agreement" required>
+								<label class="form__label_checkbox" for="form__check_original_id">Даю согласие на обработку данных</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 			<section class="clientSpeakAboutUs">

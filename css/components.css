@@ -371,7 +371,7 @@ input.frm__checkbox_original{
 	}
 }
 :root{
-	--checkboxReg-color: #FFC700;
+	--checkbox-color: #FFC700;
 }
 .frm__label_checkbox::before{
 	content: "";
@@ -379,7 +379,7 @@ input.frm__checkbox_original{
 	width: 15px;
 	height: 15px;
 	border: 2px solid;
-	border-color: var(--checkboxReg-color);
+	border-color: var(--checkbox-color);
 	border-radius: 2px;
 	margin-right: 10px;
 	background-repeat: no-repeat;
@@ -398,6 +398,9 @@ input.frm__checkbox_original{
 	.frm__checkbox_original:checked+label::before{
 		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
 	}
+}
+.isValid{
+	align-self: center;
 }
 .valid_tooltip{
 	position: absolute;

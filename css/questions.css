@@ -116,28 +116,29 @@
 		left: 1024px;
 	}
 }
-.questions__form{
+.questions__form_container{
 	position: absolute;
 	width: 300px;
 	top: 100px;
 	left: 50%;
 	transform: translate(-50%, 0);
 	z-index: 25;
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 @media (min-width: 480px){
-	.questions__form{
+	.questions__form_container{
 		width: 400px;
 	}
 }
 @media (min-width: 768px){
-	.questions__form{
+	.questions__form_container{
 		width: 450px;
 		top: 100px;
 	}
 }
 @media (min-width: 1000px){
-	.questions__form{
+	.questions__form_container{
 		width: 450px;
 		top: 175px;
 		left: 531px;
@@ -145,11 +146,16 @@
 	}
 }
 @media (min-width: 1920px){
-	.questions__form{
+	.questions__form_container{
 		width: 470px;
 		top: 135px;
 		left: 1075px;
 	}
+}
+.questions__form{
+	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 .form__header{
 	font-family: 'Philosopher';
@@ -226,14 +232,44 @@
 		padding-left: 21px;
 	}
 }
-.form__input_invalid{
-	border: 1px solid #FF5C00;
+.write_letters{
+	top: 149px;
 }
-.inputTooltip{
-	position: absolute;
-	font-size: 10px;
-	line-height: 10px;
-	color: #FF5C00;
+@media (min-width: 480px){
+	.write_letters{
+		top: 177px;
+	}
+}
+@media (min-width: 1000px){
+	.write_letters{
+		top: 188px;
+	}
+}
+.write_figures{
+	top: 214px;
+}
+@media (min-width: 480px){
+	.write_figures{
+		top: 247px;
+	}
+}
+@media (min-width: 1000px){
+	.write_figures{
+		top: 269px;
+	}
+}
+.confirm_agreement{
+	top: 378px;
+}
+@media (min-width: 480px){
+	.confirm_agreement{
+		top: 260px;
+	}
+}
+@media (min-width: 1000px){
+	.confirm_agreement{
+		top: 490px;
+	}
 }
 .form__button{
 	width: 225px;
@@ -242,6 +278,7 @@
 	line-height: 10px;
 	margin-bottom: 25px;
 	display: inline-block;
+	align-self: center;
 }
 @media (min-width: 480px){
 	.form__button{
@@ -299,9 +336,6 @@
 		line-height: 18px;
 	}
 }
-:root{
-	--checkbox-color: #FFC700;
-}
 .form__label_checkbox::before{
 	content: "";
 	display: inline-block;
@@ -327,11 +361,4 @@
 	.form__checkbox_original:checked+label::before{
 		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
 	}
-}
-.tooltip{
-	margin-top: 10px;
-	color: #FF5C00;
-	font-size: 10px;
-	line-height: 10px;
-	
 }

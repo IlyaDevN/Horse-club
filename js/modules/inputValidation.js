@@ -1,5 +1,7 @@
 const elemsToValidate = document.querySelectorAll(".isValid");
 const errorTimeout = 3000;
+const colorOk = '#FFC700';
+const colorError = '#FF5C00';
 
 if(elemsToValidate.length){
 	elemsToValidate.forEach(elem => {
@@ -31,7 +33,7 @@ function showTooltips(tooltip){
 
 function addBorderColor(invalidElem){
 	if(invalidElem.type === "checkbox"){
-		document.documentElement.style.setProperty('--checkboxReg-color', '#FF5C00');
+		document.documentElement.style.setProperty('--checkbox-color', colorError);
 	} else{
 		invalidElem.classList.add("active");
 	}
@@ -49,7 +51,7 @@ function hideTooltips(tooltip){
 
 function removeBorderColor (invalidElem){
 	if(invalidElem.type === "checkbox"){
-		document.documentElement.style.setProperty('--checkboxReg-color', '#FFC700');
+		document.documentElement.style.setProperty('--checkbox-color', colorOk);
 	} else{
 		invalidElem.classList.remove("active");
 	}
