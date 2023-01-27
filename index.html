@@ -36,12 +36,16 @@
 						<span></span>
 					</div>
 					<form class="register__form" >
-						<p class="valid_tooltip letters">Вводите буквы</p>
-						<input class="validate" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$" required>
-						<p class="valid_tooltip figures">Вводите цифры</p>
-						<input class="validate" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" required>
+						<div class="isValid">
+							<p class="valid_tooltip letters">Вводите буквы</p>
+							<input class="validate" type="text" placeholder="Ваше имя" pattern="^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$" required>
+						</div>
+						<div class="isValid">
+							<p class="valid_tooltip figures">Вводите цифры</p>
+							<input class="validate" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" required>
+						</div>
 						<button class="frm__btn button" type="submit"></button>
-						<div class="frm__checkbox_container" invalidTooltip = "Подтвердите согласие">
+						<div class="frm__checkbox_container isValid" invalidTooltip = "Подтвердите согласие">
 							<p class="valid_tooltip checkes">Подтвердите согласие</p>
 							<input class="frm__checkbox_original validate" id="frm__check_original_id" type="checkbox" name="checkbox" value="agreement" required>
 							<label class="frm__label_checkbox" for="frm__check_original_id">Даю согласие на обработку данных</label>

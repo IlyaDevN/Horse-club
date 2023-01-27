@@ -1,30 +1,32 @@
-const elemsToCheck = document.querySelectorAll(".validate");
+const elemsToValidate = document.querySelectorAll(".isValid");
 const errorTimeout = 3000;
 
-if(elemsToCheck.length > 0){
-	elemsToCheck.forEach(elem => {
-		if(elem.tagName === "INPUT"){
-			elem.addEventListener("invalid", function(event){
-				event.preventDefault();
-				if(event.target.getAttribute("isErrorShown") === "true") {
-					return;
-				}
-				showError(event.target);
-				setTimeout(hideError, errorTimeout, event.target);
-			})
-		}
+if(elemsToValidate.length){
+	elemsToValidate.forEach(elem => {
+		
+		const tooltip = elem.querySelector(".valid_tooltip");
+		const input = elem.querySelector(".validate");
+		if(input.tagName !== "INPUT") return;
+
+		input.addEventListener("invalid", function(event){
+			event.preventDefault();
+			if(input.getAttribute("isErrorShown") === "true") {
+				return;
+			}
+			showError(input, tooltip);
+			setTimeout(hideError, errorTimeout, input, tooltip);
+		})
 	})
 }
 
-function showError(invalidElem){
-
-	showTooltips(invalidElem);
+function showError(invalidElem, tooltip){
+	showTooltips(tooltip);
 	addBorderColor(invalidElem);
 	invalidElem.setAttribute("isErrorShown", true);
 }
 
-function showTooltips(invalidElem){
-	invalidElem.previousElementSibling.classList.add("active");
+function showTooltips(tooltip){
+	tooltip.classList.add("active");
 }
 
 function addBorderColor(invalidElem){
@@ -35,20 +37,17 @@ function addBorderColor(invalidElem){
 	}
 }
 
-function hideError(invalidElem){
-
-	hideTooltips(invalidElem);
+function hideError(invalidElem, tooltip){
+	hideTooltips(tooltip);
 	removeBorderColor(invalidElem);
 	invalidElem.setAttribute("isErrorShown", false);
 }
 
-function hideTooltips(invalidElem){
-
-	invalidElem.previousElementSibling.classList.remove("active");
+function hideTooltips(tooltip){
+	tooltip.classList.remove("active");
 }
 
 function removeBorderColor (invalidElem){
-
 	if(invalidElem.type === "checkbox"){
 		document.documentElement.style.setProperty('--checkboxReg-color', '#FFC700');
 	} else{
