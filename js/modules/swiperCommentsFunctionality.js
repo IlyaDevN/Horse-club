@@ -1,4 +1,4 @@
-import { navigationButtonAppearance, setSlidesState } from "./swiperGlobalFunctionality.js";
+import { navigationButtonAppearance, setSlidesState } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.esm.browser.min.js";
 
 const swiperComments = new Swiper(".swiper-container-2", {
