@@ -336,20 +336,23 @@
 		line-height: 18px;
 	}
 }
-.form__label_checkbox::before{
+.form__checkbox_original + label::before{
 	content: "";
 	display: inline-block;
 	width: 15px;
 	height: 15px;
 	border: 2px solid;
-	border-color: var(--checkbox-color);
+	border-color: #FFC700;
 	border-radius: 2px;
 	margin-right: 10px;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+.isValid.error .form__checkbox_original + label::before{
+	border-color: #FF5C00;
+}
 @media (min-width: 480px){
-	.form__label_checkbox::before{
+	.form__checkbox_original + label::before{
 		width: 1.3333em;
 		height: 1.3333em;
 	}

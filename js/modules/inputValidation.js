@@ -1,59 +1,32 @@
 const elemsToValidate = document.querySelectorAll(".isValid");
 const errorTimeout = 3000;
-const colorOk = '#FFC700';
-const colorError = '#FF5C00';
 
 if(elemsToValidate.length){
 	elemsToValidate.forEach(elem => {
 		
-		const tooltip = elem.querySelector(".valid_tooltip");
 		const input = elem.querySelector(".validate");
 		if(input.tagName !== "INPUT") return;
 
 		input.addEventListener("invalid", function(event){
 			event.preventDefault();
-			if(input.getAttribute("isErrorShown") === "true") {
+			if(elem.getAttribute("data-isErrorShown") === "true") {
 				return;
 			}
-			showError(input, tooltip);
-			setTimeout(hideError, errorTimeout, input, tooltip);
+			showError(elem);
+			hideError(elem);
 		})
 	})
 }
 
-function showError(invalidElem, tooltip){
-	showTooltips(tooltip);
-	addBorderColor(invalidElem);
-	invalidElem.setAttribute("isErrorShown", true);
+function showError(invalidItem){
+	invalidItem.classList.add("error");
+	invalidItem.setAttribute("data-isErrorShown", true);
 }
 
-function showTooltips(tooltip){
-	tooltip.classList.add("active");
-}
-
-function addBorderColor(invalidElem){
-	if(invalidElem.type === "checkbox"){
-		document.documentElement.style.setProperty('--checkbox-color', colorError);
-	} else{
-		invalidElem.classList.add("active");
-	}
-}
-
-function hideError(invalidElem, tooltip){
-	hideTooltips(tooltip);
-	removeBorderColor(invalidElem);
-	invalidElem.setAttribute("isErrorShown", false);
-}
-
-function hideTooltips(tooltip){
-	tooltip.classList.remove("active");
-}
-
-function removeBorderColor (invalidElem){
-	if(invalidElem.type === "checkbox"){
-		document.documentElement.style.setProperty('--checkbox-color', colorOk);
-	} else{
-		invalidElem.classList.remove("active");
-	}
+function hideError(invalidItem){
+	setTimeout(()=>{
+		invalidItem.classList.remove("error");
+		invalidItem.setAttribute("data-isErrorShown", false);
+	}, errorTimeout);
 }
 

@@ -77,10 +77,7 @@
 /* ============================================================================
 		slider (ourVisitors)
 =============================================================================*/
-/* :root{
-	--opacity-btnPrev: 1;
-	--opacity-btnNext: 1;
-} */
+
 .sliderCheckbox{
 	display: flex;
 	justify-content: center; 
@@ -349,14 +346,14 @@ div .swiper-scrollbar-drag{
 		width: 330px;
 	}
 }
-input.frm__checkbox_original{
+.frm__checkbox_original{
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
 	width: 1.5em;
 	height: 1.5em;
 }
-.frm__label_checkbox{
+.frm__checkbox_original + label{
 	font-size: 13px;
 	line-height: 15px;
 	color: #8A8A8A;
@@ -365,31 +362,31 @@ input.frm__checkbox_original{
 	user-select: none;
 }
 @media (min-width: 480px){
-	.frm__label_checkbox{
+	.frm__checkbox_original + label{
 		font-size: 15px;
 		line-height: 18px;
 	}
 }
-:root{
-	--checkbox-color: #FFC700;
-}
-.frm__label_checkbox::before{
+.frm__checkbox_original + label::before{
 	content: "";
 	display: inline-block;
 	width: 15px;
 	height: 15px;
 	border: 2px solid;
-	border-color: var(--checkbox-color);
+	border-color: #FFC700;
 	border-radius: 2px;
 	margin-right: 10px;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 @media (min-width: 480px){
-	.frm__label_checkbox::before{
+	.frm__checkbox_original + label::before{
 		width: 1.3333em;
 		height: 1.3333em;
 	}
+}
+.isValid.error .frm__checkbox_original + label::before{
+	border-color: #FF5C00;
 }
 .frm__checkbox_original:checked+label::before{
 	background-image: url(../img/questions/checkbox/x320/checkbox_x320.svg);
@@ -411,7 +408,7 @@ input.frm__checkbox_original{
 	opacity: 0;
 	transition: all 0.3s;
 }
-.valid_tooltip.active{
+.isValid.error .valid_tooltip{
 	visibility: visible;
 	opacity: 1;
 }
@@ -454,7 +451,7 @@ input.frm__checkbox_original{
 		top: 290px;
 	}
 }
-.validate.active{
+.isValid.error .validate{
 	border-color: #FF5C00;
 }
 .register__modal_gratitude{
