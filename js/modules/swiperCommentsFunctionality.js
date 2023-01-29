@@ -45,19 +45,6 @@ const slideStateHandler = function(){
 	setSlidesState(swiperComments, "activeSlides");
 }
 
-const mqlLess1920 = window.matchMedia("(max-width: 1919px)");
-mqlLess1920.addEventListener("change", function(){
-
-	if(mqlLess1920.matches){
-		swiperComments.off("slideChange", slideStateHandler);
-
-		swiperComments.slides.forEach(slide => {
-			slide.classList.remove("activeSlides");
-		});
-		navigationButtonAppearance(swiperComments);
-	}
-})
-
 const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
 if(mqlOver1920.matches){
 	slideStateHandler();
@@ -70,8 +57,15 @@ mqlOver1920.addEventListener("change", function(){
 		swiperComments.on("slideChange", slideStateHandler);
 		navigationButtonAppearance(swiperComments);
 	}
-})
+	if(!mqlOver1920.matches){
+		swiperComments.off("slideChange", slideStateHandler);
 
+		swiperComments.slides.forEach(slide => {
+			slide.classList.remove("activeSlides");
+		});
+		navigationButtonAppearance(swiperComments);
+	}
+})
 
 unwrapCommentsButtons();
 changeUnwrapBtnVisibility();
