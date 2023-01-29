@@ -83,14 +83,14 @@
 	justify-content: center; 
 	align-items: center;
 }
-.btn_prev {
+.slider_btn{
 	position: relative;
 	width: 40px;
 	height: 40px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
 	border-radius: 50%;
 }
-.btn_prev::before{
+.slider_btn::before{
 	content: "";
 	position: absolute;
 	left: 0;
@@ -102,19 +102,32 @@
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 	transition: opacity 0.2s ease-in-out;
 }
-.btn_prev:hover::before{
-	opacity: var(--opacity-btnPrev);
+.slider_btn:hover::before{
+	opacity: 1;
 }
-.arrow_prev{
+.slider_button_disabled.slider_btn{
+	opacity: 0.4;
+	cursor: auto;
+}
+.slider_button_disabled.slider_btn:hover::before{
+	opacity: 0;
+	cursor: auto;
+}
+.arrow{
 	color: #6A5300;
 	width: 10px;
 	height: 10px;
 	border-top: 3px solid #6A5300;
 	border-right: 3px solid #6A5300;
-	margin-left: 16px;
-	margin-right: 16px;
 	box-sizing: border-box;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.arrow_prev{
 	transform: rotate(-135deg);
+}
+.arrow_next{
+	transform: rotate(45deg);
 }
 .slider_range {
 	width: 96px;
@@ -129,45 +142,6 @@
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
 	transition: margin-left 1s ease-in-out 0s;
-}
-.btn_next {
-	position: relative;
-	width: 40px;
-	height: 40px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
-	border-radius: 50%;
-}
-.btn_next::before{
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	opacity: 0;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
-	transition: opacity 0.2s ease-in-out;
-}
-.btn_next:hover::before{
-	opacity: var(--opacity-btnNext);
-}
-.arrow_next{
-	color: #6A5300;
-	width: 10px;
-	height: 10px;
-	border-top: 3px solid #6A5300;
-	border-right: 3px solid #6A5300;
-	margin-left: 14px;
-	margin-right: 14px;
-	box-sizing: border-box;
-	transform: rotate(45deg);
-}
-.slider_button_disabled{
-	opacity: 0.4;
-	cursor: auto;
-	--opacity-btnPrev: 0;
-	--opacity-btnNext: 0;
 }
 /* ============================================================================
 	slider SWIPER
@@ -190,11 +164,13 @@ div .swiper-scrollbar-drag{
 	opacity: 0.4 !important;
 	pointer-events: none;
 }
-.swiper-button-disabled{
+.swiper-button-disabled.slider_btn{
 	opacity: 0.4;
 	cursor: auto;
-	--opacity-btnPrev: 0;
-	--opacity-btnNext: 0;
+}
+.swiper-button-disabled.slider_btn:hover::before{
+	opacity: 0;
+	cursor: auto;
 }
 /* ============================================================================
 		registration modal window
