@@ -37,9 +37,9 @@ const swiper = new Swiper(".swiper-container-1", {
 });
 
 const viewportWidth = window.innerWidth;
-const screenResolution = 1920;
+const SCREEN_RESOLUTION = 1920;
 
-if(viewportWidth >= screenResolution){
+if(viewportWidth >= SCREEN_RESOLUTION){
 	for(let slide of swiper.slides){
 		slide.classList.add("activeSlides");
 	}

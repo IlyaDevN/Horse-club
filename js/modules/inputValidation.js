@@ -1,5 +1,5 @@
 const elemsToValidate = document.querySelectorAll(".isValid");
-const errorTimeout = 3000;
+const ERROR_DELAY = 3000;
 
 if(elemsToValidate.length){
 	elemsToValidate.forEach(elem => {
@@ -27,6 +27,6 @@ function hideError(invalidItem){
 	setTimeout(()=>{
 		invalidItem.classList.remove("error");
 		invalidItem.setAttribute("data-isErrorShown", false);
-	}, errorTimeout);
+	}, ERROR_DELAY);
 }
 

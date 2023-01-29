@@ -7,9 +7,10 @@ const closeBtn = document.querySelector(".register__close_btn");
 const form = document.querySelector(".register__form");
 const modalSubmitBtn = document.querySelector(".frm__btn");
 const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
-const timeout = 800;
-const closeTimeout = 3000;
-let unlock = true;
+const REOPEN_DELAY = 800;
+const SHOW_TIME = 3000;
+const BTN_ESC = "Escape";
+let isOpen = true;
 
 if(popupLinks.length > 0){
 	for(let index = 0; index <popupLinks.length; index++){
@@ -23,15 +24,13 @@ if(popupLinks.length > 0){
 }
 
 function popupOpen(currentPopup, popupContent){
-	if(!unlock) return;
-
-	const btnEsc = "Escape";
+	if(!isOpen) return;
 
 	currentPopup.classList.add("open");
 	popupContent.classList.add("open");
 	body.classList.add("stopPageScroll");
 	body.style.paddingRight = scrollBarWidth + "px";
-	unlock = false;
+	isOpen = false;
 
 	currentPopup.addEventListener("click", function(e){
 		if(!e.target.closest(".register__modal_content")){
@@ -42,26 +41,26 @@ function popupOpen(currentPopup, popupContent){
 		popupClose(currentPopup, popupContent);
 	})
 	document.addEventListener("keydown", function(e){
-		if(e.code === btnEsc){
+		if(e.code === BTN_ESC){
 			popupClose(currentPopup, popupContent);
 		}
 	})
-	setTimeout(() => unlock = true, timeout);
+	setTimeout(() => isOpen = true, REOPEN_DELAY);
 
 	form.addEventListener("submit", function(e){
 		e.preventDefault();
 		registerModalContent.classList.remove("open");
 		registerModalGratitude.classList.add("open");
-		unlock = false;
+		isOpen = false;
 		setTimeout(()=>{
-			unlock = true;
+			isOpen = true;
 			popupClose(registerModalOverlay, registerModalGratitude);
-		}, closeTimeout);
+		}, SHOW_TIME);
 	});
 }
 
 function popupClose(currentPopup, popupContent){
-	if(!unlock) return;
+	if(!isOpen) return;
 
 	currentPopup.classList.remove("open");
 	popupContent.classList.remove("open");
@@ -69,8 +68,8 @@ function popupClose(currentPopup, popupContent){
 	setTimeout(()=>{
 		body.classList.remove("stopPageScroll");
 		body.style.paddingRight = "";
-		unlock = true;
-	}, timeout);
+		isOpen = true;
+	}, REOPEN_DELAY);
 
 }
 

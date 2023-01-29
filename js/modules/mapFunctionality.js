@@ -1,13 +1,14 @@
+const SCREEN_RESOLUTION = 768;
+const ZOOM_LEVEL = 16;
+const markerImageSrc = document.getElementById("contactsBgMap").dataset.markerImageSrc;
+
 function initMap() {
 	const viewportWidth = window.innerWidth;
-	const screenResolutionTab = 768;
-
+	
 	const markerOnTheMap = { lat: 50.4475, lng: 30.5369 };
 	let centerOfTheMap = {};
 
-	const markerImage = "img/contacts/icons/x768/pinGreen_x768.svg";
-
-	if(viewportWidth < screenResolutionTab){
+	if(viewportWidth < SCREEN_RESOLUTION){
 		centerOfTheMap = { lat: 50.4445, lng: 30.537 };
 	}
 	else {
@@ -15,7 +16,7 @@ function initMap() {
 	}
 
 	const map = new google.maps.Map(document.getElementById("contactsBgMap"), {
-		zoom: 16,
+		zoom: ZOOM_LEVEL,
 		center: centerOfTheMap,
 		disableDefaultUI: true,
 	});
@@ -23,14 +24,14 @@ function initMap() {
 	const marker = new google.maps.Marker({
 		position: markerOnTheMap,
 		map: map,
-		icon: markerImage,
+		icon: markerImageSrc,
 	});
 }
 
 window.initMap = initMap;
 
 let isScrollIgnored = false;
-const delay = 250;
+const SCROLL_DELAY = 250;
 const loadPoint = document.querySelector(".contacts__container");
 const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
 
@@ -51,7 +52,7 @@ window.addEventListener("load", function(){
 
 		setTimeout(()=>{
 			isScrollIgnored = false;
-		}, delay);
+		}, SCROLL_DELAY);
 
 	});
 

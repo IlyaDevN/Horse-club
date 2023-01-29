@@ -2,13 +2,13 @@ const slidesContainer = document.getElementById("ourVisitors__photo_container");
 const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
 const slideWidth = slidesContainer.querySelector(".ourVisitors__photo").offsetWidth;
 const sliderMinPossiblePosition = -(slidesQuantity - 1)*slideWidth;
-const sliderMaxPossiblePosition = 0;
+const SLIDER_MAX_POSSIBLE_POSITION = 0;
 let sliderCurrentPosition = 0;
 
 const sliderRangeWidth = document.getElementById("slider_range").offsetWidth;
 const sliderThumb = document.getElementById("slider_thumb");
 const sliderThumbWidth = sliderRangeWidth/slidesQuantity;
-const sliderThumbMinPossiblePosition = 0;
+const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
 const sliderThumbMaxPossiblePosition = (slidesQuantity - 1)*sliderThumbWidth;
 let sliderThumbCurrentPosition = 0;
 
@@ -21,14 +21,14 @@ changeButtonView();
 btnPrevOurVisitors.addEventListener("click", function(){
 
 	sliderCurrentPosition += slideWidth;
-	if(sliderCurrentPosition >= sliderMaxPossiblePosition){
-		sliderCurrentPosition = sliderMaxPossiblePosition;
+	if(sliderCurrentPosition >= SLIDER_MAX_POSSIBLE_POSITION){
+		sliderCurrentPosition = SLIDER_MAX_POSSIBLE_POSITION;
 	}
 	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
 
 	sliderThumbCurrentPosition -= sliderThumbWidth;
-	if(sliderThumbCurrentPosition <= sliderThumbMinPossiblePosition){
-		sliderThumbCurrentPosition = sliderThumbMinPossiblePosition;
+	if(sliderThumbCurrentPosition <= SLIDER_THUMB_MIN_POSSIBLE_POSITION){
+		sliderThumbCurrentPosition = SLIDER_THUMB_MIN_POSSIBLE_POSITION;
 	}
 	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
 	changeButtonView();

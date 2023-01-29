@@ -1,6 +1,9 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.esm.browser.min.js";
 
+const BTN_APPEARANCE_DELAY = 1000;
+const RESIZE_DELAY = 250;
+
 const swiperComments = new Swiper(".swiper-container-2", {
 
 	navigation: {
@@ -117,13 +120,11 @@ function closeComments(slideNotToClose){
 }
 
 function changeUnwrapBtnVisibility(){
-
-	const btnAppearanceDelay = 1000;
+	
 	setTimeout(()=>{
 		changeBtnVisibility();
-	}, btnAppearanceDelay);
+	}, BTN_APPEARANCE_DELAY);
 
-	const delay = 250;
 	let isThrottled = false;
 	window.addEventListener("resize", ()=>{
 		if(isThrottled) return;
@@ -132,7 +133,7 @@ function changeUnwrapBtnVisibility(){
 		setTimeout(()=>{
 			changeBtnVisibility();
 			isThrottled = false;
-		}, delay);
+		}, RESIZE_DELAY);
 	});
 
 	function changeBtnVisibility(){
@@ -155,7 +156,7 @@ function changeUnwrapBtnVisibility(){
 }
 
 function closeCommentsOnResize(){
-	const delay = 250;
+
 	let isThrottled = false;
 
 	window.addEventListener("resize", ()=>{
@@ -165,6 +166,6 @@ function closeCommentsOnResize(){
 		setTimeout(()=>{
 			closeComments();
 			isThrottled = false;
-		}, delay);
+		}, RESIZE_DELAY);
 	});
 }
