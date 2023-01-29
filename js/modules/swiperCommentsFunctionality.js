@@ -1,4 +1,4 @@
-import { navigationButtonAppearance, setSlidesState } from "./swiperHelpers.js";
+import { setSlidesState } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.esm.browser.min.js";
 
 const swiperComments = new Swiper(".swiper-container-2", {
@@ -36,10 +36,7 @@ const swiperComments = new Swiper(".swiper-container-2", {
 	focufocusableElements: "button",
 
 });
-swiperComments.on("slideChange", navigationButtonAppearance);
 swiperComments.on("slideChange", closeComments);
-
-navigationButtonAppearance(swiperComments);
 
 const slideStateHandler = function(){
 	setSlidesState(swiperComments, "activeSlides");
@@ -55,7 +52,7 @@ mqlOver1920.addEventListener("change", function(){
 
 	if(mqlOver1920.matches){
 		swiperComments.on("slideChange", slideStateHandler);
-		navigationButtonAppearance(swiperComments);
+		// navigationButtonAppearance(swiperComments);
 	}
 	if(!mqlOver1920.matches){
 		swiperComments.off("slideChange", slideStateHandler);
@@ -63,7 +60,6 @@ mqlOver1920.addEventListener("change", function(){
 		swiperComments.slides.forEach(slide => {
 			slide.classList.remove("activeSlides");
 		});
-		navigationButtonAppearance(swiperComments);
 	}
 })
 

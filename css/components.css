@@ -170,7 +170,7 @@
 	--opacity-btnNext: 0;
 }
 /* ============================================================================
-		 slider SWIPER (ourHorses)
+	slider SWIPER
 =============================================================================*/
 .scrollBar{
 	position: static;
@@ -190,7 +190,12 @@ div .swiper-scrollbar-drag{
 	opacity: 0.4 !important;
 	pointer-events: none;
 }
-
+.swiper-button-disabled{
+	opacity: 0.4;
+	cursor: auto;
+	--opacity-btnPrev: 0;
+	--opacity-btnNext: 0;
+}
 /* ============================================================================
 		registration modal window
 =============================================================================*/

@@ -33,22 +33,3 @@ export function getActiveIndexes(slider, realIndex){
 	}
 	return activeIndexes;
 }
-
-export function navigationButtonAppearance(slider){
-
-	const btnPrev = slider.navigation.prevEl;
-	const btnNext = slider.navigation.nextEl;
-
-	if(btnPrev.classList.contains("swiper-button-disabled")){
-		btnPrev.classList.add("slider_button_disabled");
-	}
-	if(!btnPrev.classList.contains("swiper-button-disabled")){
-		btnPrev.classList.remove("slider_button_disabled");
-	}
-	if(btnNext.classList.contains("swiper-button-disabled")){
-		btnNext.classList.add("slider_button_disabled");
-	}
-	if(!btnNext.classList.contains("swiper-button-disabled")){
-		btnNext.classList.remove("slider_button_disabled");
-	}
-}

@@ -1,4 +1,4 @@
-import { navigationButtonAppearance, setSlidesState } from "./swiperHelpers.js";
+import { setSlidesState } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.esm.browser.min.js";
 
 const swiper = new Swiper(".swiper-container-1", {
@@ -38,9 +38,6 @@ const swiper = new Swiper(".swiper-container-1", {
 
 const viewportWidth = window.innerWidth;
 const screenResolution = 1920;
-
-navigationButtonAppearance(swiper);
-swiper.on("slideChange", navigationButtonAppearance);
 
 if(viewportWidth >= screenResolution){
 	for(let slide of swiper.slides){
