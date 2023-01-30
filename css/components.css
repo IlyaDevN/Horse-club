@@ -89,6 +89,7 @@
 	height: 40px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
 	border-radius: 50%;
+	transition: opacity 1s ease-in-out;
 }
 .slider_btn::before{
 	content: "";
@@ -141,7 +142,7 @@
 	height: 8px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
-	transition: margin-left 1s ease-in-out 0s;
+	transition: transform 1s ease-in-out 0s;
 }
 /* ============================================================================
 	slider SWIPER

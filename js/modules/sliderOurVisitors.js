@@ -33,13 +33,13 @@ btnPrevOurVisitors.addEventListener("click", function(){
 	btnNextOurVisitors.disabled = false;
 	btnNextOurVisitors.tabIndex = "0";
 
-	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
+	slidesContainer.style.transform = "translateX(" + sliderCurrentPosition + "px)";
 
 	sliderThumbCurrentPosition -= sliderThumbWidth;
 	if(sliderThumbCurrentPosition <= SLIDER_THUMB_MIN_POSSIBLE_POSITION){
 		sliderThumbCurrentPosition = SLIDER_THUMB_MIN_POSSIBLE_POSITION;
 	}
-	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
+	sliderThumb.style.transform = "translateX(" + sliderThumbCurrentPosition + "px)";
 	// changeButtonView();
 });
 
@@ -58,13 +58,13 @@ btnNextOurVisitors.addEventListener("click", function(){
 	btnPrevOurVisitors.disabled = false;
 	btnPrevOurVisitors.tabIndex = "0";
 
-	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
+	slidesContainer.style.transform = "translateX(" + sliderCurrentPosition + "px)";
 
 	sliderThumbCurrentPosition += sliderThumbWidth;
 	if(sliderThumbCurrentPosition >= sliderThumbMaxPossiblePosition){
 		sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
 	}
-	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
+	sliderThumb.style.transform = "translateX(" + sliderThumbCurrentPosition + "px)";
 	// changeButtonView();
 });
 
