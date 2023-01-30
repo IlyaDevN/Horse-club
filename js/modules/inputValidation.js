@@ -1,22 +1,20 @@
 const elemsToValidate = document.querySelectorAll(".isValid");
 const ERROR_DELAY = 3000;
 
-if(elemsToValidate.length){
-	elemsToValidate.forEach(elem => {
-		
-		const input = elem.querySelector(".validate");
-		if(input.tagName !== "INPUT") return;
+elemsToValidate.forEach(elem => {
+	
+	const input = elem.querySelector(".validate");
+	if(input.tagName !== "INPUT") return;
 
-		input.addEventListener("invalid", function(event){
-			event.preventDefault();
-			if(elem.getAttribute("data-isErrorShown") === "true") {
-				return;
-			}
-			showError(elem);
-			hideError(elem);
-		})
+	input.addEventListener("invalid", function(event){
+		event.preventDefault();
+		if(elem.getAttribute("data-isErrorShown") === "true") {
+			return;
+		}
+		showError(elem);
+		hideError(elem);
 	})
-}
+})
 
 function showError(invalidItem){
 	invalidItem.classList.add("error");

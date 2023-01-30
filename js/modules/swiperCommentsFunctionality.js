@@ -102,7 +102,6 @@ function openComment(slide){
 function closeComments(slideNotToClose){
 
 	const slides = document.querySelectorAll(".feedbacks__card_container");
-	if(slides.length === 0) return;
 
 	slides.forEach(slide => {
 		if(slide === slideNotToClose) return;
