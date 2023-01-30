@@ -18,8 +18,6 @@ const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
 sliderThumb.style.width = sliderThumbWidth + "px"; 
 
 // changeButtonView();
-btnPrevOurVisitors.disabled = true;
-btnPrevOurVisitors.tabIndex = "-1";
 
 btnPrevOurVisitors.addEventListener("click", function(){
 
