@@ -34,29 +34,27 @@ let isScrollIgnored = false;
 const SCROLL_DELAY = 250;
 const loadPoint = document.querySelector(".contacts__container");
 const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
+const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
 
 window.addEventListener("load", function(){
-
-	const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
-
-	window.addEventListener("scroll", function scrollHandler(){
-
-		if(isScrollIgnored) return;
-
-		if(window.scrollY >= loadPointCoords){
-			loadScript(mapSrc);
-			window.removeEventListener("scroll", scrollHandler);
-		}
-
-		isScrollIgnored = true;
-
-		setTimeout(()=>{
-			isScrollIgnored = false;
-		}, SCROLL_DELAY);
-
-	});
-
+	window.addEventListener("scroll", scrollHandler);
 });
+
+function scrollHandler(){
+
+	if(isScrollIgnored) return;
+
+	if(window.scrollY >= loadPointCoords){
+		loadScript(mapSrc);
+		window.removeEventListener("scroll", scrollHandler);
+	}
+
+	isScrollIgnored = true;
+
+	setTimeout(()=>{
+		isScrollIgnored = false;
+	}, SCROLL_DELAY);
+}
 
 function loadScript(src){
 	const script = document.createElement("script");
