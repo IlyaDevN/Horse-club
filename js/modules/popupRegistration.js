@@ -16,31 +16,31 @@ for(let index = 0; index < popupLinks.length; index++){
 	const popupLink = popupLinks[index];
 
 	popupLink.addEventListener("click", function(){
-		popupOpen(registerModalOverlay, registerModalContent);
+		popupOpen();
 		addButtonContent(popupLink);
 	})
 }
 
-function popupOpen(currentPopup, popupContent){
+function popupOpen(){
 	if(!isOpen) return;
 
-	currentPopup.classList.add("open");
-	popupContent.classList.add("open");
+	registerModalOverlay.classList.add("open");
+	registerModalContent.classList.add("open");
 	body.classList.add("stopPageScroll");
 	body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
-	currentPopup.addEventListener("click", function(e){
+	registerModalOverlay.addEventListener("click", function(e){
 		if(!e.target.closest(".register__modal_content")){
-			popupClose(currentPopup, popupContent);
+			popupClose(registerModalContent);
 		}
 	})
 	closeBtn.addEventListener("click", function(){
-		popupClose(currentPopup, popupContent);
+		popupClose(registerModalContent);
 	})
 	document.addEventListener("keydown", function(e){
 		if(e.code === BTN_ESC){
-			popupClose(currentPopup, popupContent);
+			popupClose(registerModalContent);
 		}
 	})
 	setTimeout(() => isOpen = true, REOPEN_DELAY);
@@ -52,15 +52,15 @@ function popupOpen(currentPopup, popupContent){
 		isOpen = false;
 		setTimeout(()=>{
 			isOpen = true;
-			popupClose(registerModalOverlay, registerModalGratitude);
+			popupClose(registerModalGratitude);
 		}, SHOW_TIME);
 	});
 }
 
-function popupClose(currentPopup, popupContent){
+function popupClose(popupContent){
 	if(!isOpen) return;
 
-	currentPopup.classList.remove("open");
+	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
 
 	setTimeout(()=>{
