@@ -16,14 +16,25 @@ const btnPrevOurVisitors = document.getElementById("btn_prev_ourVisitors");
 const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
 
 sliderThumb.style.width = sliderThumbWidth + "px"; 
-changeButtonView();
+
+// changeButtonView();
+btnPrevOurVisitors.disabled = true;
+btnPrevOurVisitors.tabIndex = "-1";
 
 btnPrevOurVisitors.addEventListener("click", function(){
 
 	sliderCurrentPosition += slideWidth;
 	if(sliderCurrentPosition >= SLIDER_MAX_POSSIBLE_POSITION){
 		sliderCurrentPosition = SLIDER_MAX_POSSIBLE_POSITION;
+		this.disabled = true;
+		this.tabIndex = "-1";
+	} else{
+		this.disabled = false;
+		this.tabIndex = "0";
 	}
+	btnNextOurVisitors.disabled = false;
+	btnNextOurVisitors.tabIndex = "0";
+
 	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
 
 	sliderThumbCurrentPosition -= sliderThumbWidth;
@@ -31,7 +42,7 @@ btnPrevOurVisitors.addEventListener("click", function(){
 		sliderThumbCurrentPosition = SLIDER_THUMB_MIN_POSSIBLE_POSITION;
 	}
 	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-	changeButtonView();
+	// changeButtonView();
 });
 
 btnNextOurVisitors.addEventListener("click", function(){
@@ -39,7 +50,16 @@ btnNextOurVisitors.addEventListener("click", function(){
 	sliderCurrentPosition -= slideWidth;
 	if(sliderCurrentPosition <= sliderMinPossiblePosition){
 		sliderCurrentPosition = sliderMinPossiblePosition;
+		this.disabled = true;
+		this.tabIndex = "-1";
 	}
+	else{
+		this.disabled = false;
+		this.tabIndex = "0";
+	}
+	btnPrevOurVisitors.disabled = false;
+	btnPrevOurVisitors.tabIndex = "0";
+
 	slidesContainer.style.marginLeft = sliderCurrentPosition + "px";
 
 	sliderThumbCurrentPosition += sliderThumbWidth;
@@ -47,24 +67,24 @@ btnNextOurVisitors.addEventListener("click", function(){
 		sliderThumbCurrentPosition = sliderThumbMaxPossiblePosition;
 	}
 	sliderThumb.style.marginLeft = sliderThumbCurrentPosition + "px";
-	changeButtonView();
+	// changeButtonView();
 });
 
-function changeButtonView(){
-	if(sliderCurrentPosition == 0){
-		btnPrevOurVisitors.disabled = true;
-		btnPrevOurVisitors.tabIndex = "-1";
-	}
-	if(sliderCurrentPosition != 0){
-		btnPrevOurVisitors.disabled = false;
-		btnPrevOurVisitors.tabIndex = "0";
-	}
-	if(sliderCurrentPosition == sliderMinPossiblePosition){
-		btnNextOurVisitors.disabled = true;
-		btnNextOurVisitors.tabIndex = "-1";
-	}
-	if(sliderCurrentPosition != sliderMinPossiblePosition){
-		btnNextOurVisitors.disabled = false;
-		btnNextOurVisitors.tabIndex = "0";
-	}
-}
+// function changeButtonView(){
+	// if(sliderCurrentPosition == 0){
+	// 	btnPrevOurVisitors.disabled = true;
+	// 	btnPrevOurVisitors.tabIndex = "-1";
+	// }
+	// if(sliderCurrentPosition != 0){
+	// 	btnPrevOurVisitors.disabled = false;
+	// 	btnPrevOurVisitors.tabIndex = "0";
+	// }
+	// if(sliderCurrentPosition == sliderMinPossiblePosition){
+	// 	btnNextOurVisitors.disabled = true;
+	// 	btnNextOurVisitors.tabIndex = "-1";
+	// }
+	// if(sliderCurrentPosition != sliderMinPossiblePosition){
+	// 	btnNextOurVisitors.disabled = false;
+	// 	btnNextOurVisitors.tabIndex = "0";
+	// }
+// }
