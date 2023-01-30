@@ -340,7 +340,6 @@ div .swiper-scrollbar-drag{
 	color: #8A8A8A;
 	display: inline-flex;
 	align-items: center;
-	user-select: none;
 }
 @media (min-width: 480px){
 	.frm__checkbox_original + label{
