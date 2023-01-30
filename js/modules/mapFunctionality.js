@@ -56,7 +56,7 @@ window.addEventListener("load", function(){
 
 	});
 
-}, {once: true});
+});
 
 function loadScript(src){
 	const script = document.createElement("script");
