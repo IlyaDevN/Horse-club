@@ -12,15 +12,13 @@ const SHOW_TIME = 3000;
 const BTN_ESC = "Escape";
 let isOpen = true;
 
-if(popupLinks.length > 0){
-	for(let index = 0; index <popupLinks.length; index++){
-		const popupLink = popupLinks[index];
-		popupLink.addEventListener("click", function(){
+for(let index = 0; index < popupLinks.length; index++){
+	const popupLink = popupLinks[index];
 
-			popupOpen(registerModalOverlay, registerModalContent);
-			addButtonContent(popupLink);
-		})
-	}
+	popupLink.addEventListener("click", function(){
+		popupOpen(registerModalOverlay, registerModalContent);
+		addButtonContent(popupLink);
+	})
 }
 
 function popupOpen(currentPopup, popupContent){
