@@ -52,19 +52,19 @@ btnNextOurVisitors.addEventListener("click", function(){
 
 function changeButtonView(){
 	if(sliderCurrentPosition == 0){
-		btnPrevOurVisitors.classList.add("slider_button_disabled");
+		btnPrevOurVisitors.disabled = true;
 		btnPrevOurVisitors.tabIndex = "-1";
 	}
 	if(sliderCurrentPosition != 0){
-		btnPrevOurVisitors.classList.remove("slider_button_disabled");
+		btnPrevOurVisitors.disabled = false;
 		btnPrevOurVisitors.tabIndex = "0";
 	}
 	if(sliderCurrentPosition == sliderMinPossiblePosition){
-		btnNextOurVisitors.classList.add("slider_button_disabled");
+		btnNextOurVisitors.disabled = true;
 		btnNextOurVisitors.tabIndex = "-1";
 	}
 	if(sliderCurrentPosition != sliderMinPossiblePosition){
-		btnNextOurVisitors.classList.remove("slider_button_disabled");
+		btnNextOurVisitors.disabled = false;
 		btnNextOurVisitors.tabIndex = "0";
 	}
 }

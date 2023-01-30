@@ -105,11 +105,11 @@
 .slider_btn:hover::before{
 	opacity: 1;
 }
-.slider_button_disabled.slider_btn{
+.slider_btn[disabled]{
 	opacity: 0.4;
 	cursor: auto;
 }
-.slider_button_disabled.slider_btn:hover::before{
+.slider_btn[disabled]:hover::before{
 	opacity: 0;
 	cursor: auto;
 }
