@@ -1,4 +1,4 @@
-const SCREEN_RESOLUTION = 768;
+const TABLET_SCREEN_RESOLUTION = 768;
 const ZOOM_LEVEL = 16;
 const markerImageSrc = document.getElementById("contactsBgMap").dataset.markerImageSrc;
 
@@ -8,7 +8,7 @@ function initMap() {
 	const markerOnTheMap = { lat: 50.4475, lng: 30.5369 };
 	let centerOfTheMap = {};
 
-	if(viewportWidth < SCREEN_RESOLUTION){
+	if(viewportWidth < TABLET_SCREEN_RESOLUTION){
 		centerOfTheMap = { lat: 50.4445, lng: 30.537 };
 	}
 	else {
