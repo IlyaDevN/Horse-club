@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const body = document.body;
 const popupLinks = document.querySelectorAll(".popup-link");
 const registerModalOverlay = document.querySelector(".register__modal_overlay");
 const registerModalContent = document.querySelector(".register__modal_content");
