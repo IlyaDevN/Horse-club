@@ -36,16 +36,26 @@ const swiper = new Swiper(".swiper-container-1", {
 	speed: 1000,
 });
 
-const viewportWidth = window.innerWidth;
-const SCREEN_RESOLUTION = 1920;
-
-if(viewportWidth >= SCREEN_RESOLUTION){
-	for(let slide of swiper.slides){
-		slide.classList.add("activeSlides");
-	}
+const slideStateHandler = function(){
 	setSlidesState(swiper, "activeSlides");
-
-	swiper.on("slideChange", function(){
-		setSlidesState(swiper, "activeSlides");
-	});
 }
+
+const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
+if(mqlOver1920.matches){
+	slideStateHandler();
+	swiper.on("slideChange", slideStateHandler);
+}
+
+mqlOver1920.addEventListener("change", function(){
+
+	if(mqlOver1920.matches){
+		swiper.on("slideChange", slideStateHandler);
+	}
+	if(!mqlOver1920.matches){
+		swiper.off("slideChange", slideStateHandler);
+
+		swiper.slides.forEach(slide => {
+			slide.classList.remove("activeSlides");
+		});
+	}
+})

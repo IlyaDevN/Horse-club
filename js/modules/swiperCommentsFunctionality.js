@@ -55,7 +55,6 @@ mqlOver1920.addEventListener("change", function(){
 
 	if(mqlOver1920.matches){
 		swiperComments.on("slideChange", slideStateHandler);
-		// navigationButtonAppearance(swiperComments);
 	}
 	if(!mqlOver1920.matches){
 		swiperComments.off("slideChange", slideStateHandler);
