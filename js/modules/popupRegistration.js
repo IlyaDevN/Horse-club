@@ -1,11 +1,11 @@
 const body = document.body;
-const popupLinks = document.querySelectorAll(".popup-link");
+const popupLinks = document.body.querySelectorAll(".popup-link");
 const registerModalOverlay = document.querySelector(".register__modal_overlay");
-const registerModalContent = document.querySelector(".register__modal_content");
-const registerModalGratitude = document.querySelector(".register__modal_gratitude");
-const closeBtn = document.querySelector(".register__close_btn");
-const form = document.querySelector(".register__form");
-const modalSubmitBtn = document.querySelector(".frm__btn");
+const registerModalContent = registerModalOverlay.querySelector(".register__modal_content");
+const registerModalGratitude = registerModalOverlay.querySelector(".register__modal_gratitude");
+const closeBtn = registerModalOverlay.querySelector(".register__close_btn");
+const form = registerModalOverlay.querySelector(".register__form");
+const modalSubmitBtn = registerModalOverlay.querySelector(".frm__btn");
 const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 const REOPEN_DELAY = 800;
 const SHOW_TIME = 3000;
