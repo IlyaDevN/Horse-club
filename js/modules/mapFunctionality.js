@@ -21,7 +21,7 @@ function initMap() {
 		disableDefaultUI: true,
 	});
 
-	const marker = new google.maps.Marker({
+	new google.maps.Marker({
 		position: markerOnTheMap,
 		map: map,
 		icon: markerImageSrc,
