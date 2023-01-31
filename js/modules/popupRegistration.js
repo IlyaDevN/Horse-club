@@ -29,15 +29,22 @@ function popupOpen(){
 	document.body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
-	registerModalOverlay.addEventListener("click", function(e){
-		if(!e.target.closest(".register__modal_content")){
+	registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler)
+
+	function emptyPlaceCloseHandler (event){
+		if(!event.target.closest(".register__modal_content")){
 			popupClose(registerModalContent);
+			registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
 		}
-	})
-	closeBtn.addEventListener("click", function(){
+	}
+
+	closeBtn.addEventListener("click", closeBtnHandler);
+
+	function closeBtnHandler(){
 		popupClose(registerModalContent);
-	})
-	
+		closeBtn.removeEventListener("click", closeBtnHandler);
+	}
+
 	document.addEventListener("keydown", keyDownHandler);
 
 	function keyDownHandler(event){
