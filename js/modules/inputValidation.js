@@ -4,7 +4,6 @@ const ERROR_DELAY = 3000;
 elemsToValidate.forEach(elem => {
 	
 	const input = elem.querySelector(".validate");
-	if(input.tagName !== "INPUT") return;
 
 	input.addEventListener("invalid", function(event){
 		event.preventDefault();
