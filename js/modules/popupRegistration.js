@@ -37,11 +37,16 @@ function popupOpen(){
 	closeBtn.addEventListener("click", function(){
 		popupClose(registerModalContent);
 	})
-	document.addEventListener("keydown", function(e){
-		if(e.code === BTN_ESC){
+	
+	document.addEventListener("keydown", keyDownHandler);
+
+	function keyDownHandler(event){
+		if(event.code === BTN_ESC){
 			popupClose(registerModalContent);
+			document.removeEventListener("keydown", keyDownHandler);
 		}
-	})
+	}
+
 	setTimeout(() => isOpen = true, REOPEN_DELAY);
 
 	form.addEventListener("submit", function(e){
