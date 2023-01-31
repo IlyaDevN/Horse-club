@@ -7,7 +7,7 @@ elemsToValidate.forEach(elem => {
 
 	input.addEventListener("invalid", function(event){
 		event.preventDefault();
-		if(elem.getAttribute("data-isErrorShown") === "true") {
+		if(elem.dataset.isErrorShown === "true") {
 			return;
 		}
 		showError(elem);
@@ -17,13 +17,12 @@ elemsToValidate.forEach(elem => {
 
 function showError(invalidItem){
 	invalidItem.classList.add("error");
-	invalidItem.setAttribute("data-isErrorShown", true);
+	invalidItem.dataset.isErrorShown = true;
 }
 
 function hideError(invalidItem){
 	setTimeout(()=>{
 		invalidItem.classList.remove("error");
-		invalidItem.setAttribute("data-isErrorShown", false);
+		invalidItem.dataset.isErrorShown = false;
 	}, ERROR_DELAY);
 }
-
