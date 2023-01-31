@@ -1,5 +1,5 @@
 import { setSlidesState } from "./swiperHelpers.js";
-import Swiper from "./swiper-bundle.esm.browser.min.js";
+import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
 const swiper = new Swiper(".swiper-container-1", {
 	navigation: {
