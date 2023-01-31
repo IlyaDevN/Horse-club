@@ -36,9 +36,7 @@ const loadPoint = document.querySelector(".contacts__container");
 const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
 const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
 
-window.addEventListener("load", function(){
-	window.addEventListener("scroll", scrollHandler);
-});
+window.addEventListener("scroll", scrollHandler);
 
 function scrollHandler(){
 
