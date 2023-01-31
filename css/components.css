@@ -163,7 +163,6 @@ div .swiper-scrollbar-drag{
 .activeSlides {
 	transform: translateY(-40px) !important;
 	opacity: 0.4 !important;
-	pointer-events: none;
 }
 .swiper-button-disabled.slider_btn{
 	opacity: 0.4;
