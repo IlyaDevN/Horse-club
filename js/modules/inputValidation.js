@@ -11,7 +11,7 @@ elemsToValidate.forEach(elem => {
 			return;
 		}
 		showError(elem);
-		hideError(elem);
+		setTimeout(hideError, ERROR_DELAY, elem);
 	})
 })
 
@@ -21,8 +21,6 @@ function showError(invalidItem){
 }
 
 function hideError(invalidItem){
-	setTimeout(()=>{
-		invalidItem.classList.remove("error");
-		invalidItem.dataset.isErrorShown = false;
-	}, ERROR_DELAY);
+	invalidItem.classList.remove("error");
+	invalidItem.dataset.isErrorShown = false;
 }
