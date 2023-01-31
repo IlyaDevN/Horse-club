@@ -285,7 +285,7 @@ div .swiper-scrollbar-drag{
 		padding-left: 21px;
 	}
 }
-.frm__btn{
+.modal_form_btn{
 	width: 245px;
 	height: 45px;
 	font-size: 10px;
@@ -294,7 +294,7 @@ div .swiper-scrollbar-drag{
 	display: inline-block;
 }
 @media (min-width: 480px){
-	.frm__btn{
+	.modal_form_btn{
 		width: 300px;
 		height: 64px;
 		font-size: 13px;
@@ -303,39 +303,39 @@ div .swiper-scrollbar-drag{
 	}
 }
 @media (min-width: 768px){
-	.frm__btn{
+	.modal_form_btn{
 		font-size: 15px;
 	}
 }
 @media (min-width: 1000px){
-	.frm__btn{
+	.modal_form_btn{
 		width: 330px;
 		height: 70px;
 	}
 }
-.frm__checkbox_container{
+.modal_form__checkbox_container{
 	width: 245px;
 	margin: 0 auto;
 	text-align: start;
 }
 @media (min-width: 480px){
-	.frm__checkbox_container{
+	.modal_form__checkbox_container{
 		width: 300px;
 	}
 }
 @media (min-width: 1000px){
-	.frm__checkbox_container{
+	.modal_form__checkbox_container{
 		width: 330px;
 	}
 }
-.frm__checkbox_original{
+.modal_form__checkbox{
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
 	width: 1.5em;
 	height: 1.5em;
 }
-.frm__checkbox_original + label{
+.modal_form__checkbox + label{
 	font-size: 13px;
 	line-height: 15px;
 	color: #8A8A8A;
@@ -343,12 +343,12 @@ div .swiper-scrollbar-drag{
 	align-items: center;
 }
 @media (min-width: 480px){
-	.frm__checkbox_original + label{
+	.modal_form__checkbox + label{
 		font-size: 15px;
 		line-height: 18px;
 	}
 }
-.frm__checkbox_original + label::before{
+.modal_form__checkbox + label::before{
 	content: "";
 	display: inline-block;
 	width: 15px;
@@ -361,19 +361,19 @@ div .swiper-scrollbar-drag{
 	background-position: center center;
 }
 @media (min-width: 480px){
-	.frm__checkbox_original + label::before{
+	.modal_form__checkbox + label::before{
 		width: 1.3333em;
 		height: 1.3333em;
 	}
 }
-.isValid.error .frm__checkbox_original + label::before{
+.isValid.error .modal_form__checkbox + label::before{
 	border-color: #FF5C00;
 }
-.frm__checkbox_original:checked+label::before{
+.modal_form__checkbox:checked+label::before{
 	background-image: url(../img/questions/checkbox/x320/checkbox_x320.svg);
 }
 @media (min-width: 480px){
-	.frm__checkbox_original:checked+label::before{
+	.modal_form__checkbox:checked+label::before{
 		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
 	}
 }
