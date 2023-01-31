@@ -14,19 +14,15 @@ const swiperComments = new Swiper(".swiper-container-2", {
 		el: ".swiper_scrollbar_2",
 		draggable: true,
 	},
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	spaceBetween: 10,
 	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			slidesPerGroup: 1,
-			spaceBetween: 10,
-		},
 		768: {
 			slidesPerView: 2,
-			spaceBetween: 10,
 		},
 		1000: {
 			slidesPerView: 2,
-			spaceBetween: 10,
 			allowTouchMove: false,
 		},
 		1920: {

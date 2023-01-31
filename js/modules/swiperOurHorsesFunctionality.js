@@ -10,26 +10,19 @@ const swiper = new Swiper(".swiper-container-1", {
 		el: ".swiper_scrollbar_1",
 		draggable: true,
 	},
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	spaceBetween: 10,
 	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			slidesPerGroup: 1,
-			spaceBetween: 10,
-		},
 		480: {
 			slidesPerView: 2,
-			slidesPerGroup: 1,
-			spaceBetween: 10,
-
 		}, 
 		768: {
 			slidesPerView: 3,
-			slidesPerGroup: 1,
 			spaceBetween: 20,
 		},
 		1920: {
 			slidesPerView: 5,
-			slidesPerGroup: 1,
 			spaceBetween: 30,
 		}
 	},
