@@ -1,4 +1,3 @@
-const body = document.body;
 const popupLinks = document.body.querySelectorAll(".popup-link");
 const registerModalOverlay = document.querySelector(".register__modal_overlay");
 const registerModalContent = registerModalOverlay.querySelector(".register__modal_content");
@@ -26,8 +25,8 @@ function popupOpen(){
 
 	registerModalOverlay.classList.add("open");
 	registerModalContent.classList.add("open");
-	body.classList.add("stopPageScroll");
-	body.style.paddingRight = scrollBarWidth + "px";
+	document.body.classList.add("stopPageScroll");
+	document.body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
 	registerModalOverlay.addEventListener("click", function(e){
@@ -64,8 +63,8 @@ function popupClose(popupContent){
 	popupContent.classList.remove("open");
 
 	setTimeout(()=>{
-		body.classList.remove("stopPageScroll");
-		body.style.paddingRight = "";
+		document.body.classList.remove("stopPageScroll");
+		document.body.style.paddingRight = "";
 		isOpen = true;
 	}, REOPEN_DELAY);
 
