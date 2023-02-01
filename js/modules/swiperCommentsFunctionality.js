@@ -4,7 +4,7 @@ import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 const BTN_APPEARANCE_DELAY = 1000;
 const RESIZE_DELAY = 250;
 
-const swiperComments = new Swiper(".swiper-container-2", {
+const swiperComments = new Swiper(".comments_slider_container", {
 
 	navigation: {
 		nextEl: '.swiper_btn_next_2',
@@ -67,10 +67,10 @@ closeCommentsOnResize();
 
 function unwrapCommentsButtons(){
 
-	const slides = document.querySelectorAll(".feedbacks__card_container");
+	const slides = document.querySelectorAll(".comments_card_container");
 
 	slides.forEach(slide => {
-		const cardBtn = slide.querySelector(".card__unwrap_btn");
+		const cardBtn = slide.querySelector(".card_unwrap_btn");
 
 		cardBtn.addEventListener("click", function(){
 			openComment(slide);
@@ -79,8 +79,8 @@ function unwrapCommentsButtons(){
 }
 
 function openComment(slide){
-	const cardText = slide.querySelector(".card__text");
-	const cardBtn = slide.querySelector(".card__unwrap_btn");
+	const cardText = slide.querySelector(".card_text");
+	const cardBtn = slide.querySelector(".card_unwrap_btn");
 	const cardTextHeight = cardText.scrollHeight;
 
 	closeComments(slide);
@@ -97,13 +97,13 @@ function openComment(slide){
 
 function closeComments(slideNotToClose){
 
-	const slides = document.querySelectorAll(".feedbacks__card_container");
+	const slides = document.querySelectorAll(".comments_card_container");
 
 	slides.forEach(slide => {
 		if(slide === slideNotToClose) return;
 		
-		const cardText = slide.querySelector(".card__text.open");
-		const cardBtn = slide.querySelector(".card__unwrap_btn.open");
+		const cardText = slide.querySelector(".card_text.open");
+		const cardBtn = slide.querySelector(".card_unwrap_btn.open");
 
 		if(!cardText || !cardBtn) return;
 
@@ -132,12 +132,12 @@ function changeUnwrapBtnVisibility(){
 
 	function changeBtnVisibility(){
 
-		const slides = document.querySelectorAll(".feedbacks__card_container");
+		const slides = document.querySelectorAll(".comments_card_container");
 		if(slides.length === 0) return;
 
 		slides.forEach(slide => {
-			const cardText = slide.querySelector(".card__text");
-			const cardBtn = slide.querySelector(".card__unwrap_btn");
+			const cardText = slide.querySelector(".card_text");
+			const cardBtn = slide.querySelector(".card_unwrap_btn");
 
 			if(cardText.scrollHeight > cardText.clientHeight){
 				cardBtn.classList.add("calculated");

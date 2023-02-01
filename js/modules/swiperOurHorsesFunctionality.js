@@ -1,7 +1,7 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
-const swiper = new Swiper(".swiper-container-1", {
+const swiper = new Swiper(".our_horses_swiper_container", {
 	navigation: {
 		nextEl: '.swiper_btn_next_1',
 		prevEl: '.swiper_btn_prev_1',
