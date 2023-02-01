@@ -365,7 +365,7 @@ div .swiper-scrollbar-drag{
 		height: 1.3333em;
 	}
 }
-.isValid.error .modal_form__checkbox + label::before{
+.input_container.error .modal_form__checkbox + label::before{
 	border-color: #FF5C00;
 }
 .modal_form__checkbox:checked+label::before{
@@ -376,7 +376,7 @@ div .swiper-scrollbar-drag{
 		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
 	}
 }
-.isValid{
+.input_container{
 	align-self: center;
 }
 .valid_tooltip{
@@ -388,7 +388,7 @@ div .swiper-scrollbar-drag{
 	opacity: 0;
 	transition: all 0.3s;
 }
-.isValid.error .valid_tooltip{
+.input_container.error .valid_tooltip{
 	visibility: visible;
 	opacity: 1;
 }
@@ -431,7 +431,7 @@ div .swiper-scrollbar-drag{
 		top: 290px;
 	}
 }
-.isValid.error .validate{
+.input_container.error .validate{
 	border-color: #FF5C00;
 }
 .register__modal_gratitude{

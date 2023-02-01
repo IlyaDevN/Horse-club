@@ -347,7 +347,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-.isValid.error .form__checkbox + label::before{
+.input_container.error .form__checkbox + label::before{
 	border-color: #FF5C00;
 }
 @media (min-width: 480px){

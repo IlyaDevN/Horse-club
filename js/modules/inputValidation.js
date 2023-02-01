@@ -1,4 +1,4 @@
-const elemsToValidate = document.body.querySelectorAll(".isValid");
+const elemsToValidate = document.body.querySelectorAll(".input_container");
 const ERROR_DELAY = 3000;
 
 elemsToValidate.forEach(elem => {
