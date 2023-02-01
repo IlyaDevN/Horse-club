@@ -5,14 +5,14 @@ const menuBody = menuOverlay.querySelector(".menu_body");
 
 burgerBtn.addEventListener("click", function(){
 
-	menuOverlay.style.visibility = "visible";
-	menuBody.style.transform = `translateX(0%)`;
-	document.body.style.overflowY = "hidden";
+	menuOverlay.classList.add("active");
+	menuBody.classList.add("active");
+	document.body.classList.add("stopPageScroll");
 });
 
 menuCloseBtn.addEventListener("click", function(){
 
-	menuOverlay.style.visibility = "hidden";
-	menuBody.style.transform = `translateX(-100%)`;
-	document.body.style.overflowY = "";
+	menuOverlay.classList.remove("active");
+	menuBody.classList.remove("active");
+	document.body.classList.remove("stopPageScroll");
 })

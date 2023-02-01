@@ -495,6 +495,9 @@
 	z-index: 110;
 	visibility: hidden;
 }
+.menu_overlay.active{
+	visibility: visible;
+}
 .menu_body{
 	position: absolute;
 	width: 100%;
@@ -506,6 +509,9 @@
 	border-right: 5px solid #008139;
 	transform: translateX(-100%);
 	transition: all 1s ease 0s;
+}
+.menu_body.active{
+	transform: translateX(0);
 }
 @media (min-width: 480px){
 	.menu_body{
