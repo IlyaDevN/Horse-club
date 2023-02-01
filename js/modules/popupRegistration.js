@@ -56,8 +56,10 @@ function popupOpen(){
 
 	setTimeout(() => isOpen = true, REOPEN_DELAY);
 
-	form.addEventListener("submit", function(e){
-		e.preventDefault();
+	form.addEventListener("submit", submitHandler);
+
+	function submitHandler(event){
+		event.preventDefault();
 		registerModalContent.classList.remove("open");
 		registerModalGratitude.classList.add("open");
 		isOpen = false;
@@ -65,7 +67,8 @@ function popupOpen(){
 			isOpen = true;
 			popupClose(registerModalGratitude);
 		}, SHOW_TIME);
-	});
+	}
+	
 }
 
 function popupClose(popupContent){
