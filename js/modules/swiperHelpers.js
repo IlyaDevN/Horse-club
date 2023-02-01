@@ -12,7 +12,7 @@ export function setSlidesState(slider, className){
 	});
 }
 
-export function getActiveIndexes(slider, realIndex){
+function getActiveIndexes(slider, realIndex){
 	let activeIndexes = [];
 	let activeIndex = realIndex;
 	if(realIndex == 0){
