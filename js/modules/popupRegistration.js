@@ -30,45 +30,42 @@ function popupOpen(){
 	isOpen = false;
 
 	registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler)
-
-	function emptyPlaceCloseHandler (event){
-		if(!event.target.closest(".register__modal_content")){
-			popupClose(registerModalContent);
-			registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
-		}
-	}
-
 	closeBtn.addEventListener("click", closeBtnHandler);
-
-	function closeBtnHandler(){
-		popupClose(registerModalContent);
-		closeBtn.removeEventListener("click", closeBtnHandler);
-	}
-
 	document.addEventListener("keydown", keyDownHandler);
-
-	function keyDownHandler(event){
-		if(event.code === BTN_ESC){
-			popupClose(registerModalContent);
-			document.removeEventListener("keydown", keyDownHandler);
-		}
-	}
 
 	setTimeout(() => isOpen = true, REOPEN_DELAY);
 
 	form.addEventListener("submit", submitHandler);
+}
 
-	function submitHandler(event){
-		event.preventDefault();
-		registerModalContent.classList.remove("open");
-		registerModalGratitude.classList.add("open");
-		isOpen = false;
-		setTimeout(()=>{
-			isOpen = true;
-			popupClose(registerModalGratitude);
-		}, SHOW_TIME);
+function emptyPlaceCloseHandler (event){
+	if(!event.target.closest(".register__modal_content")){
+		popupClose(registerModalContent);
+		registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
 	}
-	
+}
+
+function closeBtnHandler(){
+	popupClose(registerModalContent);
+	closeBtn.removeEventListener("click", closeBtnHandler);
+}
+
+function keyDownHandler(event){
+	if(event.code === BTN_ESC){
+		popupClose(registerModalContent);
+		document.removeEventListener("keydown", keyDownHandler);
+	}
+}
+
+function submitHandler(event){
+	event.preventDefault();
+	registerModalContent.classList.remove("open");
+	registerModalGratitude.classList.add("open");
+	isOpen = false;
+	setTimeout(()=>{
+		isOpen = true;
+		popupClose(registerModalGratitude);
+	}, SHOW_TIME);
 }
 
 function popupClose(popupContent){
