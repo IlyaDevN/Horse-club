@@ -42,19 +42,16 @@ function popupOpen(){
 function emptyPlaceCloseHandler (event){
 	if(event.target === this){
 		popupClose(registerModalContent);
-		registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
 	}
 }
 
 function closeBtnHandler(){
 	popupClose(registerModalContent);
-	closeBtn.removeEventListener("click", closeBtnHandler);
 }
 
 function keyDownHandler(event){
 	if(event.code === KEYCODE.ESC){
 		popupClose(registerModalContent);
-		document.removeEventListener("keydown", keyDownHandler);
 	}
 }
 
@@ -74,6 +71,9 @@ function popupClose(popupContent){
 
 	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
+	registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
+	closeBtn.removeEventListener("click", closeBtnHandler);
+	document.removeEventListener("keydown", keyDownHandler);
 
 	setTimeout(()=>{
 		document.body.classList.remove("stopPageScroll");
