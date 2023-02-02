@@ -1,5 +1,6 @@
 const popupLinks = document.querySelectorAll(".popup-link");
 const registerModalOverlay = document.querySelector(".register__modal_overlay");
+const registerModalBody = document.querySelector(".register__modal_body");
 const registerModalContent = registerModalOverlay.querySelector(".register__modal_content");
 const registerModalGratitude = registerModalOverlay.querySelector(".register__modal_gratitude");
 const closeBtn = registerModalOverlay.querySelector(".register__close_btn");
@@ -29,7 +30,7 @@ function popupOpen(){
 	document.body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
-	registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler)
+	registerModalBody.addEventListener("click", emptyPlaceCloseHandler);
 	closeBtn.addEventListener("click", closeBtnHandler);
 	document.addEventListener("keydown", keyDownHandler);
 
@@ -39,7 +40,7 @@ function popupOpen(){
 }
 
 function emptyPlaceCloseHandler (event){
-	if(!event.target.closest(".register__modal_content")){
+	if(event.target === this){
 		popupClose(registerModalContent);
 		registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
 	}
