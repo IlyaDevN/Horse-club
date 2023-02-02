@@ -129,24 +129,23 @@ function changeUnwrapBtnVisibility(){
 			isThrottled = false;
 		}, RESIZE_DELAY);
 	});
+}
 
-	function changeBtnVisibility(){
+function changeBtnVisibility(){
 
-		const slides = document.querySelectorAll(".comments_card_container");
-		if(slides.length === 0) return;
+	const slides = document.querySelectorAll(".comments_card_container");
 
-		slides.forEach(slide => {
-			const cardText = slide.querySelector(".card_text");
-			const cardBtn = slide.querySelector(".card_unwrap_btn");
+	slides.forEach(slide => {
+		const cardText = slide.querySelector(".card_text");
+		const cardBtn = slide.querySelector(".card_unwrap_btn");
 
-			if(cardText.scrollHeight > cardText.clientHeight){
-				cardBtn.classList.add("calculated");
-			}
-			else{
-				cardBtn.classList.remove("calculated");
-			}
-		});
-	}
+		if(cardText.scrollHeight > cardText.clientHeight){
+			cardBtn.classList.add("calculated");
+		}
+		else{
+			cardBtn.classList.remove("calculated");
+		}
+	});
 }
 
 function closeCommentsOnResize(){
