@@ -44,13 +44,13 @@ mqlOver1920.addEventListener("change", function(){
 	if(mqlOver1920.matches){
 		swiper.on("slideChange", slideStateHandler);
 	} else {
+		swiper.off("slideChange", slideStateHandler);
 		cleanSlidesState();
 	}
 })
 
 function cleanSlidesState(){
-	swiper.off("slideChange", slideStateHandler);
-
+	
 	swiper.slides.forEach(slide => {
 		slide.classList.remove("activeSlides");
 	});
