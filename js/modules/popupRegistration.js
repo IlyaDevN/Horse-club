@@ -13,14 +13,12 @@ const KEYCODE = {
 };
 let isOpen = true;
 
-for(let index = 0; index < popupLinks.length; index++){
-	const popupLink = popupLinks[index];
-
+popupLinks.forEach( popupLink => {
 	popupLink.addEventListener("click", function(){
 		popupOpen();
 		addButtonContent(popupLink);
 	})
-}
+});
 
 function popupOpen(){
 	if(!isOpen) return;
