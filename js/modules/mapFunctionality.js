@@ -1,3 +1,5 @@
+import {throttle} from "./helpers.js";
+
 const TABLET_SCREEN_RESOLUTION = 768;
 const ZOOM_LEVEL = 16;
 const markerImageSrc = document.getElementById("contactsBgMap").dataset.markerImageSrc;
@@ -30,28 +32,19 @@ function initMap() {
 
 window.initMap = initMap;
 
-let isScrollIgnored = false;
 const SCROLL_DELAY = 250;
 const loadPoint = document.querySelector(".contacts__container");
 const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
 const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
 
-window.addEventListener("scroll", scrollHandler);
+const throttledScrollHandler = throttle(scrollHandler, SCROLL_DELAY);
+window.addEventListener("scroll", throttledScrollHandler);
 
 function scrollHandler(){
-
-	if(isScrollIgnored) return;
-
 	if(window.scrollY >= loadPointCoords){
 		loadScript(mapSrc);
-		window.removeEventListener("scroll", scrollHandler);
+		window.removeEventListener("scroll", throttledScrollHandler);
 	}
-
-	isScrollIgnored = true;
-
-	setTimeout(()=>{
-		isScrollIgnored = false;
-	}, SCROLL_DELAY);
 }
 
 function loadScript(src){
