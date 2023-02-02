@@ -29,7 +29,7 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 	speed: 1000,
 });
 
-const slideStateHandler = function(){
+function slideStateHandler(){
 	setSlidesState(swiper, "activeSlides");
 }
 
