@@ -140,10 +140,10 @@ function changeBtnVisibility(){
 		const cardBtn = slide.querySelector(".card_unwrap_btn");
 
 		if(cardText.scrollHeight > cardText.clientHeight){
-			cardBtn.classList.add("calculated");
+			cardBtn.classList.add("active");
 		}
 		else{
-			cardBtn.classList.remove("calculated");
+			cardBtn.classList.remove("active");
 		}
 	});
 }

@@ -165,7 +165,7 @@
 	color: #008139;
 	visibility: hidden;
 }
-.card_unwrap_btn.calculated{
+.card_unwrap_btn.active{
 	visibility: visible;
 }
 @media (min-width: 480px){
