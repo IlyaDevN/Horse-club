@@ -115,9 +115,7 @@ function closeComments(slideNotToClose){
 
 function changeUnwrapBtnVisibility(){
 	
-	setTimeout(()=>{
-		changeBtnVisibility();
-	}, BTN_APPEARANCE_DELAY);
+	setTimeout(changeBtnVisibility, BTN_APPEARANCE_DELAY);
 
 	let isThrottled = false;
 	window.addEventListener("resize", ()=>{
