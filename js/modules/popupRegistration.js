@@ -8,7 +8,9 @@ const modalSubmitBtn = registerModalOverlay.querySelector(".modal_form_btn");
 const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 const REOPEN_DELAY = 800;
 const SHOW_TIME = 3000;
-const BTN_ESC = "Escape";
+const KEYCODE = {
+	ESC: "Escape"
+};
 let isOpen = true;
 
 for(let index = 0; index < popupLinks.length; index++){
@@ -51,7 +53,7 @@ function closeBtnHandler(){
 }
 
 function keyDownHandler(event){
-	if(event.code === BTN_ESC){
+	if(event.code === KEYCODE.ESC){
 		popupClose(registerModalContent);
 		document.removeEventListener("keydown", keyDownHandler);
 	}
