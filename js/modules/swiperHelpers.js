@@ -1,32 +1,55 @@
-export function setSlidesState(slider, className){
-	const activeIndexes = getActiveIndexes(slider, slider.realIndex);
-	const slideCollection = slider.slides;
-	
-	slideCollection.forEach(function(elem, index) {
-		if(activeIndexes.includes(index)){
-			elem.classList.remove(className);
+export function setSlidesState(){
+	const swiper = this;
+	const activeIndexes = getActiveIndexes.call(swiper);
+	const slideCollection = swiper.slides;
+	const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
+
+	if(mqlOver1920.matches){
+		slideCollection.forEach(function(elem, index) {
+			if(activeIndexes.includes(index)){
+				elem.classList.remove("activeSlides");
+			}
+			else{
+				elem.classList.add("activeSlides");
+			}
+		});
+	}
+
+	mqlOver1920.addEventListener("change", on1920changeStateHandler);
+
+	function on1920changeStateHandler(){
+		if(mqlOver1920.matches){
+			swiper.on("slideChange", setSlidesState);
+		} else {
+			swiper.off("slideChange", setSlidesState);
+			cleanSlidesState.call(swiper);
 		}
-		else{
-			elem.classList.add(className);
-		}
+	}
+}
+
+function cleanSlidesState(){
+	const swiper = this;
+	swiper.slides.forEach(slide => {
+		slide.classList.remove("activeSlides");
 	});
 }
 
-function getActiveIndexes(slider, realIndex){
+function getActiveIndexes(){
+	const swiper = this;
 	let activeIndexes = [];
-	let activeIndex = realIndex;
-	if(realIndex == 0){
-		for(let i = 0; i < slider.params.slidesPerView; i++){
+	let activeIndex = swiper.realIndex;
+	if(swiper.realIndex == 0){
+		for(let i = 0; i < swiper.params.slidesPerView; i++){
 			activeIndexes.push(i);
 		}
 	}
-	if(realIndex == slider.slides.length - slider.params.slidesPerView){
-		for(let i = realIndex; i < slider.slides.length; i++){
+	if(swiper.realIndex == swiper.slides.length - swiper.params.slidesPerView){
+		for(let i = swiper.realIndex; i < swiper.slides.length; i++){
 			activeIndexes.push(i);
 		}
 	}
 	else {
-		const quantityOfActiveIndexes = slider.params.slidesPerView - 2;
+		const quantityOfActiveIndexes = swiper.params.slidesPerView - 2;
 		for(let i = 0; i < quantityOfActiveIndexes; i++){
 			activeIndexes.push(++activeIndex);
 		}

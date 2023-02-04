@@ -33,33 +33,12 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	},
 	speed: 1000,
 	focufocusableElements: "button",
-
+	on: {
+		slideChange: setSlidesState,
+	}
 });
-swiperComments.on("slideChange", closeComments);
 
-const slideStateHandler = function(){
-	setSlidesState(swiperComments, "activeSlides");
-}
-
-const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
-if(mqlOver1920.matches){
-	slideStateHandler();
-	swiperComments.on("slideChange", slideStateHandler);
-}
-
-mqlOver1920.addEventListener("change", function(){
-
-	if(mqlOver1920.matches){
-		swiperComments.on("slideChange", slideStateHandler);
-	}
-	if(!mqlOver1920.matches){
-		swiperComments.off("slideChange", slideStateHandler);
-
-		swiperComments.slides.forEach(slide => {
-			slide.classList.remove("activeSlides");
-		});
-	}
-})
+setSlidesState.call(swiperComments);
 
 unwrapCommentsButtons();
 changeUnwrapBtnVisibility();

@@ -27,31 +27,9 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 		}
 	},
 	speed: 1000,
+	on: {
+		slideChange: setSlidesState,
+	}
 });
 
-function slideStateHandler(){
-	setSlidesState(swiper, "activeSlides");
-}
-
-const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
-if(mqlOver1920.matches){
-	slideStateHandler();
-	swiper.on("slideChange", slideStateHandler);
-}
-
-mqlOver1920.addEventListener("change", function(){
-
-	if(mqlOver1920.matches){
-		swiper.on("slideChange", slideStateHandler);
-	} else {
-		swiper.off("slideChange", slideStateHandler);
-		cleanSlidesState();
-	}
-})
-
-function cleanSlidesState(){
-	
-	swiper.slides.forEach(slide => {
-		slide.classList.remove("activeSlides");
-	});
-}
+setSlidesState.call(swiper);
