@@ -13,6 +13,7 @@ const KEYCODE = {
 };
 let isOpen = true;
 form.addEventListener("submit", submitHandler);
+registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 
 popupLinks.forEach( popupLink => {
 	popupLink.addEventListener("click", function(){
@@ -30,7 +31,6 @@ function popupOpen(){
 	document.body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
-	registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 	closeBtn.addEventListener("click", closeBtnHandler);
 	document.addEventListener("keydown", keyDownHandler);
 
@@ -69,7 +69,6 @@ function popupClose(popupContent){
 
 	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
-	registerModalOverlay.removeEventListener("click", emptyPlaceCloseHandler);
 	closeBtn.removeEventListener("click", closeBtnHandler);
 	document.removeEventListener("keydown", keyDownHandler);
 
