@@ -1,3 +1,5 @@
+import { mqlArray } from "./helpers.js";
+
 const slidesContainer = document.getElementById("ourVisitors__photo_container");
 const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
 let slideWidth = slidesContainer.querySelector(".ourVisitors__photo").offsetWidth;
@@ -17,14 +19,6 @@ const btnPrevOurVisitors = document.getElementById("btn_prev_ourVisitors");
 const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
 
 sliderThumb.style.width = sliderThumbWidth + "px"; 
-
-const mql320 = window.matchMedia("(min-width: 320px)");
-const mql480 = window.matchMedia("(min-width: 480px)");
-const mql768 = window.matchMedia("(min-width: 768px)");
-const mql1000 = window.matchMedia("(min-width: 1000px)");
-const mql1920 = window.matchMedia("(min-width: 1920px)");
-
-const mqlArray = [mql320, mql480, mql768, mql1000, mql1920];
 
 mqlArray.forEach(mql => {
 	mql.addEventListener("change", setState);
