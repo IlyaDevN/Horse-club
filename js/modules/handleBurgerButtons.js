@@ -7,13 +7,24 @@ burgerBtn.addEventListener("click", openMenu);
 function openMenu(){
 	menuOverlay.classList.add("active");
 	document.body.classList.add("stopPageScroll");
-	document.addEventListener("click", closeMenu);
+	document.addEventListener("click", closeMenuByOverlay);
+	document.addEventListener("click", closeMenuByButton);
 }
 
-function closeMenu(event){
-	if(event.target === menuOverlay || event.target.offsetParent === menuCloseBtn){
-		menuOverlay.classList.remove("active");
-		document.body.classList.remove("stopPageScroll");
-		document.removeEventListener("click", closeMenu);
+function closeMenuByOverlay(event){
+	if(event.target === menuOverlay) {
+		closeMenu();
 	}
+}
+function closeMenuByButton(event){
+	if(event.target.offsetParent === menuCloseBtn){
+		closeMenu();
+	}
+}
+
+function closeMenu(){
+	menuOverlay.classList.remove("active");
+	document.body.classList.remove("stopPageScroll");
+	document.removeEventListener("click", closeMenuByOverlay);
+	document.removeEventListener("click", closeMenuByButton);
 }
