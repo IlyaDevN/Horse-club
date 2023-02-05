@@ -183,6 +183,9 @@ div .swiper-scrollbar-drag{
 	top: 0;
 	left: 0;
 	z-index: 150;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: rgba(0, 0, 0, 0.8);
 	transition: all 0.8s;
 	opacity: 0;
@@ -191,12 +194,6 @@ div .swiper-scrollbar-drag{
 .register__modal_overlay.open{
 	opacity: 1;
 	visibility: visible;
-}
-.register__modal_body{
-	min-height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .register__modal_content{
 	width: 300px;

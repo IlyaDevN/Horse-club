@@ -1,6 +1,5 @@
 const popupLinks = document.querySelectorAll(".popup-link");
 const registerModalOverlay = document.querySelector(".register__modal_overlay");
-const registerModalBody = document.querySelector(".register__modal_body");
 const registerModalContent = registerModalOverlay.querySelector(".register__modal_content");
 const registerModalGratitude = registerModalOverlay.querySelector(".register__modal_gratitude");
 const closeBtn = registerModalOverlay.querySelector(".register__close_btn");
@@ -13,6 +12,7 @@ const KEYCODE = {
 	ESC: "Escape"
 };
 let isOpen = true;
+form.addEventListener("submit", submitHandler);
 
 popupLinks.forEach( popupLink => {
 	popupLink.addEventListener("click", function(){
@@ -30,17 +30,15 @@ function popupOpen(){
 	document.body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
-	registerModalBody.addEventListener("click", emptyPlaceCloseHandler);
+	registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 	closeBtn.addEventListener("click", closeBtnHandler);
 	document.addEventListener("keydown", keyDownHandler);
 
 	setTimeout(() => isOpen = true, REOPEN_DELAY);
-
-	form.addEventListener("submit", submitHandler);
 }
 
 function emptyPlaceCloseHandler (event){
-	if(event.target === this){
+	if(event.target === registerModalOverlay){
 		popupClose(registerModalContent);
 	}
 }
