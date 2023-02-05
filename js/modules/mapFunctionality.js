@@ -35,7 +35,8 @@ window.initMap = initMap;
 const SCROLL_DELAY = 250;
 const loadPoint = document.querySelector(".contacts__container");
 const mapSrc = document.getElementById("contactsBgMap").dataset.mapSrc;
-const loadPointCoords = loadPoint.getBoundingClientRect().top + window.pageYOffset -1000;
+const SCROLL_BEFORE_LOAD = 1000;
+const loadPointCoords = loadPoint.getBoundingClientRect().top + window.scrollY - SCROLL_BEFORE_LOAD;
 
 const throttledScrollHandler = throttle(scrollHandler, SCROLL_DELAY);
 window.addEventListener("scroll", throttledScrollHandler);
