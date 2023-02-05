@@ -14,6 +14,7 @@ const KEYCODE = {
 let isOpen = true;
 form.addEventListener("submit", submitHandler);
 registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
+closeBtn.addEventListener("click", closeBtnHandler);
 
 popupLinks.forEach( popupLink => {
 	popupLink.addEventListener("click", function(){
@@ -31,7 +32,6 @@ function popupOpen(){
 	document.body.style.paddingRight = scrollBarWidth + "px";
 	isOpen = false;
 
-	closeBtn.addEventListener("click", closeBtnHandler);
 	document.addEventListener("keydown", keyDownHandler);
 
 	setTimeout(() => isOpen = true, REOPEN_DELAY);
@@ -69,7 +69,6 @@ function popupClose(popupContent){
 
 	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
-	closeBtn.removeEventListener("click", closeBtnHandler);
 	document.removeEventListener("keydown", keyDownHandler);
 
 	setTimeout(()=>{
