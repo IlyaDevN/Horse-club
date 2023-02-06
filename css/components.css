@@ -223,7 +223,7 @@ div .swiper-scrollbar-drag{
 .register__modal_content.open{
 	transform: perspective(380px) translateY(0) rotateX(0);
 }
-.register__close_btn{
+.register__close_button{
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -231,7 +231,7 @@ div .swiper-scrollbar-drag{
 	right: 10px;
 	cursor: pointer;
 }
-.register__close_btn span{
+.register__close_button span{
 	position: absolute;
 	top: 50%;
 	width: 17px;
@@ -240,10 +240,10 @@ div .swiper-scrollbar-drag{
 	transform: rotate(135deg);
 	transition: all 0.3s;
 }
-.register__close_btn:hover span{
+.register__close_button:hover span{
 	background-color: red;
 }
-.register__close_btn span:nth-child(1){
+.register__close_button span:nth-child(1){
 	transform: rotate(-135deg);
 }
 .register__form{
