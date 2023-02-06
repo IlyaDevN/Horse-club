@@ -467,7 +467,7 @@
 	z-index: 5;
 }
 /*============================================================*/
-.menu_close_btn{
+.menu_close_button{
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -475,7 +475,7 @@
 	right: 21px;
 	cursor: pointer;
 }
-.menu_close_btn span{
+.menu_close_button span{
 	position: absolute;
 	top: 50%;
 	width: 17px;
@@ -483,7 +483,7 @@
 	background-color: #FFF;
 	transform: rotate(135deg);
 }
-.menu_close_btn span:nth-child(1){
+.menu_close_button span:nth-child(1){
 	transform: rotate(-135deg);
 }
 .menu_overlay{
