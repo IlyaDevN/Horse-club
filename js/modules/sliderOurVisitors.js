@@ -12,25 +12,25 @@ const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
 const sliderThumbMaxPossiblePosition = (slidesQuantity - 1)*100;
 let sliderThumbCurrentShift = 0;
 
-const btnPrevOurVisitors = document.getElementById("btn_prev_ourVisitors");
-const btnNextOurVisitors = document.getElementById("btn_next_ourVisitors");
+const btnPrev = document.getElementById("btn_prev_ourVisitors");
+const btnNext = document.getElementById("btn_next_ourVisitors");
 
 sliderThumb.style.width = sliderThumbWidth + "px"; 
 
-btnPrevOurVisitors.addEventListener("click", function(){
+btnPrev.addEventListener("click", function(){
 	movePrevSlide();
 	moveThumbPrev();
-	if(btnNextOurVisitors.disabled){
-		enableButton(btnNextOurVisitors);
+	if(btnNext.disabled){
+		enableButton(btnNext);
 	}
 });
 
-btnNextOurVisitors.addEventListener("click", function(){
+btnNext.addEventListener("click", function(){
 	moveNextSlide();
 	moveThumbNext();
 
-	if(btnPrevOurVisitors.disabled){
-		enableButton(btnPrevOurVisitors);
+	if(btnPrev.disabled){
+		enableButton(btnPrev);
 	}
 });
 
@@ -38,9 +38,9 @@ function movePrevSlide(){
 	sliderCurrentShift += 100;
 
 	if(sliderCurrentShift >= SLIDER_MAX_POSSIBLE_POSITION){
-		disableButton(btnPrevOurVisitors);
+		disableButton(btnPrev);
 	} else{
-		enableButton(btnPrevOurVisitors);
+		enableButton(btnPrev);
 	}
 	slidesContainer.style.transform = `translateX(${sliderCurrentShift}%)`;
 }
@@ -48,10 +48,10 @@ function movePrevSlide(){
 function moveNextSlide(){
 	sliderCurrentShift -= 100;
 	if(sliderCurrentShift <= sliderMinPossiblePosition){
-		disableButton(btnNextOurVisitors);
+		disableButton(btnNext);
 	}
 	else{
-		enableButton(btnNextOurVisitors);
+		enableButton(btnNext);
 	}
 	slidesContainer.style.transform = `translateX(${sliderCurrentShift}%)`;
 }
