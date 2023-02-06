@@ -5,6 +5,7 @@ import { mqlArray } from "./helpers.js" ;
 
 const slides = document.querySelectorAll(".comments_card_container");
 const BTN_APPEARANCE_DELAY = 1000;
+const LINE_CLAMP_DELAY = 500;
 
 const swiperComments = new Swiper(".comments_slider_container", {
 
@@ -83,7 +84,7 @@ function closeComment(slide){
 	const cardText = slide.querySelector(".card_text");
 
 	cardText.style.height = "";
-	slide.classList.remove("open");
+	setTimeout(() => slide.classList.remove("open"), LINE_CLAMP_DELAY);
 }
 
 function closeAllComments(){
@@ -92,7 +93,7 @@ function closeAllComments(){
 		const cardText = slide.querySelector(".card_text");
 
 		cardText.style.height = "";
-		slide.classList.remove("open");
+		setTimeout(() => slide.classList.remove("open"), LINE_CLAMP_DELAY);
 	});
 }
 
