@@ -164,6 +164,9 @@
 .comments_card_container.active .card_unwrap_btn{
 	visibility: visible;
 }
+.comments_card_container.activeSlides .card_unwrap_btn{
+	pointer-events: none;
+}
 @media (min-width: 480px){
 	.card_unwrap_btn {
 		line-height: 23px;
@@ -237,4 +240,7 @@
 }
 .author_cocial_network_link > a > img{
 	margin-right: 10px;
+}
+.comments_card_container.activeSlides .author_cocial_network_link a{
+	pointer-events: none;
 }
