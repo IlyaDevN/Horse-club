@@ -281,7 +281,7 @@ div .swiper-scrollbar-drag{
 		padding-left: 21px;
 	}
 }
-.modal_form_btn{
+.modal_form_button{
 	width: 245px;
 	height: 45px;
 	font-size: 10px;
@@ -290,7 +290,7 @@ div .swiper-scrollbar-drag{
 	display: inline-block;
 }
 @media (min-width: 480px){
-	.modal_form_btn{
+	.modal_form_button{
 		width: 300px;
 		height: 64px;
 		font-size: 13px;
@@ -299,12 +299,12 @@ div .swiper-scrollbar-drag{
 	}
 }
 @media (min-width: 768px){
-	.modal_form_btn{
+	.modal_form_button{
 		font-size: 15px;
 	}
 }
 @media (min-width: 1000px){
-	.modal_form_btn{
+	.modal_form_button{
 		width: 330px;
 		height: 70px;
 	}
