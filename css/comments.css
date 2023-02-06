@@ -143,11 +143,7 @@
 		font-size: 15px;
 	}
 }
-:root{
-	--cardText-height: ;
-}
-.card_text.open{
-	height: var(--cardText-height);
+.comments_card_container.open .card_text{
 	display: block;
 }
 .card_unwrap_btn {
@@ -165,7 +161,7 @@
 	color: #008139;
 	visibility: hidden;
 }
-.card_unwrap_btn.active{
+.comments_card_container.active .card_unwrap_btn{
 	visibility: visible;
 }
 @media (min-width: 480px){
@@ -195,10 +191,10 @@
 .card_unwrap_btn span:last-of-type{
 	transform: translate(-1px, 1px) rotate(-45deg);
 }
-.card_unwrap_btn.open span:first-of-type{
+.comments_card_container.open .card_unwrap_btn span:first-of-type{
 	transform: translate(2px, 1px) rotate(-45deg);
 }
-.card_unwrap_btn.open span:last-of-type{
+.comments_card_container.open .card_unwrap_btn span:last-of-type{
 	transform: translate(-1px, 1px) rotate(45deg);
 }
 .card_author {

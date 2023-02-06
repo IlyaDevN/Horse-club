@@ -1,6 +1,7 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
+const slides = document.querySelectorAll(".comments_card_container");
 const BTN_APPEARANCE_DELAY = 1000;
 const RESIZE_DELAY = 250;
 
@@ -43,10 +44,9 @@ setSlidesState.call(swiperComments);
 unwrapCommentsButtons();
 changeUnwrapBtnVisibility();
 closeCommentsOnResize();
+addInitClientHeigh();
 
 function unwrapCommentsButtons(){
-
-	const slides = document.querySelectorAll(".comments_card_container");
 
 	slides.forEach(slide => {
 		const cardBtn = slide.querySelector(".card_unwrap_btn");
@@ -59,36 +59,37 @@ function unwrapCommentsButtons(){
 
 function openComment(slide){
 	const cardText = slide.querySelector(".card_text");
-	const cardBtn = slide.querySelector(".card_unwrap_btn");
-	const cardTextHeight = cardText.scrollHeight;
 
-	closeComments(slide);
-
-	if(!cardText.classList.contains("open")){
-		document.documentElement.style.setProperty('--cardText-height', `${cardTextHeight}px`);
-		cardText.classList.add("open");
-		cardBtn.classList.add("open");
+	if(!slide.classList.contains("open")){
+		cardText.style.height = cardText.scrollHeight + "px";
+		slide.classList.add("open");
 	} 
 	else {
-		closeComments();
+		closeComment(slide);
 	}
 }
 
-function closeComments(slideNotToClose){
+function closeComment(slide){
+	const cardText = slide.querySelector(".card_text");
+	
+	cardText.style.height = "";
+	slide.classList.remove("open");
+}
 
-	const slides = document.querySelectorAll(".comments_card_container");
+function closeAllComments(){
+	slides.forEach(slide => {
+		const cardText = slide.querySelector(".card_text");
+
+		cardText.style.height = "";
+		slide.classList.remove("open");
+	});
+}
+
+function addInitClientHeigh(){
 
 	slides.forEach(slide => {
-		if(slide === slideNotToClose) return;
-		
-		const cardText = slide.querySelector(".card_text.open");
-		const cardBtn = slide.querySelector(".card_unwrap_btn.open");
-
-		if(!cardText || !cardBtn) return;
-
-		cardText.classList.remove("open");
-		cardBtn.classList.remove("open");
-
+		const cardText = slide.querySelector(".card_text");
+		cardText.dataset.initClientHeight = cardText.clientHeight;
 	});
 }
 
@@ -110,17 +111,14 @@ function changeUnwrapBtnVisibility(){
 
 function changeBtnVisibility(){
 
-	const slides = document.querySelectorAll(".comments_card_container");
-
 	slides.forEach(slide => {
 		const cardText = slide.querySelector(".card_text");
-		const cardBtn = slide.querySelector(".card_unwrap_btn");
 
-		if(cardText.scrollHeight > cardText.clientHeight){
-			cardBtn.classList.add("active");
+		if(cardText.scrollHeight > cardText.dataset.initClientHeight){
+			slide.classList.add("active");
 		}
 		else{
-			cardBtn.classList.remove("active");
+			slide.classList.remove("active");
 		}
 	});
 }
@@ -134,7 +132,8 @@ function closeCommentsOnResize(){
 
 		isThrottled = true;
 		setTimeout(()=>{
-			closeComments();
+			closeAllComments();
+			changeUnwrapBtnVisibility();
 			isThrottled = false;
 		}, RESIZE_DELAY);
 	});
