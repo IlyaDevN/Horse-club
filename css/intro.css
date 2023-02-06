@@ -88,10 +88,10 @@
 	line-height: 15px;
 	color: #202020;
 }
-.menu_burger_btn{
+.menu_burger_button{
 	position: relative;
 }
-.menu_burger_btn span{
+.menu_burger_button span{
 	width: 10px;
 	height: 2px;
 	background-color: #008139;
@@ -100,10 +100,10 @@
 	left: 50%;
 	transform: translate(0, -50%);
 }
-.menu_burger_btn span:nth-of-type(2) {
+.menu_burger_button span:nth-of-type(2) {
 	top: calc(50% - 4px);
 }
-.menu_burger_btn span:nth-of-type(3) {
+.menu_burger_button span:nth-of-type(3) {
 	top: calc(50% + 4px);
 }
 .header__nav {
