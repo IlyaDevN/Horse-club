@@ -1,5 +1,4 @@
-export function setSlidesState(){
-	const swiper = this;
+export function setSlidesState(swiper){
 	const activeIndexes = getActiveIndexes(swiper);
 	const slideCollection = swiper.slides;
 	const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
@@ -14,16 +13,20 @@ export function setSlidesState(){
 			}
 		});
 	}
+}
 
-	mqlOver1920.addEventListener("change", on1920changeStateHandler);
+export function switchSlidesStateHandlerOn1920px(swiper){
+	const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
+	mqlOver1920.addEventListener("change", () => slidesStateHandlerOn1920px(swiper, mqlOver1920));
+}
 
-	function on1920changeStateHandler(){
-		if(mqlOver1920.matches){
-			swiper.on("slideChange", setSlidesState);
-		} else {
-			swiper.off("slideChange", setSlidesState);
-			cleanSlidesState(swiper);
-		}
+function slidesStateHandlerOn1920px(swiper, mql){
+
+	if(mql.matches){
+		swiper.on("slideChange", setSlidesState);
+	} else {
+		swiper.off("slideChange", setSlidesState);
+		cleanSlidesState(swiper);
 	}
 }
 

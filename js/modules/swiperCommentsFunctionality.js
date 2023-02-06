@@ -1,4 +1,5 @@
 import { setSlidesState } from "./swiperHelpers.js";
+import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 import { mqlArray } from "./helpers.js" ;
 
@@ -41,7 +42,8 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	}
 });
 
-setSlidesState.call(swiperComments);
+setSlidesState(swiperComments);
+switchSlidesStateHandlerOn1920px(swiperComments);
 
 addInitialClientHeigh();
 initializeCommentsButtons();

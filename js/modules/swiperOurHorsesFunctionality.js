@@ -1,4 +1,5 @@
 import { setSlidesState } from "./swiperHelpers.js";
+import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
 const swiper = new Swiper(".our_horses_swiper_container", {
@@ -32,4 +33,5 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 	}
 });
 
-setSlidesState.call(swiper);
+setSlidesState(swiper);
+switchSlidesStateHandlerOn1920px(swiper);
