@@ -7,8 +7,8 @@ burgerBtn.addEventListener("click", openMenu);
 function openMenu(){
 	menuOverlay.classList.add("active");
 	document.body.classList.add("stopPageScroll");
-	document.addEventListener("click", closeMenuByOverlay);
-	document.addEventListener("click", closeMenuByButton);
+	menuOverlay.addEventListener("click", closeMenuByOverlay);
+	menuOverlay.addEventListener("click", closeMenuByButton);
 }
 
 function closeMenuByOverlay(event){
@@ -16,6 +16,7 @@ function closeMenuByOverlay(event){
 		closeMenu();
 	}
 }
+
 function closeMenuByButton(event){
 	if(event.target.offsetParent === menuCloseBtn){
 		closeMenu();
@@ -25,6 +26,6 @@ function closeMenuByButton(event){
 function closeMenu(){
 	menuOverlay.classList.remove("active");
 	document.body.classList.remove("stopPageScroll");
-	document.removeEventListener("click", closeMenuByOverlay);
-	document.removeEventListener("click", closeMenuByButton);
+	menuOverlay.removeEventListener("click", closeMenuByOverlay);
+	menuOverlay.removeEventListener("click", closeMenuByButton);
 }
