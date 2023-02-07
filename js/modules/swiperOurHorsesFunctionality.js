@@ -4,8 +4,8 @@ import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
 const swiper = new Swiper(".our_horses_swiper_container", {
 	navigation: {
-		nextEl: '.swiper_btn_next_1',
-		prevEl: '.swiper_btn_prev_1',
+		nextEl: '.swiper_button_next_ourHorses',
+		prevEl: '.swiper_button_prev_ourHorses',
 	},
 	scrollbar: {
 		el: ".swiper_scrollbar_1",
@@ -17,7 +17,7 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 	breakpoints: {
 		480: {
 			slidesPerView: 2,
-		}, 
+		},
 		768: {
 			slidesPerView: 3,
 			spaceBetween: 20,

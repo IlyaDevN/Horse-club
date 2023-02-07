@@ -1,7 +1,7 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
-import { mqlArray } from "./helpers.js" ;
+import { mqlArray } from "./helpers.js";
 
 
 const slides = document.querySelectorAll(".comments_card_container");
@@ -11,8 +11,8 @@ const LINE_CLAMP_DELAY = 500;
 const swiperComments = new Swiper(".comments_slider_container", {
 
 	navigation: {
-		nextEl: '.swiper_btn_next_2',
-		prevEl: '.swiper_btn_prev_2',
+		nextEl: '.swiper_button_next_comments',
+		prevEl: '.swiper_button_prev_comments',
 	},
 	scrollbar: {
 		el: ".swiper_scrollbar_2",
@@ -50,7 +50,7 @@ initializeCommentsButtons();
 changeBtnVisibilityDelayed();
 addHandlerOnResize();
 
-function addInitialClientHeigh(){
+function addInitialClientHeigh() {
 
 	slides.forEach(slide => {
 		const cardText = slide.querySelector(".card_text");
@@ -58,38 +58,38 @@ function addInitialClientHeigh(){
 	});
 }
 
-function initializeCommentsButtons(){
+function initializeCommentsButtons() {
 
 	slides.forEach(slide => {
-		const cardBtn = slide.querySelector(".card_unwrap_btn");
+		const cardBtn = slide.querySelector(".card_unwrap_button");
 		cardBtn.addEventListener("click", () => changeCommentState(slide))
 	});
 }
 
-function changeCommentState(slide){
+function changeCommentState(slide) {
 
-	if(!slide.classList.contains("open")){
+	if (!slide.classList.contains("open")) {
 		openComment(slide);
 	} else {
 		closeComment(slide);
 	}
 }
 
-function openComment(slide){
+function openComment(slide) {
 	const cardText = slide.querySelector(".card_text");
 
 	cardText.style.height = cardText.scrollHeight + "px";
 	slide.classList.add("open");
 }
 
-function closeComment(slide){
+function closeComment(slide) {
 	const cardText = slide.querySelector(".card_text");
 
 	cardText.style.height = "";
 	setTimeout(() => slide.classList.remove("open"), LINE_CLAMP_DELAY);
 }
 
-function closeAllComments(){
+function closeAllComments() {
 
 	slides.forEach(slide => {
 		const cardText = slide.querySelector(".card_text");
@@ -99,26 +99,26 @@ function closeAllComments(){
 	});
 }
 
-function changeBtnVisibilityDelayed(){
-	
+function changeBtnVisibilityDelayed() {
+
 	setTimeout(changeBtnVisibility, BTN_APPEARANCE_DELAY);
 }
 
-function changeBtnVisibility(){
-	
+function changeBtnVisibility() {
+
 	slides.forEach(slide => {
 		const cardText = slide.querySelector(".card_text");
 
-		if(cardText.scrollHeight > cardText.dataset.initialClientHeight){
+		if (cardText.scrollHeight > cardText.dataset.initialClientHeight) {
 			slide.classList.add("active");
 		}
-		else{
+		else {
 			slide.classList.remove("active");
 		}
 	});
 }
 
-function addHandlerOnResize(){
+function addHandlerOnResize() {
 
 	mqlArray.forEach(mql => {
 		mql.addEventListener("change", closeAllComments);

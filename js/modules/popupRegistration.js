@@ -80,5 +80,5 @@ function popupClose(popupContent){
 }
 
 function addButtonContent(popupLink){
-	modalSubmitBtn.innerHTML = popupLink.dataset.btnContent;
+	modalSubmitBtn.innerHTML = popupLink.dataset.buttonContent;
 }

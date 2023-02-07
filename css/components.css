@@ -1,4 +1,4 @@
-.button{
+.button {
 	position: relative;
 	display: block;
 	width: 170px;
@@ -15,32 +15,37 @@
 	box-shadow: 0px 4px 0px #C89C00;
 	z-index: 100;
 }
-@media (min-width: 480px){
+
+@media (min-width: 480px) {
 	.button {
 		width: 180px;
 		height: 45px;
 	}
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
 	.button {
 		line-height: 32px;
 	}
 }
-@media (min-width: 1000px){
+
+@media (min-width: 1000px) {
 	.button {
 		width: 218px;
 		height: 60px;
 		font-size: 13px;
 	}
 }
-@media (min-width: 1920px){
+
+@media (min-width: 1920px) {
 	.button {
 		width: 270px;
 		height: 70px;
 		font-size: 15px;
 	}
 }
-.button::before{
+
+.button::before {
 	content: "";
 	position: absolute;
 	border-radius: 5px;
@@ -54,10 +59,11 @@
 	z-index: -100;
 }
 
-.button:hover::before{
+.button:hover::before {
 	opacity: 1;
 }
-.button::after{
+
+.button::after {
 	content: "";
 	position: absolute;
 	border-radius: 5px;
@@ -71,19 +77,22 @@
 	transition: opacity 0.2s ease-in-out;
 	z-index: -100;
 }
-.button:active::after{
+
+.button:active::after {
 	opacity: 1;
 }
+
 /* ============================================================================
 		slider (ourVisitors)
 =============================================================================*/
 
-.sliderCheckbox{
+.sliderCheckbox {
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
 }
-.slider_btn{
+
+.slider_button {
 	position: relative;
 	width: 40px;
 	height: 40px;
@@ -91,7 +100,8 @@
 	border-radius: 50%;
 	transition: opacity 1s ease-in-out;
 }
-.slider_btn::before{
+
+.slider_button::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -103,18 +113,22 @@
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
 	transition: opacity 0.2s ease-in-out;
 }
-.slider_btn:hover::before{
+
+.slider_button:hover::before {
 	opacity: 1;
 }
-.slider_btn[disabled]{
+
+.slider_button[disabled] {
 	opacity: 0.4;
 	cursor: auto;
 }
-.slider_btn[disabled]:hover::before{
+
+.slider_button[disabled]:hover::before {
 	opacity: 0;
 	cursor: auto;
 }
-.arrow{
+
+.arrow {
 	color: #6A5300;
 	width: 10px;
 	height: 10px;
@@ -124,12 +138,15 @@
 	margin-left: 15px;
 	margin-right: 15px;
 }
-.arrow_prev{
+
+.arrow_prev {
 	transform: rotate(-135deg);
 }
-.arrow_next{
+
+.arrow_next {
 	transform: rotate(45deg);
 }
+
 .slider_range {
 	width: 96px;
 	height: 8px;
@@ -137,6 +154,7 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 }
+
 .slider_thumb {
 	/* width took from JS*/
 	height: 8px;
@@ -144,10 +162,11 @@
 	border-radius: 10px;
 	transition: transform 1s ease-in-out 0s;
 }
+
 /* ============================================================================
 	slider SWIPER
 =============================================================================*/
-.scrollBar{
+.scrollBar {
 	position: static;
 	width: 96px;
 	height: 8px;
@@ -155,28 +174,33 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 }
-div .swiper-scrollbar-drag{
+
+div .swiper-scrollbar-drag {
 	height: 8px;
 	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	border-radius: 10px;
 }
+
 .activeSlides {
 	transform: translateY(-40px) !important;
 	opacity: 0.4 !important;
 }
-.swiper-button-disabled.slider_btn{
+
+.swiper-button-disabled.slider_button {
 	opacity: 0.4;
 	cursor: auto;
 }
-.swiper-button-disabled.slider_btn:hover::before{
+
+.swiper-button-disabled.slider_button:hover::before {
 	opacity: 0;
 	cursor: auto;
 }
+
 /* ============================================================================
 		registration modal window
 =============================================================================*/
 
-.register__modal_overlay{
+.register__modal_overlay {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -191,11 +215,13 @@ div .swiper-scrollbar-drag{
 	opacity: 0;
 	visibility: hidden;
 }
-.register__modal_overlay.open{
+
+.register__modal_overlay.open {
 	opacity: 1;
 	visibility: visible;
 }
-.register__modal_content{
+
+.register__modal_content {
 	width: 300px;
 	height: 300px;
 	background-color: #FFF;
@@ -206,24 +232,28 @@ div .swiper-scrollbar-drag{
 	transform: perspective(300px) translateY(-100%) rotateX(45deg);
 	transition: all 0.8s;
 }
-@media (min-width: 480px){
-	.register__modal_content{
+
+@media (min-width: 480px) {
+	.register__modal_content {
 		width: 375px;
 		height: 375px;
 		transform: perspective(375px) translateY(-100%) rotateX(45deg);
 	}
 }
-@media (min-width: 1000px){
-	.register__modal_content{
+
+@media (min-width: 1000px) {
+	.register__modal_content {
 		width: 405px;
 		height: 380px;
 		transform: perspective(380px) translateY(-100%) rotateX(45deg);
 	}
 }
-.register__modal_content.open{
+
+.register__modal_content.open {
 	transform: perspective(380px) translateY(0) rotateX(0);
 }
-.register__close_button{
+
+.register__close_button {
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -231,7 +261,8 @@ div .swiper-scrollbar-drag{
 	right: 10px;
 	cursor: pointer;
 }
-.register__close_button span{
+
+.register__close_button span {
 	position: absolute;
 	top: 50%;
 	width: 17px;
@@ -240,18 +271,22 @@ div .swiper-scrollbar-drag{
 	transform: rotate(135deg);
 	transition: all 0.3s;
 }
-.register__close_button:hover span{
+
+.register__close_button:hover span {
 	background-color: red;
 }
-.register__close_button span:nth-child(1){
+
+.register__close_button span:nth-child(1) {
 	transform: rotate(-135deg);
 }
-.register__form{
+
+.register__form {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 }
-.register__form input{
+
+.register__form input {
 	background: #FFF;
 	border: 1px solid #8F8F8F;
 	border-radius: 5px;
@@ -262,8 +297,9 @@ div .swiper-scrollbar-drag{
 	margin-bottom: 15px;
 	padding-left: 14px;
 }
-@media (min-width: 480px){
-	.register__form input{
+
+@media (min-width: 480px) {
+	.register__form input {
 		font-size: 15px;
 		line-height: 18px;
 		width: 300px;
@@ -271,8 +307,9 @@ div .swiper-scrollbar-drag{
 		padding-left: 19px;
 	}
 }
-@media (min-width: 1000px){
-	.register__form input{
+
+@media (min-width: 1000px) {
+	.register__form input {
 		font-size: 18px;
 		line-height: 21px;
 		width: 330px;
@@ -281,7 +318,8 @@ div .swiper-scrollbar-drag{
 		padding-left: 21px;
 	}
 }
-.modal_form_button{
+
+.modal_form_button {
 	width: 245px;
 	height: 45px;
 	font-size: 10px;
@@ -289,8 +327,9 @@ div .swiper-scrollbar-drag{
 	margin-bottom: 25px;
 	display: inline-block;
 }
-@media (min-width: 480px){
-	.modal_form_button{
+
+@media (min-width: 480px) {
+	.modal_form_button {
 		width: 300px;
 		height: 64px;
 		font-size: 13px;
@@ -298,53 +337,62 @@ div .swiper-scrollbar-drag{
 		margin-bottom: 30px;
 	}
 }
-@media (min-width: 768px){
-	.modal_form_button{
+
+@media (min-width: 768px) {
+	.modal_form_button {
 		font-size: 15px;
 	}
 }
-@media (min-width: 1000px){
-	.modal_form_button{
+
+@media (min-width: 1000px) {
+	.modal_form_button {
 		width: 330px;
 		height: 70px;
 	}
 }
-.modal_form__checkbox_container{
+
+.modal_form__checkbox_container {
 	width: 245px;
 	margin: 0 auto;
 	text-align: start;
 }
-@media (min-width: 480px){
-	.modal_form__checkbox_container{
+
+@media (min-width: 480px) {
+	.modal_form__checkbox_container {
 		width: 300px;
 	}
 }
-@media (min-width: 1000px){
-	.modal_form__checkbox_container{
+
+@media (min-width: 1000px) {
+	.modal_form__checkbox_container {
 		width: 330px;
 	}
 }
-.modal_form__checkbox{
+
+.modal_form__checkbox {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
 	width: 1.5em;
 	height: 1.5em;
 }
-.modal_form__checkbox + label{
+
+.modal_form__checkbox+label {
 	font-size: 13px;
 	line-height: 15px;
 	color: #8A8A8A;
 	display: inline-flex;
 	align-items: center;
 }
-@media (min-width: 480px){
-	.modal_form__checkbox + label{
+
+@media (min-width: 480px) {
+	.modal_form__checkbox+label {
 		font-size: 15px;
 		line-height: 18px;
 	}
 }
-.modal_form__checkbox + label::before{
+
+.modal_form__checkbox+label::before {
 	content: "";
 	display: inline-block;
 	width: 15px;
@@ -356,27 +404,33 @@ div .swiper-scrollbar-drag{
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-@media (min-width: 480px){
-	.modal_form__checkbox + label::before{
+
+@media (min-width: 480px) {
+	.modal_form__checkbox+label::before {
 		width: 1.3333em;
 		height: 1.3333em;
 	}
 }
-.input_container.error .modal_form__checkbox + label::before{
+
+.input_container.error .modal_form__checkbox+label::before {
 	border-color: #FF5C00;
 }
-.modal_form__checkbox:checked+label::before{
+
+.modal_form__checkbox:checked+label::before {
 	background-image: url(../img/questions/checkbox/x320/checkbox_x320.svg);
 }
-@media (min-width: 480px){
-	.modal_form__checkbox:checked+label::before{
+
+@media (min-width: 480px) {
+	.modal_form__checkbox:checked+label::before {
 		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
 	}
 }
-.input_container{
+
+.input_container {
 	align-self: center;
 }
-.valid_tooltip{
+
+.valid_tooltip {
 	position: absolute;
 	color: #FF5C00;
 	font-size: 10px;
@@ -385,53 +439,65 @@ div .swiper-scrollbar-drag{
 	opacity: 0;
 	transition: all 0.3s;
 }
-.input_container.error .valid_tooltip{
+
+.input_container.error .valid_tooltip {
 	visibility: visible;
 	opacity: 1;
 }
-.letters{
+
+.letters {
 	top: -13px;
 }
-@media (min-width: 480px){
-	.letters{
+
+@media (min-width: 480px) {
+	.letters {
 		top: -13px;
 	}
 }
-@media (min-width: 1000px){
-	.letters{
+
+@media (min-width: 1000px) {
+	.letters {
 		top: -15px;
 	}
 }
-.figures{
+
+.figures {
 	top: 52px;
 }
-@media (min-width: 480px){
-	.figures{
+
+@media (min-width: 480px) {
+	.figures {
 		top: 57px;
 	}
 }
-@media (min-width: 1000px){
-	.figures{
+
+@media (min-width: 1000px) {
+	.figures {
 		top: 66px;
 	}
 }
-.checkes{
+
+.checkes {
 	top: 220px;
 }
-@media (min-width: 480px){
-	.checkes{
+
+@media (min-width: 480px) {
+	.checkes {
 		top: 260px;
 	}
 }
-@media (min-width: 1000px){
-	.checkes{
+
+@media (min-width: 1000px) {
+	.checkes {
 		top: 290px;
 	}
 }
-.input_container.error .validate{
+
+.input_container.error .validate {
 	border-color: #FF5C00;
 }
-.register__modal_gratitude{
+
+.register__modal_gratitude {
 	position: absolute;
 	width: 300px;
 	height: 300px;
@@ -447,57 +513,67 @@ div .swiper-scrollbar-drag{
 	visibility: hidden;
 	opacity: 0;
 }
-@media (min-width: 480px){
-	.register__modal_gratitude{
+
+@media (min-width: 480px) {
+	.register__modal_gratitude {
 		width: 375px;
 		height: 375px;
 	}
 }
-@media (min-width: 1000px){
-	.register__modal_gratitude{
+
+@media (min-width: 1000px) {
+	.register__modal_gratitude {
 		width: 380px;
 		height: 380px;
 	}
 }
-.register__modal_gratitude.open{
+
+.register__modal_gratitude.open {
 	position: absolute;
 	visibility: visible;
 	opacity: 1;
 	transform: perspective(600px) translateY(0) rotateX(0);
 }
-.register__modal_gratitude :nth-child(1){
+
+.register__modal_gratitude :nth-child(1) {
 	font-size: 40px;
 	line-height: 50px;
 	text-align: center;
 }
-@media (min-width: 480px){
-	.register__modal_gratitude :nth-child(1){
+
+@media (min-width: 480px) {
+	.register__modal_gratitude :nth-child(1) {
 		font-size: 50px;
 		line-height: 60px;
 		text-align: center;
 	}
 }
-.register__modal_gratitude :nth-child(2){
+
+.register__modal_gratitude :nth-child(2) {
 	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
 }
-@media (min-width: 480px){
-	.register__modal_gratitude :nth-child(2){
+
+@media (min-width: 480px) {
+	.register__modal_gratitude :nth-child(2) {
 		font-size: 30px;
 		line-height: 50px;
 		text-align: center;
 	}
 }
-.gratitude_image{
+
+.gratitude_image {
 	width: 250px;
 }
-@media(min-width: 480px){
-	.gratitude_image{
+
+@media(min-width: 480px) {
+	.gratitude_image {
 		width: 270px;
 	}
 }
-.gratitude_image img{
+
+.gratitude_image img {
 	width: 100%;
 	object-fit: contain;
 }
