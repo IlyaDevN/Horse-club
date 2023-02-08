@@ -228,11 +228,11 @@
 	transform: translate(-1px, 1px) rotate(-45deg);
 }
 
-.comments_card_container.open .card_unwrap_button span:first-of-type {
+.card_unwrap_button.open span:first-of-type {
 	transform: translate(2px, 1px) rotate(-45deg);
 }
 
-.comments_card_container.open .card_unwrap_button span:last-of-type {
+.card_unwrap_button.open span:last-of-type {
 	transform: translate(-1px, 1px) rotate(45deg);
 }
 

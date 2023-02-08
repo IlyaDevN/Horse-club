@@ -6,7 +6,6 @@ import { mqlArray } from "./helpers.js";
 
 const slides = document.querySelectorAll(".comments_card_container");
 const BTN_APPEARANCE_DELAY = 1000;
-const LINE_CLAMP_DELAY = 500;
 
 const swiperComments = new Swiper(".comments_slider_container", {
 
@@ -77,25 +76,30 @@ function changeCommentState(slide) {
 
 function openComment(slide) {
 	const cardText = slide.querySelector(".card_text");
-
+	const unwrapButtonn = slide.querySelector(".card_unwrap_button");
 	cardText.style.height = cardText.scrollHeight + "px";
 	slide.classList.add("open");
+	unwrapButtonn.classList.add("open");
 }
 
 function closeComment(slide) {
 	const cardText = slide.querySelector(".card_text");
+	const unwrapButtonn = slide.querySelector(".card_unwrap_button");
 
 	cardText.style.height = "";
-	setTimeout(() => slide.classList.remove("open"), LINE_CLAMP_DELAY);
+	unwrapButtonn.classList.remove("open");
+	cardText.addEventListener("transitionend", ()=> slide.classList.remove("open"), {once: true});
 }
 
 function closeAllComments() {
 
 	slides.forEach(slide => {
 		const cardText = slide.querySelector(".card_text");
+		const unwrapButtonn = slide.querySelector(".card_unwrap_button");
 
 		cardText.style.height = "";
-		setTimeout(() => slide.classList.remove("open"), LINE_CLAMP_DELAY);
+		unwrapButtonn.classList.remove("open");
+		cardText.addEventListener("transitionend", ()=> slide.classList.remove("open"), {once: true});
 	});
 }
 
