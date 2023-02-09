@@ -1,8 +1,8 @@
 const slidesContainer = document.getElementById("ourVisitors__photo_container");
 const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
 const SLIDER_MAX_POSSIBLE_POSITION = 0;
-const SHIFT = 100;
-let sliderMinPossiblePosition = -(slidesQuantity - 1) * SHIFT;
+const SLIDE_SHIFT_IN_PERCENT = 100;
+let sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderCurrentShift = 0;
 let sliderCurrentPosition;
 
@@ -10,7 +10,7 @@ const sliderRangeWidth = document.getElementById("slider_range").offsetWidth;
 const sliderThumb = document.getElementById("slider_thumb");
 const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
 const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
-const sliderThumbMaxPossiblePosition = (slidesQuantity - 1) * SHIFT;
+const sliderThumbMaxPossiblePosition = (slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderThumbCurrentShift = 0;
 
 const btnPrev = document.getElementById("button_prev_ourVisitors");
@@ -36,7 +36,7 @@ btnNext.addEventListener("click", function () {
 });
 
 function movePrevSlide() {
-	sliderCurrentShift += SHIFT;
+	sliderCurrentShift += SLIDE_SHIFT_IN_PERCENT;
 
 	if (sliderCurrentShift >= SLIDER_MAX_POSSIBLE_POSITION) {
 		disableButton(btnPrev);
@@ -47,7 +47,7 @@ function movePrevSlide() {
 }
 
 function moveNextSlide() {
-	sliderCurrentShift -= SHIFT;
+	sliderCurrentShift -= SLIDE_SHIFT_IN_PERCENT;
 	if (sliderCurrentShift <= sliderMinPossiblePosition) {
 		disableButton(btnNext);
 	}
@@ -58,7 +58,7 @@ function moveNextSlide() {
 }
 
 function moveThumbPrev() {
-	sliderThumbCurrentShift -= SHIFT;
+	sliderThumbCurrentShift -= SLIDE_SHIFT_IN_PERCENT;
 	if (sliderThumbCurrentShift <= SLIDER_THUMB_MIN_POSSIBLE_POSITION) {
 		sliderThumbCurrentShift = SLIDER_THUMB_MIN_POSSIBLE_POSITION;
 	}
@@ -66,7 +66,7 @@ function moveThumbPrev() {
 }
 
 function moveThumbNext() {
-	sliderThumbCurrentShift += SHIFT;
+	sliderThumbCurrentShift += SLIDE_SHIFT_IN_PERCENT;
 	if (sliderThumbCurrentShift >= sliderThumbMaxPossiblePosition) {
 		sliderThumbCurrentShift = sliderThumbMaxPossiblePosition;
 	}
