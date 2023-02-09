@@ -1,11 +1,6 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
-import { mqlArray } from "./helpers.js";
-
-
-const slides = document.querySelectorAll(".comments_card_container");
-const BTN_APPEARANCE_DELAY = 1000;
 
 const swiperComments = new Swiper(".comments_slider_container", {
 
@@ -44,88 +39,81 @@ const swiperComments = new Swiper(".comments_slider_container", {
 setSlidesState(swiperComments);
 switchSlidesStateHandlerOn1920px(swiperComments);
 
-addInitialClientHeigh();
-initializeCommentsButtons();
-changeBtnVisibilityDelayed();
-addHandlerOnResize();
+const slidesOriginal = swiperComments.slides;
+const slides = swiperComments.slides.map((slide) => {
+	return {
+		comment: slide.querySelector(".card_text"),
+		button: slide.querySelector(".card_unwrap_button")
+	}
+});
 
-function addInitialClientHeigh() {
+const debouncedOnResize = debounce(onResize, 240);
+window.addEventListener("resize", debouncedOnResize);
 
-	slides.forEach(slide => {
-		const cardText = slide.querySelector(".card_text");
-		cardText.dataset.initialClientHeight = cardText.clientHeight;
+slides.forEach((slide) => {
+
+	initializeComment(slide);
+
+	slide.button.addEventListener("click", () => {
+		if(slide.comment.classList.contains("opened")){
+			closeComment(slide);
+		} else {
+			openComment(slide);
+		}
+
+		slide.button.classList.toggle("opened");
 	});
-}
+});
 
-function initializeCommentsButtons() {
+slidesOriginal.forEach((slideOriginal) => {
+	slideOriginal.classList.add("transitioned");
+})
 
-	slides.forEach(slide => {
-		const cardBtn = slide.querySelector(".card_unwrap_button");
-		cardBtn.addEventListener("click", () => changeCommentState(slide))
-	});
-}
+function initializeComment(slide){
 
-function changeCommentState(slide) {
+	slide.comment.dataset.scrollHeight = slide.comment.scrollHeight;
+	slide.comment.dataset.clientHeight = slide.comment.clientHeight;
+	slide.comment.style.setProperty('--height', slide.comment.clientHeight + "px");
 
-	if (!slide.classList.contains("open")) {
-		openComment(slide);
-	} else {
-		closeComment(slide);
+	if(slide.comment.scrollHeight > slide.comment.clientHeight){
+		
+		slide.button.classList.add("visible");
+	} else{
+		slide.button.classList.remove("visible");
 	}
 }
 
-function openComment(slide) {
-	const cardText = slide.querySelector(".card_text");
-	const unwrapButtonn = slide.querySelector(".card_unwrap_button");
-	cardText.style.height = cardText.scrollHeight + "px";
-	slide.classList.add("open");
-	unwrapButtonn.classList.add("open");
+function openComment(slide){
+	slide.comment.classList.add("opened");
+	slide.comment.style.setProperty('--height', slide.comment.dataset.scrollHeight + "px");
 }
 
-function closeComment(slide) {
-	const cardText = slide.querySelector(".card_text");
-	const unwrapButtonn = slide.querySelector(".card_unwrap_button");
-
-	cardText.style.height = "";
-	unwrapButtonn.classList.remove("open");
-	cardText.addEventListener("transitionend", ()=> slide.classList.remove("open"), {once: true});
+function closeComment(slide, callback = () => {}){
+	slide.comment.style.setProperty('--height', slide.comment.dataset.clientHeight + "px");
+	slide.comment.addEventListener("transitionend", () => {
+		slide.comment.classList.remove("opened");
+		callback(slide);
+	}, {once: true});
 }
 
-function closeAllComments() {
-
+function onResize(){
 	slides.forEach(slide => {
-		const cardText = slide.querySelector(".card_text");
-		const unwrapButtonn = slide.querySelector(".card_unwrap_button");
-
-		cardText.style.height = "";
-		unwrapButtonn.classList.remove("open");
-		cardText.addEventListener("transitionend", ()=> slide.classList.remove("open"), {once: true});
-	});
-}
-
-function changeBtnVisibilityDelayed() {
-
-	setTimeout(changeBtnVisibility, BTN_APPEARANCE_DELAY);
-}
-
-function changeBtnVisibility() {
-
-	slides.forEach(slide => {
-		const cardText = slide.querySelector(".card_text");
-
-		if (cardText.scrollHeight > cardText.dataset.initialClientHeight) {
-			slide.classList.add("active");
+		slide.comment.style.setProperty('--height', "auto");
+		
+		if(slide.comment.classList.contains("opened")){
+			closeComment(slide, initializeCommentIn);
+		} else{
+			initializeComment(slide);
 		}
-		else {
-			slide.classList.remove("active");
-		}
+		
+		slide.button.classList.remove("opened");
 	});
 }
 
-function addHandlerOnResize() {
-
-	mqlArray.forEach(mql => {
-		mql.addEventListener("change", closeAllComments);
-		mql.addEventListener("change", changeBtnVisibilityDelayed);
-	});
+function debounce(func, timeout = 300){
+	let timer;
+	return (...args) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => { func.apply(this, args); }, timeout);
+	};
 }
