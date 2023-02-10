@@ -16,11 +16,14 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	slidesPerGroup: 1,
 	spaceBetween: 10,
 	breakpoints: {
+		480: {
+			slidesPerView: 2,
+		},
 		768: {
 			slidesPerView: 2,
 		},
 		1000: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			allowTouchMove: false,
 		},
 		1920: {
