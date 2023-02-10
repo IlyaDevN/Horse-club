@@ -260,10 +260,12 @@ div .swiper-scrollbar-drag {
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
+	background-color: #FFF;
 }
 
 .register__close_button span {
 	position: absolute;
+	left: 0;
 	top: 50%;
 	width: 17px;
 	height: 1px;

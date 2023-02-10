@@ -474,9 +474,11 @@
 	top: 16px;
 	right: 21px;
 	cursor: pointer;
+	background-color: transparent;
 }
 .menu_close_button span{
 	position: absolute;
+	left: 0;
 	top: 50%;
 	width: 17px;
 	height: 1px;
