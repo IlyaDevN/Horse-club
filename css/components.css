@@ -318,7 +318,10 @@ div .swiper-scrollbar-drag {
 		padding-left: 21px;
 	}
 }
-
+.register__form .modal_form__checkbox{
+	height: auto;
+	margin-bottom: 0;
+}
 .modal_form_button {
 	width: 245px;
 	height: 45px;
