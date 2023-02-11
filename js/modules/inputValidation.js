@@ -1,26 +1,36 @@
 const elemsToValidate = document.body.querySelectorAll(".input_container");
-const ERROR_DELAY = 3000;
 
-elemsToValidate.forEach(elem => {
-	
-	const input = elem.querySelector(".validate");
+elemsToValidate.forEach(elemContainer => {
+	const input = elemContainer.querySelector(".validate");
 
-	input.addEventListener("invalid", function(event){
-		event.preventDefault();
-		if(elem.dataset.isErrorShown === "true") {
+	input.addEventListener("invalid", (event)=>{
+
+		showError(event, elemContainer);
+	});
+
+	input.addEventListener("input", ()=>{
+
+		hideError(elemContainer);
+
+		if(input.type === "text" && input.value === "") {
 			return;
 		}
-		showError(elem);
-		setTimeout(hideError, ERROR_DELAY, elem);
-	})
+		if(input.type === "tel" && input.value === "") {
+			return;
+		}
+		if(input.type === "checkbox") {
+			return;
+		}
+
+		input.checkValidity();
+	});
 })
 
-function showError(invalidItem){
-	invalidItem.classList.add("error");
-	invalidItem.dataset.isErrorShown = true;
+function showError(event, elemContainer){
+	event.preventDefault();
+	elemContainer.classList.add("error");
 }
 
-function hideError(invalidItem){
-	invalidItem.classList.remove("error");
-	invalidItem.dataset.isErrorShown = false;
+function hideError(elemContainer){
+	elemContainer.classList.remove("error");
 }

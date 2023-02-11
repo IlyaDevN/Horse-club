@@ -42,7 +42,7 @@
 				</div>
 				<div class="input_container">
 					<p class="valid_tooltip figures">Вводите цифры</p>
-					<input class="validate" type="tel" placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" required>
+					<input class="validate" type="tel" placeholder="Ваш телефон" pattern="(?!.* $)^[+\-\s()0-9]{1,20}" required>
 				</div>
 				<button class="modal_form_button button" type="submit"></button>
 				<div class="modal_form__checkbox_container input_container" invalidTooltip="Подтвердите согласие">
@@ -1250,7 +1250,7 @@
 						<div class="input_container">
 							<p class="valid_tooltip write_figures">Вводите цифры</p>
 							<input name="user_phone" class="form__input validate" id="userPhone" type="tel"
-								placeholder="Ваш телефон" pattern="^[+\-\s()0-9]{1,20}" invalidTooltip="Вводите цифры"
+								placeholder="Ваш телефон" pattern="^(?! )^[+\-\s()0-9]{1,20}" invalidTooltip="Вводите цифры"
 								required>
 						</div>
 						<button class="form__button button" type="submit">Задать вопрос</button>
