@@ -5,7 +5,6 @@ const registerModalGratitude = registerModalOverlay.querySelector(".register__mo
 const closeBtn = registerModalOverlay.querySelector(".register__close_button");
 const form = registerModalOverlay.querySelector(".register__form");
 const modalSubmitBtn = registerModalOverlay.querySelector(".modal_form_button");
-const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 const REOPEN_DELAY = 800;
 const SHOW_TIME = 3000;
 const KEYCODE = {
@@ -28,8 +27,7 @@ function popupOpen(){
 
 	registerModalOverlay.classList.add("open");
 	registerModalContent.classList.add("open");
-	document.body.classList.add("stopPageScroll");
-	document.body.style.paddingRight = scrollBarWidth + "px";
+	disablePageScroll();
 	isOpen = false;
 
 	document.addEventListener("keydown", keyDownHandler);
@@ -72,8 +70,7 @@ function popupClose(popupContent){
 	document.removeEventListener("keydown", keyDownHandler);
 
 	setTimeout(()=>{
-		document.body.classList.remove("stopPageScroll");
-		document.body.style.paddingRight = "";
+		enablePageScroll();
 		isOpen = true;
 	}, REOPEN_DELAY);
 
@@ -81,4 +78,16 @@ function popupClose(popupContent){
 
 function addButtonContent(popupLink){
 	modalSubmitBtn.innerHTML = popupLink.dataset.buttonContent;
+}
+
+function disablePageScroll(){
+	const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+	
+	document.body.classList.add("stopPageScroll");
+	document.body.style.paddingRight = scrollBarWidth + "px";
+}
+
+function enablePageScroll(){
+	document.body.classList.remove("stopPageScroll");
+	document.body.style.paddingRight = "";
 }
