@@ -2,7 +2,7 @@ const slidesContainer = document.getElementById("ourVisitors__photo_container");
 const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
 const SLIDER_MAX_POSSIBLE_POSITION = 0;
 const SLIDE_SHIFT_IN_PERCENT = 100;
-let sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
+const sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderCurrentShift = 0;
 let sliderCurrentPosition;
 
