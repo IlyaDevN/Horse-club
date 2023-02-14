@@ -6,7 +6,7 @@ const closeBtn = registerModalOverlay.querySelector(".register__close_button");
 const form = registerModalOverlay.querySelector(".register__form");
 const modalSubmitBtn = registerModalOverlay.querySelector(".modal_form_button");
 const REOPEN_DELAY = 800;
-const SHOW_TIME = 3000;
+const SHOW_TIME = 2000;
 const KEYCODE = {
 	ESC: "Escape"
 };
@@ -51,8 +51,8 @@ function keyDownHandler(event){
 	}
 }
 
-function submitHandler(event){
-	event.preventDefault();
+function submitHandler(){
+	
 	registerModalContent.classList.remove("open");
 	registerModalGratitude.classList.add("open");
 	isOpen = false;
@@ -73,7 +73,6 @@ function popupClose(popupContent){
 		enablePageScroll();
 		isOpen = true;
 	}, REOPEN_DELAY);
-
 }
 
 function addButtonContent(popupLink){
