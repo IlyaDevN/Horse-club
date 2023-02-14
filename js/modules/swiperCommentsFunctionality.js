@@ -1,5 +1,6 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
+import { debounce } from "./helpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
 const swiperComments = new Swiper(".comments_slider_container", {
@@ -111,12 +112,4 @@ function onResize(){
 		
 		slide.button.classList.remove("opened");
 	});
-}
-
-function debounce(func, timeout = 300){
-	let timer;
-	return (...args) => {
-		clearTimeout(timer);
-		timer = setTimeout(() => { func.apply(this, args); }, timeout);
-	};
 }
