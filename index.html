@@ -37,16 +37,16 @@
 			<form class="register__form">
 				<div class="input_container">
 					<p class="valid_tooltip letters">Вводите буквы</p>
-					<input class="validate" type="text" placeholder="Ваше имя" data-name>
+					<input class="validate" type="text" placeholder="Ваше имя" data-name data-to-Validate>
 				</div>
 				<div class="input_container">
 					<p class="valid_tooltip figures">Вводите цифры</p>
-					<input class="validate" type="tel" placeholder="Ваш телефон" data-phone>
+					<input class="validate" type="tel" placeholder="Ваш телефон" data-phone data-to-Validate>
 				</div>
-				<button class="modal_form_button button" type="submit"></button>
+				<button class="modal_form_button button" type="submit" onclick="return false"></button>
 				<div class="modal_form__checkbox_container input_container" invalidTooltip="Подтвердите согласие">
 					<p class="valid_tooltip checkes">Подтвердите согласие</p>
-					<input class="modal_form__checkbox validate" id="modal_form_checkbox" type="checkbox" name="checkbox" data-checkbox>
+					<input class="modal_form__checkbox validate" id="modal_form_checkbox" type="checkbox" name="checkbox" data-checkbox data-to-Validate>
 					<label class="modal_form__label_checkbox" for="modal_form_checkbox">Даю согласие на обработку данных</label>
 				</div>
 			</form>
@@ -1238,17 +1238,17 @@
 						<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете записаться на <b>бесплатное</b> пробное занятие</p>
 						<div class="input_container">
 							<p class="valid_tooltip write_letters">Вводите буквы</p>
-							<input name="user_name" class="form__input validate" id="userName" type="text" placeholder="Ваше имя" invalidTooltip="Вводите буквы" data-name>
+							<input class="form__input validate" name="user_name" type="text" placeholder="Ваше имя" invalidTooltip="Вводите буквы" data-name data-to-Validate>
 						</div>
 						<div class="input_container">
 							<p class="valid_tooltip write_figures">Вводите цифры</p>
-							<input name="user_phone" class="form__input validate" id="userPhone" type="tel" placeholder="Ваш телефон" invalidTooltip="Вводите цифры" data-phone>
+							<input class="form__input validate" name="user_phone" type="tel" placeholder="Ваш телефон" invalidTooltip="Вводите цифры" data-phone data-to-Validate>
 						</div>
-						<button class="form__button button" type="submit">Задать вопрос</button>
+						<button class="form__button button" type="submit" onclick="return false">Задать вопрос</button>
 						<div class="form__checkbox_container input_container">
 							<p class="valid_tooltip confirm_agreement">Подтвердите согласие</p>
-							<input class="form__checkbox validate" id="form_checkbox" type="checkbox" name="checkbox" data-checkbox>
-							<label class="form__label_checkbox" for="form_checkbox">Даю согласие на обработку данных</label>
+							<input class="form__checkbox validate" name="checkbox" id="questions_form_checkbox" type="checkbox" data-checkbox data-to-Validate>
+							<label class="form__label_checkbox" for="questions_form_checkbox">Даю согласие на обработку данных</label>
 						</div>
 					</form>
 				</div>
