@@ -161,7 +161,7 @@
 	font-size: 13px;
 	line-height: 13px;
 	text-align: center;
-	color: #008139;
+	color: var(--color-green);
 	visibility: hidden;
 }
 .card_unwrap_button.visible {
@@ -188,7 +188,7 @@
 	display: inline-block;
 	height: 1px;
 	width: 10px;
-	background-color: #008139;
+	background-color: var(--color-green);
 	transition: transform 0.5s;
 }
 .card_unwrap_button span:first-of-type {

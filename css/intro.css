@@ -71,7 +71,7 @@
 .menu_burger{
 	width: 77px;
 	height: 29px;
-	border: 1px solid #008139;
+	border: 1px solid var(--color-green);
 	border-radius: 3px;
 	display: flex;
 	justify-content: space-around;
@@ -94,7 +94,7 @@
 .menu_burger_button span{
 	width: 10px;
 	height: 2px;
-	background-color: #008139;
+	background-color: var(--color-green);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -164,7 +164,7 @@
 @media (min-width: 768px){
 	.menu__link_header:hover{
 		text-decoration-line: none;
-		border-bottom: 1px solid #008139;
+		border-bottom: 1px solid var(--color-green);
 	}
 }
 .header__contacts {
@@ -466,7 +466,6 @@
 	bottom: 0;
 	z-index: 5;
 }
-/*============================================================*/
 .menu_close_button{
 	position: absolute;
 	width: 16px;

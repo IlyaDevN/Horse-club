@@ -170,7 +170,7 @@
 .square__row{
 	width: 26px;
 	height: 1px;
-	background-color: #008139;
+	background-color: var(--color-green);
 	margin: 20px auto;
 }
 @media (min-width: 480px){

@@ -279,7 +279,7 @@
 	}
 }
 .clubDirection_card__row {
-	background-color: #008139;
+	background-color: var(--color-green);
 	width: 26px;
 	height: 1px;
 	margin-top: 10px;
@@ -301,7 +301,7 @@
 	font-size: 13px;
 	line-height: 20px;
 	text-align: center;
-	color: #7E7E7E;
+	color: var(--color-dark-grey);
 	width: 275px;
 	margin-bottom: 33px;
 }

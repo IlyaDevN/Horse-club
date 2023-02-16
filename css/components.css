@@ -275,7 +275,7 @@ div .swiper-scrollbar-drag {
 }
 
 .modal_close_button:hover span {
-	background-color: red;
+	background-color: var(--color-orange);
 }
 
 .modal_close_button span:nth-child(1) {
@@ -403,7 +403,7 @@ div .swiper-scrollbar-drag {
 	width: 15px;
 	height: 15px;
 	border: 2px solid;
-	border-color: #FFC700;
+	border-color: var(--color-yellow);
 	border-radius: 2px;
 	margin-right: 10px;
 	background-repeat: no-repeat;
@@ -418,17 +418,12 @@ div .swiper-scrollbar-drag {
 }
 
 .input_container.error .modal_form__checkbox+label::before {
-	border-color: #FF5C00;
+	border-color: var(--color-orange);
 }
 
 .modal_form__checkbox:checked+label::before {
-	background-image: url(../img/questions/checkbox/x320/checkbox_x320.svg);
-}
-
-@media (min-width: 480px) {
-	.modal_form__checkbox:checked+label::before {
-		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
-	}
+	background-image: url(../img/questions/checkbox/checkbox.svg);
+	background-size: contain;
 }
 
 .input_container {
@@ -437,7 +432,7 @@ div .swiper-scrollbar-drag {
 
 .valid_tooltip {
 	position: absolute;
-	color: #FF5C00;
+	color: var(--color-orange);
 	font-size: 10px;
 	line-height: 10px;
 	visibility: hidden;
@@ -499,7 +494,7 @@ div .swiper-scrollbar-drag {
 }
 
 .input_container.error .validate {
-	border-color: #FF5C00;
+	border-color: var(--color-orange);
 }
 
 .modal_gratitude {

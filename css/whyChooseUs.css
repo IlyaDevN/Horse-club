@@ -152,7 +152,7 @@
 .benefits__text {
 	font-size: 13px;
 	line-height: 20px;
-	color: #7E7E7E;
+	color: var(--color-dark-grey);
 	text-align: center;
 	padding: 0 5px;
 }

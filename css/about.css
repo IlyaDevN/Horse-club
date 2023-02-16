@@ -171,7 +171,7 @@
 	font-size: 27px;
 	line-height: 160%;
 	text-align: center;
-	color: #008139;
+	color: var(--color-green);
 }
 @media (min-width: 768px){
 	.bonus__block_title {
@@ -217,7 +217,7 @@
 .text__subtext {
 	font-size: 12px;
 	line-height: 19px;
-	color: #7E7E7E;
+	color: var(--color-dark-grey);
 	max-width: 100%;
 	margin: -5px auto 0;
 }
