@@ -357,10 +357,6 @@
 	}
 }
 .form__checkbox:checked+label::before{
-	background-image: url(../img/questions/checkbox/x320/checkbox_x320.svg);
-}
-@media (min-width: 480px){
-	.form__checkbox:checked+label::before{
-		background-image: url(../img/questions/checkbox/x420/checkbox_x420.svg);
-	}
+	background-image: url(../img/questions/checkbox/checkbox.svg);
+	background-size: contain;
 }
