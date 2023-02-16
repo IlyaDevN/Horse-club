@@ -540,28 +540,28 @@ div .swiper-scrollbar-drag {
 	transform: perspective(600px) translateY(0) rotateX(0);
 }
 
-.register__modal_gratitude :nth-child(1) {
+.gratitude_line_1 {
 	font-size: 40px;
 	line-height: 50px;
 	text-align: center;
 }
 
 @media (min-width: 480px) {
-	.register__modal_gratitude :nth-child(1) {
+	.gratitude_line_1 {
 		font-size: 50px;
 		line-height: 60px;
 		text-align: center;
 	}
 }
 
-.register__modal_gratitude :nth-child(2) {
+.gratitude_line_2 {
 	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
 }
 
 @media (min-width: 480px) {
-	.register__modal_gratitude :nth-child(2) {
+	.gratitude_line_2 {
 		font-size: 30px;
 		line-height: 50px;
 		text-align: center;

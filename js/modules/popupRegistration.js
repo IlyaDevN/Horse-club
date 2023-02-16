@@ -2,18 +2,18 @@ const popupLinks = document.querySelectorAll(".popup-link");
 const registerModalOverlay = document.querySelector(".register__modal_overlay");
 const registerModalContent = registerModalOverlay.querySelector(".register__modal_content");
 const registerModalGratitude = registerModalOverlay.querySelector(".register__modal_gratitude");
-const closeBtn = registerModalOverlay.querySelector(".register__close_button");
+const closeBtns = registerModalOverlay.querySelectorAll(".register__close_button");
 const form = registerModalOverlay.querySelector(".register__form");
 const modalSubmitBtn = registerModalOverlay.querySelector(".modal_form_button");
-const REOPEN_DELAY = 800;
-const SHOW_TIME = 2000;
 const KEYCODE = {
 	ESC: "Escape"
 };
-let isOpen = true;
+
 form.addEventListener("submit", submitHandler);
 registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
-closeBtn.addEventListener("click", closeBtnHandler);
+closeBtns.forEach((button) => {
+	button.addEventListener("click", closeBtnHandler)
+});
 
 popupLinks.forEach( popupLink => {
 	popupLink.addEventListener("click", function(){
@@ -23,56 +23,51 @@ popupLinks.forEach( popupLink => {
 });
 
 function popupOpen(){
-	if(!isOpen) return;
 
 	registerModalOverlay.classList.add("open");
 	registerModalContent.classList.add("open");
 	disablePageScroll();
-	isOpen = false;
 
 	document.addEventListener("keydown", keyDownHandler);
-
-	setTimeout(() => isOpen = true, REOPEN_DELAY);
 }
 
 function emptyPlaceCloseHandler (event){
 	if(event.target === registerModalOverlay){
 		popupClose(registerModalContent);
+		popupClose(registerModalGratitude);
 	}
 }
 
 function closeBtnHandler(){
 	popupClose(registerModalContent);
+	popupClose(registerModalGratitude);
 }
 
 function keyDownHandler(event){
 	if(event.code === KEYCODE.ESC){
 		popupClose(registerModalContent);
+		popupClose(registerModalGratitude);
 	}
 }
 
 function submitHandler(){
-	
 	registerModalContent.classList.remove("open");
+	gratitudeOpen();
+}
+
+function gratitudeOpen(){
 	registerModalGratitude.classList.add("open");
-	isOpen = false;
-	setTimeout(()=>{
-		isOpen = true;
-		popupClose(registerModalGratitude);
-	}, SHOW_TIME);
 }
 
 function popupClose(popupContent){
-	if(!isOpen) return;
 
 	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
 
-	setTimeout(()=>{
+	registerModalOverlay.addEventListener("transitionend", ()=>{
 		enablePageScroll();
-		isOpen = true;
-	}, REOPEN_DELAY);
+	}, {once:true})
 }
 
 function addButtonContent(popupLink){
