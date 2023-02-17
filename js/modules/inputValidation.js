@@ -2,35 +2,38 @@ const buttons = document.querySelectorAll("button[type = submit]");
 let onSubmit = false;
 let isInputHandlerAdded = false;
 
+const REGEXP = {
+	name: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/,
+	phone: /^(?! )^[+\-\s()0-9]{1,20}$/,
+}
+
 const RULES = [
 
 	{
 		name: "name",
 		validate: function(input){
-			const regExp = /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/
 
 			if(onSubmit){
-				return regExp.test(input.value);
+				return REGEXP.name.test(input.value);
 			} else {
 				if(!input.value){
 					return true;
 				}
-				return regExp.test(input.value);
+				return REGEXP.name.test(input.value);
 			}
 		}
 	},
 	{
 		name: "phone",
 		validate: function(input){
-			const regExp = /^(?! )^[+\-\s()0-9]{1,20}$/
 
 			if(onSubmit){
-				return regExp.test(input.value) && input.value.length >= 10;
+				return REGEXP.phone.test(input.value) && input.value.length >= 10;
 			} else {
 				if(!input.value){
 					return true;
 				}
-				return regExp.test(input.value);
+				return REGEXP.phone.test(input.value);
 			}
 		}
 	},
