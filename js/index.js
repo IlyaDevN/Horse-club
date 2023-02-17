@@ -1,4 +1,4 @@
-import "./modules/handleBurgerButtons.js";
+import "./modules/mobileMenu.js";
 import "./modules/popupRegistration.js";
 import "./modules/swiperOurHorsesFunctionality.js";
 import "./modules/swiperCommentsFunctionality.js";
