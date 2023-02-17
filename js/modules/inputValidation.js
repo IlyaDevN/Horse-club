@@ -84,9 +84,7 @@ function isFormValid(form){
 	})
 	isInputHandlerAdded = true;
 	
-	return checkings.every((item) => {
-		return item;
-	})
+	return checkings.every((item) => item);
 }
 
 buttons.forEach((button) => {
