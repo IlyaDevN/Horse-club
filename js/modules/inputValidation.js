@@ -8,15 +8,14 @@ const RULES = [
 		name: "name",
 		validate: function(input){
 			const regExp = /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/
-			const str = input.value;
 
 			if(onSubmit){
-				return regExp.test(str);
+				return regExp.test(input.value);
 			} else {
 				if(!input.value){
 					return true;
 				}
-				return regExp.test(str);
+				return regExp.test(input.value);
 			}
 		}
 	},
@@ -24,15 +23,14 @@ const RULES = [
 		name: "phone",
 		validate: function(input){
 			const regExp = /^(?! )^[+\-\s()0-9]{1,20}$/
-			const str = input.value;
 
 			if(onSubmit){
-				return regExp.test(str) && input.value.length >= 10;
+				return regExp.test(input.value) && input.value.length >= 10;
 			} else {
 				if(!input.value){
 					return true;
 				}
-				return regExp.test(str);
+				return regExp.test(input.value);
 			}
 		}
 	},
