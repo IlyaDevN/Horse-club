@@ -9,7 +9,7 @@ const KEYCODE = {
 	ESC: "Escape"
 };
 
-form.addEventListener("submit", submitHandler);
+form.addEventListener("submitSuccess", submitHandler);
 registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 closeBtns.forEach((button) => {
 	button.addEventListener("click", closeBtnHandler)

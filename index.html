@@ -26,7 +26,7 @@
 				<span></span>
 				<span></span>
 			</button>
-			<form class="register__form">
+			<form class="register__form" onsubmit="return false">
 				<div class="input_container">
 					<p class="valid_tooltip letters">Вводите буквы</p>
 					<input class="validate" type="text" placeholder="Ваше имя" data-name data-to-Validate>
@@ -35,7 +35,7 @@
 					<p class="valid_tooltip figures">Вводите цифры</p>
 					<input class="validate" type="tel" placeholder="Ваш телефон" data-phone data-to-Validate>
 				</div>
-				<button class="modal_form_button button" type="submit" onclick="return false"></button>
+				<button class="modal_form_button button" type="submit"></button>
 				<div class="modal_form__checkbox_container input_container">
 					<p class="valid_tooltip checkes">Подтвердите согласие</p>
 					<input class="modal_form__checkbox validate" id="modal_form_checkbox" type="checkbox" name="checkbox" data-checkbox data-to-Validate>
@@ -1239,7 +1239,7 @@
 					<img class="questions__frame" src="img/questions/bg_elements/x320/frame_x320.png" alt="frame">
 				</picture>
 				<div class="questions__form_container">
-					<form class="questions__form" name="visitor_contacts" action="" enctype="text/plain">
+					<form class="questions__form" name="visitor_contacts" onsubmit="return false">
 						<p class="form__header">Отвечаем на вопросы</p>
 						<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете записаться на <b>бесплатное</b> пробное занятие</p>
 						<div class="input_container">
@@ -1250,7 +1250,7 @@
 							<p class="valid_tooltip write_figures">Вводите цифры</p>
 							<input class="form__input validate" name="user_phone" type="tel" placeholder="Ваш телефон" data-phone data-to-Validate>
 						</div>
-						<button class="form__button button" type="submit" onclick="return false">Задать вопрос</button>
+						<button class="form__button button" type="submit">Задать вопрос</button>
 						<div class="form__checkbox_container input_container">
 							<p class="valid_tooltip confirm_agreement">Подтвердите согласие</p>
 							<input class="form__checkbox validate" name="checkbox" id="questions_form_checkbox" type="checkbox" data-checkbox data-to-Validate>

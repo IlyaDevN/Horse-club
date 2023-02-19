@@ -6,7 +6,7 @@ const KEYCODE = {
 	ESC: "Escape"
 };
 
-form.addEventListener("submit", submitHandler);
+form.addEventListener("submitSuccess", submitHandler);
 questionModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 closeBtn.addEventListener("click", closeBtnHandler);
 

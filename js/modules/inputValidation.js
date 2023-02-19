@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll("button[type = submit]");
+const forms = document.querySelectorAll("form");
 let onSubmit = false;
 let isInputHandlerAdded = false;
 
@@ -13,37 +13,21 @@ const RULES = [
 		name: "name",
 		validate: function(input){
 
-			if(onSubmit){
-				return REGEXP.name.test(input.value);
-			} else {
-				if(!input.value){
-					return true;
-				}
-				return REGEXP.name.test(input.value);
-			}
+			return REGEXP.name.test(input.value);
 		}
 	},
 	{
 		name: "phone",
 		validate: function(input){
 
-			if(onSubmit){
-				return REGEXP.phone.test(input.value) && input.value.length >= 10;
-			} else {
-				if(!input.value){
-					return true;
-				}
-				return REGEXP.phone.test(input.value);
-			}
+			return REGEXP.phone.test(input.value) && input.value.length >= 10;
 		}
 	},
 	{
 		name: "checkbox",
 		validate: function(input){
-			if(onSubmit){
-				return input.checked;
-			}
-			return true;
+
+			return input.checked;
 		}
 	}
 ]
@@ -88,14 +72,12 @@ function isFormValid(form){
 	return checkings.every((item) => item);
 }
 
-buttons.forEach((button) => {
+forms.forEach((form) => {
 	
-	button.addEventListener("click", () => {
-		onSubmit = true;
-		const isValid = isFormValid(button.form);
+	form.addEventListener("submit", () => {
 		
-		if(isValid) {
-			formSubmit(button.form);
+		if(isFormValid(form)) {
+			formSubmit(form);
 		}
 	})
 });
@@ -115,8 +97,8 @@ function addInputHandler(input){
 }
 
 function formSubmit(form){
-	let submit = new Event("submit");
-	form.dispatchEvent(submit);
+	let submitSuccess = new Event("submitSuccess");
+	form.dispatchEvent(submitSuccess);
 	// form.submit();
 	form.reset();
 }
