@@ -49,14 +49,15 @@ const RULES = [
 ]
 
 function validateField(input){
-	let isValid;
+	let checkings = [];
 
 	RULES.forEach((rule) => {
 		if(Object.hasOwn(input.dataset, rule.name)){
-			isValid = rule.validate(input);
+			let isValid = rule.validate(input);
+			checkings.push(isValid);
 		}
 	});
-	return isValid;
+	return checkings.every((item) => item);
 }
 
 function isFormValid(form){
