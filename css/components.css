@@ -10,9 +10,9 @@
 	line-height: 10px;
 	letter-spacing: 0.07em;
 	text-transform: uppercase;
-	color: #6A5300;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFF383 0.01%, #FFC700 100%);
-	box-shadow: 0px 4px 0px #C89C00;
+	color: var(--color-dark-orange);
+	background: var(--gradient-yellow);
+	box-shadow: 0px 4px 0px var(--color-light-orange);
 	z-index: 100;
 }
 
@@ -53,7 +53,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+	background: var(--gradient-yellow-dark);
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
 	z-index: -100;
@@ -71,7 +71,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+	background: var(--gradient-yellow-dark);
 	transform: matrix(1, 0, 0, -1, 0, 0);
 	opacity: 0;
 	transition: opacity 0.2s ease-in-out;
@@ -96,7 +96,7 @@
 	position: relative;
 	width: 40px;
 	height: 40px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
+	background: var(--gradient-slide-button);
 	border-radius: 50%;
 	transition: opacity 1s ease-in-out;
 }
@@ -110,7 +110,7 @@
 	height: 100%;
 	border-radius: 50%;
 	opacity: 0;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+	background: var(--gradient-yellow-dark);
 	transition: opacity 0.2s ease-in-out;
 }
 
@@ -129,11 +129,11 @@
 }
 
 .arrow {
-	color: #6A5300;
+	color: var(--color-dark-orange);
 	width: 10px;
 	height: 10px;
-	border-top: 3px solid #6A5300;
-	border-right: 3px solid #6A5300;
+	border-top: 3px solid var(--color-dark-orange);
+	border-right: 3px solid var(--color-dark-orange);
 	box-sizing: border-box;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -158,7 +158,7 @@
 .slider_thumb {
 	/* width took from JS*/
 	height: 8px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
+	background: var(--gradient-yellow-thumb);
 	border-radius: 10px;
 	transition: transform 1s ease-in-out 0s;
 }
@@ -177,7 +177,7 @@
 
 div .swiper-scrollbar-drag {
 	height: 8px;
-	background: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
+	background: var(--gradient-yellow-thumb);
 	border-radius: 10px;
 }
 
@@ -224,7 +224,7 @@ div .swiper-scrollbar-drag {
 .register__modal_content {
 	width: 300px;
 	height: 300px;
-	background-color: #FFF;
+	background-color: var(--color-white);
 	border-radius: 5px;
 	display: flex;
 	justify-content: center;
@@ -260,7 +260,7 @@ div .swiper-scrollbar-drag {
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
-	background-color: #FFF;
+	background-color: var(--color-white);
 }
 
 .modal_close_button span {
@@ -269,7 +269,7 @@ div .swiper-scrollbar-drag {
 	top: 50%;
 	width: 17px;
 	height: 1px;
-	background-color: #000;
+	background-color: var(--color-black);
 	transform: rotate(135deg);
 	transition: all 0.3s;
 }
@@ -289,8 +289,8 @@ div .swiper-scrollbar-drag {
 }
 
 .register__form input {
-	background: #FFF;
-	border: 1px solid #8F8F8F;
+	background: var(--color-white);
+	border: 1px solid var(--color-light-grey);
 	border-radius: 5px;
 	font-size: 13px;
 	line-height: 13px;
@@ -372,7 +372,7 @@ div .swiper-scrollbar-drag {
 .modal_form__checkbox+label {
 	font-size: 13px;
 	line-height: 15px;
-	color: #8A8A8A;
+	color: var(--color-font-grey);
 	display: inline-flex;
 	align-items: center;
 }
@@ -459,7 +459,7 @@ div .swiper-scrollbar-drag {
 	position: absolute;
 	width: 300px;
 	height: 300px;
-	background-color: #FFF;
+	background-color: var(--color-white);
 	border-radius: 5px;
 	padding: 30px;
 	display: flex;

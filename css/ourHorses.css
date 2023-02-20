@@ -84,8 +84,8 @@
 	flex-direction: column;
 	width: 260px;
 	align-items: center;
-	background-color: #fff;
-	border: 1px solid #EAEAEA;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-border-white);
 	box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
 	border-radius: 5px;
 	transition: all 1s !important;
@@ -124,7 +124,7 @@
 	font-size: 15px;
 	line-height: 15px;
 	text-align: center;
-	color: #363434;
+	color: var(--color-brown);
 }
 @media (min-width: 1920px){
 	.item__title{

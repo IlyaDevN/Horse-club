@@ -32,7 +32,7 @@
 	font-family: 'Philosopher', sans-serif;
 	font-size: 21px;
 	line-height: 21px;
-	color: #363434;
+	color: var(--color-brown);
 	text-align: center;
 }
 @media (min-width: 480px){
@@ -188,7 +188,7 @@
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 18px;
-	color: #0B0B0B;
+	color: var(--color-font-black-one);
 	text-align: center;
 }
 @media (min-width: 768px){

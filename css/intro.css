@@ -110,7 +110,7 @@
 .menu_burger_name{
 	font-size: 15px;
 	line-height: 15px;
-	color: #202020;
+	color: var(--color-font-black);
 }
 .menu_burger_button{
 	position: relative;
@@ -183,13 +183,13 @@
 .menu__link_header{
 	font-size: 15px;
 	line-height: 50px;
-	color: #FFF;
+	color: var(--color-white);
 }
 @media (min-width: 768px){
 	.menu__link_header{
 		font-size: 11px;
 		line-height: 13px;
-		color: #202020;
+		color: var(--color-font-black);
 		padding: 12px 5px;
 	}
 }
@@ -234,7 +234,7 @@
 	}
 }
 .tel_number{
-	color: #202020;
+	color: var(--color-font-black);
 	font-weight: 700;
 	font-size: 11px;
 	line-height: 13px;
@@ -260,7 +260,7 @@
 .header__contacts::after{
 	content: "Ежедневно 9:00 – 22:00";
 	position: absolute;
-	color: #7D808A;
+	color: var(--color-font-dark-grey);
 	display: block;
 }
 @media (min-width: 480px){
@@ -297,7 +297,7 @@
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 27px;
-	color: #000;
+	color: var(--color-black);
 	margin: 0 auto 30px;
 }
 @media (min-width: 480px){
@@ -338,7 +338,7 @@
 	font-family: 'Alegreya Sans', sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	color: #646464;
+	color: var(--color-font-grey-1);
 	margin: 0 auto 25px;
 	max-width: 265px;
 	text-align: center;
@@ -378,7 +378,7 @@
 .intro__advertising::before{
 	content: "";
 	display: block;
-	background-color: #8F8F8F;
+	background-color: var(--color-light-grey);
 	height: 1px;
 	width: 15px;
 	position: absolute;
@@ -464,7 +464,7 @@
 	top: 50%;
 	width: 17px;
 	height: 1px;
-	background-color: #FFF;
+	background-color: var(--color-white);
 	transform: rotate(135deg);
 }
 .menu_close_button span:nth-child(1){
@@ -490,7 +490,7 @@
 	top: 0;
 	left: 0;
 	z-index: 111;
-	background-color: #0D0D0D;
+	background-color: var(--color-font-black-two);
 	border-right: 5px solid var(--color-green);
 	transform: translateX(-100%);
 	transition: var(--menu-transition);
