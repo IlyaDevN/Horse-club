@@ -301,8 +301,9 @@
 		line-height: 18px;
 	}
 }
-.form__label_checkbox p{
+.form__label_checkbox a{
 	text-decoration: underline;
+	color: inherit;
 }
 .form__checkbox + label::before{
 	content: "";
