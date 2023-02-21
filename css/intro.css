@@ -132,7 +132,8 @@
 }
 :root{
 	--menu-width: 230px;
-	--menu-transition: all 1s ease 0s;
+	--menu-transition:	transform 1s,
+						visibility 1s;
 }
 .header__nav {
 	position: absolute;

@@ -211,7 +211,8 @@ div .swiper-scrollbar-drag {
 	align-items: center;
 	justify-content: center;
 	background-color: rgba(0, 0, 0, 0.8);
-	transition: all 0.8s;
+	transition: opacity 0.8s,
+				visibility 0.8s	;
 	opacity: 0;
 	visibility: hidden;
 }
@@ -230,7 +231,7 @@ div .swiper-scrollbar-drag {
 	justify-content: center;
 	align-items: center;
 	transform: perspective(300px) translateY(-100%) rotateX(45deg);
-	transition: all 0.8s;
+	transition: transform 0.8s;
 }
 
 @media (min-width: 480px) {
@@ -271,7 +272,7 @@ div .swiper-scrollbar-drag {
 	height: 1px;
 	background-color: var(--color-black);
 	transform: rotate(135deg);
-	transition: all 0.3s;
+	transition: background-color 0.3s;
 }
 
 .modal_close_button:hover .modal_close_button_span {
@@ -431,7 +432,8 @@ div .swiper-scrollbar-drag {
 	line-height: 10px;
 	visibility: hidden;
 	opacity: 0;
-	transition: all 0.3s;
+	transition: opacity 0.3s,
+				visibility 0.3s;
 }
 
 .input_container.error .valid_tooltip {
@@ -467,7 +469,9 @@ div .swiper-scrollbar-drag {
 	justify-content: center;
 	align-items: center;
 	transform: perspective(600px) translateY(100%) rotateX(45deg);
-	transition: all 0.8s;
+	transition: transform 0.8s,
+				opacity 0.8s,
+				visibility 0.8s;
 	visibility: hidden;
 	opacity: 0;
 }

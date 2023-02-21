@@ -118,7 +118,7 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 5;
 	-webkit-box-orient: vertical;
-	transition: 0.5s;
+	transition: height 0.5s;
 }
 @media (min-width: 480px) {
 	.card_text {
@@ -197,7 +197,7 @@
 .unwrap_button_span:last-of-type {
 	transform: translate(-1px, 1px) rotate(-45deg);
 }
-.card_unwrap_butto.opened .unwrap_button_span:first-of-type {
+.card_unwrap_button.opened .unwrap_button_span:first-of-type {
 	transform: translate(2px, 1px) rotate(-45deg);
 }
 .card_unwrap_button.opened .unwrap_button_span:last-of-type {
