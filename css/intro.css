@@ -259,7 +259,7 @@
 	width: 0.9em;
 }
 .header__contacts::after{
-	content: "Ежедневно 9:00 – 22:00";
+	content: attr(data-timetable);
 	position: absolute;
 	color: var(--color-font-dark-grey);
 	display: block;
