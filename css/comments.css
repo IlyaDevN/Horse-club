@@ -116,7 +116,7 @@
 	height: var(--height);
 	overflow: hidden;
 	display: -webkit-box;
-	-webkit-line-clamp: 5;
+	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	transition: height 0.5s;
 }
@@ -125,7 +125,6 @@
 		line-height: 22px;
 		min-width: 314px;
 		margin-bottom: 10px;
-		-webkit-line-clamp: 4;
 	}
 }
 @media (min-width: 768px) {
@@ -138,7 +137,6 @@
 		line-height: 24px;
 		min-width: 380px;
 		margin-bottom: 15px;
-		-webkit-line-clamp: 3;
 	}
 }
 @media (min-width: 1920px) {
