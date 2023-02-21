@@ -1,7 +1,6 @@
 .our-horses__container{
 	width: 320px;
 	margin: 0 auto;
-	/* padding: 0 15px; */
 	overflow: hidden;
 }
 @media (min-width: 480px){

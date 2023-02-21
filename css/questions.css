@@ -301,7 +301,7 @@
 		line-height: 18px;
 	}
 }
-.form__label_checkbox a{
+.form_agreement_link{
 	text-decoration: underline;
 	color: inherit;
 }

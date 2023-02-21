@@ -15,56 +15,56 @@
 	<div class="menu_overlay">
 		<div class="menu_body">
 			<button class="menu_close_button">
-				<span></span>
-				<span></span>
+				<span class="close_button_span"></span>
+				<span class="close_button_span"></span>
 			</button>
 		</div>
 	</div>
 	<div class="register__modal_overlay modal_overlay">
 		<div class="register__modal_content">
 			<button class="register__close_button modal_close_button">
-				<span></span>
-				<span></span>
+				<span class="modal_close_button_span"></span>
+				<span class="modal_close_button_span"></span>
 			</button>
 			<form class="register__form" onsubmit="return false">
 				<div class="input_container">
 					<p class="valid_tooltip letters">Вводите буквы</p>
-					<input class="validate" type="text" placeholder="Ваше имя" data-name data-to-Validate>
+					<input class="form_input validate" type="text" placeholder="Ваше имя" data-name data-to-Validate>
 				</div>
 				<div class="input_container">
 					<p class="valid_tooltip figures">Вводите цифры</p>
-					<input class="validate" type="tel" placeholder="Ваш телефон" data-phone data-to-Validate>
+					<input class="form_input validate" type="tel" placeholder="Ваш телефон" data-phone data-to-Validate>
 				</div>
 				<button class="modal_form_button button" type="submit"></button>
 				<div class="modal_form__checkbox_container input_container">
 					<p class="valid_tooltip checkes">Подтвердите согласие</p>
-					<input class="modal_form__checkbox validate" id="modal_form_checkbox" type="checkbox" name="checkbox" data-checkbox data-to-Validate>
+					<input class="modal_form__checkbox form_input validate" id="modal_form_checkbox" type="checkbox" name="checkbox" data-checkbox data-to-Validate>
 					<label class="modal_form__label_checkbox" for="modal_form_checkbox">Даю согласие на&nbsp;<p>обработку данных</p></label>
 				</div>
 			</form>
 		</div>
 		<div class="register__modal_gratitude modal_gratitude">
 			<button class="register__close_button modal_close_button">
-				<span></span>
-				<span></span>
+				<span class="modal_close_button_span"></span>
+				<span class="modal_close_button_span"></span>
 			</button>
 			<p class="gratitude_line_1">Спасибо!</p>
 			<p class="gratitude_line_2">Мы свяжемся с Вами в ближайшее время!</p>
-			<div class="gratitude_image">
-				<img src="img/modal/smile_x1000.jpg" alt="smile">
+			<div class="gratitude_image_container">
+				<img class="gratitude_image" src="img/modal/smile.jpg" alt="smile">
 			</div>
 		</div>
 	</div>
 	<div class="question__modal_overlay modal_overlay">
 		<div class="question__modal_gratitude modal_gratitude">
 			<button class="question__close_button modal_close_button">
-				<span></span>
-				<span></span>
+				<span class="modal_close_button_span"></span>
+				<span class="modal_close_button_span"></span>
 			</button>
 			<p class="gratitude_line_1">Спасибо!</p>
 			<p class="gratitude_line_2">Мы свяжемся с Вами в ближайшее время!</p>
-			<div class="gratitude_image">
-				<img src="img/modal/smile_x1000.jpg" alt="smile">
+			<div class="gratitude_image_container">
+				<img class="gratitude_image" src="img/modal/smile.jpg" alt="smile">
 			</div>
 		</div>
 	</div>
@@ -111,14 +111,14 @@
 				<header class="intro__header">
 					<div class="header__logo">
 						<a href="#">
-							<img src="img/intro/introHeader/logo.svg" alt="logo">
+							<img class="header__logo_img" src="img/intro/introHeader/logo.svg" alt="logo">
 						</a>
 					</div>
 					<div class="menu_burger">
 						<div class="menu_burger_button">
-							<span></span>
-							<span></span>
-							<span></span>
+							<span class="burger_button_span"></span>
+							<span class="burger_button_span"></span>
+							<span class="burger_button_span"></span>
 						</div>
 						<div class="menu_burger_name">Menu</div>
 					</div>
@@ -131,7 +131,7 @@
 						</ul>
 					</nav>
 					<div class="header__contacts">
-						<a href="tel:+38 (000) 000-00-00" class="tel_number"><img src="img/intro/introHeader/tel_logo.png" alt="tel_icon"> +38 (000) 000-00-00 </a>
+						<a href="tel:+38 (000) 000-00-00" class="tel_number"><img class="tel_number_img" src="img/intro/introHeader/tel_logo.png" alt="tel_icon"> +38 (000) 000-00-00 </a>
 					</div>
 				</header>
 				<div class="intro__content" id="intro__content">
@@ -219,7 +219,7 @@
 				<div class="whyChooseUs__benefits">
 					<div class="benefits__card">
 						<div class="benefits__image_container">
-							<img src="img/whyChooseUs/map_1_x1920.jpg" alt="map">
+							<img class="benefits_img" src="img/whyChooseUs/map_1_x1920.jpg" alt="map">
 						</div>
 						<div class="benefits__subtitle">Удобное расположение</div>
 						<div class="benefits__text">Мы находимся недалеко от автостанции «Восточный» чтобы вам было
@@ -227,7 +227,7 @@
 					</div>
 					<div class="benefits__card">
 						<div class="benefits__image_container">
-							<img src="img/whyChooseUs/desk_2_x1920.jpg" alt="desk">
+							<img class="benefits_img" src="img/whyChooseUs/desk_2_x1920.jpg" alt="desk">
 						</div>
 						<div class="benefits__subtitle">Обеденная зона</div>
 						<div class="benefits__text">Имеется столовая, чтобы Вы могли перекусить и немного отдохнуть.
@@ -235,7 +235,7 @@
 					</div>
 					<div class="benefits__card">
 						<div class="benefits__image_container">
-							<img src="img/whyChooseUs/clock_3_x1920.jpg" alt="clock">
+							<img class="benefits_img" src="img/whyChooseUs/clock_3_x1920.jpg" alt="clock">
 						</div>
 						<div class="benefits__subtitle">Профессиональные тренера</div>
 						<div class="benefits__text">Наши преподаватели имеют награды в конном спорте, и отличные отзывы
@@ -243,7 +243,7 @@
 					</div>
 					<div class="benefits__card">
 						<div class="benefits__image_container">
-							<img src="img/whyChooseUs/car_4_x1920.jpg" alt="car">
+							<img class="benefits_img" src="img/whyChooseUs/car_4_x1920.jpg" alt="car">
 						</div>
 						<div class="benefits__subtitle">Бесплатная парковка</div>
 						<div class="benefits__text">Наши преподаватели имеют награды в конном спорте, и отличные отзывы
@@ -299,7 +299,7 @@
 					<div class="firstRow__line">
 						<div class="line__card">
 							<div class="card__image_galary">
-								<img src="img/clubDirection/clubDirectionGalary/galery_img_1_x1920.jpg"
+								<img class="galary_img" src="img/clubDirection/clubDirectionGalary/galery_img_1_x1920.jpg"
 									alt="JumpingHourse">
 							</div>
 							<div class="clubDirection_card__title">
@@ -312,7 +312,7 @@
 						</div>
 						<div class="line__card">
 							<div class="card__image_galary">
-								<img src="img/clubDirection/clubDirectionGalary/galery_img_2_x1920.jpg"
+								<img class="galary_img" src="img/clubDirection/clubDirectionGalary/galery_img_2_x1920.jpg"
 									alt="JumpingHourse">
 							</div>
 							<div class="clubDirection_card__title">
@@ -326,7 +326,7 @@
 						</div>
 						<div class="line__card">
 							<div class="card__image_galary">
-								<img src="img/clubDirection/clubDirectionGalary/galery_img_3_x1920.jpg"
+								<img class="galary_img" src="img/clubDirection/clubDirectionGalary/galery_img_3_x1920.jpg"
 									alt="JumpingHourse">
 							</div>
 							<div class="clubDirection_card__title">
@@ -341,7 +341,7 @@
 					<div class="secondRow__line">
 						<div class="line__card">
 							<div class="card__image_galary">
-								<img src="img/clubDirection/clubDirectionGalary/galery_img_4_x1920.jpg"
+								<img class="galary_img" src="img/clubDirection/clubDirectionGalary/galery_img_4_x1920.jpg"
 									alt="JumpingHourse">
 							</div>
 							<div class="clubDirection_card__title">
@@ -355,7 +355,7 @@
 						</div>
 						<div class="line__card">
 							<div class="card__image_galary">
-								<img src="img/clubDirection/clubDirectionGalary/galery_img_5_x1920.jpg"
+								<img class="galary_img" src="img/clubDirection/clubDirectionGalary/galery_img_5_x1920.jpg"
 									alt="JumpingHourse">
 							</div>
 							<div class="clubDirection_card__title">
@@ -368,7 +368,7 @@
 						</div>
 						<div class="line__card">
 							<div class="card__image_galary">
-								<img src="img/clubDirection/clubDirectionGalary/galery_img_6_x1920.jpg"
+								<img class="galary_img" src="img/clubDirection/clubDirectionGalary/galery_img_6_x1920.jpg"
 									alt="JumpingHourse">
 							</div>
 							<div class="clubDirection_card__title">
@@ -1252,7 +1252,7 @@
 						<div class="form__checkbox_container input_container">
 							<p class="valid_tooltip confirm_agreement">Подтвердите согласие</p>
 							<input class="form__checkbox validate" name="checkbox" id="questions_form_checkbox" type="checkbox" data-checkbox data-to-Validate>
-							<label class="form__label_checkbox" for="questions_form_checkbox">Даю согласие на&nbsp;<a href="agreement.html">обработку данных</a></label>
+							<label class="form__label_checkbox" for="questions_form_checkbox">Даю согласие на&nbsp;<a class="form_agreement_link" href="agreement.html" target="_blank">обработку данных</a></label>
 						</div>
 					</form>
 				</div>
@@ -1272,17 +1272,17 @@
 								стрессоустойчивость; Общение с лошадью лечит умственные отклонения.</div>
 							<button class="card_unwrap_button">
 								<p>Подробнее</p>
-								<span></span>
-								<span></span>
+								<span class="unwrap_button_span"></span>
+								<span class="unwrap_button_span"></span>
 							</button>
 							<div class="card_author">
 								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Syutkin.png"
 										alt="author_photo"></div>
 								<div class="author_cocial_network_link">
 									<div class="author_name">Константин Сюткин</div>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="instagram_icon"></a>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="vk_icon"></a>
 								</div>
 								<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="quotes">
@@ -1294,17 +1294,17 @@
 								и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения.</div>
 							<button class="card_unwrap_button">
 								<p>Подробнее</p>
-								<span></span>
-								<span></span>
+								<span class="unwrap_button_span"></span>
+								<span class="unwrap_button_span"></span>
 							</button>
 							<div class="card_author">
 								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Syutkin.png"
 										alt="author_photo"></div>
 								<div class="author_cocial_network_link">
 									<div class="author_name">Константин Сюткин</div>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="instagram_icon"></a>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="vk_icon"></a>
 								</div>
 								<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="quotes">
@@ -1316,8 +1316,8 @@
 								некоторой сказочности, сразу появляется красивая осанка, работают все группы мышц.</div>
 							<button class="card_unwrap_button">
 								<p>Подробнее</p>
-								<span></span>
-								<span></span>
+								<span class="unwrap_button_span"></span>
+								<span class="unwrap_button_span"></span>
 							</button>
 							<div class="card_author">
 								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Sorokina.png"
@@ -1325,9 +1325,9 @@
 
 								<div class="author_cocial_network_link">
 									<div class="author_name">Валентина Сорокина</div>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="instagram_icon"></a>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="vk_icon"></a>
 								</div>
 								<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="quotes">
@@ -1340,17 +1340,17 @@
 								всего!</div>
 							<button class="card_unwrap_button">
 								<p>Подробнее</p>
-								<span></span>
-								<span></span>
+								<span class="unwrap_button_span"></span>
+								<span class="unwrap_button_span"></span>
 							</button>
 							<div class="card_author">
 								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
 										alt="author_photo"></div>
 								<div class="author_cocial_network_link">
 									<div class="author_name">Светлана Мирная</div>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="instagram_icon"></a>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="vk_icon"></a>
 								</div>
 								<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="quotes">
@@ -1363,17 +1363,17 @@
 								всего!</div>
 							<button class="card_unwrap_button">
 								<p>Подробнее</p>
-								<span></span>
-								<span></span>
+								<span class="unwrap_button_span"></span>
+								<span class="unwrap_button_span"></span>
 							</button>
 							<div class="card_author">
 								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
 										alt="author_photo"></div>
 								<div class="author_cocial_network_link">
 									<div class="author_name">Светлана Мирная</div>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="instagram_icon"></a>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="vk_icon"></a>
 								</div>
 								<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="quotes">
@@ -1386,17 +1386,17 @@
 								всего!</div>
 							<button class="card_unwrap_button">
 								<p>Подробнее</p>
-								<span></span>
-								<span></span>
+								<span class="unwrap_button_span"></span>
+								<span class="unwrap_button_span"></span>
 							</button>
 							<div class="card_author">
 								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
 										alt="author_photo"></div>
 								<div class="author_cocial_network_link">
 									<div class="author_name">Светлана Мирная</div>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="instagram_icon"></a>
-									<a href="#"><img src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									<a class="link_ref" href="#"><img class="link_icon" src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="vk_icon"></a>
 								</div>
 								<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="quotes">
@@ -1459,7 +1459,7 @@
 									media="(min-width:1000px)">
 								<source srcset="img/contacts/icons/x768/mail_x768.svg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img src="img/contacts/icons/x1000/mail_x1000.svg" alt="mail-box">
+								<img class="mail_icon" src="img/contacts/icons/x1000/mail_x1000.svg" alt="mail-box">
 							</picture>
 							<a href="mailto:mail@somemail.com" class="item__mail item_every">mail@somemail.com</a>
 						</div>
@@ -1469,19 +1469,19 @@
 									media="(min-width:1000px)">
 								<source srcset="img/contacts/icons/x768/clock_x768.svg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img src="img/contacts/icons/x1000/clock_x1000.svg" alt="clock">
+								<img class="timetable_icon" src="img/contacts/icons/x1000/clock_x1000.svg" alt="clock">
 							</picture>
 							<p class="item__timetable item_every">Пн-Пт: 10:00 - 19:00 <br>Сб: 10:00 - 17:00 <br>Вс:
 								выходной</p>
 						</div>
-						<div class="social_network_icons">
-							<a class="icon icon_instagram" href="#"><img src="img/contacts/icons/social/instagram.svg"
+						<div class="social_network_icon_container">
+							<a class="icon_instagram social_network_icon" href="#"><img src="img/contacts/icons/social/instagram.svg"
 									alt="icon_instagram"></a>
-							<a class="icon icon_youtube" href="#"><img src="img/contacts/icons/social/youtube.svg"
+							<a class="icon_youtube social_network_icon" href="#"><img src="img/contacts/icons/social/youtube.svg"
 									alt="icon_youtube"></a>
-							<a class="icon icon_watsUp" href="#"><img src="img/contacts/icons/social/whatsUp.svg"
+							<a class="icon_watsUp social_network_icon" href="#"><img src="img/contacts/icons/social/whatsUp.svg"
 									alt="icon_watsUp"></a>
-							<a class="icon icon_vk" href="#"><img src="img/contacts/icons/social/vk.svg"
+							<a class="icon_vk social_network_icon" href="#"><img src="img/contacts/icons/social/vk.svg"
 									alt="icon_vk"></a>
 						</div>
 					</div>

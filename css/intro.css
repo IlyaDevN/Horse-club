@@ -75,18 +75,18 @@
 		flex: 1 1 auto;
 	}
 }
-.header__logo img{
+.header__logo_img{
 	width: 89px;
 	height: 29px;
 }
 @media (min-width: 768px){
-	.header__logo img{
+	.header__logo_img{
 		width: 120px;
 		height: 39px;
 	}
 }
 @media (min-width: 1000px){
-	.header__logo img{
+	.header__logo_img{
 		width: 152px;
 		height: 49px;
 	}
@@ -115,7 +115,7 @@
 .menu_burger_button{
 	position: relative;
 }
-.menu_burger_button span{
+.burger_button_span{
 	width: 10px;
 	height: 2px;
 	background-color: var(--color-green);
@@ -124,10 +124,10 @@
 	left: 50%;
 	transform: translate(0, -50%);
 }
-.menu_burger_button span:nth-of-type(2) {
+.burger_button_span:nth-of-type(2) {
 	top: calc(50% - 4px);
 }
-.menu_burger_button span:nth-of-type(3) {
+.burger_button_span:nth-of-type(3) {
 	top: calc(50% + 4px);
 }
 :root{
@@ -253,7 +253,7 @@
 		line-height: 21px;
 	}
 }
-.tel_number img{
+.tel_number_img{
 	display: inline-block;
 	width: 0.9em;
 }
@@ -458,7 +458,7 @@
 	cursor: pointer;
 	background-color: transparent;
 }
-.menu_close_button span{
+.close_button_span{
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -467,7 +467,7 @@
 	background-color: var(--color-white);
 	transform: rotate(135deg);
 }
-.menu_close_button span:nth-child(1){
+.close_button_span:nth-child(1){
 	transform: rotate(-135deg);
 }
 .menu_overlay{
