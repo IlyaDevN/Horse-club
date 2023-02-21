@@ -171,7 +171,6 @@
 	}
 }
 .nav__menu_header{
-	text-transform: uppercase;
 	text-align: center;
 }
 @media (min-width: 768px){
@@ -185,6 +184,7 @@
 	font-size: 15px;
 	line-height: 50px;
 	color: var(--color-white);
+	text-transform: uppercase;
 }
 @media (min-width: 768px){
 	.menu__link_header{
