@@ -456,6 +456,7 @@
 	position: absolute;
 	width: 16px;
 	height: 16px;
+	padding: 16px;
 	top: 16px;
 	right: 21px;
 	cursor: pointer;
@@ -463,7 +464,7 @@
 }
 .close_button_span{
 	position: absolute;
-	left: 0;
+	left: 7px;
 	top: 50%;
 	width: 17px;
 	height: 1px;

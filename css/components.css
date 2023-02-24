@@ -258,15 +258,22 @@ div .swiper-scrollbar-drag {
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	top: 10px;
-	right: 10px;
+	padding: 16px;
+	top: 0px;
+	right: 0px;
 	cursor: pointer;
 	background-color: var(--color-white);
+}
+@media (min-width: 480px) {
+	.modal_close_button {
+		top: 4px;
+		right: 4px;
+	}
 }
 
 .modal_close_button_span {
 	position: absolute;
-	left: 0;
+	left: 7px;
 	top: 50%;
 	width: 17px;
 	height: 1px;
