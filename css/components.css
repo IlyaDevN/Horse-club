@@ -367,8 +367,12 @@ div .swiper-scrollbar-drag {
 	width: 1.5em;
 	height: 1.5em;
 }
-.modal_form__label_checkbox p{
+/* .modal_form__label_checkbox p{
 	text-decoration: underline;
+} */
+.form_agreement_link{
+	text-decoration: underline;
+	color: inherit;
 }
 .modal_form__checkbox+label {
 	font-size: 13px;
@@ -385,35 +389,43 @@ div .swiper-scrollbar-drag {
 	}
 }
 
-.modal_form__checkbox+label::before {
-	content: "";
-	display: inline-block;
+.checkbox_svg{
 	width: 15px;
 	height: 15px;
-	border: 2px solid;
-	border-color: var(--color-yellow);
-	border-radius: 2px;
-	margin-right: 10px;
-	background-repeat: no-repeat;
-	background-position: center center;
 }
-
-@media (min-width: 480px) {
-	.modal_form__checkbox+label::before {
-		width: 1.3333em;
-		height: 1.3333em;
+@media (min-width: 480px){
+	.checkbox_svg{
+		width: 20px;
+		height: 20px;
 	}
 }
-
-.input_container.error .modal_form__checkbox+label::before {
-	border-color: var(--color-orange);
+.check_rect{
+	width: 18px;
+	height: 18px;
+	stroke-width: 1px;
+	stroke: var(--color-yellow);
+	fill: var(--color-white);
 }
-
-.modal_form__checkbox:checked+label::before {
-	background-image: url(../img/questions/checkbox/checkbox.svg);
-	background-size: contain;
+@media (min-width: 480px){
+	.check_rect{
+		stroke-width: 2px;
+	}
 }
-
+.check_path{
+	transform: translate(4px, 4px);
+	stroke: var(--color-green);
+	fill: var(--color-green);
+	visibility: hidden;
+}
+.check_ref{
+	margin-left: 10px;
+}
+.input_container.error .check_rect{
+	stroke: var(--color-orange);
+}
+.modal_form__checkbox:checked+label .check_path{
+	visibility: visible;
+}
 .input_container {
 	position: relative;
 	align-self: center;

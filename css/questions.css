@@ -301,32 +301,6 @@
 		line-height: 18px;
 	}
 }
-.form_agreement_link{
-	text-decoration: underline;
-	color: inherit;
-}
-.form__checkbox + label::before{
-	content: "";
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 2px solid;
-	border-color: var(--color-yellow);
-	border-radius: 2px;
-	margin-right: 10px;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-.input_container.error .form__checkbox + label::before{
-	border-color: var(--color-orange);
-}
-@media (min-width: 480px){
-	.form__checkbox + label::before{
-		width: 1.3333em;
-		height: 1.3333em;
-	}
-}
-.form__checkbox:checked+label::before{
-	background-image: url(../img/questions/checkbox/checkbox.svg);
-	background-size: contain;
+.form__checkbox:checked+label .check_path{
+	visibility: visible;
 }
