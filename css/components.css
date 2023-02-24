@@ -465,7 +465,7 @@ div .swiper-scrollbar-drag {
 	bottom: 0;
 }
 
-.input_container.error .validate {
+.input_container.error [data-to-Validate] {
 	border-color: var(--color-orange);
 }
 
