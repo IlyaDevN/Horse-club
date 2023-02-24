@@ -194,6 +194,7 @@
 		line-height: 13px;
 		color: var(--color-font-black);
 		padding: 12px 5px;
+		display: inline;
 	}
 }
 @media (min-width: 1000px){
@@ -243,22 +244,21 @@
 	line-height: 13px;
 	display: flex;
 	align-items: center;
+	height: 10px;
 }
 @media (min-width: 768px){
 	.tel_number{
 		font-size: 14px;
 		line-height: 16px;
+		height: 13px;
 	}
 }
 @media (min-width: 1000px){
 	.tel_number{
 		font-size: 18px;
 		line-height: 21px;
+		height: 16px;
 	}
-}
-.tel_number_img{
-	display: inline-block;
-	width: 0.9em;
 }
 .header__contacts::after{
 	content: attr(data-timetable);
