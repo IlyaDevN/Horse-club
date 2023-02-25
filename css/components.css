@@ -261,7 +261,6 @@ div .swiper-scrollbar-drag {
 	padding: 16px;
 	top: 0px;
 	right: 0px;
-	cursor: pointer;
 	background-color: var(--color-white);
 }
 
