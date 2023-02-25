@@ -98,9 +98,7 @@
 	border: 1px solid var(--color-green);
 	border-radius: 3px;
 	display: flex;
-	justify-content: space-around;
 	align-items:center;
-	cursor: pointer;
 }
 @media (min-width: 768px){
 	.menu_burger{
@@ -113,22 +111,16 @@
 	color: var(--color-font-black);
 }
 .menu_burger_button{
-	position: relative;
+	padding: 0 5px 0 10px;
 }
-.burger_button_span{
+.burger_button_line{
+	margin-bottom: 2px;
 	width: 10px;
 	height: 2px;
 	background-color: var(--color-green);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(0, -50%);
 }
-.burger_button_span:nth-of-type(2) {
-	top: calc(50% - 4px);
-}
-.burger_button_span:nth-of-type(3) {
-	top: calc(50% + 4px);
+.burger_button_line:last-child{
+	margin-bottom: 0;
 }
 :root{
 	--menu-width: 230px;
