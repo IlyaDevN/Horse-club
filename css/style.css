@@ -15,10 +15,11 @@
 @import url(swiper-bundle.8.4.5.min.css);
 
 
-body{
+body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
-body.stopPageScroll{
+
+body.stopPageScroll {
 	overflow-y: hidden;
 }
