@@ -7,7 +7,7 @@ const markerImageSrc = document.getElementById("contactsBgMap").dataset.markerIm
 function initMap() {
 	const viewportWidth = window.innerWidth;
 	
-	const markerOnTheMap = { lat: 50.4475, lng: 30.5369 };
+	const markerOnTheMap = { lat: 50.4456, lng: 30.5410 };
 	let centerOfTheMap = {};
 
 	if(viewportWidth < TABLET_SCREEN_RESOLUTION){
