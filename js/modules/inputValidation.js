@@ -2,8 +2,8 @@ const forms = Array.from(document.forms);
 let isInputHandlerAdded = false;
 
 const REGEXP = {
-	Name: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/,
-	Phone: /^(?! )^[+\-\s()0-9]{10,20}$/,
+	NAME: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/,
+	PHONE: /^(?! )^[+\-\s()0-9]{10,20}$/,
 }
 
 const RULES = [
@@ -11,14 +11,14 @@ const RULES = [
 		name: "name",
 		validate: function(input){
 
-			return REGEXP.Name.test(input.value);
+			return REGEXP.NAME.test(input.value);
 		}
 	},
 	{
 		name: "phone",
 		validate: function(input){
 
-			return REGEXP.Phone.test(input.value);
+			return REGEXP.PHONE.test(input.value);
 		}
 	},
 	{
