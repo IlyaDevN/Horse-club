@@ -1,4 +1,4 @@
-const forms = document.querySelectorAll("form");
+const forms = document.forms;
 let onSubmit = false;
 let isInputHandlerAdded = false;
 
@@ -74,7 +74,7 @@ function isFormValid(form){
 	return checkings.every((item) => item);
 }
 
-forms.forEach((form) => {
+for (let form of forms){
 	
 	form.addEventListener("submit", () => {
 		
@@ -82,7 +82,7 @@ forms.forEach((form) => {
 			formSubmit(form);
 		}
 	})
-});
+};
 
 function addInputHandler(input){
 
