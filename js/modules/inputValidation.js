@@ -86,10 +86,10 @@ function addInputHandler(input){
 	input.addEventListener("input", ()=>{
 		const isValid = validateField(input);
 
-		hideError(input);
-
 		if(!isValid) {
 			showError(input);
+		} else {
+			hideError(input);
 		}
 	});
 }
