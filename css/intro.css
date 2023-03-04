@@ -270,6 +270,7 @@
 	display: flex;
 	align-items: center;
 	height: 10px;
+	gap: 2px;
 }
 
 @media (min-width: 768px) {
@@ -277,6 +278,7 @@
 		font-size: 14px;
 		line-height: 16px;
 		height: 13px;
+		gap: 5px;
 	}
 }
 
@@ -285,7 +287,12 @@
 		font-size: 18px;
 		line-height: 21px;
 		height: 16px;
+		gap: 10px;
 	}
+}
+
+.tel_number_img {
+	height: inherit;
 }
 
 .header__contacts::after {
