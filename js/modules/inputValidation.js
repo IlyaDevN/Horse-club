@@ -32,6 +32,8 @@ const RULES = [
 	}
 ]
 
+document.onsubmit = () => {return false};
+
 function validateField(input){
 	let checkings = [];
 
