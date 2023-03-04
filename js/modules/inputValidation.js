@@ -75,9 +75,13 @@ forms.forEach((form) => form.addEventListener("submit", handleFormSubmit));
 
 function handleFormSubmit(event){
 	const form = event.target;
-	
+
 	if(isFormValid(form)) {
-		formSubmit(form);
+		
+		let submitSuccess = new Event("submitSuccess");
+		form.dispatchEvent(submitSuccess);
+		// form.submit();
+		form.reset();
 	}
 }
 
@@ -92,13 +96,6 @@ function addInputHandler(input){
 			hideError(input);
 		}
 	});
-}
-
-function formSubmit(form){
-	let submitSuccess = new Event("submitSuccess");
-	form.dispatchEvent(submitSuccess);
-	// form.submit();
-	form.reset();
 }
 
 function showError(input){
