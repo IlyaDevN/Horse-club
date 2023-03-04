@@ -7,7 +7,6 @@ const REGEXP = {
 }
 
 const RULES = [
-
 	{
 		name: "name",
 		validate: function(input){
@@ -47,7 +46,6 @@ function validateField(input){
 
 function isFormValid(form){
 	const checkings = [];
-	
 	const filteredFields = Array.from(form.elements).filter((element)=>{
 		return Object.hasOwn(element.dataset, "toValidate");
 	});
