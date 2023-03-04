@@ -38,7 +38,7 @@ function validateField(input){
 
 	RULES.forEach((rule) => {
 		if(Object.hasOwn(input.dataset, rule.name)){
-			let isValid = rule.validate(input);
+			const isValid = rule.validate(input);
 			checkings.push(isValid);
 		}
 	});
@@ -46,7 +46,7 @@ function validateField(input){
 }
 
 function isFormValid(form){
-	let checkings = [];
+	const checkings = [];
 	
 	const filteredFields = Array.from(form.elements).filter((element)=>{
 		return Object.hasOwn(element.dataset, "toValidate");
