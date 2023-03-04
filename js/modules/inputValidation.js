@@ -1,4 +1,4 @@
-const forms = document.forms;
+const forms = Array.from(document.forms);
 let isInputHandlerAdded = false;
 
 const REGEXP = {
@@ -71,15 +71,15 @@ function isFormValid(form){
 	return checkings.every((item) => item);
 }
 
-for (let form of forms){
+forms.forEach((form) => form.addEventListener("submit", handleFormSubmit));
+
+function handleFormSubmit(event){
+	const form = event.target;
 	
-	form.addEventListener("submit", () => {
-		
-		if(isFormValid(form)) {
-			formSubmit(form);
-		}
-	})
-};
+	if(isFormValid(form)) {
+		formSubmit(form);
+	}
+}
 
 function addInputHandler(input){
 
