@@ -3,7 +3,7 @@ let isInputHandlerAdded = false;
 
 const REGEXP = {
 	Name: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/,
-	Phone: /^(?! )^[+\-\s()0-9]{1,20}$/,
+	Phone: /^(?! )^[+\-\s()0-9]{10,20}$/,
 }
 
 const RULES = [
@@ -19,7 +19,7 @@ const RULES = [
 		name: "phone",
 		validate: function(input){
 
-			return REGEXP.Phone.test(input.value) && input.value.length >= 10;
+			return REGEXP.Phone.test(input.value);
 		}
 	},
 	{
