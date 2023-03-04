@@ -1,5 +1,4 @@
 const forms = document.forms;
-let onSubmit = false;
 let isInputHandlerAdded = false;
 
 const REGEXP = {
@@ -87,7 +86,6 @@ for (let form of forms){
 function addInputHandler(input){
 
 	input.addEventListener("input", ()=>{
-		onSubmit = false;
 		const isValid = validateField(input);
 
 		hideError(input);
