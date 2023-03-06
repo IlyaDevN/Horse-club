@@ -12,14 +12,6 @@
 </head>
 
 <body>
-	<div class="menu_overlay">
-		<div class="menu_body">
-			<button class="menu_close_button">
-				<span class="close_button_span"></span>
-				<span class="close_button_span"></span>
-			</button>
-		</div>
-	</div>
 	<div class="register__modal_overlay modal_overlay">
 		<div class="register__modal_content">
 			<button class="register__close_button modal_close_button">
@@ -133,14 +125,22 @@
 							<p>Меню</p>
 						</div>
 					</button>
-					<nav class="header__nav">
-						<ul class="nav__menu_header">
-							<li><a class="menu__link_header" href="#">О нас</a></li>
-							<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
-							<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
-							<li><a class="menu__link_header" href="#">Контакты</a></li>
-						</ul>
-					</nav>
+					<div class="menu_overlay">
+						<div class="menu">
+							<button class="menu_close_button">
+								<span class="close_button_span"></span>
+								<span class="close_button_span"></span>
+							</button>
+							<nav class="header__nav">
+								<ul class="nav__menu_header">
+									<li><a class="menu__link_header" href="#">О нас</a></li>
+									<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
+									<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
+									<li><a class="menu__link_header" href="#">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
 					<div class="header__contacts" data-timetable="Ежедневно 9:00 – 22:00">
 						<a class="tel_number" href="tel:+38 (000) 000-00-00">
 							<img class="tel_number_img" src="img/intro/introHeader/tel.svg" alt="telephone icon">
@@ -174,7 +174,7 @@
 								media="(min-width:1000px)">
 							<source srcset="img/about/x768/jumping_horse_x768.jpg" type="image/jpeg"
 								media="(min-width:768px)">
-							<img src="img/about/x1920/jumping_horse_x768.jpg" alt="jumping horse">
+							<img src="img/about/x768/jumping_horse_x768.jpg" alt="jumping horse">
 						</picture>
 					</div>
 					<div class="about__content_text">
