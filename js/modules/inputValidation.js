@@ -27,6 +27,8 @@ const RULES = [
 	}
 ]
 
+forms.forEach((form) => form.addEventListener("submit", handleFormSubmit));
+
 function validateField(input){
 	const checkings = [];
 
@@ -65,8 +67,6 @@ function isFormValid(form){
 	
 	return checkings.every((item) => item);
 }
-
-forms.forEach((form) => form.addEventListener("submit", handleFormSubmit));
 
 function handleFormSubmit(event){
 	const form = event.target;
