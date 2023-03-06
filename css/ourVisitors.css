@@ -75,9 +75,27 @@
 	overflow: hidden;
 	justify-content: space-around;
 	width: 100%;
+	height: 488px;
 	flex-shrink: 0;
 }
 
+@media (min-width: 768px) {
+	.ourVisitors__photo {
+		height: 314px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.ourVisitors__photo {
+		height: 380px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.ourVisitors__photo {
+		height: 608px;
+	}
+}
 .photo__item {
 	padding: 1px 0px;
 }
