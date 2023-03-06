@@ -10,21 +10,18 @@ const RULES = [
 	{
 		name: "name",
 		validate: function(input){
-
 			return REGEXP.NAME.test(input.value);
 		}
 	},
 	{
 		name: "phone",
 		validate: function(input){
-
 			return REGEXP.PHONE.test(input.value);
 		}
 	},
 	{
 		name: "checkbox",
 		validate: function(input){
-
 			return input.checked;
 		}
 	}
