@@ -27,8 +27,6 @@ const RULES = [
 	}
 ]
 
-document.onsubmit = () => {return false};
-
 function validateField(input){
 	let checkings = [];
 
@@ -72,6 +70,7 @@ forms.forEach((form) => form.addEventListener("submit", handleFormSubmit));
 
 function handleFormSubmit(event){
 	const form = event.target;
+	event.preventDefault();
 
 	if(isFormValid(form)) {
 
