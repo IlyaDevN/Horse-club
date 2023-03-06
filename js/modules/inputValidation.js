@@ -28,7 +28,7 @@ const RULES = [
 ]
 
 function validateField(input){
-	let checkings = [];
+	const checkings = [];
 
 	RULES.forEach((rule) => {
 		if(Object.hasOwn(input.dataset, rule.name)){
