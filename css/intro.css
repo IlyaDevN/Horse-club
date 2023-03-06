@@ -198,7 +198,7 @@
 	display: block;
 	width: 100%;
 	font-size: 15px;
-	padding: 17.5px 0;
+	padding: 17.5px 15px;
 	color: var(--color-white);
 	text-transform: uppercase;
 	text-align: center;
