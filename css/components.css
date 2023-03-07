@@ -130,32 +130,18 @@
 
 .arrow {
 	display: block;
-	width: 10px;
-	height: 3px;
-	background-color: var(--color-dark-orange);
-	margin: 0 auto;
+	width: 10.62px;
+	height: 10.62px;
+	border-left: 3px solid var(--color-dark-orange);
+	border-bottom: 3px solid var(--color-dark-orange);
 }
 
-.arrow.arrow_prev:nth-child(1) {
-	transform-origin: left center;
-	transform: translateY(15%) rotate(45deg);
-
+.arrow.arrow_prev {
+	transform: translateX(17px) rotate(45deg);
 }
 
-.arrow.arrow_prev:nth-child(2) {
-	transform-origin: left center;
-	transform: translateY(-15%) rotate(-45deg);
-}
-
-.arrow.arrow_next:nth-child(1) {
-	transform-origin: right center;
-	transform: translateY(85%) rotate(45deg);
-
-}
-
-.arrow.arrow_next:nth-child(2) {
-	transform-origin: right center;
-	transform: translateY(-85%) rotate(-45deg);
+.arrow.arrow_next {
+	transform: translateX(12px) rotate(225deg);
 }
 
 .slider_range {
