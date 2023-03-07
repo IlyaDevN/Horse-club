@@ -192,9 +192,9 @@ div .swiper-scrollbar-drag {
 	border-radius: 10px;
 }
 
-.activeSlides {
-	transform: translateY(-40px) !important;
-	opacity: 0.4 !important;
+.swiper-slide.activeSlides {
+	transform: translateY(-40px);
+	opacity: 0.4;
 }
 
 .swiper-button-disabled.slider_button {
