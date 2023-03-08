@@ -134,14 +134,15 @@
 	height: 10.62px;
 	border-left: 3px solid var(--color-dark-orange);
 	border-bottom: 3px solid var(--color-dark-orange);
+	margin: 0 auto;
 }
 
 .arrow.arrow_prev {
-	transform: translateX(17px) rotate(45deg);
+	transform: translateX(25%) rotate(45deg);
 }
 
 .arrow.arrow_next {
-	transform: translateX(12px) rotate(225deg);
+	transform: translateX(-25%) rotate(225deg);
 }
 
 .slider_range {
