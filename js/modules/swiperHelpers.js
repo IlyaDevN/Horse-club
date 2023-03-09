@@ -23,8 +23,11 @@ export function switchSlidesStateHandlerOn1920px(swiper){
 function slidesStateHandlerOn1920px(swiper, mql){
 
 	if(mql.matches){
+		swiper.update();
 		swiper.on("slideChange", setSlidesState);
+		setSlidesState(swiper);
 	} else {
+		swiper.update();
 		swiper.off("slideChange", setSlidesState);
 		cleanSlidesState(swiper);
 	}
@@ -37,23 +40,14 @@ function cleanSlidesState(slider){
 }
 
 function getActiveIndexes(slider){
-	let activeIndexes = [];
+	
 	let activeIndex = slider.realIndex;
-	if(slider.realIndex == 0){
-		for(let i = 0; i < slider.params.slidesPerView; i++){
-			activeIndexes.push(i);
-		}
+	const activeIndexes = [activeIndex];
+	const restIndexesCount = slider.params.slidesPerView - 1;
+
+	for(let i = 0; i < restIndexesCount; i++){
+		activeIndexes.push(++activeIndex);
 	}
-	if(slider.realIndex == slider.slides.length - slider.params.slidesPerView){
-		for(let i = slider.realIndex; i < slider.slides.length; i++){
-			activeIndexes.push(i);
-		}
-	}
-	else {
-		const quantityOfActiveIndexes = slider.params.slidesPerView - 2;
-		for(let i = 0; i < quantityOfActiveIndexes; i++){
-			activeIndexes.push(++activeIndex);
-		}
-	}
+	
 	return activeIndexes;
 }

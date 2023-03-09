@@ -18,17 +18,17 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	spaceBetween: 10,
 	breakpoints: {
 		480: {
-			slidesPerView: 2,
+			slidesPerView: "auto",
 		},
 		768: {
 			slidesPerView: 2,
 		},
 		1000: {
-			slidesPerView: 3,
+			slidesPerView: "auto",
 			allowTouchMove: false,
 		},
 		1920: {
-			slidesPerView: 4,
+			slidesPerView: 2,
 			spaceBetween: 15,
 			allowTouchMove: false,
 		}
@@ -105,7 +105,7 @@ function onResize(){
 		slide.comment.style.setProperty('--height', "auto");
 		
 		if(slide.comment.classList.contains("opened")){
-			closeComment(slide, initializeCommentIn);
+			closeComment(slide, initializeComment);
 		} else{
 			initializeComment(slide);
 		}

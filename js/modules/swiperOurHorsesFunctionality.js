@@ -11,19 +11,16 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 		el: ".swiper_scrollbar_1",
 		draggable: true,
 	},
-	slidesPerView: 1,
+	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,
 	breakpoints: {
-		480: {
-			slidesPerView: 2,
-		},
 		768: {
-			slidesPerView: 3,
 			spaceBetween: 20,
+			slidesPerView: "auto",
 		},
 		1920: {
-			slidesPerView: 5,
+			slidesPerView: 3,
 			spaceBetween: 30,
 		}
 	},
