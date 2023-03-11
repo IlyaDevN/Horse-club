@@ -74,7 +74,6 @@ function handleFormSubmit(event){
 
 	if(isFormValid(form)) {
 		form.dispatchEvent(new Event("submitSuccess"));
-		// form.submit();
 		form.reset();
 	}
 }
