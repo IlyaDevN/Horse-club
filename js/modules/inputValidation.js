@@ -2,7 +2,7 @@ const forms = Array.from(document.forms);
 let isInputHandlerAdded = false;
 
 const REGEXP = {
-	NAME: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']+$/,
+	NAME: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']{2,20}$/,
 	PHONE: /^(?! )^[+\-\s()0-9]{10,20}$/,
 }
 
