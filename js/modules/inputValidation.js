@@ -73,7 +73,6 @@ function handleFormSubmit(event){
 	event.preventDefault();
 
 	if(isFormValid(form)) {
-
 		form.dispatchEvent(new Event("submitSuccess"));
 		// form.submit();
 		form.reset();
@@ -81,7 +80,6 @@ function handleFormSubmit(event){
 }
 
 function addInputHandler(input){
-
 	input.addEventListener("input", ()=>{
 		const isValid = validateField(input);
 
