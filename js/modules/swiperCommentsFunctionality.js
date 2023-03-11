@@ -69,10 +69,6 @@ slides.forEach((slide) => {
 	});
 });
 
-slidesOriginal.forEach((slideOriginal) => {
-	slideOriginal.classList.add("transitioned");
-})
-
 function initializeComment(slide){
 
 	slide.comment.dataset.scrollHeight = slide.comment.scrollHeight;
