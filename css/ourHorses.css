@@ -2,9 +2,26 @@
 	max-width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 0 10px 0;
+	padding: 0 10px;
 }
 
+@media (min-width: 768px) {
+	.our-horses__container {
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.our-horses__container {
+		padding: 0;
+	}
+}
+
+@media (min-width: 1970px) {
+	.our-horses__container {
+		width: 1970px;
+	}
+}
 .our-horses__title {
 	margin: 70px 0 55px;
 }
@@ -45,7 +62,7 @@
 
 @media (min-width: 1920px) {
 	.our-horses__galary {
-		width: 70%;
+		width: 1170px;
 		margin: 0 auto 60px;
 	}
 }
@@ -77,7 +94,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 260px;
-	height: 393px;
+	height: 390px;
 	align-items: center;
 	background-color: var(--color-white);
 	border: 1px solid var(--color-border-white);
@@ -90,28 +107,28 @@
 @media (min-width: 480px) {
 	.galary__item.swiper-slide {
 		width: 220px;
-		height: 337px;
+		height: 330px;
 	}
 }
 
 @media (min-width: 768px) {
 	.galary__item.swiper-slide {
 		width: 250px;
-		height: 367px;
+		height: 360px;
 	}
 }
 
 @media (min-width: 1000px) {
 	.galary__item.swiper-slide {
 		width: 293px;
-		height: 451px;
+		height: 448px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.galary__item.swiper-slide {
 		width: 370px;
-		height: 588px;
+		height: 580px;
 	}
 }
 
