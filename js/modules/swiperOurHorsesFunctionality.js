@@ -11,6 +11,9 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 		el: ".swiper_scrollbar_1",
 		draggable: true,
 	},
+	pagination: {
+		el: ".swiper_pagination_ourHorses",
+	},
 	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,

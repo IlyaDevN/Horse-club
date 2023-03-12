@@ -173,6 +173,12 @@
 	border-radius: 10px;
 }
 
+@media (min-width: 1920px) {
+	.scrollBar {
+		display: none;
+	}
+}
+
 div .swiper-scrollbar-drag {
 	height: 8px;
 	background: var(--gradient-yellow-thumb);
@@ -194,6 +200,19 @@ div .swiper-slide.activeSlides {
 	cursor: auto;
 }
 
+div .swiper_pagination.pagination {
+	display: none;
+}
+
+@media (min-width: 1920px) {
+	div .swiper_pagination.pagination {
+		display: block;
+		position: static;
+		width: auto;
+		margin: 0 26px;
+		--swiper-theme-color: #FFC700;
+	}
+}
 /* ============================================================================
 		registration modal window
 =============================================================================*/
