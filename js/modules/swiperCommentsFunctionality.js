@@ -29,12 +29,11 @@ const swiperComments = new Swiper(".comments_slider_container", {
 		},
 		1920: {
 			slidesPerView: 2,
-			spaceBetween: 15,
+			spaceBetween: 30,
 			allowTouchMove: false,
 		}
 	},
 	speed: 1000,
-	focufocusableElements: "button",
 	on: {
 		slideChange: setSlidesState,
 	}
@@ -43,7 +42,6 @@ const swiperComments = new Swiper(".comments_slider_container", {
 setSlidesState(swiperComments);
 switchSlidesStateHandlerOn1920px(swiperComments);
 
-const slidesOriginal = swiperComments.slides;
 const slides = swiperComments.slides.map((slide) => {
 	return {
 		comment: slide.querySelector(".card_text"),

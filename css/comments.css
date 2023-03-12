@@ -16,9 +16,9 @@
 	}
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 2370px) {
 	.comments_container {
-		width: 1920px;
+		width: 2370px;
 	}
 }
 
@@ -64,19 +64,21 @@
 
 @media (min-width: 768px) {
 	.comments_slider_container {
+		padding: 0 20px;
 		margin: 0 auto 40px;
 	}
 }
 
 @media (min-width: 1000px) {
 	.comments_slider_container {
+		padding: 0 10px;
 		margin: 0 0 40px 0;
 	}
 }
 
 @media (min-width: 1920px) {
 	.comments_slider_container {
-		width: 60.15%;
+		width: 1170px;
 		margin: 0 auto 60px;
 		padding: 0;
 	}
@@ -114,7 +116,7 @@
 	.comments_card_container.swiper-slide {
 		padding: 28.5px;
 		width: 440px;
-		min-height: 259px;
+		min-height: 260px;
 	}
 }
 
