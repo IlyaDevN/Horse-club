@@ -4,7 +4,6 @@ import { debounce } from "./helpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
 const swiperComments = new Swiper(".comments_slider_container", {
-
 	navigation: {
 		nextEl: '.swiper_button_next_comments',
 		prevEl: '.swiper_button_prev_comments',
@@ -53,7 +52,6 @@ const debouncedOnResize = debounce(onResize, 240);
 window.addEventListener("resize", debouncedOnResize);
 
 slides.forEach((slide) => {
-
 	initializeComment(slide);
 
 	slide.button.addEventListener("click", () => {
@@ -68,13 +66,11 @@ slides.forEach((slide) => {
 });
 
 function initializeComment(slide){
-
 	slide.comment.dataset.scrollHeight = slide.comment.scrollHeight;
 	slide.comment.dataset.clientHeight = slide.comment.clientHeight;
 	slide.comment.style.setProperty('--height', slide.comment.clientHeight + "px");
 
 	if(slide.comment.scrollHeight > slide.comment.clientHeight){
-		
 		slide.button.classList.add("visible");
 	} else{
 		slide.button.classList.remove("visible");
