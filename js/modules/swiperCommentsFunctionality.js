@@ -12,6 +12,9 @@ const swiperComments = new Swiper(".comments_slider_container", {
 		el: ".swiper_scrollbar_2",
 		draggable: true,
 	},
+	pagination: {
+		el: ".swiper_pagination_comments",
+	},
 	slidesPerView: 1,
 	slidesPerGroup: 1,
 	spaceBetween: 10,
