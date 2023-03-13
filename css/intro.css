@@ -284,8 +284,7 @@
 		font-size: 11px;
 		line-height: 13px;
 		color: var(--color-font-black);
-		padding: 12px 5px;
-		display: inline;
+		padding: 0 5px;
 	}
 }
 
