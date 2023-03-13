@@ -153,6 +153,12 @@
 	border-radius: 10px;
 }
 
+@media (min-width: 1920px) {
+	.slider_range {
+		display: none;
+	}
+}
+
 .slider_thumb {
 	/* width took from JS*/
 	height: 8px;
@@ -209,9 +215,13 @@ div .swiper_pagination.pagination {
 		display: block;
 		position: static;
 		width: auto;
-		margin: 0 26px;
+		margin: 0 18.5px;
 		--swiper-theme-color: #FFC700;
 	}
+}
+
+div .swiper_pagination.pagination .swiper-pagination-bullet {
+	margin: auto 7.5px;
 }
 /* ============================================================================
 		registration modal window
