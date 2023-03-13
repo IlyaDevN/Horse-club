@@ -71,21 +71,19 @@
 }
 
 .header__logo {
-	flex: 1 1 auto;
+	margin-right: auto;
 	position: relative;
 }
 
 @media (min-width: 480px) {
 	.header__logo {
-		flex: 0 0 auto;
 		margin-right: 24px;
 	}
 }
 
 @media (min-width: 768px) {
 	.header__logo {
-		margin-right: 0;
-		flex: 1 1 auto;
+		margin-right: auto;
 	}
 }
 
