@@ -125,3 +125,29 @@
 		display: inline;
 	}
 }
+
+.pagination_container {
+	padding: 0 18.5px;
+	display: none;
+}
+
+@media(min-width:1920px) {
+	.pagination_container {
+		display: block;
+	}
+}
+
+.ourVisitor_pagination_bullet{
+	display: inline-block;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	margin: 0 7.5px;
+	background-color: var(--color-black);
+	opacity: 0.2;
+}
+
+.ourVisitor_pagination_bullet.active {
+	background-color: var(--color-yellow);
+	opacity: 1;
+}

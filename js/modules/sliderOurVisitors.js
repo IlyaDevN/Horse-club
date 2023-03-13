@@ -4,23 +4,29 @@ const SLIDER_MAX_POSSIBLE_POSITION = 0;
 const SLIDE_SHIFT_IN_PERCENT = 100;
 const sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderCurrentShift = 0;
-let sliderCurrentPosition;
 
-const sliderRangeWidth = document.getElementById("slider_range").offsetWidth;
+const sliderRangeWidth = document.getElementById("slider_range")?.offsetWidth;
 const sliderThumb = document.getElementById("slider_thumb");
 const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
 const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
 const sliderThumbMaxPossiblePosition = (slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderThumbCurrentShift = 0;
 
+const paginationContainer = document.querySelector(".pagination_container");
+let bullets;
+let bulletCurrentPosition = 0;
+
 const btnPrev = document.getElementById("button_prev_ourVisitors");
 const btnNext = document.getElementById("button_next_ourVisitors");
+
+initializeBulletPagination();
 
 sliderThumb.style.width = sliderThumbWidth + "px";
 
 btnPrev.addEventListener("click", function () {
 	movePrevSlide();
 	moveThumbPrev();
+	prevActiveBullet();
 	if (btnNext.disabled) {
 		enableButton(btnNext);
 	}
@@ -29,6 +35,7 @@ btnPrev.addEventListener("click", function () {
 btnNext.addEventListener("click", function () {
 	moveNextSlide();
 	moveThumbNext();
+	nextActiveBullet();
 
 	if (btnPrev.disabled) {
 		enableButton(btnPrev);
@@ -79,4 +86,41 @@ function enableButton(button) {
 
 function disableButton(button) {
 	button.disabled = true;
+}
+
+function initializeBulletPagination() {
+	bulletAdd();
+	
+	bullets = paginationContainer.querySelectorAll(".ourVisitor_pagination_bullet");
+	bullets[bulletCurrentPosition].classList.add("active");
+}
+
+function bulletAdd() {
+	for(let i = 0; i < slidesQuantity; i++) {
+		let bullet = document.createElement("span");
+		bullet.classList.add("ourVisitor_pagination_bullet");
+		paginationContainer.append(bullet);
+	}
+}
+
+function prevActiveBullet() {
+	bulletCurrentPosition--;
+
+	bullets.forEach((bullet, index) => {
+		bullet.classList.remove("active");
+		if(index === bulletCurrentPosition) {
+			bullet.classList.add("active");
+		}
+	});
+}
+
+function nextActiveBullet() {
+	bulletCurrentPosition++;
+
+	bullets.forEach((bullet, index) => {
+		bullet.classList.remove("active");
+		if(index === bulletCurrentPosition) {
+			bullet.classList.add("active");
+		}
+	});
 }
