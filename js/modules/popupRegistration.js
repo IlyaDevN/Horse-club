@@ -18,7 +18,6 @@ closeBtns.forEach((button) => {
 popupLinks.forEach( popupLink => {
 	popupLink.addEventListener("click", function(){
 		popupOpen();
-		addButtonContent(popupLink);
 	})
 });
 
@@ -68,10 +67,6 @@ function popupClose(popupContent){
 	registerModalOverlay.addEventListener("transitionend", ()=>{
 		enablePageScroll();
 	}, {once:true})
-}
-
-function addButtonContent(popupLink){
-	modalSubmitBtn.innerHTML = popupLink.dataset.buttonContent;
 }
 
 function disablePageScroll(){
