@@ -1,5 +1,6 @@
 import { setSlidesState } from "./swiperHelpers.js";
-import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
+import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
+import { mql1920 } from "./mediaQueries.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
 const swiper = new Swiper(".our_horses_swiper_container", {
@@ -33,5 +34,5 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 	}
 });
 
-setSlidesState(swiper);
-switchSlidesStateHandlerOn1920px(swiper);
+updateSwiperOnMediaQuery(swiper, mql1920);
+mql1920.addEventListener("change", () => updateSwiperOnMediaQuery(swiper, mql1920));

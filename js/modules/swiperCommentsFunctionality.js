@@ -1,5 +1,6 @@
 import { setSlidesState } from "./swiperHelpers.js";
-import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
+import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
+import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "./helpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
@@ -40,8 +41,8 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	}
 });
 
-setSlidesState(swiperComments);
-switchSlidesStateHandlerOn1920px(swiperComments);
+updateSwiperOnMediaQuery(swiperComments, mql1920);
+mql1920.addEventListener("change", () => updateSwiperOnMediaQuery(swiperComments, mql1920));
 
 const slides = swiperComments.slides.map((slide) => {
 	return {
