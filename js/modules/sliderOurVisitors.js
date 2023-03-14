@@ -15,6 +15,7 @@ let sliderThumbCurrentShift = 0;
 const paginationContainer = document.querySelector(".pagination_container");
 let bullets;
 let bulletCurrentPosition = 0;
+let activeBullet = null;
 
 const btnPrev = document.getElementById("button_prev_ourVisitors");
 const btnNext = document.getElementById("button_next_ourVisitors");
@@ -26,7 +27,7 @@ sliderThumb.style.width = sliderThumbWidth + "px";
 btnPrev.addEventListener("click", function () {
 	movePrevSlide();
 	moveThumbPrev();
-	prevActiveBullet();
+	movePrevBullet();
 	if (btnNext.disabled) {
 		enableButton(btnNext);
 	}
@@ -35,7 +36,7 @@ btnPrev.addEventListener("click", function () {
 btnNext.addEventListener("click", function () {
 	moveNextSlide();
 	moveThumbNext();
-	nextActiveBullet();
+	moveNextBullet();
 
 	if (btnPrev.disabled) {
 		enableButton(btnPrev);
@@ -89,38 +90,31 @@ function disableButton(button) {
 }
 
 function initializeBulletPagination() {
-	bulletAdd();
+	createBullets();
 	
 	bullets = paginationContainer.querySelectorAll(".ourVisitor_pagination_bullet");
-	bullets[bulletCurrentPosition].classList.add("active");
+	activeBullet = bullets[bulletCurrentPosition];
+	activeBullet.classList.add("active");
 }
 
-function bulletAdd() {
+function createBullets() {
 	for(let i = 0; i < slidesQuantity; i++) {
-		let bullet = document.createElement("span");
+		const bullet = document.createElement("span");
 		bullet.classList.add("ourVisitor_pagination_bullet");
 		paginationContainer.append(bullet);
 	}
 }
 
-function prevActiveBullet() {
+function movePrevBullet() {
+	activeBullet.classList.remove("active");
 	bulletCurrentPosition--;
-
-	bullets.forEach((bullet, index) => {
-		bullet.classList.remove("active");
-		if(index === bulletCurrentPosition) {
-			bullet.classList.add("active");
-		}
-	});
+	bullets[bulletCurrentPosition].classList.add("active");
+	activeBullet = bullets[bulletCurrentPosition];
 }
 
-function nextActiveBullet() {
+function moveNextBullet() {
+	activeBullet.classList.remove("active");
 	bulletCurrentPosition++;
-
-	bullets.forEach((bullet, index) => {
-		bullet.classList.remove("active");
-		if(index === bulletCurrentPosition) {
-			bullet.classList.add("active");
-		}
-	});
+	bullets[bulletCurrentPosition].classList.add("active");
+	activeBullet = bullets[bulletCurrentPosition];
 }
