@@ -275,7 +275,7 @@
 		font-size: 11px;
 		line-height: 13px;
 		color: var(--color-font-black);
-		padding: 0 5px;
+		padding: 0 5px 12px;
 	}
 }
 
@@ -283,6 +283,7 @@
 	.menu__link_header {
 		font-size: 13px;
 		line-height: 15px;
+		padding: 0 5px 10px;
 	}
 }
 
