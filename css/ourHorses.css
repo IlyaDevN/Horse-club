@@ -95,7 +95,6 @@
 	display: flex;
 	flex-direction: column;
 	width: 260px;
-	min-height: 390px;
 	height: auto;
 	align-items: center;
 	background-color: var(--color-white);
@@ -109,40 +108,67 @@
 @media (min-width: 480px) {
 	.galary__item.swiper-slide {
 		width: 220px;
-		min-height: 330px;
 	}
 }
 
 @media (min-width: 768px) {
 	.galary__item.swiper-slide {
 		width: 250px;
-		min-height: 360px;
 	}
 }
 
 @media (min-width: 1000px) {
 	.galary__item.swiper-slide {
 		width: 293px;
-		min-height: 448px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.galary__item.swiper-slide {
 		width: 370px;
-		min-height: 580px;
 	}
 }
 
 .item__image {
 	position: relative;
 	top: -20px;
+	width: 230px;
+	height: 290px;
+}
+
+@media (min-width: 480px) {
+	.item__image {
+		width: 189px;
+		height: 225px;
+	}
+}
+
+@media (min-width: 768px) {
+	.item__image {
+		width: 210px;
+		height: 252px;
+	}
 }
 
 @media (min-width: 1000px) {
 	.item__image {
 		top: -25px;
+		width: 243px;
+		height: 320px;
 	}
+}
+
+@media (min-width: 1920px) {
+	.item__image {
+		width: 320px;
+		height: 421px;
+	}
+}
+
+.image_horse {
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 .item__title {
