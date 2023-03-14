@@ -15,17 +15,16 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	pagination: {
 		el: ".swiper_pagination_comments",
 	},
-	slidesPerView: 1,
+	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,
 	breakpoints: {
-		480: {
+		768: {
+			spaceBetween: 20,
 			slidesPerView: "auto",
 		},
-		768: {
-			slidesPerView: 2,
-		},
 		1000: {
+			spaceBetween: 20,
 			slidesPerView: "auto",
 			allowTouchMove: false,
 		},
