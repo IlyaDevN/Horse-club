@@ -12,18 +12,15 @@ export function updateSwiperOnMediaQuery(swiper, mql){
 
 export function setSlidesState(swiper){
 	const activeIndexes = getActiveIndexes(swiper);
-	const mqlOver1920 = window.matchMedia("(min-width: 1920px)");
 
-	if(mqlOver1920.matches){
-		swiper.slides.forEach((elem, index) => {
-			if(activeIndexes.includes(index)){
-				elem.classList.remove("activeSlides");
-			}
-			else{
-				elem.classList.add("activeSlides");
-			}
-		});
-	}
+	swiper.slides.forEach((elem, index) => {
+		if(activeIndexes.includes(index)){
+			elem.classList.remove("activeSlides");
+		}
+		else{
+			elem.classList.add("activeSlides");
+		}
+	});
 }
 
 function cleanSlidesState(slider){
