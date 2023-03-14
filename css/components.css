@@ -132,8 +132,8 @@
 
 .arrow {
 	display: block;
-	width: 10.62px;
-	height: 10.62px;
+	width: 10px;
+	height: 10px;
 	border-left: 3px solid var(--color-dark-orange);
 	border-bottom: 3px solid var(--color-dark-orange);
 	margin: 0 auto;
