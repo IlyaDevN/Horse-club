@@ -27,7 +27,7 @@ sliderThumb.style.width = sliderThumbWidth + "px";
 btnPrev.addEventListener("click", function () {
 	movePrevSlide();
 	moveThumbPrev();
-	movePrevBullet();
+	selectPrevBullet();
 	if (btnNext.disabled) {
 		enableButton(btnNext);
 	}
@@ -36,7 +36,7 @@ btnPrev.addEventListener("click", function () {
 btnNext.addEventListener("click", function () {
 	moveNextSlide();
 	moveThumbNext();
-	moveNextBullet();
+	selectNextBullet();
 
 	if (btnPrev.disabled) {
 		enableButton(btnPrev);
@@ -105,14 +105,14 @@ function createBullets() {
 	}
 }
 
-function movePrevBullet() {
+function selectPrevBullet() {
 	activeBullet.classList.remove("active");
 	bulletCurrentPosition--;
 	bullets[bulletCurrentPosition].classList.add("active");
 	activeBullet = bullets[bulletCurrentPosition];
 }
 
-function moveNextBullet() {
+function selectNextBullet() {
 	activeBullet.classList.remove("active");
 	bulletCurrentPosition++;
 	bullets[bulletCurrentPosition].classList.add("active");
