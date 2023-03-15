@@ -2,14 +2,6 @@
 	position: relative;
 }
 
-.clubDirection_bg_container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 .clubDirection_bg_grass {
 	position: absolute;
 	bottom: 41px;
@@ -91,6 +83,113 @@
 	.clubDirection_bg_clouds_botom {
 		bottom: 0;
 	}
+}
+
+@media (min-width: 1920px) {
+	.bg_horses {
+		position: absolute;
+		width: 1920px;
+		height: 100%;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.horse_left {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	bottom: 69px;
+	width: 63px;
+	height: 149px;
+}
+
+@media (min-width: 480px) {
+	.horse_left {
+		bottom: 66px;
+		width: 107px;
+		height: 196px;
+	}
+}
+
+@media (min-width: 768px) {
+	.horse_left {
+		left: 7px;
+		bottom: 25px;
+		width: 157px;
+		height: 272px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.horse_left {
+		left: 0;
+		bottom: 20px;
+		width: 202px;
+		height: 350px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.horse_left {
+		left: 138px;
+		bottom: 39px;
+		width: 305px;
+		height: 530px;
+	}
+}
+
+.horse_left_img {
+	width: 100%;
+	height: 100%;
+}
+
+.horse_right {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	bottom: 77px;
+	width: 66px;
+	height: 141px;
+}
+
+@media (min-width: 480px) {
+	.horse_right {
+		bottom: 63px;
+		width: 93px;
+		height: 199px;
+	}
+}
+
+@media (min-width: 768px) {
+	.horse_right {
+		bottom: 37px;
+		width: 174px;
+		height: 270px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.horse_right {
+		bottom: 28px;
+		width: 224px;
+		height: 342px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.horse_right {
+		right: 83px;
+		bottom: 30px;
+		width: 372px;
+		height: 532px;
+	}
+}
+
+.horse_right_img {
+	width: 100%;
+	height: 100%;
 }
 
 .clubDirection__container {
@@ -415,69 +514,5 @@
 @media (min-width: 1920px) {
 	.clubDirection__button {
 		margin: 50px auto 0;
-	}
-}
-
-.horse_left {
-	position: absolute;
-	left: 0;
-	bottom: 69px;
-}
-
-@media (min-width: 480px) {
-	.horse_left {
-		bottom: 66px;
-	}
-}
-
-@media (min-width: 768px) {
-	.horse_left {
-		left: 7px;
-		bottom: 25px;
-	}
-}
-
-@media (min-width: 1000px) {
-	.horse_left {
-		left: 0;
-		bottom: 20px;
-	}
-}
-
-@media (min-width: 1920px) {
-	.horse_left {
-		left: -238px;
-		bottom: 39px;
-	}
-}
-
-.horse_right {
-	position: absolute;
-	right: 0;
-	bottom: 77px;
-}
-
-@media (min-width: 480px) {
-	.horse_right {
-		bottom: 63px;
-	}
-}
-
-@media (min-width: 768px) {
-	.horse_right {
-		bottom: 37px;
-	}
-}
-
-@media (min-width: 1000px) {
-	.horse_right {
-		bottom: 28px;
-	}
-}
-
-@media (min-width: 1920px) {
-	.horse_right {
-		right: -291px;
-		bottom: 30px;
 	}
 }
