@@ -1,5 +1,5 @@
-export function updateSwiperOnMediaQuery(swiper, mql){
-	if(mql.matches){
+export function updateSwiperOnMediaQuery(swiper, mediaQuery){
+	if(mediaQuery.matches){
 		swiper.update();
 		swiper.on("slideChange", setSlidesState);
 		setSlidesState(swiper);
