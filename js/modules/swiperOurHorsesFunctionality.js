@@ -18,17 +18,18 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,
+	speed: 600,
 	breakpoints: {
 		768: {
 			spaceBetween: 20,
 			slidesPerView: "auto",
+			speed: 1000,
 		},
 		1920: {
 			slidesPerView: 3,
 			spaceBetween: 30,
 		}
 	},
-	speed: 1000,
 	on: {
 		slideChange: setSlidesState,
 	}

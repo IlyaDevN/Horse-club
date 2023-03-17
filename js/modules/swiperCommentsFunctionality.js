@@ -19,10 +19,12 @@ const swiperComments = new Swiper(".comments_slider_container", {
 	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,
+	speed: 600,
 	breakpoints: {
 		768: {
 			spaceBetween: 20,
 			slidesPerView: "auto",
+			speed: 1000,
 		},
 		1000: {
 			spaceBetween: 20,
@@ -35,7 +37,6 @@ const swiperComments = new Swiper(".comments_slider_container", {
 			allowTouchMove: false,
 		}
 	},
-	speed: 1000,
 	on: {
 		slideChange: setSlidesState,
 	}
