@@ -35,6 +35,5 @@ function getActiveIndexes(slider){
 	for(let i = 0; i < restIndexesCount; i++){
 		activeIndexes.push(++activeIndex);
 	}
-	
 	return activeIndexes;
 }

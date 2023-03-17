@@ -24,7 +24,6 @@ popupLinks.forEach( popupLink => {
 });
 
 function popupOpen(){
-
 	registerModalOverlay.classList.add("open");
 	registerModalContent.classList.add("open");
 	disablePageScroll();
@@ -64,7 +63,6 @@ function gratitudeOpen(){
 }
 
 function popupClose(popupContent){
-
 	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
