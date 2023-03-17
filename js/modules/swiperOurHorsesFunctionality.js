@@ -28,6 +28,7 @@ const swiper = new Swiper(".our_horses_swiper_container", {
 		1920: {
 			slidesPerView: 3,
 			spaceBetween: 30,
+			speed: 1000,
 		}
 	},
 	on: {

@@ -30,11 +30,13 @@ const swiperComments = new Swiper(".comments_slider_container", {
 			spaceBetween: 20,
 			slidesPerView: "auto",
 			allowTouchMove: false,
+			speed: 1000,
 		},
 		1920: {
 			slidesPerView: 2,
 			spaceBetween: 30,
 			allowTouchMove: false,
+			speed: 1000,
 		}
 	},
 	on: {
