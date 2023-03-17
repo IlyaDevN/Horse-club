@@ -5,4 +5,3 @@ import "./modules/swiperCommentsFunctionality.js";
 import "./modules/sliderOurVisitors.js";
 import "./modules/inputValidation.js";
 import "./modules/mapFunctionality.js";
-import "./modules/questionModalGratitude.js"

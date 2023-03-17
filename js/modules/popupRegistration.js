@@ -3,13 +3,15 @@ const registerModalOverlay = document.querySelector(".register__modal_overlay");
 const registerModalContent = registerModalOverlay.querySelector(".register__modal_content");
 const registerModalGratitude = registerModalOverlay.querySelector(".register__modal_gratitude");
 const closeBtns = registerModalOverlay.querySelectorAll(".register__close_button");
-const form = registerModalOverlay.querySelector(".register__form");
+const forms = document.forms;
 const modalSubmitBtn = registerModalOverlay.querySelector(".modal_form_button");
 const KEYCODE = {
 	ESC: "Escape"
 };
 
-form.addEventListener("submitSuccess", submitHandler);
+for(let form of forms) {
+	form.addEventListener("submitSuccess", submitHandler);
+}
 registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 closeBtns.forEach((button) => {
 	button.addEventListener("click", closeBtnHandler)
@@ -51,6 +53,9 @@ function keyDownHandler(event){
 
 function submitHandler(){
 	registerModalContent.classList.remove("open");
+	if(!registerModalOverlay.classList.contains("open")) {
+		registerModalOverlay.classList.add("open");
+	}
 	gratitudeOpen();
 }
 
