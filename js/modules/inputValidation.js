@@ -1,5 +1,4 @@
 const forms = Array.from(document.forms);
-let isInputHandlerAdded = false;
 
 const REGEXP = {
 	NAME: /^[а-яА-ЯёЁa-zA-ZЁёЇїІіЄєҐґ']{2,20}$/,
@@ -50,8 +49,7 @@ function isFormValid(form){
 	filteredFields.forEach((element)=> {
 
 		const isValid = validateField(element);
-
-		if(!isInputHandlerAdded) {
+		if(!!form.dataset.isInputHandlerAdded) {
 			addInputHandler(element);
 		}
 		
@@ -63,7 +61,7 @@ function isFormValid(form){
 			hideError(element);
 		}
 	})
-	isInputHandlerAdded = true;
+	form.dataset.isInputHandlerAdded = true;
 	
 	return checkings.every((item) => item);
 }
@@ -75,6 +73,7 @@ function handleFormSubmit(event){
 	if(isFormValid(form)) {
 		form.dispatchEvent(new Event("submitSuccess"));
 		form.reset();
+		form.dataset.isInputHandlerAdded = false;
 	}
 }
 
