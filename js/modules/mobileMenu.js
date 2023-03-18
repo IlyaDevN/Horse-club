@@ -1,6 +1,6 @@
-const menuOverlay = document.body.querySelector(".menu_overlay");
+const menuOverlay = document.body.querySelector(".menu-overlay");
 const burgerBtn = document.body.querySelector(".menu-burger-button");
-const menuCloseBtn = menuOverlay.querySelector(".menu_close_button");
+const menuCloseBtn = menuOverlay.querySelector(".menu__close-button");
 
 burgerBtn.addEventListener("click", openMenu);
 menuOverlay.addEventListener("click", closeMenuByOverlay);
