@@ -205,19 +205,19 @@
 	transition: transform 0.5s;
 }
 
-.unwrap_button_span:first-of-type {
+.unwrap_button_span.first {
 	transform: translate(2px, 1px) rotate(45deg);
 }
 
-.unwrap_button_span:last-of-type {
+.unwrap_button_span.second {
 	transform: translate(-1px, 1px) rotate(-45deg);
 }
 
-.card_unwrap_button.opened .unwrap_button_span:first-of-type {
+.card_unwrap_button.opened .unwrap_button_span.first {
 	transform: translate(2px, 1px) rotate(-45deg);
 }
 
-.card_unwrap_button.opened .unwrap_button_span:last-of-type {
+.card_unwrap_button.opened .unwrap_button_span.second {
 	transform: translate(-1px, 1px) rotate(45deg);
 }
 
