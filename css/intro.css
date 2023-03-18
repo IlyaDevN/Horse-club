@@ -106,7 +106,7 @@
 	}
 }
 
-.menu_burger {
+.menu-burger-button {
 	position: relative;
 	width: 77px;
 	height: 29px;
@@ -117,29 +117,31 @@
 }
 
 @media (min-width: 768px) {
-	.menu_burger {
+	.menu-burger-button {
 		display: none;
 	}
 }
 
-.menu_burger_name {
+.menu-burger-button__name {
 	font-size: 15px;
 	line-height: 16px;
 	color: var(--color-font-black);
 }
 
-.menu_burger_button {
+.burger-button-icon {
+	display: block;
 	padding: 0 5px 0 10px;
 }
 
-.burger_button_line {
+.burger-button-icon__line {
+	display: block;
 	margin-bottom: 2px;
 	width: 10px;
 	height: 2px;
 	background-color: var(--color-green);
 }
 
-.burger_button_line:last-child {
+.burger-button-icon__line:last-child {
 	margin-bottom: 0;
 }
 
