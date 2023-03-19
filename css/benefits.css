@@ -2,12 +2,12 @@
 	max-width: 320px;
 	margin: 70px auto 0;
 	overflow: hidden;
-	padding: 0 10px;
+	padding: 0 6px;
 }
 
 @media (min-width: 480px) {
 	.benefits__container {
-		max-width: 480px;
+		max-width: 460px;
 	}
 }
 
@@ -27,62 +27,84 @@
 
 @media (min-width: 1920px) {
 	.benefits__container {
-		max-width: 1170px;
+		max-width: 1171px;
 		margin: 185px auto 0;
+		padding: 0;
+	}
+}
+
+.benefirs__title {
+	margin-bottom: 57px;
+}
+
+@media (min-width: 480px) {
+	.benefirs__title {
+		margin-bottom: 63px;
+	}
+}
+
+@media (min-width: 768px) {
+	.benefirs__title {
+		margin-bottom: 55px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.benefirs__title {
+		margin-bottom: 70px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.benefirs__title {
+		margin-bottom: 108px;
 	}
 }
 
 .benefits__table {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
-	margin: 57px 0 103px;
+	row-gap: 45px;
+	margin: 0 auto 103px;
 }
 
 @media (min-width: 480px) {
 	.benefits__table {
-		margin: 63px 0 80px;
+		margin: 0 auto 80px;
+		column-gap: 24px;
+		row-gap: 40px;
 	}
 }
 
 @media (min-width: 768px) {
 	.benefits__table {
-		margin: 55px 0 70px;
+		margin: 0 auto 70px;
+		gap: 5px;
 	}
 }
 
 @media (min-width: 1000px) {
 	.benefits__table {
-		margin: 70px 0 120px;
+		margin: 0 auto 120px;
+		gap: 20px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.benefits__table {
-		margin: 108px 0 100px;
+		margin: 0 auto 100px;
+		gap: 29px;
 	}
 }
 
 .benefits__card {
-	margin-bottom: 45px;
-}
-
-.benefits__card:last-child {
-	margin-bottom: 0;
+	max-width: 300px;
 }
 
 @media (min-width: 480px) {
 	.benefits__card {
-		width: 215px;
-		margin-bottom: 0;
-	}
-
-	.benefits__card:nth-child(1) {
-		margin-bottom: 40px;
-	}
-
-	.benefits__card:nth-child(2) {
-		margin-bottom: 40px;
+		width: 210px;
 	}
 }
 
@@ -90,25 +112,17 @@
 	.benefits__card {
 		width: 180px;
 	}
-
-	.benefits__card:nth-child(1) {
-		margin-bottom: 0;
-	}
-
-	.benefits__card:nth-child(2) {
-		margin-bottom: 0;
-	}
 }
 
 @media (min-width: 1000px) {
 	.benefits__card {
-		width: 240px;
+		width: 225px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.benefits__card {
-		width: 270px;
+		width: 271px;
 	}
 }
 
@@ -136,6 +150,7 @@
 	width: 100%;
 	height: 100%;
 	display: block;
+	object-fit: contain;
 }
 
 .benefits__subtitle {
@@ -184,7 +199,6 @@
 	line-height: 20px;
 	color: var(--color-dark-grey);
 	text-align: center;
-	padding: 0 5px;
 }
 
 @media (min-width: 480px) {
