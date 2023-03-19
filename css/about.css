@@ -1,35 +1,34 @@
 .about__container {
 	max-width: 320px;
 	width: 100%;
-	margin: 56px auto 0;
+	margin: 0 auto 70px;
 	padding: 0 10px;
 }
 
 @media (min-width: 480px) {
 	.about__container {
-		margin-top: 49px;
 		max-width: 480px;
 	}
 }
 
 @media (min-width: 768px) {
 	.about__container {
-		margin-top: 5px;
 		max-width: 748px;
+		margin: 0 auto 79px;
 	}
 }
 
 @media (min-width: 1000px) {
 	.about__container {
-		margin-top: 7px;
 		max-width: 1000px;
+		margin: 0 auto 120px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.about__container {
-		margin-top: 0;
 		max-width: 1470px;
+		margin: 0 auto 49px;
 	}
 }
 
@@ -62,32 +61,37 @@
 	}
 }
 
-.about__content {
-	margin-top: 35px;
-	position: relative;
+.about__title {
+	margin-bottom: 35px;
 }
 
 @media (min-width: 480px) {
-	.about__content {
-		margin-top: 40px;
+	.about__title {
+		margin-bottom: 40px;
 	}
 }
 
 @media (min-width: 768px) {
-	.about__content {
-		margin-top: 38px;
+	.about__title {
+		margin-bottom: 38px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.about__content {
-		margin-top: 61px;
+	.about__title {
+		margin-bottom: 61px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.about__title {
+		margin-bottom: 89px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.about__content {
-		margin-top: 89px;
+		position: relative;
 	}
 }
 

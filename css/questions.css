@@ -35,7 +35,7 @@
 	position: relative;
 	width: 320px;
 	height: 813px;
-	margin: 70px auto 0;
+	margin: 0 auto 70px;
 
 }
 
@@ -43,7 +43,7 @@
 	.questions__container {
 		width: 460px;
 		height: 1061px;
-		margin: 61px auto 0;
+		margin: 0 auto 100px;
 	}
 }
 
@@ -51,7 +51,7 @@
 	.questions__container {
 		width: 748px;
 		height: 1107px;
-		margin: 80px auto 0;
+		margin: 0 auto 80px;
 	}
 }
 
@@ -59,14 +59,14 @@
 	.questions__container {
 		width: 980px;
 		height: 800px;
-		margin: 115px auto 0;
+		margin: 0 auto 140px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.questions__container {
 		width: 1900px;
-		margin: 49px auto 0;
+		margin: 0 auto 120px;
 	}
 }
 

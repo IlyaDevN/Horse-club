@@ -5,7 +5,7 @@
 .intro__container {
 	max-width: 320px;
 	height: 558px;
-	margin: 0 auto;
+	margin: 0 auto 56px;
 	display: flex;
 	flex-direction: column;
 	padding: 0 15px;
@@ -15,6 +15,7 @@
 	.intro__container {
 		max-width: 480px;
 		height: 563px;
+		margin: 0 auto 49px;
 	}
 }
 
@@ -22,6 +23,7 @@
 	.intro__container {
 		max-width: 738px;
 		height: 537px;
+		margin: 0 auto 34px;
 	}
 }
 
@@ -29,6 +31,7 @@
 	.intro__container {
 		max-width: 970px;
 		height: 682px;
+		margin: 0 auto 53px;
 	}
 }
 
@@ -36,6 +39,7 @@
 	.intro__container {
 		max-width: 1170px;
 		height: 948px;
+		margin: 0 auto 113px;
 	}
 }
 

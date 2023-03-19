@@ -1,19 +1,33 @@
 .our-horses__container {
 	max-width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 70px;
 	overflow: hidden;
 	padding: 0 10px;
+}
+
+@media (min-width: 480px) {
+	.our-horses__container {
+		margin: 0 auto 61px;
+	}
 }
 
 @media (min-width: 768px) {
 	.our-horses__container {
 		padding: 0 20px;
+		margin: 0 auto 80px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.our-horses__container {
+		margin: 0 auto 115px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.our-horses__container {
 		padding: 0;
+		margin: 0 auto 49px;
 	}
 }
 
@@ -24,30 +38,24 @@
 }
 
 .our-horses__title {
-	margin: 70px 0 55px;
+	margin-bottom: 55px;
 }
 
 @media (min-width: 480px) {
 	.our-horses__title {
-		margin: 90px 0 60px;
+		margin-bottom: 60px;
 	}
 }
 
 @media (min-width: 768px) {
 	.our-horses__title {
-		margin: 89px 0 65px;
-	}
-}
-
-@media (min-width: 1000px) {
-	.our-horses__title {
-		margin: 120px 0 65px;
+		margin-bottom: 65px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.our-horses__title {
-		margin: 150px 0 95px;
+		margin-bottom: 95px;
 	}
 }
 
