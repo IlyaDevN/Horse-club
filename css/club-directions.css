@@ -264,9 +264,6 @@
 	}
 }
 
-.galery__first-row {
-
-}	
 @media (min-width: 1000px) {
 	.galery__first-row {
 		display: flex;
@@ -339,7 +336,6 @@
 @media (min-width: 1000px) {
 	.galery__card {
 		width: 300px;
-		min-height: auto;
 		margin-bottom: 0;
 		padding: 0 24px 32px;
 	}
@@ -348,6 +344,7 @@
 @media (min-width: 1920px) {
 	.galery__card {
 		width: 370px;
+		min-height: 399px;
 		padding: 0 24px 44px;
 	}
 }
