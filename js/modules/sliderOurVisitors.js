@@ -1,24 +1,24 @@
-const slidesContainer = document.getElementById("ourVisitors__photo_container");
-const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
+const slidesContainer = document.querySelector(".our-visitors__photo-container");
+const slidesQuantity = slidesContainer.querySelectorAll(".our-visitors__photo").length;
 const SLIDER_MAX_POSSIBLE_POSITION = 0;
 const SLIDE_SHIFT_IN_PERCENT = 100;
 const sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderCurrentShift = 0;
 
-const sliderRangeWidth = document.getElementById("slider_range")?.offsetWidth;
-const sliderThumb = document.getElementById("slider_thumb");
+const sliderRangeWidth = document.getElementById("our-visitors__slider-control-range")?.offsetWidth;
+const sliderThumb = document.getElementById("our-visitors__slider-control-thumb");
 const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
 const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
 const sliderThumbMaxPossiblePosition = (slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderThumbCurrentShift = 0;
 
-const paginationContainer = document.querySelector(".pagination_container");
+const paginationContainer = document.querySelector(".our-visitors__pagination-container");
 let bullets;
 let bulletCurrentPosition = 0;
 let activeBullet = null;
 
-const btnPrev = document.getElementById("button_prev_ourVisitors");
-const btnNext = document.getElementById("button_next_ourVisitors");
+const btnPrev = document.getElementById("our-visitors__button-prev");
+const btnNext = document.getElementById("our-visitors__button-next");
 
 initializeBulletPagination();
 
@@ -91,14 +91,14 @@ function disableButton(button) {
 
 function initializeBulletPagination() {
 	createBullets();
-	
+
 	bullets = paginationContainer.querySelectorAll(".ourVisitor_pagination_bullet");
 	activeBullet = bullets[bulletCurrentPosition];
 	activeBullet.classList.add("active");
 }
 
 function createBullets() {
-	for(let i = 0; i < slidesQuantity; i++) {
+	for (let i = 0; i < slidesQuantity; i++) {
 		const bullet = document.createElement("span");
 		bullet.classList.add("ourVisitor_pagination_bullet");
 		paginationContainer.append(bullet);

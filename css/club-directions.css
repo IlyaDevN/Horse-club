@@ -86,7 +86,7 @@
 }
 
 @media (min-width: 1920px) {
-	.bg_horses {
+	.background-horses-container {
 		position: absolute;
 		width: 1900px;
 		height: 100%;
@@ -96,7 +96,7 @@
 	}
 }
 
-.horse_left {
+.horse-left {
 	position: absolute;
 	z-index: 1;
 	left: 0;
@@ -106,7 +106,7 @@
 }
 
 @media (min-width: 480px) {
-	.horse_left {
+	.horse-left {
 		bottom: 66px;
 		width: 107px;
 		height: 196px;
@@ -114,7 +114,7 @@
 }
 
 @media (min-width: 768px) {
-	.horse_left {
+	.horse-left {
 		left: 7px;
 		bottom: 25px;
 		width: 157px;
@@ -123,7 +123,7 @@
 }
 
 @media (min-width: 1000px) {
-	.horse_left {
+	.horse-left {
 		left: 0;
 		bottom: 20px;
 		width: 202px;
@@ -132,7 +132,7 @@
 }
 
 @media (min-width: 1920px) {
-	.horse_left {
+	.horse-left {
 		left: 138px;
 		bottom: 39px;
 		width: 305px;
@@ -145,7 +145,7 @@
 	height: 100%;
 }
 
-.horse_right {
+.horse-right {
 	position: absolute;
 	z-index: 1;
 	right: 0;
@@ -155,7 +155,7 @@
 }
 
 @media (min-width: 480px) {
-	.horse_right {
+	.horse-right {
 		bottom: 63px;
 		width: 93px;
 		height: 199px;
@@ -163,7 +163,7 @@
 }
 
 @media (min-width: 768px) {
-	.horse_right {
+	.horse-right {
 		bottom: 37px;
 		width: 174px;
 		height: 270px;
@@ -171,7 +171,7 @@
 }
 
 @media (min-width: 1000px) {
-	.horse_right {
+	.horse-right {
 		bottom: 28px;
 		width: 224px;
 		height: 342px;
@@ -179,7 +179,7 @@
 }
 
 @media (min-width: 1920px) {
-	.horse_right {
+	.horse-right {
 		right: 83px;
 		bottom: 30px;
 		width: 372px;

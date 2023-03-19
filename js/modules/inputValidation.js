@@ -8,19 +8,19 @@ const REGEXP = {
 const RULES = [
 	{
 		name: "name",
-		validate: function(input){
+		validate: function (input) {
 			return REGEXP.NAME.test(input.value);
 		}
 	},
 	{
 		name: "phone",
-		validate: function(input){
+		validate: function (input) {
 			return REGEXP.PHONE.test(input.value);
 		}
 	},
 	{
 		name: "checkbox",
-		validate: function(input){
+		validate: function (input) {
 			return input.checked;
 		}
 	}
@@ -28,11 +28,11 @@ const RULES = [
 
 forms.forEach((form) => form.addEventListener("submit", handleFormSubmit));
 
-function validateField(input){
+function validateField(input) {
 	const checkings = [];
 
 	RULES.forEach((rule) => {
-		if(Object.hasOwn(input.dataset, rule.name)){
+		if (Object.hasOwn(input.dataset, rule.name)) {
 			const isValid = rule.validate(input);
 			checkings.push(isValid);
 		}
@@ -40,48 +40,48 @@ function validateField(input){
 	return checkings.every((item) => item);
 }
 
-function isFormValid(form){
+function isFormValid(form) {
 	const checkings = [];
-	const filteredFields = Array.from(form.elements).filter((element)=>{
+	const filteredFields = Array.from(form.elements).filter((element) => {
 		return Object.hasOwn(element.dataset, "toValidate");
 	});
 
-	filteredFields.forEach((element)=> {
+	filteredFields.forEach((element) => {
 
 		const isValid = validateField(element);
-		if(!!form.dataset.isInputHandlerAdded) {
+		if (!!form.dataset.isInputHandlerAdded) {
 			addInputHandler(element);
 		}
-		
+
 		checkings.push(isValid);
 
-		if(!isValid) {
+		if (!isValid) {
 			showError(element);
 		} else {
 			hideError(element);
 		}
 	})
 	form.dataset.isInputHandlerAdded = true;
-	
+
 	return checkings.every((item) => item);
 }
 
-function handleFormSubmit(event){
+function handleFormSubmit(event) {
 	const form = event.target;
 	event.preventDefault();
 
-	if(isFormValid(form)) {
+	if (isFormValid(form)) {
 		form.dispatchEvent(new Event("submitSuccess"));
 		form.reset();
 		form.dataset.isInputHandlerAdded = false;
 	}
 }
 
-function addInputHandler(input){
-	input.addEventListener("input", ()=>{
+function addInputHandler(input) {
+	input.addEventListener("input", () => {
 		const isValid = validateField(input);
 
-		if(!isValid) {
+		if (!isValid) {
 			showError(input);
 		} else {
 			hideError(input);
@@ -89,12 +89,12 @@ function addInputHandler(input){
 	});
 }
 
-function showError(input){
-	const inputContainer = input.closest(".input_container");
+function showError(input) {
+	const inputContainer = input.closest(".input-container");
 	inputContainer.classList.add("error");
 }
 
-function hideError(input){
-	const inputContainer = input.closest(".input_container");
+function hideError(input) {
+	const inputContainer = input.closest(".input-container");
 	inputContainer.classList.remove("error");
 }

@@ -1,54 +1,54 @@
-.ourVisitors__container {
+.our-visitors__container {
 	margin: 0 auto 70px;
 	width: 320px;
 	overflow: hidden;
 }
 
 @media (min-width: 480px) {
-	.ourVisitors__container {
+	.our-visitors__container {
 		width: 480px;
 		margin: 0 auto 90px;
 	}
 }
 
 @media (min-width: 768px) {
-	.ourVisitors__container {
+	.our-visitors__container {
 		width: 748px;
 		margin: 0 auto 89px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.ourVisitors__container {
+	.our-visitors__container {
 		width: 980px;
 		margin: 0 auto 120px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.ourVisitors__container {
+	.our-visitors__container {
 		width: 1900px;
 		margin: 0 auto 150px;
 	}
 }
 
-.ourVisitors__title {
+.our-visitors__title {
 	margin-bottom: 35px;
 }
 
 @media (min-width: 480px) {
-	.ourVisitors__title {
+	.our-visitors__title {
 		margin-bottom: 40px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.ourVisitors__title {
+	.our-visitors__title {
 		margin-bottom: 70px;
 	}
 }
 
-.ourVisitors__photo_container {
+.our-visitors__photo-container {
 	margin-bottom: 30px;
 	display: flex;
 	flex-wrap: nowrap;
@@ -58,35 +58,35 @@
 }
 
 @media (min-width: 480px) {
-	.ourVisitors__photo_container {
+	.our-visitors__photo-container {
 		width: 100%;
 	}
 }
 
 @media (min-width: 768px) {
-	.ourVisitors__photo_container {
+	.our-visitors__photo-container {
 		margin-bottom: 40px;
 		width: 100%;
 		transition: transform 1s ease-in-out 0s,
-		opacity 1s ease-in-out 0s;
+			opacity 1s ease-in-out 0s;
 	}
 }
 
 @media (min-width: 1000px) {
-	.ourVisitors__photo_container {
+	.our-visitors__photo-container {
 		margin-bottom: 30px;
 		width: 100%;
 	}
 }
 
 @media (min-width: 1920px) {
-	.ourVisitors__photo_container {
+	.our-visitors__photo-container {
 		margin-bottom: 60px;
 		width: 100%;
 	}
 }
 
-.ourVisitors__photo {
+.our-visitors__photo {
 	display: flex;
 	flex-wrap: wrap;
 	overflow: hidden;
@@ -97,22 +97,23 @@
 }
 
 @media (min-width: 768px) {
-	.ourVisitors__photo {
+	.our-visitors__photo {
 		height: 314px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.ourVisitors__photo {
+	.our-visitors__photo {
 		height: 380px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.ourVisitors__photo {
+	.our-visitors__photo {
 		height: 608px;
 	}
 }
+
 .photo__item {
 	padding: 1px 0px;
 }
@@ -143,18 +144,18 @@
 	}
 }
 
-.pagination_container {
+.our-visitors__pagination-container {
 	padding: 0 18.5px;
 	display: none;
 }
 
 @media(min-width:1920px) {
-	.pagination_container {
+	.our-visitors__pagination-container {
 		display: block;
 	}
 }
 
-.ourVisitor_pagination_bullet{
+.ourVisitor_pagination_bullet {
 	display: inline-block;
 	border-radius: 50%;
 	width: 8px;

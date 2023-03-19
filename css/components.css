@@ -86,14 +86,14 @@
 		slider
 =============================================================================*/
 
-.sliderCheckbox {
+.slider-control {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 43px;
 }
 
-.slider_button {
+.slider-control__button {
 	position: relative;
 	width: 40px;
 	height: 40px;
@@ -103,7 +103,7 @@
 	box-shadow: 0px 1px 0px var(--color-light-orange);
 }
 
-.slider_button::before {
+.slider-control__button::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -116,21 +116,21 @@
 	transition: opacity 0.2s ease-in-out;
 }
 
-.slider_button:hover::before {
+.slider-control__button:hover::before {
 	opacity: 1;
 }
 
-.slider_button[disabled] {
+.slider-control__button[disabled] {
 	opacity: 0.4;
 	cursor: auto;
 }
 
-.slider_button[disabled]:hover::before {
+.slider-control__button[disabled]:hover::before {
 	opacity: 0;
 	cursor: auto;
 }
 
-.arrow {
+.button__arrow {
 	display: block;
 	width: 10px;
 	height: 10px;
@@ -139,15 +139,15 @@
 	margin: 0 auto;
 }
 
-.arrow.arrow_prev {
+.button__arrow.button__arrow_prev {
 	transform: translateX(25%) rotate(45deg);
 }
 
-.arrow.arrow_next {
+.button__arrow.button__arrow_next {
 	transform: translateX(-25%) rotate(225deg);
 }
 
-.slider_range {
+.slider-control__range {
 	width: 96px;
 	height: 8px;
 	margin: 0 27px;
@@ -156,12 +156,12 @@
 }
 
 @media (min-width: 1920px) {
-	.slider_range {
+	.slider-control__range {
 		display: none;
 	}
 }
 
-.slider_thumb {
+.slider-control__thumb {
 	/* width took from JS*/
 	height: 8px;
 	background: var(--gradient-yellow-thumb);
@@ -170,7 +170,7 @@
 }
 
 @media (min-width: 768px) {
-	.slider_thumb {
+	.slider-control__thumb {
 		transition: transform 1s ease-in-out 0s;
 	}
 }
@@ -178,7 +178,7 @@
 /* ============================================================================
 	slider SWIPER
 =============================================================================*/
-.scrollBar {
+.scroll-bar {
 	position: static;
 	width: 96px;
 	height: 8px;
@@ -188,7 +188,7 @@
 }
 
 @media (min-width: 1920px) {
-	.scrollBar {
+	.scroll-bar {
 		display: none;
 	}
 }
@@ -204,22 +204,22 @@ div .swiper-slide.activeSlides {
 	opacity: 0.4;
 }
 
-.swiper-button-disabled.slider_button {
+.swiper-button-disabled.slider-control__button {
 	opacity: 0.4;
 	cursor: auto;
 }
 
-.swiper-button-disabled.slider_button:hover::before {
+.swiper-button-disabled.slider-control__button:hover::before {
 	opacity: 0;
 	cursor: auto;
 }
 
-div .swiper_pagination.pagination {
+div .swiper-pagination.pagination {
 	display: none;
 }
 
 @media (min-width: 1920px) {
-	div .swiper_pagination.pagination {
+	div .swiper-pagination.pagination {
 		display: block;
 		position: static;
 		width: auto;
@@ -228,9 +228,10 @@ div .swiper_pagination.pagination {
 	}
 }
 
-div .swiper_pagination.pagination .swiper-pagination-bullet {
+div .swiper-pagination.pagination .swiper-pagination-bullet {
 	margin: auto 7.5px;
 }
+
 /* ============================================================================
 		registration modal window
 =============================================================================*/
@@ -389,7 +390,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	}
 }
 
-.modal_form__checkbox_container.input_container {
+.modal_form__checkbox_container.input-container {
 	align-self: flex-start;
 	padding: 0 0 10px;
 }
@@ -402,7 +403,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	height: 1.5em;
 }
 
-.form_agreement_link {
+.form__agreement-link {
 	text-decoration: underline;
 	color: inherit;
 }
@@ -422,62 +423,62 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	}
 }
 
-.checkbox_svg {
+.checkbox-svg {
 	width: 15px;
 	height: 15px;
 }
 
 @media (min-width: 480px) {
-	.checkbox_svg {
+	.checkbox-svg {
 		width: 20px;
 		height: 20px;
 	}
 }
 
-.check_rect {
+.checkbox-svg__rect {
 	stroke-width: 1px;
 	stroke: var(--color-yellow);
 	fill: var(--color-white);
 }
 
 @media (min-width: 480px) {
-	.check_rect {
+	.checkbox-svg__rect {
 		stroke-width: 2px;
 	}
 }
 
-.check_path {
+.checkbox-svg__path {
 	transform: translate(4px, 4px);
 	stroke: var(--color-green);
 	fill: var(--color-green);
 	visibility: hidden;
 }
 
-.check_ref {
+.label-checkbox__ref {
 	margin-left: 10px;
 }
 
-.input_container.error .check_rect {
+.input-container.error .checkbox-svg__rect {
 	stroke: var(--color-orange);
 }
 
-.modal_form__checkbox:checked+label .check_path {
+.modal_form__checkbox:checked+label .checkbox-svg__path {
 	visibility: visible;
 }
 
-.input_container {
+.input-container {
 	position: relative;
 	padding: 10px 0 5px;
 	width: 100%;
 }
 
 @media (min-width: 1000px) {
-	.input_container {
+	.input-container {
 		padding: 10px 0 10px;
 	}
 }
 
-.valid_tooltip {
+.valid-tooltip {
 	position: absolute;
 	color: var(--color-orange);
 	font-size: 10px;
@@ -488,7 +489,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 		visibility 0.3s;
 }
 
-.input_container.error .valid_tooltip {
+.input-container.error .valid-tooltip {
 	visibility: visible;
 	opacity: 1;
 }
@@ -505,7 +506,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	bottom: 0;
 }
 
-.input_container.error [data-to-validate] {
+.input-container.error [data-to-validate] {
 	border-color: var(--color-orange);
 }
 

@@ -126,18 +126,18 @@
 	}
 }
 
-.header__menu-burger-button__name {
+.menu-burger-button__name {
 	font-size: 15px;
 	line-height: 16px;
 	color: var(--color-font-black);
 }
 
-.burger-button-icon {
+.menu-burger-button__icon {
 	display: block;
 	padding: 0 5px 0 10px;
 }
 
-.burger-button-icon__line {
+.icon__line {
 	display: block;
 	margin-bottom: 2px;
 	width: 10px;
@@ -145,7 +145,7 @@
 	background-color: var(--color-green);
 }
 
-.burger-button-icon__line:last-child {
+.icon__line:last-child {
 	margin-bottom: 0;
 }
 

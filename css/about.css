@@ -95,17 +95,17 @@
 	}
 }
 
-.about__content_image {
+.content__image {
 	display: none;
 }
 
 @media (min-width: 768px) {
-	.about__content_image {
+	.content__image {
 		display: inline-block;
 	}
 }
 
-.about__content_text {
+.content__text {
 	display: inline-flex;
 	flex-direction: column;
 	position: relative;
@@ -113,94 +113,94 @@
 }
 
 @media (min-width: 768px) {
-	.about__content_text {
+	.content__text {
 		width: 380px;
 		top: 23px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.about__content_text {
+	.content__text {
 		width: 445px;
 		top: 40px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.about__content_text {
+	.content__text {
 		width: 530px;
 		top: 30px;
 	}
 }
 
-.text__bonus_row {
+.text__bonus-row {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 @media (min-width: 480px) {
-	.text__bonus_row {
+	.text__bonus-row {
 		justify-content: space-between;
 		margin-bottom: 30px;
 	}
 }
 
 @media (min-width: 768px) {
-	.text__bonus_row {
+	.text__bonus-row {
 		margin-bottom: 36px;
 		flex-wrap: nowrap;
 	}
 }
 
 @media (min-width: 1000px) {
-	.text__bonus_row {
+	.text__bonus-row {
 		margin-bottom: 30px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.text__bonus_row {
+	.text__bonus-row {
 		justify-content: flex-start;
 		margin-bottom: 24px;
 	}
 }
 
-.bonus_row_2 {
+.text__bonus-row_2 {
 	margin-bottom: 0;
 }
 
-.bonus__block {
+.text__bonus-block {
 	width: 220px;
 	margin-bottom: 35px;
 }
 
 @media (min-width: 480px) {
-	.bonus__block {
+	.text__bonus-block {
 		width: 220px;
 		margin-bottom: 0;
 	}
 }
 
 @media (min-width: 768px) {
-	.bonus__block {
+	.text__bonus-block {
 		width: 240px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.bonus__block {
+	.text__bonus-block {
 		width: 240px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.bonus__block {
+	.text__bonus-block {
 		width: 275px;
 	}
 }
 
-.bonus__block_title {
+.bonus-block__title {
 	font-family: 'Philosopher';
 	font-weight: 700;
 	font-size: 27px;
@@ -210,19 +210,19 @@
 }
 
 @media (min-width: 768px) {
-	.bonus__block_title {
+	.bonus-block__title {
 		font-size: 32px;
 		text-align: start;
 	}
 }
 
 @media (min-width: 1920px) {
-	.bonus__block_title {
+	.bonus-block__title {
 		font-size: 42px;
 	}
 }
 
-.bonus__block_text {
+.bonus-block__text {
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 18px;
@@ -231,7 +231,7 @@
 }
 
 @media (min-width: 768px) {
-	.bonus__block_text {
+	.bonus-block__text {
 		font-size: 13px;
 		line-height: 22px;
 		text-align: start;
@@ -239,25 +239,25 @@
 }
 
 @media (min-width: 1000px) {
-	.bonus__block_text {
+	.bonus-block__text {
 		font-size: 15px;
 		line-height: 25px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.bonus__block_text {
+	.bonus-block__text {
 		font-size: 17px;
 	}
 }
 
 @media (min-width: 480px) {
-	.bonus__block_text_3 {
+	.bonus-block__text_3 {
 		max-width: 248px;
 	}
 }
 
-.text__subtext {
+.content__subtext {
 	font-size: 12px;
 	line-height: 19px;
 	color: var(--color-dark-grey);
@@ -266,7 +266,7 @@
 }
 
 @media (min-width: 480px) {
-	.text__subtext {
+	.content__subtext {
 		font-size: 13px;
 		line-height: 20px;
 		margin: 30px auto 0;
@@ -274,13 +274,13 @@
 }
 
 @media (min-width: 768px) {
-	.text__subtext {
+	.content__subtext {
 		margin: 34px auto 0;
 	}
 }
 
 @media (min-width: 1920px) {
-	.text__subtext {
+	.content__subtext {
 		font-size: 15px;
 		line-height: 28px;
 		position: absolute;

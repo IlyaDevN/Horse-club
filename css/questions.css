@@ -2,7 +2,7 @@
 	position: relative;
 }
 
-.questioons__bg_container {
+.questioons__background-container {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -112,7 +112,7 @@
 	}
 }
 
-.form-background {
+.questions__form-background {
 	position: absolute;
 	width: 300px;
 	height: 425px;
@@ -127,21 +127,21 @@
 }
 
 @media (min-width: 480px) {
-	.form-background {
+	.questions__form-background {
 		width: 400px;
 		height: 510px;
 	}
 }
 
 @media (min-width: 768px) {
-	.form-background {
+	.questions__form-background {
 		width: 450px;
 		top: 100px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.form-background {
+	.questions__form-background {
 		height: 547px;
 		top: 175px;
 		left: 511px;
@@ -150,14 +150,14 @@
 }
 
 @media (min-width: 1920px) {
-	.form-background {
+	.questions__form-background {
 		width: 470px;
 		top: 135px;
 		left: 1075px;
 	}
 }
 
-.questions__form_container {
+.questions__form-container {
 	position: absolute;
 	width: 300px;
 	height: 425px;
@@ -169,7 +169,7 @@
 }
 
 @media (min-width: 480px) {
-	.questions__form_container {
+	.questions__form-container {
 		width: 400px;
 		height: 510px;
 		padding: 47px 50px 0;
@@ -177,7 +177,7 @@
 }
 
 @media (min-width: 768px) {
-	.questions__form_container {
+	.questions__form-container {
 		width: 450px;
 		top: 100px;
 		padding: 50px 69px 0;
@@ -185,7 +185,7 @@
 }
 
 @media (min-width: 1000px) {
-	.questions__form_container {
+	.questions__form-container {
 		height: 547px;
 		top: 175px;
 		left: 511px;
@@ -195,7 +195,7 @@
 }
 
 @media (min-width: 1920px) {
-	.questions__form_container {
+	.questions__form-container {
 		width: 470px;
 		top: 135px;
 		left: 1075px;
@@ -261,7 +261,7 @@
 	}
 }
 
-.questions__form .input_container {
+.questions__form .input-container {
 	width: auto;
 }
 
@@ -296,15 +296,15 @@
 	}
 }
 
-.write_letters {
+.write-letters {
 	top: 0;
 }
 
-.write_figures {
+.write-figures {
 	top: 0;
 }
 
-.confirm_agreement {
+.confirm-agreement {
 	bottom: 0;
 }
 
@@ -341,13 +341,13 @@
 	}
 }
 
-.form__checkbox_container.input_container {
+.form__checkbox-container.input-container {
 	padding: 0 0 10px;
 	align-self: flex-start;
 }
 
 @media (min-width: 768px) {
-	.form__checkbox_container.input_container {
+	.form__checkbox-container.input-container {
 		text-align: left;
 		padding-left: 5px;
 	}
@@ -361,7 +361,7 @@
 	height: 1.5em;
 }
 
-.form__label_checkbox {
+.form__label-checkbox {
 	font-size: 13px;
 	line-height: 15px;
 	color: var(--color-font-grey);
@@ -371,12 +371,12 @@
 }
 
 @media (min-width: 480px) {
-	.form__label_checkbox {
+	.form__label-checkbox {
 		font-size: 15px;
 		line-height: 18px;
 	}
 }
 
-.form__checkbox:checked+label .check_path {
+.form__checkbox:checked+label .checkbox-svg__path {
 	visibility: visible;
 }
