@@ -47,12 +47,9 @@ function isFormValid(form) {
 	});
 
 	filteredFields.forEach((element) => {
-
 		const isValid = validateField(element);
-		if (!!form.dataset.isInputHandlerAdded) {
-			addInputHandler(element);
-		}
 
+		addInputHandler(element);
 		checkings.push(isValid);
 
 		if (!isValid) {
@@ -61,8 +58,6 @@ function isFormValid(form) {
 			hideError(element);
 		}
 	})
-	form.dataset.isInputHandlerAdded = true;
-
 	return checkings.every((item) => item);
 }
 
@@ -78,15 +73,19 @@ function handleFormSubmit(event) {
 }
 
 function addInputHandler(input) {
-	input.addEventListener("input", () => {
-		const isValid = validateField(input);
+	input.removeEventListener("input", toggleError);
+	input.addEventListener("input", toggleError);
+}
+
+function toggleError(event) {
+	const input = event.target;
+	const isValid = validateField(input);
 
 		if (!isValid) {
 			showError(input);
 		} else {
 			hideError(input);
 		}
-	});
 }
 
 function showError(input) {
