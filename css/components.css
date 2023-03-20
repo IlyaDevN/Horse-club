@@ -307,7 +307,7 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
 	}
 }
 
-.close-button__span {
+.close-button .close-button__span {
 	position: absolute;
 	left: 7px;
 	top: 50%;
