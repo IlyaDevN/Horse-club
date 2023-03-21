@@ -1,7 +1,7 @@
 
 <h1 align="center"><a href="https://ilyadevn.github.io/Horse-club/" target="_blank">Horse-club</a></h1>
 
-<div margin="auto">
+<div>
   ![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=IlyaDevN&theme=dark&date_format=j%20M%5B%20Y%5D)
 </div>
 
