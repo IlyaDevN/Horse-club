@@ -1,7 +1,5 @@
 
-<h1 align="center">Horse-club<a href="https://ilyadevn.github.io/Horse-club/" target="_blank"></a></h1>
-
-https://ilyadevn.github.io/Horse-club/
+<h1 align="center"><a href="https://ilyadevn.github.io/Horse-club/" target="_blank">Horse-club</a></h1>
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=IlyaDevN&theme=dark&date_format=j%20M%5B%20Y%5D)]
 
