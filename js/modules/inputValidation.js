@@ -46,16 +46,16 @@ function isFormValid(form) {
 		return Object.hasOwn(element.dataset, "toValidate");
 	});
 
-	filteredFields.forEach((element) => {
-		const isValid = validateField(element);
+	filteredFields.forEach((input) => {
+		const isValid = validateField(input);
 
-		addInputHandler(element);
+		addInputHandler(input);
 		checkings.push(isValid);
 
 		if (!isValid) {
-			showError(element);
+			showError(input);
 		} else {
-			hideError(element);
+			hideError(input);
 		}
 	})
 	return checkings.every((item) => item);
