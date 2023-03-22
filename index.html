@@ -151,19 +151,11 @@
 					<h2>О нашем клубе</h2>
 				</div>
 				<div class="about__content">
-					<div class="content__image">
-						<picture>
-							<source srcset="img/about/x1920/jumping_horse_x1920.jpg" type="image/jpeg"
-								media="(min-width:1920px)">
-							<source srcset="img/about/x1000/jumping_horse_x1000.jpg" type="image/jpeg"
-								media="(min-width:1000px)">
-							<source srcset="img/about/x768/jumping_horse_x768.jpg" type="image/jpeg"
-								media="(min-width:768px)">
-							<img src="img/about/x768/jumping_horse_x768.jpg" alt="Лошадь в прыжке">
-						</picture>
+					<div class="content__image-container">
+						<img class="content__image" src="img/about/jumping_horse.jpg" alt="Лошадь в прыжке">
 					</div>
 					<div class="content__text">
-						<div class="text__bonus-row text__bonus-row_1">
+						<div class="text__bonus-row">
 							<div class="text__bonus-block">
 								<div class="bonus-block__title">
 									1100+
@@ -181,12 +173,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="text__bonus-row text__bonus-row_2">
+						<div class="text__bonus-row">
 							<div class="text__bonus-block">
 								<div class="bonus-block__title">
 									20+
 								</div>
-								<div class="bonus-block__text bonus-block__text_3">
+								<div class="bonus-block__text">
 									Выпущенных профессиональных спортсменов за 1 год
 								</div>
 							</div>
@@ -1078,7 +1070,8 @@
 						media="(min-width:768px)">
 					<source srcset="img/questions/background/x480/questions_bg_x480.jpg" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="question__bg_forest" src="img/questions/background/x320/questions_bg_x320.jpg" alt="Зимний лес">
+					<img class="question__bg_forest" src="img/questions/background/x320/questions_bg_x320.jpg"
+						alt="Зимний лес">
 				</picture>
 				<picture>
 					<source srcset="img/questions/background/x1920/cloudsTop_x1920.png" type="image/jpeg"
@@ -1115,7 +1108,8 @@
 						media="(min-width:768px)">
 					<source srcset="img/questions/background_elements/x480/girlWithHorse_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="questions__girl_with_horse" src="img/questions/background_elements/x320/girlWithHorse_x320.png"
+					<img class="questions__girl_with_horse"
+						src="img/questions/background_elements/x320/girlWithHorse_x320.png"
 						alt="Девушка рядом с лошадью">
 				</picture>
 				<picture>
@@ -1123,7 +1117,8 @@
 						media="(min-width:1920px)">
 					<source srcset="img/questions/background_elements/x1000/bush_x1000.png" type="image/jpeg"
 						media="(min-width:1000px)">
-					<img class="questions__bush" src="img/questions/background_elements/x1920/bush_x1920.png" alt="Куст">
+					<img class="questions__bush" src="img/questions/background_elements/x1920/bush_x1920.png"
+						alt="Куст">
 				</picture>
 				<div class="questions__form-background"></div>
 				<div class="questions__form-container">
@@ -1381,8 +1376,10 @@
 							<a href="mailto:mail@somemail.com" class="item-mail__ref item_every">mail@somemail.com</a>
 						</div>
 						<div class="square__item-timetable">
-							<svg class="item-timetable__svg"viewBox="0 0 14 14">
-								<path d="M6.993 0C3.129 0 0 3.136 0 7C0 10.864 3.129 14 6.993 14C10.864 14 14 10.864 14 7C14 3.136 10.864 0 6.993 0ZM9.303 10.297L6.3 7.287V3.5H7.7V6.713L10.297 9.31L9.303 10.297Z" fill="#FFC700" />
+							<svg class="item-timetable__svg" viewBox="0 0 14 14">
+								<path
+									d="M6.993 0C3.129 0 0 3.136 0 7C0 10.864 3.129 14 6.993 14C10.864 14 14 10.864 14 7C14 3.136 10.864 0 6.993 0ZM9.303 10.297L6.3 7.287V3.5H7.7V6.713L10.297 9.31L9.303 10.297Z"
+									fill="#FFC700" />
 							</svg>
 							<p class="item-timetable__ref item_every">Пн-Пт: 10:00 - 19:00 <br>Сб: 10:00 - 17:00
 								<br>Вс:
