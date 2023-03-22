@@ -4,7 +4,6 @@ const registerModalContent = registerModalOverlay.querySelector(".register-modal
 const registerModalGratitude = registerModalOverlay.querySelector(".register-modal__gratitude");
 const closeBtns = registerModalOverlay.querySelectorAll(".register-modal__close-button");
 const forms = document.forms;
-const modalSubmitBtn = registerModalOverlay.querySelector(".register-modal__form-button");
 const KEYCODE = {
 	ESC: "Escape"
 };
