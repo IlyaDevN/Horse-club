@@ -68,7 +68,6 @@ function handleFormSubmit(event) {
 	if (isFormValid(form)) {
 		form.dispatchEvent(new Event("submitSuccess"));
 		form.reset();
-		form.dataset.isInputHandlerAdded = false;
 	}
 }
 
