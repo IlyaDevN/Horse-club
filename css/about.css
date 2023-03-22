@@ -97,29 +97,26 @@
 
 .content__image-container {
 	display: none;
+	aspect-ratio: 871/529;
 }
 
 @media (min-width: 768px) {
 	.content__image-container {
 		display: inline-block;
 		width: 326px;
-		aspect-ratio: 326/273;
-		vertical-align: top;
+		vertical-align: middle;
 	}
 }
 
 @media (min-width: 1000px) {
 	.content__image-container {
-		width: 490px;
-		aspect-ratio: 490/313;
-		vertical-align: middle;
+		width: 473px;
 	}
 }
 
 @media (min-width: 1920px) {
 	.content__image-container {
 		width: 876px;
-		aspect-ratio: 876/529;
 	}
 }
 
@@ -134,12 +131,12 @@
 	flex-direction: column;
 	width: 100%;
 	row-gap: 35px;
-	vertical-align: top;
 }
 
 @media (min-width: 768px) {
 	.content__text {
 		width: 390px;
+		vertical-align: middle;
 	}
 }
 
@@ -147,7 +144,6 @@
 	.content__text {
 		width: 486px;
 		row-gap: 30px;
-		vertical-align: middle;
 	}
 }
 
