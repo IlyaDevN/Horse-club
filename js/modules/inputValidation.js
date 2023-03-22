@@ -47,16 +47,9 @@ function isFormValid(form) {
 	});
 
 	filteredFields.forEach((input) => {
-		const isValid = validateField(input);
-
+		const isValid = toggleError(input);
 		addInputHandler(input);
 		checkings.push(isValid);
-
-		if (!isValid) {
-			showError(input);
-		} else {
-			hideError(input);
-		}
 	})
 	return checkings.every((item) => item);
 }
@@ -72,12 +65,11 @@ function handleFormSubmit(event) {
 }
 
 function addInputHandler(input) {
-	input.removeEventListener("input", toggleError);
-	input.addEventListener("input", toggleError);
+	input.removeEventListener("input", (event) => toggleError(event.target));
+	input.addEventListener("input", (event) => toggleError(event.target));
 }
 
-function toggleError(event) {
-	const input = event.target;
+function toggleError(input) {
 	const isValid = validateField(input);
 
 		if (!isValid) {
@@ -85,6 +77,8 @@ function toggleError(event) {
 		} else {
 			hideError(input);
 		}
+		
+	return isValid;
 }
 
 function showError(input) {
