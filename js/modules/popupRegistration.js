@@ -12,15 +12,8 @@ for (let form of forms) {
 	form.addEventListener("submitSuccess", submitHandler);
 }
 registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
-closeBtns.forEach((button) => {
-	button.addEventListener("click", closeBtnHandler)
-});
-
-popupLinks.forEach(popupLink => {
-	popupLink.addEventListener("click", function () {
-		popupOpen();
-	})
-});
+closeBtns.forEach((button) => button.addEventListener("click", closeBtnHandler));
+popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
 
 function popupOpen() {
 	registerModalOverlay.classList.add("open");
