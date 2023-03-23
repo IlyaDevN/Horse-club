@@ -166,12 +166,13 @@
 	.text__bonus-row {
 		row-gap: 0;
 		column-gap: 20px;
+		flex-wrap: nowrap;
+		justify-content: unset;
 	}
 }
 
 @media (min-width: 768px) {
 	.text__bonus-row {
-		flex-wrap: nowrap;
 		column-gap: 10px;
 	}
 }
@@ -184,7 +185,6 @@
 
 @media (min-width: 1920px) {
 	.text__bonus-row {
-		justify-content: flex-start;
 		column-gap: 65px;
 	}
 }
@@ -193,21 +193,9 @@
 	width: 220px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 	.text__bonus-block {
-		width: 190px;
-	}
-}
-
-@media (min-width: 1000px) {
-	.text__bonus-block {
-		width: 220px;
-	}
-}
-
-@media (min-width: 1920px) {
-	.text__bonus-block {
-		width: 252px;
+		width: 50%;
 	}
 }
 
