@@ -58,10 +58,7 @@ function popupClose(popupContent) {
 	registerModalOverlay.classList.remove("open");
 	popupContent.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
-
-	registerModalOverlay.addEventListener("transitionend", () => {
-		enablePageScroll();
-	}, { once: true })
+	registerModalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
 }
 
 function disablePageScroll() {
