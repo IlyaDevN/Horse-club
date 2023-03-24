@@ -1,3 +1,13 @@
+.our-visitors {
+	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	.our-visitors {
+		overflow: visible;
+	}
+}
+
 .our-visitors__container {
 	margin: 0 auto 70px;
 	width: 320px;
