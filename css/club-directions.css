@@ -472,7 +472,7 @@
 
 @media (min-width: 480px) {
 	.card__text {
-		text-align: start;
+		text-align: left;
 	}
 }
 

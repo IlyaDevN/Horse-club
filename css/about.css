@@ -223,7 +223,7 @@
 @media (min-width: 768px) {
 	.bonus-block__title {
 		font-size: 32px;
-		text-align: start;
+		text-align: left;
 	}
 }
 
@@ -245,7 +245,7 @@
 	.bonus-block__text {
 		font-size: 13px;
 		line-height: 22px;
-		text-align: start;
+		text-align: left;
 	}
 }
 
