@@ -90,6 +90,7 @@
 }
 
 .footer__logo {
+	display: block;
 	margin: 0 auto;
 	order: 1;
 	width: 99px;
