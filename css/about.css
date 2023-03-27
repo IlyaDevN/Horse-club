@@ -117,6 +117,7 @@
 @media (min-width: 1920px) {
 	.content__image-container {
 		width: 876px;
+		float: left;
 	}
 }
 
@@ -288,10 +289,6 @@
 	.content__subtext {
 		font-size: 15px;
 		line-height: 28px;
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		max-width: 570px;
-		margin: 41px auto 0;
+		margin: 41px 0 0;
 	}
 }
