@@ -40,6 +40,7 @@ const loadPointCoords = loadPoint.getBoundingClientRect().top + window.scrollY -
 
 const throttledScrollHandler = throttle(scrollHandler, SCROLL_DELAY);
 window.addEventListener("scroll", throttledScrollHandler);
+window.addEventListener("load", scrollHandler);
 
 function scrollHandler() {
 	if (window.scrollY >= loadPointCoords) {
