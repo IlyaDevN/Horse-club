@@ -97,7 +97,6 @@
 
 .content__image-container {
 	display: none;
-	aspect-ratio: 871/529;
 }
 
 @media (min-width: 768px) {
@@ -105,6 +104,7 @@
 		display: inline-block;
 		width: 326px;
 		vertical-align: middle;
+		aspect-ratio: 871/529;
 	}
 }
 
