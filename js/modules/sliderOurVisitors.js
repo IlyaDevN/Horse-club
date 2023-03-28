@@ -1,3 +1,5 @@
+import { mql1920 } from "./mediaQueries.js";
+
 const slidesContainer = document.querySelector(".our-visitors__photo-container");
 const slidesQuantity = slidesContainer.querySelectorAll(".our-visitors__photo").length;
 const SLIDER_MAX_POSSIBLE_POSITION = 0;
@@ -5,9 +7,7 @@ const SLIDE_SHIFT_IN_PERCENT = 100;
 const sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderCurrentShift = 0;
 
-const sliderRangeWidth = document.getElementById("our-visitors__slider-control-range")?.offsetWidth;
 const sliderThumb = document.getElementById("our-visitors__slider-control-thumb");
-const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
 const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
 const sliderThumbMaxPossiblePosition = (slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderThumbCurrentShift = 0;
@@ -21,8 +21,9 @@ const btnPrev = document.getElementById("our-visitors__button-prev");
 const btnNext = document.getElementById("our-visitors__button-next");
 
 initializeBulletPagination();
+countSliderThumbWidth();
 
-sliderThumb.style.width = sliderThumbWidth + "px";
+mql1920.addEventListener("change", countSliderThumbWidth);
 
 btnPrev.addEventListener("click", function () {
 	movePrevSlide();
@@ -42,6 +43,12 @@ btnNext.addEventListener("click", function () {
 		enableButton(btnPrev);
 	}
 });
+
+function countSliderThumbWidth() {
+	const sliderRangeWidth = document.getElementById("our-visitors__slider-control-range")?.offsetWidth;
+	const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
+	sliderThumb.style.width = sliderThumbWidth + "px";
+}
 
 function movePrevSlide() {
 	sliderCurrentShift += SLIDE_SHIFT_IN_PERCENT;
