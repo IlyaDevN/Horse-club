@@ -97,6 +97,7 @@
 @media (min-width: 768px) {
 	.footer__nav-container {
 		width: 367px;
+		margin-left: auto;
 	}
 }
 
@@ -189,7 +190,6 @@
 
 @media (min-width: 768px) {
 	.footer__logo {
-		margin-right: auto;
 		align-self: flex-start;
 		order: -1;
 	}
