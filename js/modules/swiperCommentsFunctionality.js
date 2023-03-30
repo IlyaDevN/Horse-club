@@ -1,53 +1,56 @@
 import { setSlidesState } from "./swiperHelpers.js";
-import { switchSlidesStateHandlerOn1920px } from "./swiperHelpers.js";
+import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
+import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "./helpers.js";
 import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
 
-const swiperComments = new Swiper(".comments_slider_container", {
+const swiperComments = new Swiper(".comments__slider-container", {
 	navigation: {
-		nextEl: '.swiper_button_next_comments',
-		prevEl: '.swiper_button_prev_comments',
+		nextEl: '.comments__swiper-button-next',
+		prevEl: '.comments__swiper-button-prev',
 	},
 	scrollbar: {
-		el: ".swiper_scrollbar_2",
+		el: ".comments__swiper-scroll-bar",
 		draggable: true,
 	},
 	pagination: {
-		el: ".swiper_pagination_comments",
+		el: ".comments__swiper-pagination",
 	},
-	slidesPerView: 1,
+	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,
+	speed: 600,
 	breakpoints: {
-		480: {
-			slidesPerView: "auto",
-		},
 		768: {
-			slidesPerView: 2,
+			spaceBetween: 20,
+			slidesPerView: "auto",
+			speed: 1000,
 		},
 		1000: {
+			spaceBetween: 20,
 			slidesPerView: "auto",
 			allowTouchMove: false,
+			speed: 1000,
 		},
 		1920: {
 			slidesPerView: 2,
 			spaceBetween: 30,
 			allowTouchMove: false,
+			speed: 1000,
 		}
 	},
-	speed: 1000,
 	on: {
 		slideChange: setSlidesState,
 	}
 });
 
-setSlidesState(swiperComments);
-switchSlidesStateHandlerOn1920px(swiperComments);
+updateSwiperOnMediaQuery(swiperComments, mql1920);
+mql1920.addEventListener("change", () => updateSwiperOnMediaQuery(swiperComments, mql1920));
 
 const slides = swiperComments.slides.map((slide) => {
 	return {
-		comment: slide.querySelector(".card_text"),
-		button: slide.querySelector(".card_unwrap_button")
+		comment: slide.querySelector(".comments__card-text"),
+		button: slide.querySelector(".comments__card-unwrap-button")
 	}
 });
 
@@ -58,7 +61,7 @@ slides.forEach((slide) => {
 	initializeComment(slide);
 
 	slide.button.addEventListener("click", () => {
-		if(slide.comment.classList.contains("opened")){
+		if (slide.comment.classList.contains("opened")) {
 			closeComment(slide);
 		} else {
 			openComment(slide);
@@ -68,41 +71,41 @@ slides.forEach((slide) => {
 	});
 });
 
-function initializeComment(slide){
+function initializeComment(slide) {
 	slide.comment.dataset.scrollHeight = slide.comment.scrollHeight;
 	slide.comment.dataset.clientHeight = slide.comment.clientHeight;
 	slide.comment.style.setProperty('--height', slide.comment.clientHeight + "px");
 
-	if(slide.comment.scrollHeight > slide.comment.clientHeight){
+	if (slide.comment.scrollHeight > slide.comment.clientHeight) {
 		slide.button.classList.add("visible");
-	} else{
+	} else {
 		slide.button.classList.remove("visible");
 	}
 }
 
-function openComment(slide){
+function openComment(slide) {
 	slide.comment.classList.add("opened");
 	slide.comment.style.setProperty('--height', slide.comment.dataset.scrollHeight + "px");
 }
 
-function closeComment(slide, callback = () => {}){
+function closeComment(slide, callback = () => { }) {
 	slide.comment.style.setProperty('--height', slide.comment.dataset.clientHeight + "px");
 	slide.comment.addEventListener("transitionend", () => {
 		slide.comment.classList.remove("opened");
 		callback(slide);
-	}, {once: true});
+	}, { once: true });
 }
 
-function onResize(){
+function onResize() {
 	slides.forEach(slide => {
 		slide.comment.style.setProperty('--height', "auto");
-		
-		if(slide.comment.classList.contains("opened")){
+
+		if (slide.comment.classList.contains("opened")) {
 			closeComment(slide, initializeComment);
-		} else{
+		} else {
 			initializeComment(slide);
 		}
-		
+
 		slide.button.classList.remove("opened");
 	});
 }

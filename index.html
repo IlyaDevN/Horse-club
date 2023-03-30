@@ -5,75 +5,62 @@
 <head>
 	<title>Horse club</title>
 	<link rel="shortcut icon" href="img/favIcon/favicon.png" type="image/png">
-	<link rel="stylesheet" href="css/style.css" />
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="css/style.css">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<meta name="viewport" content="width=device-width">
 
 </head>
 
 <body>
-	<div class="register__modal_overlay modal_overlay">
-		<div class="register__modal_content">
-			<button class="register__close_button modal_close_button">
-				<span class="modal_close_button_span"></span>
-				<span class="modal_close_button_span"></span>
+	<div class="register-modal__overlay modal-overlay">
+		<div class="register-modal__content">
+			<button class="register-modal__close-button close-button">
+				<span class="close-button__span"></span>
+				<span class="close-button__span"></span>
 			</button>
-			<form class="register__form">
-				<div class="input_container">
-					<p class="valid_tooltip letters">Вводите буквы</p>
-					<input class="form_input" type="text" placeholder="Ваше имя" data-name data-to-validate>
+			<form class="register-modal__form">
+				<div class="input-container">
+					<p class="valid-tooltip letters">Вводите буквы</p>
+					<input class="form-input" type="text" placeholder="Ваше имя" data-name data-to-validate>
 				</div>
-				<div class="input_container">
-					<p class="valid_tooltip figures">Вводите цифры</p>
-					<input class="form_input" type="tel" placeholder="Ваш телефон" data-phone data-to-validate>
+				<div class="input-container">
+					<p class="valid-tooltip figures">Вводите цифры</p>
+					<input class="form-input" type="tel" placeholder="Ваш телефон" data-phone data-to-validate>
 				</div>
-				<button class="modal_form_button button" type="submit">
+				<button class="register-modal__form-button button" type="submit">
 					записаться
 				</button>
-				<div class="modal_form__checkbox_container input_container">
-					<p class="valid_tooltip checkes">Подтвердите согласие</p>
-					<input class="modal_form__checkbox form_input" id="modal_form_checkbox" type="checkbox"
+				<div class="register-modal__checkbox-container input-container">
+					<p class="valid-tooltip checkes">Подтвердите согласие</p>
+					<input class="register-modal__checkbox form-input" id="register-modal__checkbox" type="checkbox"
 						name="checkbox" data-checkbox data-to-validate>
-					<label class="modal_form__label_checkbox" for="modal_form_checkbox">
-						<svg class="checkbox_svg" viewBox="0 0 20 20">
-							<rect class="check_rect" x="1" y="1" rx="1" />
-							<path class="check_path"
+					<label class="register-modal__label-checkbox" for="register-modal__checkbox">
+						<svg class="checkbox-svg" viewBox="0 0 20 20">
+							<rect class="checkbox-svg__rect" width="18" height="18" x="1" y="1" rx="1" />
+							<path class="checkbox-svg__path"
 								d="M11.0134 0L4.5134 7.44671L1.9867 4.55229L0 6.8288L4.51343 12L13 2.27656L11.0134 0Z" />
 						</svg>
-						<span class="check_ref">Даю согласие на&nbsp;</span>
-						<a class="form_agreement_link" href="agreement.html" target="_blank">обработку данных</a>
+						<span class="label-checkbox__ref">Даю согласие на&nbsp;</span>
+						<a class="form__agreement-link" href="agreement.html" target="_blank">обработку данных</a>
 					</label>
 				</div>
 			</form>
 		</div>
-		<div class="register__modal_gratitude modal_gratitude">
-			<button class="register__close_button modal_close_button">
-				<span class="modal_close_button_span"></span>
-				<span class="modal_close_button_span"></span>
+		<div class="register-modal__gratitude modal-gratitude">
+			<button class="register-modal__close-button close-button">
+				<span class="close-button__span"></span>
+				<span class="close-button__span"></span>
 			</button>
-			<p class="gratitude_line_1">Спасибо!</p>
-			<p class="gratitude_line_2">Мы свяжемся с Вами в ближайшее время!</p>
-			<div class="gratitude_image_container">
-				<img class="gratitude_image" src="img/modal/smile.jpg" alt="Смайлик">
-			</div>
-		</div>
-	</div>
-	<div class="question__modal_overlay modal_overlay">
-		<div class="question__modal_gratitude modal_gratitude">
-			<button class="question__close_button modal_close_button">
-				<span class="modal_close_button_span"></span>
-				<span class="modal_close_button_span"></span>
-			</button>
-			<p class="gratitude_line_1">Спасибо!</p>
-			<p class="gratitude_line_2">Мы свяжемся с Вами в ближайшее время!</p>
-			<div class="gratitude_image_container">
-				<img class="gratitude_image" src="img/modal/smile.jpg" alt="Смайлик">
+			<p class="modal-gratitude__line-first">Спасибо!</p>
+			<p class="modal-gratitude__line-second">Мы свяжемся с Вами в ближайшее время!</p>
+			<div class="modal-gratitude__image-container">
+				<img class="modal-gratitude__image" src="img/modal/smile.jpg" alt="Смайлик">
 			</div>
 		</div>
 	</div>
 	<div class="wrapper">
-		<section class="intro" id="intro">
-			<div class="intro__image_container">
+		<section class="intro">
+			<div class="intro__background-container">
 				<picture>
 					<source srcset="img/intro/background/x1920/bgIntroFull_x1920.jpg" type="image/jpeg"
 						media="(min-width:1920px)">
@@ -95,7 +82,7 @@
 					<source srcset="img/intro/background/x480/bushLeft_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
 					<img class="intro__image_bushLeft" src="img/intro/background/x320/bushLeft_x320.png"
-						alt="Облака снизу">
+						alt="Куст слева">
 				</picture>
 				<picture>
 					<source srcset="img/intro/background/x1920/bushRight_x1920.png" type="image/jpeg"
@@ -107,48 +94,46 @@
 					<source srcset="img/intro/background/x480/bushRight_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
 					<img class="intro__image_bushRight" src="img/intro/background/x320/bushRight_x320.png"
-						alt="Облака снизу">
+						alt="Куст справа">
 				</picture>
 			</div>
 			<div class="intro__container">
 				<header class="intro__header">
 					<a class="header__logo" href="#">
-						<img class="header__logo_img" src="img/intro/introHeader/logo.svg" alt="Логотип">
+						<img class="header__logo-img" src="img/intro/introHeader/intro_logo.png" alt="Логотип">
 					</a>
-					<button class="menu_burger">
-						<div class="menu_burger_button">
-							<div class="burger_button_line"></div>
-							<div class="burger_button_line"></div>
-							<div class="burger_button_line"></div>
-						</div>
-						<div class="menu_burger_name">
-							<p>Меню</p>
-						</div>
+					<button class="header__menu-burger-button">
+						<span class="menu-burger-button__icon">
+							<span class="icon__line"></span>
+							<span class="icon__line"></span>
+							<span class="icon__line"></span>
+						</span>
+						<span class="menu-burger-button__name">Меню</span>
 					</button>
-					<div class="menu_overlay">
-						<div class="menu">
-							<button class="menu_close_button">
-								<span class="close_button_span"></span>
-								<span class="close_button_span"></span>
+					<div class="header__menu-overlay">
+						<div class="header__menu">
+							<button class="menu__close-button">
+								<span class="close-button__span"></span>
+								<span class="close-button__span"></span>
 							</button>
-							<nav class="header__nav">
-								<ul class="nav__menu_header">
-									<li><a class="menu__link_header" href="#">О нас</a></li>
-									<li><a class="menu__link_header" href="#">Услуги и цены</a></li>
-									<li><a class="menu__link_header" href="#">Фотоальбом</a></li>
-									<li><a class="menu__link_header" href="#">Контакты</a></li>
+							<nav class="menu__nav-container">
+								<ul class="menu__nav">
+									<li><a class="nav__link" href="#">О нас</a></li>
+									<li><a class="nav__link" href="#">Услуги и цены</a></li>
+									<li><a class="nav__link" href="#">Фотоальбом</a></li>
+									<li><a class="nav__link" href="#">Контакты</a></li>
 								</ul>
 							</nav>
 						</div>
 					</div>
 					<div class="header__contacts" data-timetable="Ежедневно 9:00 – 22:00">
-						<a class="tel_number" href="tel:+38 (000) 000-00-00">
-							<img class="tel_number_img" src="img/intro/introHeader/tel.svg" alt="Иконка телефона">
+						<a class="contacts__tel-number" href="tel:+38(000)0000000">
+							<img class="tel-number__img" src="img/intro/introHeader/tel.svg" alt="Иконка телефона">
 							+38 (000) 000-00-00
 						</a>
 					</div>
 				</header>
-				<div class="intro__content" id="intro__content">
+				<div class="intro__content">
 					<h1 class="intro__invitation">Окунитесь в мир лошадей вместе с нами</h1>
 					<div class="intro__advertising">
 						<p>Уроки верховой езды, фотосессии и мероприятия в частном конном клубе <b>г. Киев</b> </p>
@@ -161,61 +146,56 @@
 
 		</section>
 		<section class="about">
-			<div class="about__container _container">
+			<div class="about__container">
 				<div class="about__title title_every">
 					<h2>О нашем клубе</h2>
 				</div>
 				<div class="about__content">
-					<div class="about__content_image">
+					<div class="content__image-container">
 						<picture>
-							<source srcset="img/about/x1920/jumping_horse_x1920.jpg" type="image/jpeg"
-								media="(min-width:1920px)">
-							<source srcset="img/about/x1000/jumping_horse_x1000.jpg" type="image/jpeg"
-								media="(min-width:1000px)">
-							<source srcset="img/about/x768/jumping_horse_x768.jpg" type="image/jpeg"
-								media="(min-width:768px)">
-							<img src="img/about/x768/jumping_horse_x768.jpg" alt="Лошадь в прыжке">
+							<source srcset="img/about/jumping_horse.jpg" type="image/jpeg" media="(min-width:768px)">
+							<img class="content__image" src="" alt="Лошадь в прыжке">
 						</picture>
 					</div>
-					<div class="about__content_text">
-						<div class="text__bonus_row bonus_row_1">
-							<div class="bonus__block">
-								<div class="bonus__block_title">
+					<div class="content__text">
+						<div class="text__bonus-row">
+							<div class="text__bonus-block">
+								<div class="bonus-block__title">
 									1100+
 								</div>
-								<div class="bonus__block_text">
+								<div class="bonus-block__text">
 									Довольный посетителей <br>за последний год
 								</div>
 							</div>
-							<div class="bonus__block">
-								<div class="bonus__block_title">
+							<div class="text__bonus-block">
+								<div class="bonus-block__title">
 									50+
 								</div>
-								<div class="bonus__block_text">
+								<div class="bonus-block__text">
 									Проведенных мероприятий за 6 месяцев
 								</div>
 							</div>
 						</div>
-						<div class="text__bonus_row bonus_row_2">
-							<div class="bonus__block">
-								<div class="bonus__block_title">
+						<div class="text__bonus-row">
+							<div class="text__bonus-block">
+								<div class="bonus-block__title">
 									20+
 								</div>
-								<div class="bonus__block_text bonus__block_text_3">
+								<div class="bonus-block__text">
 									Выпущенных профессиональных спортсменов за 1 год
 								</div>
 							</div>
-							<div class="bonus__block">
-								<div class="bonus__block_title">
+							<div class="text__bonus-block">
+								<div class="bonus-block__title">
 									15+
 								</div>
-								<div class="bonus__block_text">
+								<div class="bonus-block__text">
 									Регулярный занятий в неделю с профессиональными наставниками
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="text__subtext">
+					<div class="content__subtext">
 						Занятия проводятся индивидуально и в группах, стоимость также будет зависеть от ваших навыков
 						и умений. Более выгодные условия предусмотрены для регулярных занятий при покупке абонементов.
 						Для тех, кто хочет отточить своё мастерство, разработаны программы по специализации (конкур,
@@ -225,647 +205,650 @@
 				</div>
 			</div>
 		</section>
-		<section class="whyChooseUs">
-			<div class="whyChooseUs__container _container">
-				<div class="whyChooseUs__title title_every">
+		<section class="benefits">
+			<div class="benefits__container">
+				<div class="benefirs__title title_every">
 					<h2>Почему нас выбирают</h2>
 				</div>
-				<div class="whyChooseUs__benefits">
+				<div class="benefits__table">
 					<div class="benefits__card">
-						<div class="benefits__image_container">
-							<img class="benefits_img" src="img/whyChooseUs/map_1_x1920.jpg" alt="Маршрут">
+						<div class="benefits__image-container">
+							<img class="benefits__image" src="img/benefits/map.jpg" alt="Маршрут">
 						</div>
-						<div class="benefits__subtitle">Удобное расположение</div>
-						<div class="benefits__text">Мы находимся недалеко от автостанции «Восточный» чтобы вам было
-							удобно добираться</div>
+						<h3 class="benefits__subtitle">Удобное расположение</h3>
+						<p class="benefits__text">Мы находимся недалеко от автостанции «Восточный» чтобы вам было
+							удобно добираться</p>
 					</div>
 					<div class="benefits__card">
-						<div class="benefits__image_container">
-							<img class="benefits_img" src="img/whyChooseUs/desk_2_x1920.jpg" alt="Стол">
+						<div class="benefits__image-container">
+							<img class="benefits__image" src="img/benefits/desk.jpg" alt="Стол">
 						</div>
-						<div class="benefits__subtitle">Обеденная зона</div>
-						<div class="benefits__text">Имеется столовая, чтобы Вы могли перекусить и немного отдохнуть.
-							Бесплатно чай, кофе, печенки.</div>
+						<h3 class="benefits__subtitle">Обеденная зона</h3>
+						<p class="benefits__text">Имеется столовая, чтобы Вы могли перекусить и немного отдохнуть.
+							Бесплатно чай, кофе, печенки.</p>
 					</div>
 					<div class="benefits__card">
-						<div class="benefits__image_container">
-							<img class="benefits_img" src="img/whyChooseUs/clock_3_x1920.jpg" alt="Часы">
+						<div class="benefits__image-container">
+							<img class="benefits__image" src="img/benefits/clock.jpg" alt="Часы">
 						</div>
-						<div class="benefits__subtitle">Профессиональные тренера</div>
-						<div class="benefits__text">Наши преподаватели имеют награды в конном спорте, и отличные отзывы
-							среди учеников</div>
+						<h3 class="benefits__subtitle">Профессиональные тренера</h3>
+						<p class="benefits__text">Наши преподаватели имеют награды в конном спорте, и отличные
+							отзывы
+							среди учеников</p>
 					</div>
 					<div class="benefits__card">
-						<div class="benefits__image_container">
-							<img class="benefits_img" src="img/whyChooseUs/car_4_x1920.jpg" alt="Автомобиль">
+						<div class="benefits__image-container">
+							<img class="benefits__image" src="img/benefits/car.jpg" alt="Автомобиль на парковке">
 						</div>
-						<div class="benefits__subtitle">Бесплатная парковка</div>
-						<div class="benefits__text">Наши преподаватели имеют награды в конном спорте, и отличные отзывы
-							среди учеников</div>
+						<h3 class="benefits__subtitle">Бесплатная парковка</h3>
+						<p class="benefits__text">Наши преподаватели имеют награды в конном спорте, и отличные
+							отзывы
+							среди учеников</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="clubDirection">
-			<div class="clubDirection_bg_container">
+		<section class="club-directions">
+			<div>
 				<picture>
-					<source srcset="img/clubDirection/clubDirectionBG/x1920/sky_x1920.png" type="image/jpeg"
-						media="(min-width:1920px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x1000/sky_x1000.png" type="image/jpeg"
-						media="(min-width:1000px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x768/sky_x768.png" type="image/jpeg"
+					<source srcset="img/club-directions/club-directions-background/x1920/sky_x1920.png"
+						type="image/jpeg" media="(min-width:1920px)">
+					<source srcset="img/club-directions/club-directions-background/x1000/sky_x1000.png"
+						type="image/jpeg" media="(min-width:1000px)">
+					<source srcset="img/club-directions/club-directions-background/x768/sky_x768.png" type="image/jpeg"
 						media="(min-width:768px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x480/sky_x480.png" type="image/jpeg"
+					<source srcset="img/club-directions/club-directions-background/x480/sky_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="clubDirection_bg_sky" src="img/clubDirection/clubDirectionBG/x320/sky_x320.png"
-						alt="Небо">
+					<img class="club-directions_bg_sky"
+						src="img/club-directions/club-directions-background/x320/sky_x320.png" alt="Небо">
 				</picture>
 				<picture>
-					<source srcset="img/clubDirection/clubDirectionBG/x1920/grass_x1920.png" type="image/jpeg"
-						media="(min-width:1920px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x1000/grass_x1000.png" type="image/jpeg"
-						media="(min-width:1000px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x768/grass_x768.png" type="image/jpeg"
-						media="(min-width:768px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x480/grass_x480.png" type="image/jpeg"
-						media="(min-width:480px)">
-					<img class="clubDirection_bg_grass" src="img/clubDirection/clubDirectionBG/x320/grass_x320.png"
-						alt="Трава">
+					<source srcset="img/club-directions/club-directions-background/x1920/grass_x1920.png"
+						type="image/jpeg" media="(min-width:1920px)">
+					<source srcset="img/club-directions/club-directions-background/x1000/grass_x1000.png"
+						type="image/jpeg" media="(min-width:1000px)">
+					<source srcset="img/club-directions/club-directions-background/x768/grass_x768.png"
+						type="image/jpeg" media="(min-width:768px)">
+					<source srcset="img/club-directions/club-directions-background/x480/grass_x480.png"
+						type="image/jpeg" media="(min-width:480px)">
+					<img class="club-directions_bg_grass"
+						src="img/club-directions/club-directions-background/x320/grass_x320.png" alt="Трава">
 				</picture>
 				<picture>
-					<source srcset="img/clubDirection/clubDirectionBG/x1920/clouds_bottom_x1920.png" type="image/jpeg"
-						media="(min-width:1920px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x1000/clouds_bottom_x1000.png" type="image/jpeg"
-						media="(min-width:1000px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x768/clouds_bottom_x768.png" type="image/jpeg"
-						media="(min-width:768px)">
-					<source srcset="img/clubDirection/clubDirectionBG/x480/clouds_bottom_x480.png" type="image/jpeg"
-						media="(min-width:480px)">
-					<img class="clubDirection_bg_clouds_botom"
-						src="img/clubDirection/clubDirectionBG/x320/clouds_bottom_x320.png" alt="Облака снизу">
+					<source srcset="img/club-directions/club-directions-background/x1920/clouds_bottom_x1920.png"
+						type="image/jpeg" media="(min-width:1920px)">
+					<source srcset="img/club-directions/club-directions-background/x1000/clouds_bottom_x1000.png"
+						type="image/jpeg" media="(min-width:1000px)">
+					<source srcset="img/club-directions/club-directions-background/x768/clouds_bottom_x768.png"
+						type="image/jpeg" media="(min-width:768px)">
+					<source srcset="img/club-directions/club-directions-background/x480/clouds_bottom_x480.png"
+						type="image/jpeg" media="(min-width:480px)">
+					<img class="club-directions_bg_clouds_botom"
+						src="img/club-directions/club-directions-background/x320/clouds_bottom_x320.png"
+						alt="Облака снизу">
 				</picture>
+				<div class="background-horses-container">
+					<div class="horse-left">
+						<picture>
+							<source
+								srcset="img/club-directions/club-directions-background/x1920/girlOnHorseLeft_x1920.png"
+								type="image/jpeg" media="(min-width:1920px)">
+							<source
+								srcset="img/club-directions/club-directions-background/x1000/girlOnHorseLeft_x1000.png"
+								type="image/jpeg" media="(min-width:1000px)">
+							<source
+								srcset="img/club-directions/club-directions-background/x768/girlOnHorseLeft_x768.png"
+								type="image/jpeg" media="(min-width:768px)">
+							<source
+								srcset="img/club-directions/club-directions-background/x480/girlOnHorseLeft_x480.png"
+								type="image/jpeg" media="(min-width:480px)">
+							<img class="horse_left_img"
+								src="img/club-directions/club-directions-background/x320/girlOnHorseLeft_x320.png"
+								alt="Девушка на лошади">
+						</picture>
+					</div>
+					<div class="horse-right">
+						<picture>
+							<source
+								srcset="img/club-directions/club-directions-background/x1920/boyOnHorseRight_x1920.png"
+								type="image/jpeg" media="(min-width:1920px)">
+							<source
+								srcset="img/club-directions/club-directions-background/x1000/boyOnHorseRight_x1000.png"
+								type="image/jpeg" media="(min-width:1000px)">
+							<source
+								srcset="img/club-directions/club-directions-background/x768/boyOnHorseRight_x768.png"
+								type="image/jpeg" media="(min-width:768px)">
+							<source
+								srcset="img/club-directions/club-directions-background/x480/boyOnHorseRight_x480.png"
+								type="image/jpeg" media="(min-width:480px)">
+							<img class="horse_right_img"
+								src="img/club-directions/club-directions-background/x320/boyOnHorseRight_x320.png"
+								alt="Мальчик на лошади">
+						</picture>
+					</div>
+				</div>
 			</div>
-			<div class="clubDirection__container _container">
-				<div class="clubDirection__title title_every">
+			<div class="club-directions__container">
+				<div class="club-directions__title title_every">
 					<h2>Направления клуба</h2>
 				</div>
-				<div class="clubDirection__galery" id="clubDirection__galery">
-					<div class="firstRow__line">
-						<div class="line__card">
-							<div class="card__image_galary">
-								<img class="galary_img"
-									src="img/clubDirection/clubDirectionGalary/galery_img_1_x1920.jpg" alt="Лошадь">
+				<div class="club-directions__galery">
+					<div class="galery__first-row">
+						<div class="galery__card">
+							<div class="card__image-container">
+								<img class="card__image"
+									src="img/club-directions/club-directions-galary/galery_img_1.jpg" alt="Лошадь">
 							</div>
-							<div class="clubDirection_card__title">
-								Уроки верховой езды
-							</div>
-							<div class="clubDirection_card__row"></div>
-							<div class="clubDirection_card__text">
+							<h3 class="card__title">Уроки верховой езды</h3>
+							<div class="card__row"></div>
+							<p class="card__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
-						<div class="line__card">
-							<div class="card__image_galary">
-								<img class="galary_img"
-									src="img/clubDirection/clubDirectionGalary/galery_img_2_x1920.jpg" alt="Лошадь">
+						<div class="galery__card">
+							<div class="card__image-container">
+								<img class="card__image"
+									src="img/club-directions/club-directions-galary/galery_img_2.jpg" alt="Лошадь">
 							</div>
-							<div class="clubDirection_card__title">
-								Прогулки верхом с тренером
-							</div>
-							<div class="clubDirection_card__row"></div>
-							<div class="clubDirection_card__text">
+							<h3 class="card__title">Прогулки верхом с тренером</h3>
+							<div class="card__row"></div>
+							<p class="card__text">
 								Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под
 								руководством опытных теннеров
-							</div>
+							</p>
 						</div>
-						<div class="line__card">
-							<div class="card__image_galary">
-								<img class="galary_img"
-									src="img/clubDirection/clubDirectionGalary/galery_img_3_x1920.jpg" alt="Лошадь">
+						<div class="galery__card">
+							<div class="card__image-container">
+								<img class="card__image"
+									src="img/club-directions/club-directions-galary/galery_img_3.jpg" alt="Лошадь">
 							</div>
-							<div class="clubDirection_card__title">
-								Фотосессии
-							</div>
-							<div class="clubDirection_card__row"></div>
-							<div class="clubDirection_card__text">
+							<h3 class="card__title">Фотосессии</h3>
+							<div class="card__row"></div>
+							<p class="card__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 					</div>
-					<div class="secondRow__line">
-						<div class="line__card">
-							<div class="card__image_galary">
-								<img class="galary_img"
-									src="img/clubDirection/clubDirectionGalary/galery_img_4_x1920.jpg" alt="Лошадь">
+					<div class="galery__second-row">
+						<div class="galery__card">
+							<div class="card__image-container">
+								<img class="card__image"
+									src="img/club-directions/club-directions-galary/galery_img_4.jpg" alt="Лошадь">
 							</div>
-							<div class="clubDirection_card__title">
-								Прогулки верхом с тренером
-							</div>
-							<div class="clubDirection_card__row"></div>
-							<div class="clubDirection_card__text">
+							<h3 class="card__title">Прогулки верхом с тренером</h3>
+							<div class="card__row"></div>
+							<p class="card__text">
 								Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под
 								руководством опытных теннеров
-							</div>
+							</p>
 						</div>
-						<div class="line__card">
-							<div class="card__image_galary">
-								<img class="galary_img"
-									src="img/clubDirection/clubDirectionGalary/galery_img_5_x1920.jpg" alt="Лошадь">
+						<div class="galery__card">
+							<div class="card__image-container">
+								<img class="card__image"
+									src="img/club-directions/club-directions-galary/galery_img_5.jpg" alt="Лошадь">
 							</div>
-							<div class="clubDirection_card__title">
-								Фотосессии
-							</div>
-							<div class="clubDirection_card__row"></div>
-							<div class="clubDirection_card__text">
+							<h3 class="card__title">Фотосессии</h3>
+							<div class="card__row"></div>
+							<p class="card__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
-						<div class="line__card">
-							<div class="card__image_galary">
-								<img class="galary_img"
-									src="img/clubDirection/clubDirectionGalary/galery_img_6_x1920.jpg" alt="Лошадь">
+						<div class="galery__card">
+							<div class="card__image-container">
+								<img class="card__image"
+									src="img/club-directions/club-directions-galary/galery_img_6.jpg" alt="Лошадь">
 							</div>
-							<div class="clubDirection_card__title">
-								Прогулки верхом с тренером
-							</div>
-							<div class="clubDirection_card__row"></div>
-							<div class="clubDirection_card__text">
+							<h3 class="card__title">Прогулки верхом с тренером</h3>
+							<div class="card__row"></div>
+							<p class="card__text">
 								Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под
 								руководством опытных теннеров
-							</div>
+							</p>
 						</div>
 					</div>
 				</div>
-				<button class="clubDirection__button button popup-link">
+				<button class="club-directions__button button popup-link">
 					записаться
 				</button>
-				<div class="horse_left">
-					<picture>
-						<source srcset="img/clubDirection/clubDirectionBG/x1920/girlOnHorseLeft_x1920.png"
-							type="image/jpeg" media="(min-width:1920px)">
-						<source srcset="img/clubDirection/clubDirectionBG/x1000/girlOnHorseLeft_x1000.png"
-							type="image/jpeg" media="(min-width:1000px)">
-						<source srcset="img/clubDirection/clubDirectionBG/x768/girlOnHorseLeft_x768.png"
-							type="image/jpeg" media="(min-width:768px)">
-						<source srcset="img/clubDirection/clubDirectionBG/x480/girlOnHorseLeft_x480.png"
-							type="image/jpeg" media="(min-width:480px)">
-						<img src="img/clubDirection/clubDirectionBG/x320/girlOnHorseLeft_x320.png"
-							alt="Девушка на лошади">
-					</picture>
-				</div>
-				<div class="horse_right">
-					<picture>
-						<source srcset="img/clubDirection/clubDirectionBG/x1920/boyOnHorseRight_x1920.png"
-							type="image/jpeg" media="(min-width:1920px)">
-						<source srcset="img/clubDirection/clubDirectionBG/x1000/boyOnHorseRight_x1000.png"
-							type="image/jpeg" media="(min-width:1000px)">
-						<source srcset="img/clubDirection/clubDirectionBG/x768/boyOnHorseRight_x768.png"
-							type="image/jpeg" media="(min-width:768px)">
-						<source srcset="img/clubDirection/clubDirectionBG/x480/boyOnHorseRight_x480.png"
-							type="image/jpeg" media="(min-width:480px)">
-						<img src="img/clubDirection/clubDirectionBG/x320/boyOnHorseRight_x320.png"
-							alt="Мальчик на лошади">
-					</picture>
-				</div>
 			</div>
 		</section>
-		<section class="ourVisitors">
-			<div class="ourVisitors__container">
-				<div class="ourVisitors__title title_every">
+		<section class="our-visitors">
+			<div class="our-visitors__container">
+				<div class="our-visitors__title title_every">
 					<h2>Наши посетители</h2>
 				</div>
-				<div id="ourVisitors__photo_container" class="ourVisitors__photo_container">
-					<div class="ourVisitors__photo">
+				<div class="our-visitors__photo-container">
+					<div class="our-visitors__photo">
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo1_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo1_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo1_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo1_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo1_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo1_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo1_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo1_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo1_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo1_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo2_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo2_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo2_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo2_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo2_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo2_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo2_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo2_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo2_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo2_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo3_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo3_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo3_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo3_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo3_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo3_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo3_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo3_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo3_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo3_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo4_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo4_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo4_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo4_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo4_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo4_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo4_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo4_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo4_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo4_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo5_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo5_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo5_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo5_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo5_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo5_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo6_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo6_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo6_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo6_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo6_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo6_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo6_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo6_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo6_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo6_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo7_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo7_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo7_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo7_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo7_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo7_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo7_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo7_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo7_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo7_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo8_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo8_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo8_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo8_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo8_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo8_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo8_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo8_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x320/container_1/photo8_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_1/photo8_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo9_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo9_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_1/photo9_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_1/photo9_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_1/photo9_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_1/photo9_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<source srcset="img/ourVisitors/x480/container_1/photo9_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo9_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x480/container_1/photo9_x480.jpg"
+								<img class="photo" src="img/our-visitors/x480/container_1/photo9_x480.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_1/photo10_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_1/photo10_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<img class="photo" src="img/ourVisitors/x480/container_1/photo10_x480.jpg"
+								<img class="photo" src="img/our-visitors/x480/container_1/photo10_x480.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x480/container_1/photo11_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo11_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x480/container_1/photo11_x480.jpg"
+								<img class="photo" src="img/our-visitors/x480/container_1/photo11_x480.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x480/container_1/photo12_x480.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x480/container_1/photo12_x480.jpg" type="image/jpeg"
 									media="(min-width:480px)">
-								<img class="photo" src="img/ourVisitors/x480/container_1/photo12_x480.jpg"
+								<img class="photo" src="img/our-visitors/x480/container_1/photo12_x480.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 					</div>
-					<div class="ourVisitors__photo">
+					<div class="our-visitors__photo">
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo13_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo13_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo13_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo13_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo13_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo13_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo13_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo13_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo14_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo14_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo14_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo14_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo14_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo14_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo14_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo14_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo15_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo15_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo15_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo15_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo15_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo15_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo15_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo15_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo16_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo16_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo16_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo16_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo16_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo16_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo16_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo16_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo17_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo17_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<!-- <source srcset="img/ourVisitors/x1000/container_2/photo17_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_2/photo17_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo17_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1000/container_2/photo17_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_2/photo17_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_2/photo17_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo18_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo18_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo18_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo18_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo18_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo18_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo18_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo18_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo19_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo19_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo19_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo19_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo19_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo19_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo19_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo19_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo20_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo20_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo20_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo20_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo20_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo20_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo20_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo20_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo21_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo21_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_2/photo21_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_2/photo21_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_2/photo21_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_2/photo21_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo21_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_2/photo21_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_2/photo22_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_2/photo22_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<!-- <source srcset="img/ourVisitors/x1000/container_2/photo22_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_2/photo22_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo22_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1000/container_2/photo22_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_2/photo22_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_2/photo22_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<!-- <source srcset="img/ourVisitors/x1920/container_2/photo23_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
-								<!-- <source srcset="img/ourVisitors/x1000/container_2/photo23_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_2/photo23_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo23_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1920/container_2/photo23_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
+								<!-- <source srcset="img/our-visitors/x1000/container_2/photo23_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_2/photo23_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_2/photo23_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<!-- <source srcset="img/ourVisitors/x1920/container_2/photo24_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
-								<!-- <source srcset="img/ourVisitors/x1000/container_2/photo24_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_2/photo24_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_2/photo24_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1920/container_2/photo24_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
+								<!-- <source srcset="img/our-visitors/x1000/container_2/photo24_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_2/photo24_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_2/photo24_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 					</div>
-					<div class="ourVisitors__photo">
+					<div class="our-visitors__photo">
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo25_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo25_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo25_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo25_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo25_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo25_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo25_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo25_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo26_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo26_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo26_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo26_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo26_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo26_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo26_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo26_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo27_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo27_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo27_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo27_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo27_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo27_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo27_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo27_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo28_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo28_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo28_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo28_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo28_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo28_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo28_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo28_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo29_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo29_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<!-- <source srcset="img/ourVisitors/x1000/container_3/photo29_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_3/photo29_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo29_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1000/container_3/photo29_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_3/photo29_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_3/photo29_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo30_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo30_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo30_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo30_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo30_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo30_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo30_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo30_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo31_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo31_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo31_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo31_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo31_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo31_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo31_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo31_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo32_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo32_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo32_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo32_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo32_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo32_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo32_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo32_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo33_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo33_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<source srcset="img/ourVisitors/x1000/container_3/photo33_x1000.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1000/container_3/photo33_x1000.jpg" type="image/jpeg"
 									media="(min-width:1000px)">
-								<source srcset="img/ourVisitors/x768/container_3/photo33_x768.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x768/container_3/photo33_x768.jpg" type="image/jpeg"
 									media="(min-width:768px)">
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo33_x320.jpg"
+								<img class="photo" src="img/our-visitors/x320/container_3/photo33_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<source srcset="img/ourVisitors/x1920/container_3/photo34_x1920.jpg" type="image/jpeg"
+								<source srcset="img/our-visitors/x1920/container_3/photo34_x1920.jpg" type="image/jpeg"
 									media="(min-width:1920px)">
-								<!-- <source srcset="img/ourVisitors/x1000/container_3/photo34_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_3/photo34_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo34_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1000/container_3/photo34_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_3/photo34_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_3/photo34_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<!-- <source srcset="img/ourVisitors/x1920/container_3/photo35_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
-								<!-- <source srcset="img/ourVisitors/x1000/container_3/photo35_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_3/photo35_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo35_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1920/container_3/photo35_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
+								<!-- <source srcset="img/our-visitors/x1000/container_3/photo35_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_3/photo35_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_3/photo35_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 						<div class="photo__item">
 							<picture>
-								<!-- <source srcset="img/ourVisitors/x1920/container_3/photo36_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
-								<!-- <source srcset="img/ourVisitors/x1000/container_3/photo36_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
-								<!-- <source srcset="img/ourVisitors/x768/container_3/photo36_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
-								<img class="photo" src="img/ourVisitors/x320/container_3/photo36_x320.jpg"
+								<!-- <source srcset="img/our-visitors/x1920/container_3/photo36_x1920.jpg" type="image/jpeg" media="(min-width:1920px)"> -->
+								<!-- <source srcset="img/our-visitors/x1000/container_3/photo36_x1000.jpg" type="image/jpeg" media="(min-width:1000px)"> -->
+								<!-- <source srcset="img/our-visitors/x768/container_3/photo36_x768.jpg" type="image/jpeg" media="(min-width:768px)"> -->
+								<img class="photo" src="img/our-visitors/x320/container_3/photo36_x320.jpg"
 									alt="Клиент на лошади">
 							</picture>
 						</div>
 					</div>
 				</div>
-				<div class="ourVisitors__sliderCheckbox sliderCheckbox">
-					<button id="button_prev_ourVisitors" class="slider_button" disabled>
-						<span class="arrow arrow_prev"></span>
+				<div class="our-visitors__slider-control slider-control">
+					<button id="our-visitors__button-prev" class="slider-control__button" disabled>
+						<span class="button__arrow button__arrow_prev"></span>
 					</button>
-					<div id="slider_range" class="slider_range">
-						<div id="slider_thumb" class="slider_thumb"></div>
+					<div id="our-visitors__slider-control-range" class="slider-control__range">
+						<div id="our-visitors__slider-control-thumb" class="slider-control__thumb"></div>
 					</div>
-					<div class="pagination_container"></div>
-					<button id="button_next_ourVisitors" class="slider_button">
-						<span class="arrow arrow_next"></span>
+					<div class="our-visitors__pagination-container"></div>
+					<button id="our-visitors__button-next" class="slider-control__button">
+						<span class="button__arrow button__arrow_next"></span>
 					</button>
 				</div>
 			</div>
@@ -875,447 +858,300 @@
 				<div class="our-horses__title title_every">
 					<h2>Наши лошади</h2>
 				</div>
-				<div class="our-horses__galary our_horses_swiper_container">
+				<div class="our-horses__galary our-horses__swiper-container">
 					<div class="galary__row swiper-wrapper">
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_1_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_1_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_1_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_1_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_1_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_1.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Жазель
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_2_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_2_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_2_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_2_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_2_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_2.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Юджин
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_3_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_3_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_3_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_3_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_3_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_3.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Мелисса
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_4_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_4_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_4_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_4_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_4_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_4.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Циан
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_5_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_5_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_5_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_5_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_5_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_5.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Хесана
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_6_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_6_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_6_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_6_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_6_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_6.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Буцефал
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_7_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_7_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_7_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_7_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_7_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_7.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Ежевика
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_8_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_8_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_8_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_8_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_8_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_8.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Кондор
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_9_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_9_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_9_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_9_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_9_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_9.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Обсидиан
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_10_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_10_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_10_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_10_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_10_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_10.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Тень
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_11_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_11_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_11_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_11_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_11_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_11.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Икра
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_12_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_12_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_12_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_12_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_12_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_12.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Бархат
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_13_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_13_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_13_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_13_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_13_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_13.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Ворон
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_14_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_14_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_14_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_14_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_14_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_14.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Моргана
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 						<div class="galary__item swiper-slide">
 							<div class="item__image">
-								<picture>
-									<source srcset="img/ourHorses/x1920/horse_15_x1920.jpg" type="image/jpeg"
-										media="(min-width:1920px)">
-									<source srcset="img/ourHorses/x1000/horse_15_x1000.jpg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<source srcset="img/ourHorses/x768/horse_15_x768.jpg" type="image/jpeg"
-										media="(min-width:768px)">
-									<source srcset="img/ourHorses/x480/horse_15_x480.jpg" type="image/jpeg"
-										media="(min-width:480px)">
-									<img src="img/ourHorses/x320/horse_15_x320.jpg" alt="Лошадь">
-								</picture>
+								<img class="image-horse" src="img/our-horses/horse_15.jpg" alt="Лошадь">
 							</div>
-							<div class="item__title">
+							<p class="item__title">
 								Сильвер
-							</div>
+							</p>
 							<div class="item__line"></div>
-							<div class="item__text">
+							<p class="item__text">
 								Уроки профессиональной верховой езды для любителей и начинающих
-							</div>
+								Уроки профессиональной верховой езды для любителей и начинающих
+								Уроки профессиональной верховой езды для любителей и начинающих
+							</p>
 						</div>
 					</div>
 				</div>
-				<div class="ourHorses__sliderCheckbox sliderCheckbox">
-					<button class="swiper_button_prev_ourHorses slider_button">
-						<span class="arrow arrow_prev"></span>
+				<div class="our-horses__slider-control slider-control">
+					<button class="our-horses__button-prev slider-control__button">
+						<span class="button__arrow button__arrow_prev"></span>
 					</button>
-					<div class="scrollBar swiper_scrollbar_1"></div>
-					<div class="swiper_pagination pagination swiper_pagination_ourHorses"></div>
-					<button class="swiper_button_next_ourHorses slider_button">
-						<span class="arrow arrow_next"></span>
+					<div class="scroll-bar our-horses__swiper-scroll-bar"></div>
+					<div class="swiper-pagination pagination swiper_pagination_ourHorses"></div>
+					<button class="our-horses__button-next slider-control__button">
+						<span class="button__arrow button__arrow_next"></span>
 					</button>
 				</div>
 			</div>
 		</section>
 		<section class="questions">
-			<div class="questioons__bg_container">
+			<div class="questioons__background-container">
 				<picture>
-					<source srcset="img/questions/bg/x1920/questions_bg_x1920.jpg" type="image/jpeg"
+					<source srcset="img/questions/background/x1920/questions_bg_x1920.jpg" type="image/jpeg"
 						media="(min-width:1920px)">
-					<source srcset="img/questions/bg/x1000/questions_bg_x1000.jpg" type="image/jpeg"
+					<source srcset="img/questions/background/x1000/questions_bg_x1000.jpg" type="image/jpeg"
 						media="(min-width:1000px)">
-					<source srcset="img/questions/bg/x768/questions_bg_x768.jpg" type="image/jpeg"
+					<source srcset="img/questions/background/x768/questions_bg_x768.jpg" type="image/jpeg"
 						media="(min-width:768px)">
-					<source srcset="img/questions/bg/x480/questions_bg_x480.jpg" type="image/jpeg"
+					<source srcset="img/questions/background/x480/questions_bg_x480.jpg" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="question__bg_forest" src="img/questions/bg/x320/questions_bg_x320.jpg" alt="Зимний лес">
+					<img class="question__bg_forest" src="img/questions/background/x320/questions_bg_x320.jpg"
+						alt="Зимний лес">
 				</picture>
 				<picture>
-					<source srcset="img/questions/bg/x1920/cloudsTop_x1920.png" type="image/jpeg"
+					<source srcset="img/questions/background/x1920/cloudsTop_x1920.png" type="image/jpeg"
 						media="(min-width:1920px)">
-					<source srcset="img/questions/bg/x1000/cloudsTop_x1000.png" type="image/jpeg"
+					<source srcset="img/questions/background/x1000/cloudsTop_x1000.png" type="image/jpeg"
 						media="(min-width:1000px)">
-					<source srcset="img/questions/bg/x768/cloudsTop_x768.png" type="image/jpeg"
+					<source srcset="img/questions/background/x768/cloudsTop_x768.png" type="image/jpeg"
 						media="(min-width:768px)">
-					<source srcset="img/questions/bg/x480/cloudsTop_x480.png" type="image/jpeg"
+					<source srcset="img/questions/background/x480/cloudsTop_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="question__bg_cloudsTop" src="img/questions/bg/x320/cloudsTop_x320.png"
+					<img class="question__bg_cloudsTop" src="img/questions/background/x320/cloudsTop_x320.png"
 						alt="Облака сверху">
 				</picture>
 				<picture>
-					<source srcset="img/questions/bg/x1920/cloudsBottom_x1920.png" type="image/jpeg"
+					<source srcset="img/questions/background/x1920/cloudsBottom_x1920.png" type="image/jpeg"
 						media="(min-width:1920px)">
-					<source srcset="img/questions/bg/x1000/cloudsBottom_x1000.png" type="image/jpeg"
+					<source srcset="img/questions/background/x1000/cloudsBottom_x1000.png" type="image/jpeg"
 						media="(min-width:1000px)">
-					<source srcset="img/questions/bg/x768/cloudsBottom_x768.png" type="image/jpeg"
+					<source srcset="img/questions/background/x768/cloudsBottom_x768.png" type="image/jpeg"
 						media="(min-width:768px)">
-					<source srcset="img/questions/bg/x480/cloudsBottom_x480.png" type="image/jpeg"
+					<source srcset="img/questions/background/x480/cloudsBottom_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="question__bg_cloudsBottom" src="img/questions/bg/x320/cloudsBottom_x320.png"
+					<img class="question__bg_cloudsBottom" src="img/questions/background/x320/cloudsBottom_x320.png"
 						alt="Облака сверху">
 				</picture>
 			</div>
 			<div class="questions__container">
 				<picture>
-					<source srcset="img/questions/bg_elements/x1920/girlWithHorse_x1920.png" type="image/jpeg"
+					<source srcset="img/questions/background_elements/x1920/girlWithHorse_x1920.png" type="image/jpeg"
 						media="(min-width:1920px)">
-					<source srcset="img/questions/bg_elements/x1000/girlWithHorse_x1000.png" type="image/jpeg"
+					<source srcset="img/questions/background_elements/x1000/girlWithHorse_x1000.png" type="image/jpeg"
 						media="(min-width:1000px)">
-					<source srcset="img/questions/bg_elements/x768/girlWithHorse_x768.png" type="image/jpeg"
+					<source srcset="img/questions/background_elements/x768/girlWithHorse_x768.png" type="image/jpeg"
 						media="(min-width:768px)">
-					<source srcset="img/questions/bg_elements/x480/girlWithHorse_x480.png" type="image/jpeg"
+					<source srcset="img/questions/background_elements/x480/girlWithHorse_x480.png" type="image/jpeg"
 						media="(min-width:480px)">
-					<img class="questions__girl_with_horse" src="img/questions/bg_elements/x320/girlWithHorse_x320.png"
+					<img class="questions__girl_with_horse"
+						src="img/questions/background_elements/x320/girlWithHorse_x320.png"
 						alt="Девушка рядом с лошадью">
 				</picture>
 				<picture>
-					<source srcset="img/questions/bg_elements/x1920/bush_x1920.png" type="image/jpeg"
+					<source srcset="img/questions/background_elements/x1920/bush_x1920.png" type="image/jpeg"
 						media="(min-width:1920px)">
-					<source srcset="img/questions/bg_elements/x1000/bush_x1000.png" type="image/jpeg"
+					<source srcset="img/questions/background_elements/x1000/bush_x1000.png" type="image/jpeg"
 						media="(min-width:1000px)">
-					<img class="questions__bush" src="img/questions/bg_elements/x1920/bush_x1920.png" alt="Куст">
+					<img class="questions__bush" src="img/questions/background_elements/x1920/bush_x1920.png"
+						alt="Куст">
 				</picture>
-				<picture>
-					<source srcset="img/questions/bg_elements/x1920/frame_x1920.png" type="image/jpeg"
-						media="(min-width:1920px)">
-					<source srcset="img/questions/bg_elements/x1000/frame_x1000.png" type="image/jpeg"
-						media="(min-width:1000px)">
-					<source srcset="img/questions/bg_elements/x768/frame_x768.png" type="image/jpeg"
-						media="(min-width:768px)">
-					<source srcset="img/questions/bg_elements/x480/frame_x480.png" type="image/jpeg"
-						media="(min-width:480px)">
-					<img class="questions__frame" src="img/questions/bg_elements/x320/frame_x320.png" alt="Рамка">
-				</picture>
-				<div class="questions__form_container">
+				<div class="questions__form-background"></div>
+				<div class="questions__form-container">
 					<form class="questions__form">
-						<p class="form__header">Отвечаем на вопросы</p>
+						<h2 class="form__header">Отвечаем на вопросы</h2>
 						<p class="form__description">Мы ответим на все ваши вопросы по телефону, или вы можете
 							записаться на <b>бесплатное</b> пробное занятие</p>
-						<div class="input_container">
-							<p class="valid_tooltip write_letters">Вводите буквы</p>
+						<div class="input-container">
+							<p class="valid-tooltip write-letters">Вводите буквы</p>
 							<input class="form__input" type="text" placeholder="Ваше имя" data-name data-to-validate>
 						</div>
-						<div class="input_container">
-							<p class="valid_tooltip write_figures">Вводите цифры</p>
+						<div class="input-container">
+							<p class="valid-tooltip write-figures">Вводите цифры</p>
 							<input class="form__input" type="tel" placeholder="Ваш телефон" data-phone data-to-validate>
 						</div>
 						<button class="form__button button" type="submit">Задать вопрос</button>
-						<div class="form__checkbox_container input_container">
-							<p class="valid_tooltip confirm_agreement">Подтвердите согласие</p>
-							<input class="form__checkbox" id="questions_form_checkbox" type="checkbox" data-checkbox
+						<div class="form__checkbox-container input-container">
+							<p class="valid-tooltip confirm-agreement">Подтвердите согласие</p>
+							<input class="form__checkbox" id="questions-form-checkbox" type="checkbox" data-checkbox
 								data-to-validate>
-							<label class="form__label_checkbox" for="questions_form_checkbox">
-								<svg class="checkbox_svg" viewBox="0 0 20 20">
-									<rect class="check_rect" x="1" y="1" rx="1" />
-									<path class="check_path"
+							<label class="form__label-checkbox" for="questions-form-checkbox">
+								<svg class="checkbox-svg" viewBox="0 0 20 20">
+									<rect class="checkbox-svg__rect" width="18" height="18" x="1" y="1" rx="1" />
+									<path class="checkbox-svg__path"
 										d="M11.0134 0L4.5134 7.44671L1.9867 4.55229L0 6.8288L4.51343 12L13 2.27656L11.0134 0Z" />
 								</svg>
-								<span class="check_ref">Даю согласие на&nbsp;</span>
-								<a class="form_agreement_link" href="agreement.html" target="_blank">обработку
+								<span class="label-checkbox__ref">Даю согласие на&nbsp;</span>
+								<a class="form__agreement-link" href="agreement.html" target="_blank">обработку
 									данных</a>
 							</label>
 						</div>
@@ -1324,32 +1160,33 @@
 			</div>
 		</section>
 		<section class="comments">
-			<div class="comments_container">
-				<div class="comments_title title_every">
+			<div class="comments__container">
+				<div class="comments__title title_every">
 					<h2>О нас говорят клиенты</h2>
 				</div>
-				<div class="comments_slider_container">
-					<div class="comments_slider_wrapper swiper-wrapper">
-						<div class="comments_card_container transitioned swiper-slide">
-							<div class="card_text">Развивает силу, гибкость и координацию всадника; Выпрямляется осанка
+				<div class="comments__slider-container">
+					<div class="comments__slider-wrapper swiper-wrapper">
+						<div class="comments__card-container transitioned swiper-slide">
+							<div class="comments__card-text">Развивает силу, гибкость и координацию всадника;
+								Выпрямляется осанка
 								и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения.
 								Развивает силу, гибкость и координацию всадника; Выпрямляется осанка и повышается
 								стрессоустойчивость; Общение с лошадью лечит умственные отклонения. Общение с лошадью
 								лечит умственные отклонения.</div>
-							<button class="card_unwrap_button">
-								<p>Подробнее</p>
-								<span class="unwrap_button_span"></span>
-								<span class="unwrap_button_span"></span>
+							<button class="comments__card-unwrap-button">
+								<span>Подробнее</span>
+								<span class="card-unwrap-button__span first"></span>
+								<span class="card-unwrap-button__span second"></span>
 							</button>
-							<div class="card_author">
-								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Syutkin.png"
+							<div class="comments__card-author">
+								<div class="card-author__photo"><img src="img/comments/cardAuthor/photo/Syutkin.png"
 										alt="Фото автора отзыва"></div>
-								<div class="author_cocial_network_link">
-									<div class="author_name">Константин Сюткин</div>
-									<a class="link_ref" href="#"><img class="link_icon"
+								<div class="card-author__cocial-network-link">
+									<div class="cocial-network-link__name">Константин Сюткин</div>
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="Иконка Instagram"></a>
-									<a class="link_ref" href="#"><img class="link_icon"
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="Иконка Вконтакте"></a>
 								</div>
@@ -1357,25 +1194,26 @@
 								</div>
 							</div>
 						</div>
-						<div class="comments_card_container transitioned swiper-slide">
-							<div class="card_text">Развивает силу, гибкость и координацию всадника; Выпрямляется осанка
+						<div class="comments__card-container transitioned swiper-slide">
+							<div class="comments__card-text">Развивает силу, гибкость и координацию всадника;
+								Выпрямляется осанка
 								и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения. Общение
 								с лошадью лечит умственные отклонения. Развивает силу, гибкость и координацию всадника;
 								Развивает силу, гибкость и координацию всадника;</div>
-							<button class="card_unwrap_button">
-								<p>Подробнее</p>
-								<span class="unwrap_button_span"></span>
-								<span class="unwrap_button_span"></span>
+							<button class="comments__card-unwrap-button">
+								<span>Подробнее</span>
+								<span class="card-unwrap-button__span first"></span>
+								<span class="card-unwrap-button__span second"></span>
 							</button>
-							<div class="card_author">
-								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Syutkin.png"
+							<div class="comments__card-author">
+								<div class="card-author__photo"><img src="img/comments/cardAuthor/photo/Syutkin.png"
 										alt="Фото автора отзыва"></div>
-								<div class="author_cocial_network_link">
-									<div class="author_name">Константин Сюткин</div>
-									<a class="link_ref" href="#"><img class="link_icon"
+								<div class="card-author__cocial-network-link">
+									<div class="cocial-network-link__name">Константин Сюткин</div>
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="Иконка Instagram"></a>
-									<a class="link_ref" href="#"><img class="link_icon"
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="Иконка Вконтакте"></a>
 								</div>
@@ -1383,24 +1221,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="comments_card_container transitioned swiper-slide">
-							<div class="card_text">Позитивные эмоции, расслабление, чувство ответственности и даже
+						<div class="comments__card-container transitioned swiper-slide">
+							<div class="comments__card-text">Позитивные эмоции, расслабление, чувство ответственности и
+								даже
 								некоторой сказочности, сразу появляется красивая осанка, работают все группы мышц.
 								Развивает силу, гибкость и координацию всадника;</div>
-							<button class="card_unwrap_button">
-								<p>Подробнее</p>
-								<span class="unwrap_button_span"></span>
-								<span class="unwrap_button_span"></span>
+							<button class="comments__card-unwrap-button">
+								<span>Подробнее</span>
+								<span class="card-unwrap-button__span first"></span>
+								<span class="card-unwrap-button__span second"></span>
 							</button>
-							<div class="card_author">
-								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Sorokina.png"
+							<div class="comments__card-author">
+								<div class="card-author__photo"><img src="img/comments/cardAuthor/photo/Sorokina.png"
 										alt="Фото автора отзыва"></div>
-								<div class="author_cocial_network_link">
-									<div class="author_name">Валентина Сорокина</div>
-									<a class="link_ref" href="#"><img class="link_icon"
+								<div class="card-author__cocial-network-link">
+									<div class="cocial-network-link__name">Валентина Сорокина</div>
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="Иконка Instagram"></a>
-									<a class="link_ref" href="#"><img class="link_icon"
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="Иконка Вконтакте"></a>
 								</div>
@@ -1408,24 +1247,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="comments_card_container transitioned swiper-slide">
-							<div class="card_text">Плюсов до безумия много! Реакция, общение с животным, любовь,
+						<div class="comments__card-container transitioned swiper-slide">
+							<div class="comments__card-text">Плюсов до безумия много! Реакция, общение с животным,
+								любовь,
 								понимание, взаимопонимание, терпение, здесь можно перечислять и перечислять очень много
 								всего!</div>
-							<button class="card_unwrap_button">
-								<p>Подробнее</p>
-								<span class="unwrap_button_span"></span>
-								<span class="unwrap_button_span"></span>
+							<button class="comments__card-unwrap-button">
+								<span>Подробнее</span>
+								<span class="card-unwrap-button__span first"></span>
+								<span class="card-unwrap-button__span second"></span>
 							</button>
-							<div class="card_author">
-								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
+							<div class="comments__card-author">
+								<div class="card-author__photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
 										alt="Фото автора отзыва"></div>
-								<div class="author_cocial_network_link">
-									<div class="author_name">Светлана Мирная</div>
-									<a class="link_ref" href="#"><img class="link_icon"
+								<div class="card-author__cocial-network-link">
+									<div class="cocial-network-link__name">Светлана Мирная</div>
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="Иконка Instagram"></a>
-									<a class="link_ref" href="#"><img class="link_icon"
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="Иконка Вконтакте"></a>
 								</div>
@@ -1433,23 +1273,24 @@
 								</div>
 							</div>
 						</div>
-						<div class="comments_card_container transitioned swiper-slide">
-							<div class="card_text">Плюсов до безумия много! Реакция, общение с животным, любовь,
+						<div class="comments__card-container transitioned swiper-slide">
+							<div class="comments__card-text">Плюсов до безумия много! Реакция, общение с животным,
+								любовь,
 								понимание, взаимопонимание, терпение.</div>
-							<button class="card_unwrap_button">
-								<p>Подробнее</p>
-								<span class="unwrap_button_span"></span>
-								<span class="unwrap_button_span"></span>
+							<button class="comments__card-unwrap-button">
+								<span>Подробнее</span>
+								<span class="card-unwrap-button__span first"></span>
+								<span class="card-unwrap-button__span second"></span>
 							</button>
-							<div class="card_author">
-								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
+							<div class="comments__card-author">
+								<div class="card-author__photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
 										alt="Фото автора отзыва"></div>
-								<div class="author_cocial_network_link">
-									<div class="author_name">Светлана Мирная</div>
-									<a class="link_ref" href="#"><img class="link_icon"
+								<div class="card-author__cocial-network-link">
+									<div class="cocial-network-link__name">Светлана Мирная</div>
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="Иконка Instagram"></a>
-									<a class="link_ref" href="#"><img class="link_icon"
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="Иконка Вконтакте"></a>
 								</div>
@@ -1457,24 +1298,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="comments_card_container transitioned swiper-slide">
-							<div class="card_text">Плюсов до безумия много! Реакция, общение с животным, любовь,
+						<div class="comments__card-container transitioned swiper-slide">
+							<div class="comments__card-text">Плюсов до безумия много! Реакция, общение с животным,
+								любовь,
 								понимание, взаимопонимание, терпение, здесь можно перечислять и перечислять очень много
 								всего!</div>
-							<button class="card_unwrap_button">
-								<p>Подробнее</p>
-								<span class="unwrap_button_span"></span>
-								<span class="unwrap_button_span"></span>
+							<button class="comments__card-unwrap-button">
+								<span>Подробнее</span>
+								<span class="card-unwrap-button__span first"></span>
+								<span class="card-unwrap-button__span second"></span>
 							</button>
-							<div class="card_author">
-								<div class="author_photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
+							<div class="comments__card-author">
+								<div class="card-author__photo"><img src="img/comments/cardAuthor/photo/Mirnaya.png"
 										alt="Фото автора отзыва"></div>
-								<div class="author_cocial_network_link">
-									<div class="author_name">Светлана Мирная</div>
-									<a class="link_ref" href="#"><img class="link_icon"
+								<div class="card-author__cocial-network-link">
+									<div class="cocial-network-link__name">Светлана Мирная</div>
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
 											alt="Иконка Instagram"></a>
-									<a class="link_ref" href="#"><img class="link_icon"
+									<a class="cocial-network-link__ref" href="#"><img class="link_icon"
 											src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
 											alt="Иконка Вконтакте"></a>
 								</div>
@@ -1484,122 +1326,109 @@
 						</div>
 					</div>
 				</div>
-				<div class="comments__sliderCheckbox sliderCheckbox">
-					<button class="swiper_button_prev_comments slider_button">
-						<span class="arrow arrow_prev"></span>
+				<div class="comments__slider-control slider-control">
+					<button class="comments__swiper-button-prev slider-control__button">
+						<span class="button__arrow button__arrow_prev"></span>
 					</button>
-					<div class="scrollBar swiper_scrollbar_2"></div>
-					<div class="swiper_pagination pagination swiper_pagination_comments"></div>
-					<button class="swiper_button_next_comments slider_button">
-						<span class="arrow arrow_next"></span>
+					<div class="comments__swiper-scroll-bar scroll-bar"></div>
+					<div class="comments__swiper-pagination swiper-pagination pagination"></div>
+					<button class="comments__swiper-button-next slider-control__button">
+						<span class="button__arrow button__arrow_next"></span>
 					</button>
 				</div>
 			</div>
 		</section>
 		<section class="contacts">
-			<div id="contactsBgMap" class="contacts__bg_map"
+			<div id="contacts__background-map" class="contacts__background-map"
 				data-map-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmG1etT32VWFNUpBDm_VF648uvsnDFxco&callback=initMap"
-				data-marker-Image-Src="img/contacts/icons/x768/pinGreen_x768.svg"></div>
-			<div class="contacts__bg_leftTree">
-				<img src="img/contacts/bg/x1920/leftTree_x1920.png" alt="Дерево слева">
+				data-marker-Image-Src="img/contacts/icons/pin_green.svg"></div>
+			<div class="contacts__background-left-tree">
+				<img src="img/contacts/background/leftTree.png" alt="Дерево слева">
 			</div>
-			<div class="contacts__bg_rightTree">
-				<img src="img/contacts/bg/x1920/right_tree_x1920.png" alt="Дерево справа">
+			<div class="contacts__background-right-tree">
+				<img src="img/contacts/background/right_tree.png" alt="Дерево справа">
 			</div>
-			<div class="contacts__container _container">
+			<div class="contacts__container">
 				<div class="contacts__square">
 					<div class="square__container">
 						<div class="square__title">
 							<h2>Контакты</h2>
 						</div>
 						<div class="square__row"></div>
-						<div class="square__item_map">
-							<picture>
-								<source srcset="img/contacts/icons/x1000/pin_x1000.svg" type="image/jpeg"
-									media="(min-width:1000px)">
-								<source srcset="img/contacts/icons/x768/pin_x768.svg" type="image/jpeg"
-									media="(min-width:768px)">
-								<img src="img/contacts/icons/x1000/pin_x1000.svg" alt="Иконка метка на карте">
-							</picture>
-							<a href="https://goo.gl/maps/iGA47fqxnXoLWfgWA" class="item__map item_every"
+						<div class="square__item-map">
+							<svg class="item-map__svg" viewBox="0 0 11 17">
+								<path
+									d="M5.5 0C2.4618 0 0 2.36979 0 5.30519C0 10.3807 5.5 17 5.5 17C5.5 17 11 10.3797 11 5.30519C11 2.37086 8.5382 0 5.5 0ZM5.5 8.24059C4.71231 8.24059 3.95688 7.93816 3.39989 7.39983C2.84291 6.86149 2.53 6.13136 2.53 5.37004C2.53 4.60873 2.84291 3.87859 3.39989 3.34026C3.95688 2.80193 4.71231 2.4995 5.5 2.4995C6.28769 2.4995 7.04312 2.80193 7.60011 3.34026C8.15709 3.87859 8.47 4.60873 8.47 5.37004C8.47 6.13136 8.15709 6.86149 7.60011 7.39983C7.04312 7.93816 6.28769 8.24059 5.5 8.24059Z"
+									fill="#FFC700" />
+							</svg>
+							<a href="https://goo.gl/maps/iGA47fqxnXoLWfgWA" class="item-map__ref item_every"
 								target="_blank">ул. Васи Пупкина</a>
 						</div>
-						<div class="square__item_tel">
-							<picture>
-								<source srcset="img/contacts/icons/x1000/phone_x1000.svg" type="image/jpeg"
-									media="(min-width:1000px)">
-								<source srcset="img/contacts/icons/x768/phone_x768.svg" type="image/jpeg"
-									media="(min-width:768px)">
-								<img src="img/contacts/icons/x1000/phone_x1000.svg" alt="Иконка телефон">
-							</picture>
-							<a href="tel:+38 (000) 000-00-00" class="item__tel item_every">+38 (000) 000-00-00</a>
+						<div class="square__item-tel">
+							<svg class="item-tel__svg" viewBox="0 0 13 13">
+								<path
+									d="M12.4629 9.62152L11.1649 8.32353C10.9299 8.08874 10.6357 7.92212 10.3135 7.84142C9.99134 7.76073 9.6533 7.769 9.33544 7.86534C9.01759 7.96169 8.73185 8.1425 8.50869 8.38849C8.28553 8.63448 8.13333 8.93642 8.06831 9.26212C5.92783 8.86188 3.84602 6.78866 3.71644 4.93561C4.08033 4.86867 4.41523 4.69255 4.67659 4.43067C5.02072 4.08651 5.21405 3.61974 5.21405 3.13305C5.21405 2.64636 5.02072 2.1796 4.67659 1.83543L3.37894 0.537442C3.03476 0.193321 2.56799 0 2.08129 0C1.59458 0 1.12781 0.193321 0.783632 0.537442C-3.1097 4.43067 8.56955 16.1096 12.4629 12.2164C12.8068 11.8722 13 11.4055 13 10.919C13 10.4324 12.8068 9.96572 12.4629 9.62152Z"
+									fill="#FFC700" />
+							</svg>
+							<a href="tel:+38(000)0000000" class="item-tel__ref item_every">+38 (000) 000-00-00</a>
 						</div>
-						<div class="square__item_mail">
-							<picture>
-								<source srcset="img/contacts/icons/x1000/mail_x1000.svg" type="image/jpeg"
-									media="(min-width:1000px)">
-								<source srcset="img/contacts/icons/x768/mail_x768.svg" type="image/jpeg"
-									media="(min-width:768px)">
-								<img class="mail_icon" src="img/contacts/icons/x1000/mail_x1000.svg" alt="Иконка почта">
-							</picture>
-							<a href="mailto:mail@somemail.com" class="item__mail item_every">mail@somemail.com</a>
+						<div class="square__item-mail">
+							<svg class="item-mail__svg" viewBox="0 0 15 11">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M15 11V1.375L7.5 7.5625L0 1.375V11H15ZM7.5 5.5L14.3182 0H0.681818L7.5 5.5Z"
+									fill="#FFC700" />
+							</svg>
+							<a href="mailto:mail@somemail.com" class="item-mail__ref item_every">mail@somemail.com</a>
 						</div>
-						<div class="square__item_timetable">
-							<picture>
-								<source srcset="img/contacts/icons/x1000/clock_x1000.svg" type="image/jpeg"
-									media="(min-width:1000px)">
-								<source srcset="img/contacts/icons/x768/clock_x768.svg" type="image/jpeg"
-									media="(min-width:768px)">
-								<img class="timetable_icon" src="img/contacts/icons/x1000/clock_x1000.svg"
-									alt="Иконка часы">
-							</picture>
-							<p class="item__timetable item_every">Пн-Пт: 10:00 - 19:00 <br>Сб: 10:00 - 17:00 <br>Вс:
-								выходной</p>
+						<div class="square__item-timetable">
+							<svg class="item-timetable__svg" viewBox="0 0 14 14">
+								<path
+									d="M6.993 0C3.129 0 0 3.136 0 7C0 10.864 3.129 14 6.993 14C10.864 14 14 10.864 14 7C14 3.136 10.864 0 6.993 0ZM9.303 10.297L6.3 7.287V3.5H7.7V6.713L10.297 9.31L9.303 10.297Z"
+									fill="#FFC700" />
+							</svg>
+							<p class="item-timetable__ref item_every">Пн-Пт: 10:00 - 19:00 <br>Сб: 10:00 - 17:00
+								<br>Вс:
+								выходной
+							</p>
 						</div>
-						<div class="social_network_icon_container">
-							<a class="icon_instagram social_network_icon" href="#"><img
-									src="img/contacts/icons/social/instagram.svg" alt="Иконка Instagram"></a>
-							<a class="icon_youtube social_network_icon" href="#"><img
-									src="img/contacts/icons/social/youtube.svg" alt="Иконка YouTube"></a>
-							<a class="icon_watsUp social_network_icon" href="#"><img
-									src="img/contacts/icons/social/whatsUp.svg" alt="Иконка WhatsApp"></a>
-							<a class="icon_vk social_network_icon" href="#"><img src="img/contacts/icons/social/vk.svg"
-									alt="Иконка Вконтакте"></a>
+						<div class="social-network-icon-container">
+							<a class="social-network-icon__instagram social-network-icon" href="#"><img
+									src="img/contacts/icons/instagram.svg" alt="Иконка Instagram"></a>
+							<a class="social-network-icon__youtube social-network-icon" href="#"><img
+									src="img/contacts/icons/youtube.svg" alt="Иконка YouTube"></a>
+							<a class="social-network-icon__watsUp social-network-icon" href="#"><img
+									src="img/contacts/icons/whatsUp.svg" alt="Иконка WhatsApp"></a>
+							<a class="social-network-icon__vk social-network-icon" href="#"><img
+									src="img/contacts/icons/vk.svg" alt="Иконка Вконтакте"></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<footer class="footer">
-			<div class="footer__container _container">
-				<div class="footer__container_inner">
-					<div class="footer__inner_row_1">
-						<div class="footer__logo">
-							<a href="#">
-								<picture>
-									<source srcset="img/footer/x1000/footer_logo_x1000.svg" type="image/jpeg"
-										media="(min-width:1000px)">
-									<img src="img/footer/x320/footer_logo_x320.svg" alt="Логотип">
-								</picture>
-							</a>
-						</div>
-						<nav class="footer__nav">
-							<ul class="nav__menu_footer">
-								<li><a class="menu__link_footer" href="#">О нас</a></li>
-								<li><a class="menu__link_footer" href="#">Услуги</a></li>
-								<li><a class="menu__link_footer" href="#">Фотоальбом</a></li>
-								<li><a class="menu__link_footer" href="#">Контакты</a></li>
+			<div class="footer__container">
+				<div class="footer__container-inner">
+					<div class="footer__row-first">
+						<nav class="footer__nav-container">
+							<ul class="footer__nav">
+								<li><a class="nav__link-footer" href="#">О нас</a></li>
+								<li><a class="nav__link-footer" href="#">Услуги</a></li>
+								<li><a class="nav__link-footer" href="#">Фотоальбом</a></li>
+								<li><a class="nav__link-footer" href="#">Контакты</a></li>
 							</ul>
 						</nav>
 						<button class="footer__button popup-link">
 							Заказать звонок
 						</button>
+						<a class="footer__logo" href="#">
+							<img class="logo__image" src="img/footer/footer_logo.png" alt="Логотип">
+						</a>
 					</div>
-					<div class="footer__inner_row_2">
-						<a href="agreement.html" class="privacy_policy" target="_blank">Соглашение на обработку
+					<div class="footer__row-second">
+						<a href="agreement.html" class="privacy-policy" target="_blank">Соглашение на обработку
 							персональных данных</a>
-						<a href="privacy.html" class="privacy_policy" target="_blank">Политика конфенденциальности</a>
-						<p class="year">&#169 2022 Nevedrov</p>
+						<a href="privacy.html" class="privacy-policy" target="_blank">Политика конфенденциальности</a>
+						<p class="year">&#169; 2022 Nevedrov</p>
 					</div>
 				</div>
 			</div>

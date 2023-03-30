@@ -86,14 +86,14 @@
 		slider
 =============================================================================*/
 
-.sliderCheckbox {
+.slider-control {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 43px;
 }
 
-.slider_button {
+.slider-control__button {
 	position: relative;
 	width: 40px;
 	height: 40px;
@@ -103,7 +103,7 @@
 	box-shadow: 0px 1px 0px var(--color-light-orange);
 }
 
-.slider_button::before {
+.slider-control__button::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -116,38 +116,38 @@
 	transition: opacity 0.2s ease-in-out;
 }
 
-.slider_button:hover::before {
+.slider-control__button:hover::before {
 	opacity: 1;
 }
 
-.slider_button[disabled] {
+.slider-control__button[disabled] {
 	opacity: 0.4;
 	cursor: auto;
 }
 
-.slider_button[disabled]:hover::before {
+.slider-control__button[disabled]:hover::before {
 	opacity: 0;
 	cursor: auto;
 }
 
-.arrow {
+.button__arrow {
 	display: block;
-	width: 10.62px;
-	height: 10.62px;
+	width: 10px;
+	height: 10px;
 	border-left: 3px solid var(--color-dark-orange);
 	border-bottom: 3px solid var(--color-dark-orange);
 	margin: 0 auto;
 }
 
-.arrow.arrow_prev {
+.button__arrow.button__arrow_prev {
 	transform: translateX(25%) rotate(45deg);
 }
 
-.arrow.arrow_next {
+.button__arrow.button__arrow_next {
 	transform: translateX(-25%) rotate(225deg);
 }
 
-.slider_range {
+.slider-control__range {
 	width: 96px;
 	height: 8px;
 	margin: 0 27px;
@@ -156,23 +156,29 @@
 }
 
 @media (min-width: 1920px) {
-	.slider_range {
+	.slider-control__range {
 		display: none;
 	}
 }
 
-.slider_thumb {
+.slider-control__thumb {
 	/* width took from JS*/
 	height: 8px;
 	background: var(--gradient-yellow-thumb);
 	border-radius: 10px;
-	transition: transform 1s ease-in-out 0s;
+	transition: transform 0.6s ease-in-out 0s;
+}
+
+@media (min-width: 768px) {
+	.slider-control__thumb {
+		transition: transform 1s ease-in-out 0s;
+	}
 }
 
 /* ============================================================================
 	slider SWIPER
 =============================================================================*/
-.scrollBar {
+.scroll-bar {
 	position: static;
 	width: 96px;
 	height: 8px;
@@ -182,7 +188,7 @@
 }
 
 @media (min-width: 1920px) {
-	.scrollBar {
+	.scroll-bar {
 		display: none;
 	}
 }
@@ -198,22 +204,22 @@ div .swiper-slide.activeSlides {
 	opacity: 0.4;
 }
 
-.swiper-button-disabled.slider_button {
+.swiper-button-disabled.slider-control__button {
 	opacity: 0.4;
 	cursor: auto;
 }
 
-.swiper-button-disabled.slider_button:hover::before {
+.swiper-button-disabled.slider-control__button:hover::before {
 	opacity: 0;
 	cursor: auto;
 }
 
-div .swiper_pagination.pagination {
+div .swiper-pagination.pagination {
 	display: none;
 }
 
 @media (min-width: 1920px) {
-	div .swiper_pagination.pagination {
+	div .swiper-pagination.pagination {
 		display: block;
 		position: static;
 		width: auto;
@@ -222,14 +228,15 @@ div .swiper_pagination.pagination {
 	}
 }
 
-div .swiper_pagination.pagination .swiper-pagination-bullet {
+div .swiper-pagination.pagination .swiper-pagination-bullet {
 	margin: auto 7.5px;
 }
+
 /* ============================================================================
 		registration modal window
 =============================================================================*/
 
-.modal_overlay {
+.modal-overlay {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -246,12 +253,12 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	visibility: hidden;
 }
 
-.modal_overlay.open {
+.modal-overlay.open {
 	opacity: 1;
 	visibility: visible;
 }
 
-.register__modal_content {
+.register-modal__content {
 	width: 300px;
 	height: 300px;
 	background-color: var(--color-white);
@@ -262,7 +269,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 480px) {
-	.register__modal_content {
+	.register-modal__content {
 		width: 375px;
 		height: 375px;
 		padding: 54px 46px;
@@ -271,7 +278,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 1000px) {
-	.register__modal_content {
+	.register-modal__content {
 		width: 405px;
 		height: 380px;
 		padding: 42.5px;
@@ -279,30 +286,45 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	}
 }
 
-.register__modal_content.open {
+.register-modal__content.open {
 	transform: perspective(380px) translateY(0) rotateX(0);
 }
 
-.modal_close_button {
+.close-button {
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	padding: 16px;
-	top: 0px;
-	right: 0px;
+	top: 8px;
+	right: 8px;
 	background-color: var(--color-white);
 }
 
+.close-button::after {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: -50%;
+	top: -50%;
+}
+
 @media (min-width: 480px) {
-	.modal_close_button {
-		top: 4px;
-		right: 4px;
+	.close-button {
+		top: 20px;
+		right: 20px;
 	}
 }
 
-.modal_close_button_span {
+@media (min-width: 1000px) {
+	.close-button {
+		top: 17px;
+		right: 17px;
+	}
+}
+
+.close-button .close-button__span {
 	position: absolute;
-	left: 7px;
+	left: 0;
 	top: 50%;
 	width: 17px;
 	height: 1px;
@@ -311,15 +333,15 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	transition: background-color 0.3s;
 }
 
-.modal_close_button:hover .modal_close_button_span {
+.close-button:hover .close-button__span {
 	background-color: var(--color-orange);
 }
 
-.modal_close_button .modal_close_button_span:nth-child(1) {
+.close-button .close-button__span:nth-child(1) {
 	transform: rotate(-135deg);
 }
 
-.register__form .form_input {
+.register-modal__form .form-input {
 	background: var(--color-white);
 	border: 1px solid var(--color-light-grey);
 	border-radius: 5px;
@@ -331,7 +353,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 480px) {
-	.register__form .form_input {
+	.register-modal__form .form-input {
 		font-size: 15px;
 		line-height: 18px;
 		height: 55px;
@@ -340,7 +362,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 1000px) {
-	.register__form .form_input {
+	.register-modal__form .form-input {
 		font-size: 18px;
 		line-height: 21px;
 		height: 61px;
@@ -348,12 +370,12 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	}
 }
 
-.register__form .modal_form__checkbox {
+.register-modal__form .register-modal__checkbox {
 	height: auto;
 	margin-bottom: 0;
 }
 
-.modal_form_button {
+.register-modal__form-button {
 	width: 100%;
 	height: 45px;
 	font-size: 10px;
@@ -363,7 +385,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 480px) {
-	.modal_form_button {
+	.register-modal__form-button {
 		height: 64px;
 		font-size: 13px;
 		line-height: 15px;
@@ -372,23 +394,23 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 768px) {
-	.modal_form_button {
+	.register-modal__form-button {
 		font-size: 15px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.modal_form_button {
+	.register-modal__form-button {
 		height: 70px;
 	}
 }
 
-.modal_form__checkbox_container.input_container {
+.register-modal__checkbox-container.input-container {
 	align-self: flex-start;
 	padding: 0 0 10px;
 }
 
-.modal_form__checkbox {
+.register-modal__checkbox {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
@@ -396,12 +418,12 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	height: 1.5em;
 }
 
-.form_agreement_link {
+.form__agreement-link {
 	text-decoration: underline;
 	color: inherit;
 }
 
-.modal_form__checkbox+label {
+.register-modal__checkbox+label {
 	font-size: 13px;
 	line-height: 15px;
 	color: var(--color-font-grey);
@@ -410,70 +432,68 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 480px) {
-	.modal_form__checkbox+label {
+	.register-modal__checkbox+label {
 		font-size: 15px;
 		line-height: 18px;
 	}
 }
 
-.checkbox_svg {
+.checkbox-svg {
 	width: 15px;
 	height: 15px;
 }
 
 @media (min-width: 480px) {
-	.checkbox_svg {
+	.checkbox-svg {
 		width: 20px;
 		height: 20px;
 	}
 }
 
-.check_rect {
-	width: 18px;
-	height: 18px;
+.checkbox-svg__rect {
 	stroke-width: 1px;
 	stroke: var(--color-yellow);
 	fill: var(--color-white);
 }
 
 @media (min-width: 480px) {
-	.check_rect {
+	.checkbox-svg__rect {
 		stroke-width: 2px;
 	}
 }
 
-.check_path {
+.checkbox-svg__path {
 	transform: translate(4px, 4px);
 	stroke: var(--color-green);
 	fill: var(--color-green);
 	visibility: hidden;
 }
 
-.check_ref {
+.label-checkbox__ref {
 	margin-left: 10px;
 }
 
-.input_container.error .check_rect {
+.input-container.error .checkbox-svg__rect {
 	stroke: var(--color-orange);
 }
 
-.modal_form__checkbox:checked+label .check_path {
+.register-modal__checkbox:checked+label .checkbox-svg__path {
 	visibility: visible;
 }
 
-.input_container {
+.input-container {
 	position: relative;
 	padding: 10px 0 5px;
 	width: 100%;
 }
 
 @media (min-width: 1000px) {
-	.input_container {
+	.input-container {
 		padding: 10px 0 10px;
 	}
 }
 
-.valid_tooltip {
+.valid-tooltip {
 	position: absolute;
 	color: var(--color-orange);
 	font-size: 10px;
@@ -484,7 +504,7 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 		visibility 0.3s;
 }
 
-.input_container.error .valid_tooltip {
+.input-container.error .valid-tooltip {
 	visibility: visible;
 	opacity: 1;
 }
@@ -501,11 +521,11 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 	bottom: 0;
 }
 
-.input_container.error [data-to-validate] {
+.input-container.error [data-to-validate] {
 	border-color: var(--color-orange);
 }
 
-.modal_gratitude {
+.modal-gratitude {
 	position: absolute;
 	width: 300px;
 	height: 300px;
@@ -525,65 +545,65 @@ div .swiper_pagination.pagination .swiper-pagination-bullet {
 }
 
 @media (min-width: 480px) {
-	.modal_gratitude {
+	.modal-gratitude {
 		width: 375px;
 		height: 375px;
 	}
 }
 
 @media (min-width: 1000px) {
-	.modal_gratitude {
+	.modal-gratitude {
 		width: 380px;
 		height: 380px;
 	}
 }
 
-.modal_gratitude.open {
+.modal-gratitude.open {
 	position: absolute;
 	visibility: visible;
 	opacity: 1;
 	transform: perspective(600px) translateY(0) rotateX(0);
 }
 
-.gratitude_line_1 {
+.modal-gratitude__line-first {
 	font-size: 40px;
 	line-height: 50px;
 	text-align: center;
 }
 
 @media (min-width: 480px) {
-	.gratitude_line_1 {
+	.modal-gratitude__line-first {
 		font-size: 50px;
 		line-height: 60px;
 		text-align: center;
 	}
 }
 
-.gratitude_line_2 {
+.modal-gratitude__line-second {
 	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
 }
 
 @media (min-width: 480px) {
-	.gratitude_line_2 {
+	.modal-gratitude__line-second {
 		font-size: 30px;
 		line-height: 50px;
 		text-align: center;
 	}
 }
 
-.gratitude_image_container {
+.modal-gratitude__image-container {
 	width: 250px;
 }
 
 @media(min-width: 480px) {
-	.gratitude_image_container {
+	.modal-gratitude__image-container {
 		width: 270px;
 	}
 }
 
-.gratitude_image {
+.modal-gratitude__image {
 	width: 100%;
 	object-fit: contain;
 }

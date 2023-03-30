@@ -1,0 +1,525 @@
+.club-directions {
+	position: relative;
+}
+
+.club-directions_bg_grass {
+	position: absolute;
+	bottom: 41px;
+	left: 0;
+	width: 100%;
+}
+
+@media (min-width: 480px) {
+	.club-directions_bg_grass {
+		bottom: 46px;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions_bg_grass {
+		bottom: 4px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.club-directions_bg_grass {
+		bottom: 7px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.club-directions_bg_grass {
+		bottom: 8px;
+	}
+}
+
+.club-directions_bg_sky {
+	position: absolute;
+	bottom: 52px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 480px) {
+	.club-directions_bg_sky {
+		bottom: 58px;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions_bg_sky {
+		bottom: 68px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.club-directions_bg_sky {
+		bottom: 91px;
+	}
+}
+
+.club-directions_bg_clouds_botom {
+	position: absolute;
+	bottom: 39px;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+@media (min-width: 480px) {
+	.club-directions_bg_clouds_botom {
+		bottom: 46px;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions_bg_clouds_botom {
+		bottom: 4px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.club-directions_bg_clouds_botom {
+		bottom: 0;
+	}
+}
+
+@media (min-width: 1920px) {
+	.background-horses-container {
+		position: absolute;
+		width: 1900px;
+		height: 100%;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.horse-left {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	bottom: 69px;
+	width: 63px;
+	height: 149px;
+}
+
+@media (min-width: 480px) {
+	.horse-left {
+		bottom: 66px;
+		width: 107px;
+		height: 196px;
+	}
+}
+
+@media (min-width: 768px) {
+	.horse-left {
+		left: 7px;
+		bottom: 25px;
+		width: 157px;
+		height: 272px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.horse-left {
+		left: 0;
+		bottom: 20px;
+		width: 202px;
+		height: 350px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.horse-left {
+		left: 138px;
+		bottom: 39px;
+		width: 305px;
+		height: 530px;
+	}
+}
+
+.horse_left_img {
+	width: 100%;
+	height: 100%;
+}
+
+.horse-right {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	bottom: 77px;
+	width: 66px;
+	height: 141px;
+}
+
+@media (min-width: 480px) {
+	.horse-right {
+		bottom: 63px;
+		width: 93px;
+		height: 199px;
+	}
+}
+
+@media (min-width: 768px) {
+	.horse-right {
+		bottom: 37px;
+		width: 174px;
+		height: 270px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.horse-right {
+		bottom: 28px;
+		width: 224px;
+		height: 342px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.horse-right {
+		right: 83px;
+		bottom: 30px;
+		width: 372px;
+		height: 532px;
+	}
+}
+
+.horse_right_img {
+	width: 100%;
+	height: 100%;
+}
+
+.club-directions__container {
+	max-width: 320px;
+	height: 2328px;
+	margin: 0 auto 29px;
+	position: relative;
+}
+
+@media (min-width: 480px) {
+	.club-directions__container {
+		max-width: 460px;
+		height: 1321px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions__container {
+		max-width: 748px;
+		height: 1407px;
+		margin: 0 auto 30px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.club-directions__container {
+		max-width: 1000px;
+		height: 1223px;
+		margin: 0 auto 107px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.club-directions__container {
+		max-width: 1200px;
+		height: 1602px;
+		padding-top: 100px;
+		margin: 0 auto 51px;
+	}
+}
+
+.club-directions__title {
+	margin-bottom: 80px;
+}
+
+@media (min-width: 480px) {
+	.club-directions__title {
+		margin-bottom: 90px;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions__title {
+		margin-bottom: 100px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.club-directions__title {
+		margin-bottom: 105px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.club-directions__title {
+		margin-bottom: 143px;
+	}
+}
+
+@media (min-width: 480px) {
+	.club-directions__galery {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 4px;
+		padding: 0 3px;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions__galery {
+		gap: 20px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.club-directions__galery {
+		display: block;
+		gap: 0;
+	}
+}
+
+@media (min-width: 1000px) {
+	.galery__first-row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		margin-bottom: 39px;
+		gap: 30px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.galery__first-row {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 1000px) {
+	.galery__second-row {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 30px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.galery__second-row {
+		margin-top: -20px;
+	}
+}
+
+.galery__card {
+	width: 300px;
+	min-height: 260px;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-border-white);
+	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.07);
+	border-radius: 5px;
+	margin: 0 auto 60px;
+	padding: 0 24px 22px;
+}
+
+.galery__second-row .galery__card:last-child {
+	margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+	.galery__card {
+		box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
+		width: 225px;
+		min-height: 290px;
+		margin: 0 0 40px;
+		padding: 0 14px 22px;
+	}
+
+	.galery__card:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.galery__card {
+		width: 354px;
+		min-height: 300px;
+		margin-bottom: 45px;
+		padding: 0 24px 21px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.galery__card {
+		width: 300px;
+		margin-bottom: 0;
+		padding: 0 24px 32px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.galery__card {
+		width: 370px;
+		min-height: 399px;
+		padding: 0 24px 44px;
+	}
+}
+
+.card__image-container {
+	width: 100%;
+	aspect-ratio: 5/3;
+	margin: -20px auto 15px;
+	overflow: hidden;
+	border: 1px transparent;
+	border-radius: 5px;
+	transition: transform 0.5s;
+}
+
+.card__image-container:hover {
+	transform: scale(1.15);
+}
+
+@media (min-width: 480px) {
+	.card__image-container {
+		aspect-ratio: 20/13;
+		margin: -20px auto 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.card__image-container {
+		aspect-ratio: 304/181;
+		margin: -25px auto 20px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.card__image-container {
+		aspect-ratio: 25/18;
+	}
+}
+
+@media (min-width: 1920px) {
+	.card__image-container {
+		aspect-ratio: 16/11;
+		margin: -25px auto 45px;
+	}
+}
+
+.card__image {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.card__title {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: var(--color-brown);
+	margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+	.card__title {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.card__title {
+		margin-bottom: 15px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.card__title {
+		font-size: 23px;
+		margin: 0 auto 25px;
+		width: 236px;
+	}
+}
+
+.card__row {
+	background-color: var(--color-green);
+	width: 26px;
+	height: 1px;
+	margin: 0 auto 10px;
+}
+
+@media (min-width: 1000px) {
+	.card__row {
+		margin: 0 auto 15px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.card__row {
+		margin: 0 auto 25px;
+	}
+}
+
+.card__text {
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+	color: var(--color-dark-grey);
+}
+
+@media (min-width: 480px) {
+	.card__text {
+		text-align: left;
+	}
+}
+
+@media (min-width: 768px) {
+	.card__text {
+		text-align: center;
+	}
+}
+
+@media (min-width: 1000px) {
+	.card__text {
+		font-size: 13px;
+		line-height: 20px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.card__text {
+		font-size: 16px;
+		line-height: 21px;
+	}
+}
+
+.club-directions__button {
+	margin: 30px auto 0;
+}
+
+@media (min-width: 480px) {
+	.club-directions__button {
+		margin: 37px auto 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.club-directions__button {
+		margin: 40px auto 0;
+	}
+}
+
+@media (min-width: 1000px) {
+	.club-directions__button {
+		margin: 40px auto 0;
+	}
+}
+
+@media (min-width: 1920px) {
+	.club-directions__button {
+		margin: 50px auto 0;
+	}
+}

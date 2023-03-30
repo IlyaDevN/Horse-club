@@ -1,32 +1,34 @@
-const slidesContainer = document.getElementById("ourVisitors__photo_container");
-const slidesQuantity = slidesContainer.querySelectorAll(".ourVisitors__photo").length;
+import { mql1920 } from "./mediaQueries.js";
+
+const slidesContainer = document.querySelector(".our-visitors__photo-container");
+const slidesQuantity = slidesContainer.querySelectorAll(".our-visitors__photo").length;
 const SLIDER_MAX_POSSIBLE_POSITION = 0;
 const SLIDE_SHIFT_IN_PERCENT = 100;
 const sliderMinPossiblePosition = -(slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderCurrentShift = 0;
 
-const sliderRangeWidth = document.getElementById("slider_range")?.offsetWidth;
-const sliderThumb = document.getElementById("slider_thumb");
-const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
+const sliderThumb = document.getElementById("our-visitors__slider-control-thumb");
 const SLIDER_THUMB_MIN_POSSIBLE_POSITION = 0;
 const sliderThumbMaxPossiblePosition = (slidesQuantity - 1) * SLIDE_SHIFT_IN_PERCENT;
 let sliderThumbCurrentShift = 0;
 
-const paginationContainer = document.querySelector(".pagination_container");
+const paginationContainer = document.querySelector(".our-visitors__pagination-container");
 let bullets;
 let bulletCurrentPosition = 0;
+let activeBullet = null;
 
-const btnPrev = document.getElementById("button_prev_ourVisitors");
-const btnNext = document.getElementById("button_next_ourVisitors");
+const btnPrev = document.getElementById("our-visitors__button-prev");
+const btnNext = document.getElementById("our-visitors__button-next");
 
 initializeBulletPagination();
+countSliderThumbWidth();
 
-sliderThumb.style.width = sliderThumbWidth + "px";
+mql1920.addEventListener("change", countSliderThumbWidth);
 
 btnPrev.addEventListener("click", function () {
 	movePrevSlide();
 	moveThumbPrev();
-	prevActiveBullet();
+	selectPrevBullet();
 	if (btnNext.disabled) {
 		enableButton(btnNext);
 	}
@@ -35,12 +37,18 @@ btnPrev.addEventListener("click", function () {
 btnNext.addEventListener("click", function () {
 	moveNextSlide();
 	moveThumbNext();
-	nextActiveBullet();
+	selectNextBullet();
 
 	if (btnPrev.disabled) {
 		enableButton(btnPrev);
 	}
 });
+
+function countSliderThumbWidth() {
+	const sliderRangeWidth = document.getElementById("our-visitors__slider-control-range")?.offsetWidth;
+	const sliderThumbWidth = sliderRangeWidth / slidesQuantity;
+	sliderThumb.style.width = sliderThumbWidth + "px";
+}
 
 function movePrevSlide() {
 	sliderCurrentShift += SLIDE_SHIFT_IN_PERCENT;
@@ -89,38 +97,31 @@ function disableButton(button) {
 }
 
 function initializeBulletPagination() {
-	bulletAdd();
-	
+	createBullets();
+
 	bullets = paginationContainer.querySelectorAll(".ourVisitor_pagination_bullet");
-	bullets[bulletCurrentPosition].classList.add("active");
+	activeBullet = bullets[bulletCurrentPosition];
+	activeBullet.classList.add("active");
 }
 
-function bulletAdd() {
-	for(let i = 0; i < slidesQuantity; i++) {
-		let bullet = document.createElement("span");
+function createBullets() {
+	for (let i = 0; i < slidesQuantity; i++) {
+		const bullet = document.createElement("span");
 		bullet.classList.add("ourVisitor_pagination_bullet");
 		paginationContainer.append(bullet);
 	}
 }
 
-function prevActiveBullet() {
+function selectPrevBullet() {
+	activeBullet.classList.remove("active");
 	bulletCurrentPosition--;
-
-	bullets.forEach((bullet, index) => {
-		bullet.classList.remove("active");
-		if(index === bulletCurrentPosition) {
-			bullet.classList.add("active");
-		}
-	});
+	bullets[bulletCurrentPosition].classList.add("active");
+	activeBullet = bullets[bulletCurrentPosition];
 }
 
-function nextActiveBullet() {
+function selectNextBullet() {
+	activeBullet.classList.remove("active");
 	bulletCurrentPosition++;
-
-	bullets.forEach((bullet, index) => {
-		bullet.classList.remove("active");
-		if(index === bulletCurrentPosition) {
-			bullet.classList.add("active");
-		}
-	});
+	bullets[bulletCurrentPosition].classList.add("active");
+	activeBullet = bullets[bulletCurrentPosition];
 }
