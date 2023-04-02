@@ -25,3 +25,43 @@
 	--gradient-yellow-thumb: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 	--gradient-slide-button: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
 }
+
+$color-dark-grey: #7E7E7E;
+$color-green: #008139;
+$color-font-black-one: #0B0B0B;
+
+$breakpoint_mobile: 480px;
+$breakpoint_tablet: 768px;
+$breakpoint_tablet_L: 1000px;
+$breakpoint_laptop: 1366px;
+$breakpoint_desktop: 1920px;
+
+@mixin mobile () {
+	@media (min-width: $breakpoint_mobile) {
+		@content;
+	}
+}
+
+@mixin tablet () {
+	@media (min-width: $breakpoint_tablet) {
+		@content;
+	}
+}
+
+@mixin tablet_L () {
+	@media (min-width: $breakpoint_tablet_L) {
+		@content;
+	}
+}
+
+@mixin laptop () {
+	@media (min-width: $breakpoint_laptop) {
+		@content;
+	}
+}
+
+@mixin desktop () {
+	@media (min-width: $breakpoint_desktop) {
+		@content;
+	}
+}

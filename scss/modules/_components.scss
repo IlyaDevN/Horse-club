@@ -1,3 +1,32 @@
+.title_every {
+	font-family: 'Philosopher', sans-serif;
+	font-size: 21px;
+	line-height: 21px;
+	color: var(--color-brown);
+	text-align: center;
+}
+
+@media (min-width: 480px) {
+	.title_every {
+		font-size: 27px;
+		line-height: 27px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.title_every {
+		font-size: 30px;
+		line-height: 36px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.title_every {
+		font-size: 40px;
+		line-height: 36px;
+	}
+}
+
 .button {
 	position: relative;
 	display: block;
