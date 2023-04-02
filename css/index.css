@@ -1325,61 +1325,6 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
   margin: 0 auto 70px;
   padding: 0 10px;
 }
-.about__title {
-  margin-bottom: 35px;
-}
-
-.content__image-container {
-  display: none;
-}
-.content__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.content__text {
-  display: inline-block;
-  width: 100%;
-}
-.content__subtext {
-  font-size: 12px;
-  line-height: 19px;
-  color: var(--color-dark-grey);
-  max-width: 100%;
-  margin: 32px auto 0;
-}
-
-.text__bonus-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-}
-.text__bonus-row:first-child {
-  margin-bottom: 35px;
-}
-.text__bonus-block {
-  width: 220px;
-}
-
-.bonus-block__title {
-  font-family: "Philosopher";
-  font-weight: 700;
-  font-size: 27px;
-  line-height: 160%;
-  text-align: center;
-  color: var(--color-green);
-}
-.bonus-block__text {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--color-font-black-one);
-  text-align: center;
-}
-
 @media (min-width: 480px) {
   .about__container {
     max-width: 480px;
@@ -1402,6 +1347,9 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     max-width: 1470px;
     margin: 0 auto 49px;
   }
+}
+.about__title {
+  margin-bottom: 35px;
 }
 @media (min-width: 480px) {
   .about__title {
@@ -1428,6 +1376,10 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     position: relative;
   }
 }
+
+.content__image-container {
+  display: none;
+}
 @media (min-width: 768px) {
   .content__image-container {
     display: inline-block;
@@ -1447,6 +1399,17 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     float: left;
   }
 }
+.content__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content__text {
+  display: inline-block;
+  width: 100%;
+}
 @media (min-width: 768px) {
   .content__text {
     width: 390px;
@@ -1463,6 +1426,39 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     width: 570px;
     vertical-align: top;
   }
+}
+.content__subtext {
+  font-size: 12px;
+  line-height: 19px;
+  color: #7E7E7E;
+  max-width: 100%;
+  margin: 32px auto 0;
+}
+@media (min-width: 480px) {
+  .content__subtext {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 30px auto 0;
+  }
+}
+@media (min-width: 768px) {
+  .content__subtext {
+    margin: 34px auto 0;
+  }
+}
+@media (min-width: 1920px) {
+  .content__subtext {
+    font-size: 15px;
+    line-height: 28px;
+    margin: 41px 0 0;
+  }
+}
+
+.text__bonus-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
 }
 @media (min-width: 480px) {
   .text__bonus-row {
@@ -1486,6 +1482,9 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     gap: 65px;
   }
 }
+.text__bonus-row:first-child {
+  margin-bottom: 35px;
+}
 @media (min-width: 1000px) {
   .text__bonus-row:first-child {
     margin-bottom: 30px;
@@ -1496,10 +1495,22 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     margin-bottom: 24px;
   }
 }
+.text__bonus-block {
+  width: 220px;
+}
 @media (min-width: 480px) {
   .text__bonus-block {
     width: 50%;
   }
+}
+
+.bonus-block__title {
+  font-family: "Philosopher";
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 160%;
+  text-align: center;
+  color: #008139;
 }
 @media (min-width: 768px) {
   .bonus-block__title {
@@ -1511,6 +1522,13 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
   .bonus-block__title {
     font-size: 42px;
   }
+}
+.bonus-block__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #0B0B0B;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .bonus-block__text {
@@ -1530,32 +1548,13 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     font-size: 17px;
   }
 }
-@media (min-width: 480px) {
-  .content__subtext {
-    font-size: 13px;
-    line-height: 20px;
-    margin: 30px auto 0;
-  }
-}
-@media (min-width: 768px) {
-  .content__subtext {
-    margin: 34px auto 0;
-  }
-}
-@media (min-width: 1920px) {
-  .content__subtext {
-    font-size: 15px;
-    line-height: 28px;
-    margin: 41px 0 0;
-  }
-}
+
 .benefits__container {
   max-width: 320px;
   margin: 0 auto 103px;
   overflow: hidden;
   padding: 0 6px;
 }
-
 @media (min-width: 480px) {
   .benefits__container {
     max-width: 460px;
@@ -1583,27 +1582,26 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     padding: 0;
   }
 }
-.benefirs__title {
+.benefits__title {
   margin-bottom: 57px;
 }
-
 @media (min-width: 480px) {
-  .benefirs__title {
+  .benefits__title {
     margin-bottom: 63px;
   }
 }
 @media (min-width: 768px) {
-  .benefirs__title {
+  .benefits__title {
     margin-bottom: 55px;
   }
 }
 @media (min-width: 1000px) {
-  .benefirs__title {
+  .benefits__title {
     margin-bottom: 70px;
   }
 }
 @media (min-width: 1920px) {
-  .benefirs__title {
+  .benefits__title {
     margin-bottom: 108px;
   }
 }
@@ -1614,7 +1612,6 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
   row-gap: 45px;
   margin: 0 auto;
 }
-
 @media (min-width: 480px) {
   .benefits__table {
     -moz-column-gap: 24px;
@@ -1641,7 +1638,6 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
 .benefits__card {
   max-width: 300px;
 }
-
 @media (min-width: 480px) {
   .benefits__card {
     width: 210px;
@@ -1651,13 +1647,15 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
   .benefits__card {
     width: 25%;
   }
+  .benefits__card:nth-child(3) .benefits__subtitle {
+    width: auto;
+  }
 }
 .benefits__image-container {
   margin: 0 auto;
   width: 102px;
   aspect-ratio: 34/27;
 }
-
 @media (min-width: 1000px) {
   .benefits__image-container {
     width: 113px;
@@ -1677,16 +1675,14 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 .benefits__subtitle {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: var(--color-font-black-one);
+  color: #0B0B0B;
   text-align: center;
   margin: 20px auto 10px;
 }
-
 @media (min-width: 480px) {
   .benefits__subtitle {
     font-size: 15px;
@@ -1696,9 +1692,6 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
 @media (min-width: 768px) {
   .benefits__subtitle {
     width: 110px;
-  }
-  .benefits__card:nth-child(3) .benefits__subtitle {
-    width: auto;
   }
 }
 @media (min-width: 1000px) {
@@ -1720,7 +1713,6 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
   color: var(--color-dark-grey);
   text-align: center;
 }
-
 @media (min-width: 480px) {
   .benefits__text {
     margin-top: 15px;
@@ -1738,6 +1730,7 @@ div .swiper-pagination.pagination .swiper-pagination-bullet {
     line-height: 151.7%;
   }
 }
+
 .club-directions {
   position: relative;
 }
