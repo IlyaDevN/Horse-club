@@ -1,5 +1,6 @@
 @use "mixins";
 @use "variables" as var;
+@use "./common/extends";
 
 .about {
 
@@ -89,10 +90,7 @@
 	//content__image
 
 	&__image {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+		@extend %image_inner;
 	}
 
 	//content__text
