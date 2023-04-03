@@ -1,5 +1,6 @@
 @use "mixins";
 @use "variables" as var;
+@use "./common/extends";
 
 .benefits {
 
@@ -126,10 +127,7 @@
 	// .benefits__image
 
 	&__image {
-		width: 100%;
-		height: 100%;
-		display: block;
-		object-fit: contain;
+		@extend %image_inner;
 	}
 
 	// .benefits__subtitle
