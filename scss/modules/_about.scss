@@ -1,5 +1,5 @@
-@use "mixins";
-@use "variables" as var;
+@use "./common/mixins";
+@use "./common/variables" as var;
 @use "./common/extends";
 
 .about {
