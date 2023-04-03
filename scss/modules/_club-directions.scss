@@ -301,8 +301,8 @@
 	&__card {
 		width: 300px;
 		min-height: 260px;
-		background-color: var(--color-white);
-		border: 1px solid var(--color-border-white);
+		background-color: var.$color-white;
+		border: 1px solid var.$color-border-white;
 		box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.07);
 		border-radius: 5px;
 		margin: 0 auto 60px;
@@ -408,7 +408,7 @@
 		font-size: 14px;
 		line-height: 20px;
 		text-align: center;
-		color: var(--color-brown);
+		color: var.$color-brown;
 		margin-bottom: 10px;
 
 		@include mixins.tablet() {
@@ -429,7 +429,7 @@
 	// .card__row
 
 	&__row {
-		background-color: var(--color-green);
+		background-color: var.$color-green;
 		width: 26px;
 		height: 1px;
 		margin: 0 auto 10px;
@@ -449,7 +449,7 @@
 		font-size: 13px;
 		line-height: 20px;
 		text-align: center;
-		color: var(--color-dark-grey);
+		color: var.$color-dark-grey;
 
 		@include mixins.mobile() {
 			text-align: left;
