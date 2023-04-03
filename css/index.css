@@ -3660,7 +3660,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   margin: 0 auto 70px;
 }
-
 @media (min-width: 480px) {
   .comments__container {
     margin: 0 auto 100px;
@@ -3689,7 +3688,6 @@ button.swiper-pagination-bullet {
 .comments__title {
   margin-bottom: 30px;
 }
-
 @media (min-width: 480px) {
   .comments__title {
     margin-bottom: 40px;
@@ -3710,7 +3708,6 @@ button.swiper-pagination-bullet {
   margin: 0 auto 30px;
   position: relative;
 }
-
 @media (min-width: 480px) {
   .comments__slider-container {
     margin: 0 0 40px 0;
@@ -3728,11 +3725,7 @@ button.swiper-pagination-bullet {
     padding: 0;
   }
 }
-.comments__card-container.swiper-slide.transitioned {
-  transition: transform 1s, opacity 1s;
-}
-
-.comments__card-container.swiper-slide {
+.comments__card-container {
   padding: 18.5px;
   width: 300px;
   min-height: 205px;
@@ -3740,28 +3733,36 @@ button.swiper-pagination-bullet {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
 }
-
+.comments__card-container.transitioned {
+  transition: transform 1s, opacity 1s;
+}
+.comments__card-container.activeSlides .comments__card-unwrap-button {
+  pointer-events: none;
+}
+.comments__card-container.activeSlides .cocial-network-link__ref {
+  pointer-events: none;
+}
 @media (min-width: 480px) {
-  .comments__card-container.swiper-slide {
+  .comments__card-container {
     width: 354px;
     min-height: 228px;
   }
 }
 @media (min-width: 768px) {
-  .comments__card-container.swiper-slide {
+  .comments__card-container {
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
     min-height: 231px;
   }
 }
 @media (min-width: 1000px) {
-  .comments__card-container.swiper-slide {
+  .comments__card-container {
     padding: 28.5px;
     width: 440px;
     min-height: 260px;
   }
 }
 @media (min-width: 1920px) {
-  .comments__card-container.swiper-slide {
+  .comments__card-container {
     box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
     padding: 38.5px 43.5px 33.5px;
     width: 570px;
@@ -3772,7 +3773,7 @@ button.swiper-pagination-bullet {
   --height: auto;
   font-size: 13px;
   line-height: 21px;
-  color: var(--color-brown);
+  color: #363434;
   text-align: left;
   min-width: 250px;
   margin-bottom: 10px;
@@ -3783,7 +3784,9 @@ button.swiper-pagination-bullet {
   -webkit-box-orient: vertical;
   transition: height 0.5s;
 }
-
+.comments__card-text.opened {
+  display: block;
+}
 @media (min-width: 480px) {
   .comments__card-text {
     line-height: 22px;
@@ -3808,10 +3811,6 @@ button.swiper-pagination-bullet {
     font-size: 15px;
   }
 }
-.comments__card-text.opened {
-  display: block;
-}
-
 .comments__card-unwrap-button {
   display: flex;
   align-items: center;
@@ -3824,18 +3823,9 @@ button.swiper-pagination-bullet {
   font-size: 13px;
   line-height: 13px;
   text-align: center;
-  color: var(--color-green);
+  color: #008139;
   visibility: hidden;
 }
-
-.comments__card-unwrap-button.visible {
-  visibility: visible;
-}
-
-.activeSlides .comments__card-unwrap-button {
-  pointer-events: none;
-}
-
 @media (min-width: 480px) {
   .comments__card-unwrap-button {
     line-height: 23px;
@@ -3850,37 +3840,21 @@ button.swiper-pagination-bullet {
     padding: 8px 0 6px;
   }
 }
-.card-unwrap-button__span {
-  display: inline-block;
-  height: 1px;
-  width: 10px;
-  background-color: var(--color-green);
-  transition: transform 0.5s;
+.comments__card-unwrap-button.visible {
+  visibility: visible;
 }
-
-.card-unwrap-button__span.first {
-  transform: translate(2px, 1px) rotate(45deg);
-}
-
-.card-unwrap-button__span.second {
-  transform: translate(-1px, 1px) rotate(-45deg);
-}
-
 .comments__card-unwrap-button.opened .card-unwrap-button__span.first {
   transform: translate(2px, 1px) rotate(-45deg);
 }
-
 .comments__card-unwrap-button.opened .card-unwrap-button__span.second {
   transform: translate(-1px, 1px) rotate(45deg);
 }
-
 .comments__card-author {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   margin-top: 24px;
 }
-
 @media (min-width: 480px) {
   .comments__card-author {
     margin-top: 34px;
@@ -3891,37 +3865,46 @@ button.swiper-pagination-bullet {
     margin-top: 45px;
   }
 }
+
+.card-unwrap-button__span {
+  display: inline-block;
+  height: 1px;
+  width: 10px;
+  background-color: #008139;
+  transition: transform 0.5s;
+}
+.card-unwrap-button__span.first {
+  transform: translate(2px, 1px) rotate(45deg);
+}
+.card-unwrap-button__span.second {
+  transform: translate(-1px, 1px) rotate(-45deg);
+}
+
 .card-author__photo {
   margin-right: 10px;
 }
-
 @media (min-width: 1920px) {
   .card-author__photo {
     margin-right: 20px;
-  }
-}
-.cocial-network-link__name {
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--color-font-black-comments);
-  margin-bottom: 10px;
-}
-
-@media (min-width: 1920px) {
-  .cocial-network-link__name {
-    font-size: 16px;
   }
 }
 .card-author__cocial-network-link {
   flex: 1 1 auto;
 }
 
-.link_icon {
-  margin-right: 10px;
+.cocial-network-link__name {
+  font-size: 14px;
+  line-height: 21px;
+  color: #101820;
+  margin-bottom: 10px;
 }
-
-.comments__card-container.activeSlides .cocial-network-link__ref {
-  pointer-events: none;
+@media (min-width: 1920px) {
+  .cocial-network-link__name {
+    font-size: 16px;
+  }
+}
+.cocial-network-link__ref .link_icon {
+  margin-right: 10px;
 }
 
 .contacts {
