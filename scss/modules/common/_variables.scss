@@ -26,13 +26,25 @@
 	--gradient-slide-button: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
 }
 
-$color-white: #FFF;
+$color-black: #000;
 $color-border-white: #EAEAEA;
-$color-dark-grey: #7E7E7E;
-$color-green: #008139;
-$color-font-black-one: #0B0B0B;
-$color-font-black-comments: #101820;
 $color-brown: #363434;
+$color-dark-grey: #7E7E7E;
+$color-dark-orange: #6A5300;
+$color-green: #008139;
+$color-font-black-comments: #101820;
+$color-font-black-one: #0B0B0B;
+$color-font-grey: #8A8A8A;
+$color-light-grey: #8F8F8F;
+$color-light-orange: #C89C00;
+$color-orange: #FF5C00;
+$color-white: #FFF;
+$color-yellow: #FFC700;
+
+$gradient-slide-button: linear-gradient(180deg, #9BCFFF 0%, #FFF8B6 0.01%, #FFC700 100%);
+$gradient-yellow: linear-gradient(180deg, #9BCFFF 0%, #FFF383 0.01%, #FFC700 100%);
+$gradient-yellow-dark: linear-gradient(180deg, #9BCFFF 0%, #FFE456 0.01%, #FFB800 100%);
+$gradient-yellow-thumb: linear-gradient(180deg, #9BCFFF 0%, #FFC700 0.01%, #FF9900 100%);
 
 $breakpoint_mobile: 480px;
 $breakpoint_tablet: 768px;
