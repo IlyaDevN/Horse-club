@@ -97,11 +97,11 @@
 
 		@include mixins.tablet() {
 			width: 25%;
-			
-			&:nth-child(3) {
-				.benefits__subtitle {
-					width: auto;
-				}
+		}
+
+		&:nth-child(3) .benefits__subtitle {
+			@include mixins.tablet() {
+				width: auto;
 			}
 		}
 	}

@@ -1612,6 +1612,8 @@ h6 {
   .benefits__card {
     width: 25%;
   }
+}
+@media (min-width: 768px) {
   .benefits__card:nth-child(3) .benefits__subtitle {
     width: auto;
   }
