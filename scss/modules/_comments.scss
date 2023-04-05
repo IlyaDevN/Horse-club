@@ -2,21 +2,6 @@
 @use "./common/variables" as var;
 @use "./common/extends";
 
-@include mixins.mobile() {
-}
-
-@include mixins.tablet() {
-
-}
-
-@include mixins.laptop() {
-
-}
-
-@include mixins.desktop() {
-
-}
-
 .comments {
 
 	// .comments__container
