@@ -72,25 +72,6 @@
 		}
 	}
 
-	// .comments__slider-wrapper
-
-	&__slider-wrapper {
-		@include mixins.mobile() {
-		}
-		
-		@include mixins.tablet() {
-		
-		}
-		
-		@include mixins.laptop() {
-		
-		}
-		
-		@include mixins.desktop() {
-		
-		}
-	}
-
 	// .comments__card-container
 
 	&__card-container {
