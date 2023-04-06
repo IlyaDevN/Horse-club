@@ -166,7 +166,7 @@
 	&__text {
 		font-size: 13px;
 		line-height: 20px;
-		color: var(--color-dark-grey);
+		color: var.$color-dark-grey;
 		text-align: center;
 
 		@include mixins.mobile() {

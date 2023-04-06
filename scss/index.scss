@@ -1,12 +1,12 @@
-@use "./modules/reset";
-@use "./modules/fonts";
-@use "./modules/components";
+@use "./modules/common/reset";
+@use "./modules/common/fonts";
+@use "./modules/common/components";
 @use "./modules/intro";
+@use "./modules/common/swiper-bundle.8.4.5.min";
 @use "./modules/about";
 @use "./modules/benefits";
 @use "./modules/club-directions";
 @use "./modules/our-visitors";
-@use "./modules/common/swiper-bundle.8.4.5.min";
 @use "./modules/our-horses";
 @use "./modules/questions";
 @use "./modules/comments";
