@@ -73,22 +73,6 @@
 		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
 		border-radius: 5px;
 
-		&.transitioned {
-			transition: transform 1s,
-				opacity 1s;
-		}
-
-		&.activeSlides {
-
-			.comments__card-unwrap-button {
-				pointer-events: none;
-			}
-
-			.cocial-network-link__ref {
-				pointer-events: none;
-			}
-		}
-
 		@include mq.mobile() {
 			width: 354px;
 			min-height: 228px;
@@ -111,6 +95,22 @@
 			width: 570px;
 			min-height: 290px;
 		}
+
+		&.transitioned {
+			transition: transform 1s,
+				opacity 1s;
+		}
+
+		&.activeSlides {
+
+			.comments__card-unwrap-button {
+				pointer-events: none;
+			}
+
+			.cocial-network-link__ref {
+				pointer-events: none;
+			}
+		}
 	}
 
 	&__card-text {
@@ -127,10 +127,6 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		transition: height 0.5s;
-
-		&.opened {
-			display: block;
-		}
 
 		@include mq.mobile() {
 			line-height: 22px;
@@ -150,6 +146,10 @@
 
 		@include mq.desktop() {
 			font-size: 15px;
+		}
+
+		&.opened {
+			display: block;
 		}
 	}
 

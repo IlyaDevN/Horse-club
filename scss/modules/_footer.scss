@@ -176,14 +176,6 @@
 
 	@include mq.tablet() {
 		display: inline;
-
-		&:first-child {
-			margin: 0 15px 0 0;
-		}
-
-		&:nth-child(2) {
-			margin: 0;
-		}
 	}
 
 	@include mq.laptop() {
@@ -200,10 +192,18 @@
 
 	&:first-child {
 		margin: 0 0 10px;
+
+		@include mq.tablet() {
+			margin: 0 15px 0 0;
+		}
 	}
 
 	&:nth-child(2) {
 		margin: 0 0 93px;
+
+		@include mq.tablet() {
+			margin: 0;
+		}
 	}
 }
 
