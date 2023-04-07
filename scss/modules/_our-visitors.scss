@@ -1,10 +1,9 @@
-@use "./common/media-queries" as mq;
-@use "./common/colors" as color;
+@use "./common/forwarded" as helpers;
 
 .our-visitors {
 	overflow: hidden;
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		overflow: visible;
 	}
 
@@ -13,22 +12,22 @@
 		width: 320px;
 		overflow: hidden;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 480px;
 			margin: 0 auto 90px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			width: 748px;
 			margin: 0 auto 89px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 980px;
 			margin: 0 auto 120px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			width: 1900px;
 			margin: 0 auto 150px;
 		}
@@ -37,11 +36,11 @@
 	&__title {
 		margin-bottom: 35px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin-bottom: 40px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin-bottom: 70px;
 		}
 	}
@@ -54,23 +53,23 @@
 		transition: transform 0.6s ease-in-out,
 			opacity 0.6s ease-in-out;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 100%;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin-bottom: 40px;
 			width: 100%;
 			transition: transform 1s ease-in-out 0s,
 				opacity 1s ease-in-out 0s;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 30px;
 			width: 100%;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin-bottom: 60px;
 			width: 100%;
 		}
@@ -85,15 +84,15 @@
 		height: 488px;
 		flex-shrink: 0;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			height: 314px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			height: 380px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			height: 608px;
 		}
 	}
@@ -102,7 +101,7 @@
 		padding: 0 18.5px;
 		display: none;
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			display: block;
 		}
 	}
@@ -112,11 +111,11 @@
 	padding: 1px 0px;
 
 	&:nth-child(5n) {
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			display: none;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			display: inline;
 		}
 	}
@@ -124,7 +123,7 @@
 	&:nth-child(n+9) {
 		display: none;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			display: inline;
 		}
 	}
@@ -136,11 +135,11 @@
 	width: 8px;
 	height: 8px;
 	margin: 0 7.5px;
-	background-color: color.$color-black;
+	background-color: helpers.$color-black;
 	opacity: 0.2;
 
 	&.active {
-		background-color: color.$color-yellow;
+		background-color: helpers.$color-yellow;
 		opacity: 1;
 	}
 }

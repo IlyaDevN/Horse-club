@@ -1,6 +1,4 @@
-@use "./common/media-queries" as mq;
-@use "./common/colors" as color;
-@use "./common/extends";
+@use "./common/forwarded" as helpers;
 
 .intro {
 	position: relative;
@@ -21,11 +19,11 @@
 			object-fit: cover;
 			object-position: bottom;
 
-			@include mq.tablet() {
+			@include helpers.tablet() {
 				object-position: center;
 			}
 
-			@include mq.laptop() {
+			@include helpers.laptop() {
 				object-position: 50% 70%;
 			}
 		}
@@ -53,25 +51,25 @@
 		flex-direction: column;
 		padding: 0 15px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			max-width: 480px;
 			height: 563px;
 			margin: 0 auto 49px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			max-width: 738px;
 			height: 537px;
 			margin: 0 auto 34px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			max-width: 970px;
 			height: 682px;
 			margin: 0 auto 53px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			max-width: 1170px;
 			height: 948px;
 			margin: 0 auto 113px;
@@ -83,20 +81,20 @@
 		width: 100%;
 		display: flex;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin: 14px auto 111px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 10px auto 41px;
 			height: 60px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin: 21px auto 51px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin: 9px auto 88px;
 		}
 	}
@@ -113,17 +111,17 @@
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 27px;
-		color: color.$color-black;
+		color: helpers.$color-black;
 		margin: 0 auto 30px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			max-width: 390px;
 			font-size: 33px;
 			line-height: 37px;
 			margin: 0 auto 20px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			max-width: 406px;
 			font-size: 37px;
 			line-height: 41px;
@@ -131,14 +129,14 @@
 			text-align: left;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			max-width: 506px;
 			font-size: 47px;
 			line-height: 107%;
 			margin: 0 0 30px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			max-width: 613px;
 			font-size: 57px;
 			line-height: 107%;
@@ -151,32 +149,32 @@
 		font-family: 'Alegreya Sans', sans-serif;
 		font-size: 13px;
 		line-height: 18px;
-		color: color.$color-font-grey-1;
+		color: helpers.$color-font-grey-1;
 		margin: 0 auto 25px;
 		max-width: 265px;
 		text-align: center;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			font-size: 16px;
 			line-height: 22px;
 			max-width: 320px;
 			margin: 0 auto 20px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			padding-left: 27px;
 			max-width: 350px;
 			margin: 0 0 20px;
 			text-align: left;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			max-width: 364px;
 			padding-left: 46px;
 			margin: 0 0 37px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			font-size: 24px;
 			line-height: 140%;
 			max-width: 524px;
@@ -187,7 +185,7 @@
 		&::before {
 			content: "";
 			display: block;
-			background-color: color.$color-light-grey;
+			background-color: helpers.$color-light-grey;
 			height: 1px;
 			width: 15px;
 			position: absolute;
@@ -195,23 +193,23 @@
 			left: 50%;
 			transform: translate(-50%, 0);
 
-			@include mq.mobile() {
+			@include helpers.mobile() {
 				top: -13px;
 			}
 
-			@include mq.tablet() {
+			@include helpers.tablet() {
 				width: 15px;
 				top: 10px;
 				left: 0;
 				transform: none;
 			}
 
-			@include mq.laptop() {
+			@include helpers.laptop() {
 				top: 11px;
 				width: 26px;
 			}
 
-			@include mq.desktop() {
+			@include helpers.desktop() {
 				top: 15px;
 				width: 26px;
 			}
@@ -221,7 +219,7 @@
 	&__button {
 		margin: 0 auto;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 0;
 		}
 	}
@@ -235,17 +233,17 @@
 		margin-right: auto;
 		position: relative;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin-right: 24px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			width: 120px;
 			height: 39px;
 			margin-right: auto;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 152px;
 			height: 49px;
 		}
@@ -259,12 +257,12 @@
 		position: relative;
 		width: 77px;
 		height: 29px;
-		border: 1px solid color.$color-green;
+		border: 1px solid helpers.$color-green;
 		border-radius: 3px;
 		display: flex;
 		align-items: center;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			display: none;
 		}
 	}
@@ -278,13 +276,13 @@
 		z-index: 110;
 		visibility: hidden;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			visibility: visible;
 			position: static;
 			width: 345px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 427px;
 		}
 
@@ -304,17 +302,17 @@
 		top: 0;
 		left: 0;
 		z-index: 111;
-		background-color: color.$color-font-black-two;
-		border-right: 5px solid color.$color-green;
+		background-color: helpers.$color-font-black-two;
+		border-right: 5px solid helpers.$color-green;
 		transform: translateX(-100%);
 		transition: transform 0.6s,
 			visibility 0.6s;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 230px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			position: static;
 			width: 100%;
 			height: auto;
@@ -329,20 +327,20 @@
 		display: none;
 		position: relative;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			display: block;
 			margin-left: auto;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 19px 0px 0px 67px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin: 22px 0px 0px 86px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin: 22px 0px 0px 83px;
 		}
 	}
@@ -350,24 +348,24 @@
 	&__contacts::after {
 		content: attr(data-timetable);
 		position: absolute;
-		color: color.$color-font-dark-grey;
+		color: helpers.$color-font-dark-grey;
 		display: block;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			font-size: 9px;
 			line-height: 11px;
 			top: 18px;
 			right: 0;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			font-size: 11px;
 			line-height: 13px;
 			top: 23px;
 			right: 0;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			font-size: 13px;
 			line-height: 15px;
 			top: 29px;
@@ -385,7 +383,7 @@
 	&__name {
 		font-size: 15px;
 		line-height: 16px;
-		color: color.$color-font-black;
+		color: helpers.$color-font-black;
 	}
 }
 
@@ -394,7 +392,7 @@
 	margin-bottom: 2px;
 	width: 10px;
 	height: 2px;
-	background-color: color.$color-green;
+	background-color: helpers.$color-green;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -411,7 +409,7 @@
 		top: 16px;
 		right: 21px;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			display: none;
 		}
 	}
@@ -419,17 +417,17 @@
 	&__nav-container {
 		margin-top: 50px;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin-top: 7px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-top: 15px;
 		}
 	}
 
 	&__nav {
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
@@ -443,7 +441,7 @@
 	top: 50%;
 	width: 17px;
 	height: 1px;
-	background-color: color.$color-white;
+	background-color: helpers.$color-white;
 	transform: rotate(135deg);
 
 	&:nth-child(1) {
@@ -456,18 +454,18 @@
 	width: 100%;
 	font-size: 15px;
 	padding: 17.5px 15px;
-	color: color.$color-white;
+	color: helpers.$color-white;
 	text-transform: uppercase;
 	text-align: center;
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		font-size: 11px;
 		line-height: 13px;
-		color: color.$color-font-black;
+		color: helpers.$color-font-black;
 		padding: 12px 5px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		font-size: 13px;
 		line-height: 15px;
 		padding: 10px 5px;
@@ -476,15 +474,15 @@
 	&:hover {
 		text-decoration-line: underline;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			text-decoration-line: none;
-			border-bottom: 1px solid color.$color-green;
+			border-bottom: 1px solid helpers.$color-green;
 		}
 	}
 }
 
 .contacts__tel-number {
-	color: color.$color-font-black;
+	color: helpers.$color-font-black;
 	font-weight: 700;
 	font-size: 11px;
 	line-height: 13px;
@@ -493,14 +491,14 @@
 	height: 10px;
 	gap: 2px;
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		font-size: 14px;
 		line-height: 16px;
 		height: 13px;
 		gap: 5px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		font-size: 18px;
 		line-height: 21px;
 		height: 16px;

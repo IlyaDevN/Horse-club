@@ -1,28 +1,26 @@
-@use "./common/media-queries" as mq;
-@use "./common/colors" as color;
-@use "./common/extends";
+@use "./common/forwarded" as helpers;
 
 .footer {
-	background-color: color.$color-font-black-one;
+	background-color: helpers.$color-font-black-one;
 
 	&__container {
 		max-width: 320px;
 		margin: 0 auto;
 		position: relative;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			max-width: 480px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			max-width: 748px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			max-width: 1000px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			max-width: 1900px;
 		}
 	}
@@ -31,19 +29,19 @@
 		padding: 30px 40px 18px;
 		margin: 0 auto;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			padding: 24.5px 29px 30px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			padding: 25px 20px 33px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			padding: 30px 20px 35px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			max-width: 1211px;
 			padding: 24px 20px 25px;
 		}
@@ -55,35 +53,35 @@
 		flex-direction: column;
 		padding-bottom: 35px;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			flex-direction: row;
 			padding-bottom: 20px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			padding-bottom: 44px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			padding-bottom: 26px;
 		}
 	}
 
 	&__nav-container {
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 100%;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			width: 367px;
 			margin-left: auto;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 396px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			width: 364px;
 		}
 	}
@@ -91,7 +89,7 @@
 	&__nav {
 		text-align: center;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			display: flex;
 			justify-content: space-between;
 		}
@@ -101,30 +99,30 @@
 		margin: 30px 0 35px;
 		width: 167px;
 		height: 46px;
-		border: 1px solid color.$color-light-yellow;
+		border: 1px solid helpers.$color-light-yellow;
 		border-radius: 5px;
 		background: transparent;
 		font-size: 13px;
 		line-height: 15px;
-		color: color.$color-button-white;
+		color: helpers.$color-button-white;
 		padding: 5px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin: 14.5px 0 30px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 0 0 0 35px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin: 0 0 0 45px;
 			font-size: 15px;
 			line-height: 18px;
 			width: 201px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin: 0 0 0 24px;
 		}
 	}
@@ -134,12 +132,12 @@
 		width: 99px;
 		height: 30px;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			align-self: flex-start;
 			order: -1;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			align-self: center;
 			width: 159px;
 			height: 48px;
@@ -150,10 +148,10 @@
 .nav__link-footer {
 	display: block;
 	font-size: 13px;
-	color: color.$color-border-white;
+	color: helpers.$color-border-white;
 	padding: 16px 5px;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		padding: 16.5px 5px;
 	}
 
@@ -170,21 +168,21 @@
 	font-size: 10px;
 	line-height: 12px;
 	text-decoration-line: underline;
-	color: color.$color-font-dark-grey;
+	color: helpers.$color-font-dark-grey;
 	display: block;
 	text-align: center;
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		display: inline;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		font-size: 12px;
 		line-height: 14px;
 		margin-right: 20px;
 	}
 
-	@include mq.desktop() {
+	@include helpers.desktop() {
 		font-size: 13px;
 		line-height: 15px;
 		margin-right: 40px;
@@ -193,7 +191,7 @@
 	&:first-child {
 		margin: 0 0 10px;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 0 15px 0 0;
 		}
 	}
@@ -201,7 +199,7 @@
 	&:nth-child(2) {
 		margin: 0 0 93px;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 0;
 		}
 	}
@@ -210,10 +208,10 @@
 .year {
 	font-size: 12px;
 	line-height: 14px;
-	color: color.$color-white;
+	color: helpers.$color-white;
 	text-align: center;
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		display: none;
 	}
 }

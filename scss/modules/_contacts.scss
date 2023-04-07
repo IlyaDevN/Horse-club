@@ -1,19 +1,18 @@
-@use "./common/media-queries" as mq;
-@use "./common/colors" as color;
+@use "./common/forwarded" as helpers;
 
 .contacts {
 	position: relative;
 	height: 748px;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		height: 786px;
 	}
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		height: 510px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		height: 650px;
 	}
 
@@ -23,15 +22,15 @@
 		z-index: -1000;
 		height: 748px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			height: 786px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			height: 510px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			height: 650px;
 		}
 	}
@@ -66,22 +65,22 @@
 		margin: 0 auto;
 		position: relative;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			max-width: 480px;
 			height: 786px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			max-width: 748px;
 			height: 510px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			max-width: 1000px;
 			height: 650px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			max-width: 1900px;
 		}
 	}
@@ -92,27 +91,27 @@
 		top: 320px;
 		left: 50%;
 		transform: translate(-50%, 0);
-		background: color.$color-white;
-		border: 1px solid color.$color-border-white;
+		background: helpers.$color-white;
+		border: 1px solid helpers.$color-border-white;
 		box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
 		border-radius: 5px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 354px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			top: 50px;
 			left: 20px;
 			transform: none;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			top: 70px;
 			width: 500px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			left: 375px;
 			width: 521px;
 		}
@@ -125,16 +124,16 @@
 		padding: 30px 65px;
 		text-align: center;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			padding: 40px;
 			text-align: left;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			padding: 50px 72px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			padding: 50px 72px 70px;
 		}
 	}
@@ -143,14 +142,14 @@
 		font-family: 'Philosopher';
 		font-size: 24px;
 		line-height: 21px;
-		color: color.$color-black;
+		color: helpers.$color-black;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			font-size: 27px;
 			line-height: 36px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			font-size: 40px;
 		}
 	}
@@ -158,14 +157,14 @@
 	&__row {
 		width: 26px;
 		height: 1px;
-		background-color: color.$color-green;
+		background-color: helpers.$color-green;
 		margin: 20px auto;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin: 20px 0 24px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin: 30px 0 40px;
 		}
 	}
@@ -175,7 +174,7 @@
 		align-items: center;
 		margin-bottom: 10px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 28px;
 		}
 	}
@@ -185,7 +184,7 @@
 		align-items: center;
 		margin-bottom: 10px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 28px;
 		}
 	}
@@ -195,7 +194,7 @@
 		align-items: center;
 		margin-bottom: 10px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 26px;
 		}
 	}
@@ -205,11 +204,11 @@
 		align-items: flex-start;
 		margin-bottom: 25px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin-bottom: 41px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 30px;
 		}
 	}
@@ -221,7 +220,7 @@
 		width: 11px;
 		height: 17px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 14px;
 			height: 22px;
 		}
@@ -230,7 +229,7 @@
 	&__ref {
 		margin-left: 12px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-left: 22px;
 		}
 	}
@@ -239,14 +238,14 @@
 .item_every {
 	font-size: 13px;
 	line-height: 25px;
-	color: color.$color-brown;
+	color: helpers.$color-brown;
 	display: block;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		font-size: 16px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		font-size: 18px;
 		line-height: 18px;
 	}
@@ -258,7 +257,7 @@
 		width: 13px;
 		height: 13px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 19px;
 			height: 19px;
 		}
@@ -267,7 +266,7 @@
 	&__ref {
 		margin-left: 10px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-left: 20px;
 		}
 	}
@@ -279,7 +278,7 @@
 		width: 15px;
 		height: 11px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 22px;
 			height: 16px;
 		}
@@ -288,7 +287,7 @@
 	&__ref {
 		margin-left: 10px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-left: 18px;
 		}
 	}
@@ -301,7 +300,7 @@
 		height: 14px;
 		margin-top: 5px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 20px;
 			height: 20px;
 			margin-top: 3px;
@@ -312,11 +311,11 @@
 		line-height: 25px;
 		margin-left: 10px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin-left: 11px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			line-height: 28px;
 			margin-left: 19px;
 		}
@@ -328,7 +327,7 @@
 	justify-content: space-between;
 	gap: 13px;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		justify-content: flex-end;
 	}
 }

@@ -1,6 +1,4 @@
-@use "./common/media-queries" as mq;
-@use "./common/colors" as color;
-@use "./common/extends";
+@use "./common/forwarded" as helpers;
 
 .about {
 
@@ -10,21 +8,21 @@
 		margin: 0 auto 70px;
 		padding: 0 10px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			max-width: 480px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			max-width: 748px;
 			margin: 0 auto 79px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			max-width: 1000px;
 			margin: 0 auto 120px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			max-width: 1470px;
 			margin: 0 auto 49px;
 		}
@@ -33,25 +31,25 @@
 	&__title {
 		margin-bottom: 35px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			margin-bottom: 40px;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin-bottom: 38px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 61px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin-bottom: 89px;
 		}
 	}
 
 	&__content {
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			position: relative;
 		}
 	}
@@ -62,18 +60,18 @@
 	&__image-container {
 		display: none;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			display: inline-block;
 			width: 326px;
 			vertical-align: middle;
 			aspect-ratio: 871/529;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 473px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			width: 876px;
 			float: left;
 		}
@@ -87,16 +85,16 @@
 		display: inline-block;
 		width: 100%;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			width: 390px;
 			vertical-align: middle;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			width: 486px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			width: 570px;
 			vertical-align: top;
 		}
@@ -105,21 +103,21 @@
 	&__subtext {
 		font-size: 12px;
 		line-height: 19px;
-		color: color.$color-dark-grey;
+		color: helpers.$color-dark-grey;
 		max-width: 100%;
 		margin: 32px auto 0;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			font-size: 13px;
 			line-height: 20px;
 			margin: 30px auto 0;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			margin: 34px auto 0;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			font-size: 15px;
 			line-height: 28px;
 			margin: 41px 0 0;
@@ -135,21 +133,21 @@
 		justify-content: center;
 		gap: 35px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			gap: 20px;
 			flex-wrap: nowrap;
 			justify-content: unset;
 		}
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			gap: 10px;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			gap: 20px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			gap: 65px;
 		}
 	}
@@ -157,11 +155,11 @@
 	&__bonus-row:first-child {
 		margin-bottom: 35px;
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			margin-bottom: 30px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			margin-bottom: 24px;
 		}
 	}
@@ -169,7 +167,7 @@
 	&__bonus-block {
 		width: 220px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 50%;
 		}
 	}
@@ -183,14 +181,14 @@
 		font-size: 27px;
 		line-height: 160%;
 		text-align: center;
-		color: color.$color-green;
+		color: helpers.$color-green;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			font-size: 32px;
 			text-align: left;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			font-size: 42px;
 		}
 	}
@@ -199,21 +197,21 @@
 		font-weight: 500;
 		font-size: 12px;
 		line-height: 18px;
-		color: color.$color-font-black-one;
+		color: helpers.$color-font-black-one;
 		text-align: center;
 
-		@include mq.tablet() {
+		@include helpers.tablet() {
 			font-size: 13px;
 			line-height: 22px;
 			text-align: left;
 		}
 
-		@include mq.laptop() {
+		@include helpers.laptop() {
 			font-size: 15px;
 			line-height: 25px;
 		}
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			font-size: 17px;
 		}
 	}
