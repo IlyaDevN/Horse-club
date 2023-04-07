@@ -1,5 +1,5 @@
-@use "./common/mixins";
-@use "./common/variables" as var;
+@use "./common/media-queries" as mq;
+@use "./common/colors" as color;
 
 .our-horses {
 
@@ -9,20 +9,20 @@
 		overflow: hidden;
 		padding: 0 10px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin: 0 auto 61px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			padding: 0 20px;
 			margin: 0 auto 80px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			margin: 0 auto 115px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			padding: 0;
 			margin: 0 auto 49px;
 		}
@@ -35,27 +35,27 @@
 	&__title {
 		margin-bottom: 55px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin-bottom: 60px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			margin-bottom: 65px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			margin-bottom: 95px;
 		}
 	}
 
 	&__galary {
 		margin-bottom: 30px;
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			margin-bottom: 40px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			width: 1170px;
 			margin: 0 auto 60px;
 		}
@@ -68,15 +68,15 @@
 		display: flex;
 		justify-content: flex-start;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			justify-content: space-between;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			justify-content: flex-start;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			justify-content: space-between;
 		}
 	}
@@ -86,29 +86,29 @@
 		min-height: 390px;
 		height: auto;
 		padding: 0 14px 24px;
-		background-color: var.$color-white;
-		border: 1px solid var.$color-border-white;
+		background-color: color.$color-white;
+		border: 1px solid color.$color-border-white;
 		box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
 		border-radius: 5px;
 		transition: transform 1s,
-		opacity 1s;
+			opacity 1s;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			width: 220px;
 			padding: 0 14px 13px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			width: 250px;
 			padding: 0 19px 30px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			padding: 0 24px 34px;
 			width: 293px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			width: 370px;
 			padding: 0 24px 44px;
 		}
@@ -125,21 +125,21 @@
 		border-radius: 5px;
 		overflow: hidden;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin: -20px 0 15px;
 			aspect-ratio: 21/25;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			aspect-ratio: 5/6;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			margin: -25px 0 20px;
 			aspect-ratio: 243/320;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			aspect-ratio: 320/421;
 			margin: -25px 0 25px;
 		}
@@ -151,17 +151,17 @@
 		line-height: 15px;
 		margin-bottom: 10px;
 		text-align: center;
-		color: var.$color-brown;
-		
-		@include mixins.tablet() {
+		color: color.$color-brown;
+
+		@include mq.tablet() {
 			margin-bottom: 15px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			margin-bottom: 20px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			font-size: 23px;
 			line-height: 27px;
 			margin-bottom: 25px;
@@ -169,20 +169,20 @@
 	}
 
 	&__line {
-		background-color: var.$color-green;
+		background-color: color.$color-green;
 		width: 26px;
 		height: 1px;
 		margin: 0 auto 10px;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			margin: 0 auto 15px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			margin: 0 auto 20px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			margin: 0 auto 25px;
 		}
 	}
@@ -191,19 +191,19 @@
 		font-size: 13px;
 		line-height: 20px;
 		text-align: center;
-		color: var.$color-dark-grey;
-		
-		@include mixins.tablet() {
+		color: color.$color-dark-grey;
+
+		@include mq.tablet() {
 			font-size: 12px;
 			line-height: 18px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			font-size: 14px;
 			line-height: 21px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			font-size: 15px;
 			width: 280px;
 			margin: 0 auto;

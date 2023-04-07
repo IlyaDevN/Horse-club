@@ -1,19 +1,19 @@
-@use "./common/mixins";
-@use "./common/variables" as var;
+@use "./common/media-queries" as mq;
+@use "./common/colors" as color;
 
 .contacts {
 	position: relative;
 	height: 748px;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		height: 786px;
 	}
-	
-	@include mixins.tablet() {
+
+	@include mq.tablet() {
 		height: 510px;
 	}
-	
-	@include mixins.laptop() {
+
+	@include mq.laptop() {
 		height: 650px;
 	}
 
@@ -23,15 +23,15 @@
 		z-index: -1000;
 		height: 748px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			height: 786px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			height: 510px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			height: 650px;
 		}
 	}
@@ -66,22 +66,22 @@
 		margin: 0 auto;
 		position: relative;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			max-width: 480px;
 			height: 786px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			max-width: 748px;
 			height: 510px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			max-width: 1000px;
 			height: 650px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			max-width: 1900px;
 		}
 	}
@@ -92,27 +92,27 @@
 		top: 320px;
 		left: 50%;
 		transform: translate(-50%, 0);
-		background: var.$color-white;
-		border: 1px solid var.$color-border-white;
+		background: color.$color-white;
+		border: 1px solid color.$color-border-white;
 		box-shadow: 0px 16px 51px rgba(0, 0, 0, 0.11);
 		border-radius: 5px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			width: 354px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			top: 50px;
 			left: 20px;
 			transform: none;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			top: 70px;
 			width: 500px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			left: 375px;
 			width: 521px;
 		}
@@ -125,16 +125,16 @@
 		padding: 30px 65px;
 		text-align: center;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			padding: 40px;
 			text-align: left;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			padding: 50px 72px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			padding: 50px 72px 70px;
 		}
 	}
@@ -143,14 +143,14 @@
 		font-family: 'Philosopher';
 		font-size: 24px;
 		line-height: 21px;
-		color: var.$color-black;
+		color: color.$color-black;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			font-size: 27px;
 			line-height: 36px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			font-size: 40px;
 		}
 	}
@@ -158,14 +158,14 @@
 	&__row {
 		width: 26px;
 		height: 1px;
-		background-color: var.$color-green;
+		background-color: color.$color-green;
 		margin: 20px auto;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin: 20px 0 24px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin: 30px 0 40px;
 		}
 	}
@@ -175,7 +175,7 @@
 		align-items: center;
 		margin-bottom: 10px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-bottom: 28px;
 		}
 	}
@@ -185,7 +185,7 @@
 		align-items: center;
 		margin-bottom: 10px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-bottom: 28px;
 		}
 	}
@@ -195,7 +195,7 @@
 		align-items: center;
 		margin-bottom: 10px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-bottom: 26px;
 		}
 	}
@@ -205,11 +205,11 @@
 		align-items: flex-start;
 		margin-bottom: 25px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin-bottom: 41px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-bottom: 30px;
 		}
 	}
@@ -221,7 +221,7 @@
 		width: 11px;
 		height: 17px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			width: 14px;
 			height: 22px;
 		}
@@ -230,7 +230,7 @@
 	&__ref {
 		margin-left: 12px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-left: 22px;
 		}
 	}
@@ -239,14 +239,14 @@
 .item_every {
 	font-size: 13px;
 	line-height: 25px;
-	color: var.$color-brown;
+	color: color.$color-brown;
 	display: block;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		font-size: 16px;
 	}
 
-	@include mixins.laptop() {
+	@include mq.laptop() {
 		font-size: 18px;
 		line-height: 18px;
 	}
@@ -258,7 +258,7 @@
 		width: 13px;
 		height: 13px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			width: 19px;
 			height: 19px;
 		}
@@ -267,7 +267,7 @@
 	&__ref {
 		margin-left: 10px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-left: 20px;
 		}
 	}
@@ -279,7 +279,7 @@
 		width: 15px;
 		height: 11px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			width: 22px;
 			height: 16px;
 		}
@@ -288,7 +288,7 @@
 	&__ref {
 		margin-left: 10px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-left: 18px;
 		}
 	}
@@ -301,7 +301,7 @@
 		height: 14px;
 		margin-top: 5px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			width: 20px;
 			height: 20px;
 			margin-top: 3px;
@@ -312,11 +312,11 @@
 		line-height: 25px;
 		margin-left: 10px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin-left: 11px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			line-height: 28px;
 			margin-left: 19px;
 		}
@@ -328,7 +328,7 @@
 	justify-content: space-between;
 	gap: 13px;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		justify-content: flex-end;
 	}
 }

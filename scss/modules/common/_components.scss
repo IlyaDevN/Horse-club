@@ -1,24 +1,24 @@
-@use "mixins";
-@use "variables" as var;
+@use "media-queries" as mq;
+@use "colors" as color;
 
 .title_every {
 	font-family: 'Philosopher', sans-serif;
 	font-size: 21px;
 	line-height: 21px;
-	color: var.$color-brown;
+	color: color.$color-brown;
 	text-align: center;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		font-size: 27px;
 		line-height: 27px;
 	}
 
-	@include mixins.laptop() {
+	@include mq.laptop() {
 		font-size: 30px;
 		line-height: 36px;
 	}
 
-	@include mixins.desktop() {
+	@include mq.desktop() {
 		font-size: 40px;
 		line-height: 36px;
 	}
@@ -36,27 +36,27 @@
 	line-height: 10px;
 	letter-spacing: 0.07em;
 	text-transform: uppercase;
-	color: var.$color-dark-orange;
-	background: var.$gradient-yellow;
-	box-shadow: 0px 4px 0px var.$color-light-orange;
+	color: color.$color-dark-orange;
+	background: color.$gradient-yellow;
+	box-shadow: 0px 4px 0px color.$color-light-orange;
 	z-index: 100;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		width: 180px;
 		height: 45px;
 	}
 
-	@include mixins.tablet() {
+	@include mq.tablet() {
 		line-height: 32px;
 	}
 
-	@include mixins.laptop() {
+	@include mq.laptop() {
 		width: 218px;
 		height: 60px;
 		font-size: 13px;
 	}
 
-	@include mixins.desktop() {
+	@include mq.desktop() {
 		width: 270px;
 		height: 70px;
 		font-size: 15px;
@@ -70,7 +70,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: var.$gradient-yellow-dark;
+		background: color.$gradient-yellow-dark;
 		opacity: 0;
 		transition: opacity 0.5s ease-in-out;
 		z-index: -100;
@@ -88,13 +88,13 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: var.$gradient-yellow-dark;
+		background: color.$gradient-yellow-dark;
 		transform: matrix(1, 0, 0, -1, 0, 0);
 		opacity: 0;
 		transition: opacity 0.2s ease-in-out;
 		z-index: -100;
 	}
-	
+
 	&:active::after {
 		opacity: 1;
 	}
@@ -114,10 +114,10 @@
 		position: relative;
 		width: 40px;
 		height: 40px;
-		background: var.$gradient-slide-button;
+		background: color.$gradient-slide-button;
 		border-radius: 50%;
 		transition: opacity 1s ease-in-out;
-		box-shadow: 0px 1px 0px var.$color-light-orange;
+		box-shadow: 0px 1px 0px color.$color-light-orange;
 
 		&::before {
 			content: "";
@@ -128,7 +128,7 @@
 			height: 100%;
 			border-radius: 50%;
 			opacity: 0;
-			background: var.$gradient-yellow-dark;
+			background: color.$gradient-yellow-dark;
 			transition: opacity 0.2s ease-in-out;
 		}
 
@@ -152,14 +152,14 @@
 	display: block;
 	width: 10px;
 	height: 10px;
-	border-left: 3px solid var.$color-dark-orange;
-	border-bottom: 3px solid var.$color-dark-orange;
+	border-left: 3px solid color.$color-dark-orange;
+	border-bottom: 3px solid color.$color-dark-orange;
 	margin: 0 auto;
 
 	&.button__arrow_prev {
 		transform: translateX(25%) rotate(45deg);
 	}
-	
+
 	&.button__arrow_next {
 		transform: translateX(-25%) rotate(225deg);
 	}
@@ -172,7 +172,7 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 
-	@include mixins.desktop() {
+	@include mq.desktop() {
 		display: none;
 	}
 }
@@ -180,11 +180,11 @@
 .slider-control__thumb {
 	/* width took from JS*/
 	height: 8px;
-	background: var.$gradient-yellow-thumb;
+	background: color.$gradient-yellow-thumb;
 	border-radius: 10px;
 	transition: transform 0.6s ease-in-out 0s;
 
-	@include mixins.tablet() {
+	@include mq.tablet() {
 		transition: transform 1s ease-in-out 0s;
 	}
 }
@@ -200,13 +200,13 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 
-	@include mixins.desktop() {
+	@include mq.desktop() {
 		display: none;
 	}
 
 	.swiper-scrollbar-drag {
 		height: 8px;
-		background: var.$gradient-yellow-thumb;
+		background: color.$gradient-yellow-thumb;
 		border-radius: 10px;
 	}
 }
@@ -233,7 +233,7 @@
 	.swiper-pagination.pagination {
 		display: none;
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			display: block;
 			position: static;
 			width: auto;
@@ -244,7 +244,7 @@
 		.swiper-pagination-bullet {
 			margin: auto 7.5px;
 		}
-	} 
+	}
 }
 
 /* ============================================================================
@@ -263,7 +263,7 @@
 	justify-content: center;
 	background-color: rgba(0, 0, 0, 0.8);
 	transition: opacity 0.8s,
-	visibility 0.8s;
+		visibility 0.8s;
 	opacity: 0;
 	visibility: hidden;
 
@@ -276,20 +276,20 @@
 .register-modal__content {
 	width: 300px;
 	height: 300px;
-	background-color: var.$color-white;
+	background-color: color.$color-white;
 	border-radius: 5px;
 	padding: 28.5px 27.5px;
 	transform: perspective(300px) translateY(-100%) rotateX(45deg);
 	transition: transform 0.8s;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		width: 375px;
 		height: 375px;
 		padding: 54px 46px;
 		transform: perspective(375px) translateY(-100%) rotateX(45deg);
 	}
-	
-	@include mixins.laptop() {
+
+	@include mq.laptop() {
 		width: 405px;
 		height: 380px;
 		padding: 42.5px;
@@ -307,14 +307,14 @@
 	height: 16px;
 	top: 8px;
 	right: 8px;
-	background-color: var.$color-white;
+	background-color: color.$color-white;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		top: 20px;
 		right: 20px;
 	}
-	
-	@include mixins.laptop() {
+
+	@include mq.laptop() {
 		top: 17px;
 		right: 17px;
 	}
@@ -334,7 +334,7 @@
 		top: 50%;
 		width: 17px;
 		height: 1px;
-		background-color: var.$color-black;
+		background-color: color.$color-black;
 		transform: rotate(135deg);
 		transition: background-color 0.3s;
 
@@ -344,11 +344,11 @@
 	}
 
 	&:hover {
-		.close-button__span{
-			background-color: var.$color-orange;
+		.close-button__span {
+			background-color: color.$color-orange;
 		}
 	}
-	
+
 }
 
 .register-modal {
@@ -356,29 +356,29 @@
 	&__form {
 
 		.form-input {
-			background: var.$color-white;
-			border: 1px solid var.$color-light-grey;
+			background: color.$color-white;
+			border: 1px solid color.$color-light-grey;
 			border-radius: 5px;
 			font-size: 13px;
 			line-height: 13px;
 			width: 100%;
 			height: 50px;
 			padding-left: 14px;
-	
-			@include mixins.mobile() {
+
+			@include mq.mobile() {
 				font-size: 15px;
 				line-height: 18px;
 				height: 55px;
 				padding-left: 19px;
 			}
-			
-			@include mixins.laptop() {
+
+			@include mq.laptop() {
 				font-size: 18px;
 				line-height: 21px;
 				height: 61px;
 				padding-left: 21px;
 			}
-	
+
 			.register-modal__checkbox {
 				height: auto;
 				margin-bottom: 0;
@@ -393,19 +393,19 @@
 		line-height: 10px;
 		margin: 15px 0 25px;
 		display: inline-block;
-	
-		@include mixins.mobile() {
+
+		@include mq.mobile() {
 			height: 64px;
 			font-size: 13px;
 			line-height: 15px;
 			margin: 10px 0 20px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			font-size: 15px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			height: 70px;
 		}
 	}
@@ -426,11 +426,11 @@
 		&+label {
 			font-size: 13px;
 			line-height: 15px;
-			color: var.$color-font-grey;
+			color: color.$color-font-grey;
 			display: inline-flex;
 			align-items: center;
 
-			@include mixins.mobile() {
+			@include mq.mobile() {
 				font-size: 15px;
 				line-height: 18px;
 			}
@@ -453,25 +453,25 @@
 	width: 15px;
 	height: 15px;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		width: 20px;
 		height: 20px;
 	}
 
 	&__rect {
 		stroke-width: 1px;
-		stroke: var.$color-yellow;
-		fill: var.$color-white;
-	
-		@include mixins.mobile() {
+		stroke: color.$color-yellow;
+		fill: color.$color-white;
+
+		@include mq.mobile() {
 			stroke-width: 2px;
 		}
 	}
 
 	&__path {
 		transform: translate(4px, 4px);
-		stroke: var.$color-green;
-		fill: var.$color-green;
+		stroke: color.$color-green;
+		fill: color.$color-green;
 		visibility: hidden;
 	}
 }
@@ -483,7 +483,7 @@
 .input-container.error {
 
 	.checkbox-svg__rect {
-		stroke: var.$color-orange;
+		stroke: color.$color-orange;
 	}
 
 	.valid-tooltip {
@@ -492,7 +492,7 @@
 	}
 
 	[data-to-validate] {
-		border-color: var.$color-orange;
+		border-color: color.$color-orange;
 	}
 }
 
@@ -501,20 +501,20 @@
 	padding: 10px 0 5px;
 	width: 100%;
 
-	@include mixins.laptop() {
+	@include mq.laptop() {
 		padding: 10px 0 10px;
 	}
 }
 
 .valid-tooltip {
 	position: absolute;
-	color: var.$color-orange;
+	color: color.$color-orange;
 	font-size: 10px;
 	line-height: 10px;
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity 0.3s,
-	visibility 0.3s;
+		visibility 0.3s;
 }
 
 .letters {
@@ -533,7 +533,7 @@
 	position: absolute;
 	width: 300px;
 	height: 300px;
-	background-color: var.$color-white;
+	background-color: color.$color-white;
 	border-radius: 5px;
 	padding: 30px;
 	display: flex;
@@ -542,17 +542,17 @@
 	align-items: center;
 	transform: perspective(600px) translateY(100%) rotateX(45deg);
 	transition: transform 0.8s,
-	opacity 0.8s,
-	visibility 0.8s;
+		opacity 0.8s,
+		visibility 0.8s;
 	visibility: hidden;
 	opacity: 0;
 
-	@include mixins.mobile() {
+	@include mq.mobile() {
 		width: 375px;
 		height: 375px;
 	}
-	
-	@include mixins.laptop() {
+
+	@include mq.laptop() {
 		width: 380px;
 		height: 380px;
 	}
@@ -569,7 +569,7 @@
 		line-height: 50px;
 		text-align: center;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			font-size: 50px;
 			line-height: 60px;
 			text-align: center;
@@ -581,7 +581,7 @@
 		line-height: 30px;
 		text-align: center;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			font-size: 30px;
 			line-height: 50px;
 			text-align: center;
@@ -591,7 +591,7 @@
 	&__image-container {
 		width: 250px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			width: 270px;
 		}
 	}

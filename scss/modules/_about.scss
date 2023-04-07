@@ -1,5 +1,5 @@
-@use "./common/mixins";
-@use "./common/variables" as var;
+@use "./common/media-queries" as mq;
+@use "./common/colors" as color;
 @use "./common/extends";
 
 .about {
@@ -10,21 +10,21 @@
 		margin: 0 auto 70px;
 		padding: 0 10px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			max-width: 480px;
 		}
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			max-width: 748px;
 			margin: 0 auto 79px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			max-width: 1000px;
 			margin: 0 auto 120px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			max-width: 1470px;
 			margin: 0 auto 49px;
 		}
@@ -33,25 +33,25 @@
 	&__title {
 		margin-bottom: 35px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin-bottom: 40px;
 		}
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			margin-bottom: 38px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-bottom: 61px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			margin-bottom: 89px;
 		}
 	}
 
 	&__content {
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			position: relative;
 		}
 	}
@@ -62,18 +62,18 @@
 	&__image-container {
 		display: none;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			display: inline-block;
 			width: 326px;
 			vertical-align: middle;
 			aspect-ratio: 871/529;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			width: 473px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			width: 876px;
 			float: left;
 		}
@@ -87,16 +87,16 @@
 		display: inline-block;
 		width: 100%;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			width: 390px;
 			vertical-align: middle;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			width: 486px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			width: 570px;
 			vertical-align: top;
 		}
@@ -105,21 +105,21 @@
 	&__subtext {
 		font-size: 12px;
 		line-height: 19px;
-		color: var.$color-dark-grey;
+		color: color.$color-dark-grey;
 		max-width: 100%;
 		margin: 32px auto 0;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			font-size: 13px;
 			line-height: 20px;
 			margin: 30px auto 0;
 		}
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			margin: 34px auto 0;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			font-size: 15px;
 			line-height: 28px;
 			margin: 41px 0 0;
@@ -135,21 +135,21 @@
 		justify-content: center;
 		gap: 35px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			gap: 20px;
 			flex-wrap: nowrap;
 			justify-content: unset;
 		}
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			gap: 10px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			gap: 20px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			gap: 65px;
 		}
 	}
@@ -157,11 +157,11 @@
 	&__bonus-row:first-child {
 		margin-bottom: 35px;
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-bottom: 30px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			margin-bottom: 24px;
 		}
 	}
@@ -169,7 +169,7 @@
 	&__bonus-block {
 		width: 220px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			width: 50%;
 		}
 	}
@@ -183,14 +183,14 @@
 		font-size: 27px;
 		line-height: 160%;
 		text-align: center;
-		color: var.$color-green;
+		color: color.$color-green;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			font-size: 32px;
 			text-align: left;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			font-size: 42px;
 		}
 	}
@@ -199,21 +199,21 @@
 		font-weight: 500;
 		font-size: 12px;
 		line-height: 18px;
-		color: var.$color-font-black-one;
+		color: color.$color-font-black-one;
 		text-align: center;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			font-size: 13px;
 			line-height: 22px;
 			text-align: left;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			font-size: 15px;
 			line-height: 25px;
 		}
 
-		@include mixins.desktop() {
+		@include mq.desktop() {
 			font-size: 17px;
 		}
 	}

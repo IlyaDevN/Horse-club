@@ -1,5 +1,5 @@
-@use "./common/mixins";
-@use "./common/variables" as var;
+@use "./common/media-queries" as mq;
+@use "./common/colors" as color;
 @use "./common/extends";
 
 .intro {
@@ -21,11 +21,11 @@
 			object-fit: cover;
 			object-position: bottom;
 
-			@include mixins.tablet() {
+			@include mq.tablet() {
 				object-position: center;
 			}
 
-			@include mixins.laptop() {
+			@include mq.laptop() {
 				object-position: 50% 70%;
 			}
 		}
@@ -53,25 +53,25 @@
 		flex-direction: column;
 		padding: 0 15px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			max-width: 480px;
 			height: 563px;
 			margin: 0 auto 49px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			max-width: 738px;
 			height: 537px;
 			margin: 0 auto 34px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			max-width: 970px;
 			height: 682px;
 			margin: 0 auto 53px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			max-width: 1170px;
 			height: 948px;
 			margin: 0 auto 113px;
@@ -83,20 +83,20 @@
 		width: 100%;
 		display: flex;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin: 14px auto 111px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			margin: 10px auto 41px;
 			height: 60px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			margin: 21px auto 51px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			margin: 9px auto 88px;
 		}
 	}
@@ -113,32 +113,32 @@
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 27px;
-		color: var.$color-black;
+		color: color.$color-black;
 		margin: 0 auto 30px;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			max-width: 390px;
 			font-size: 33px;
 			line-height: 37px;
 			margin: 0 auto 20px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			max-width: 406px;
 			font-size: 37px;
 			line-height: 41px;
 			margin: 0 0 20px;
 			text-align: left;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			max-width: 506px;
 			font-size: 47px;
 			line-height: 107%;
 			margin: 0 0 30px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			max-width: 613px;
 			font-size: 57px;
 			line-height: 107%;
@@ -151,32 +151,32 @@
 		font-family: 'Alegreya Sans', sans-serif;
 		font-size: 13px;
 		line-height: 18px;
-		color: var.$color-font-grey-1;
+		color: color.$color-font-grey-1;
 		margin: 0 auto 25px;
 		max-width: 265px;
 		text-align: center;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			font-size: 16px;
 			line-height: 22px;
 			max-width: 320px;
 			margin: 0 auto 20px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			padding-left: 27px;
 			max-width: 350px;
 			margin: 0 0 20px;
 			text-align: left;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			max-width: 364px;
 			padding-left: 46px;
 			margin: 0 0 37px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			font-size: 24px;
 			line-height: 140%;
 			max-width: 524px;
@@ -187,7 +187,7 @@
 		&::before {
 			content: "";
 			display: block;
-			background-color: var.$color-light-grey;
+			background-color: color.$color-light-grey;
 			height: 1px;
 			width: 15px;
 			position: absolute;
@@ -195,23 +195,23 @@
 			left: 50%;
 			transform: translate(-50%, 0);
 
-			@include mixins.mobile() {
+			@include mq.mobile() {
 				top: -13px;
 			}
-			
-			@include mixins.tablet() {
+
+			@include mq.tablet() {
 				width: 15px;
 				top: 10px;
 				left: 0;
 				transform: none;
 			}
-			
-			@include mixins.laptop() {
+
+			@include mq.laptop() {
 				top: 11px;
 				width: 26px;
 			}
-			
-			@include mixins.desktop() {
+
+			@include mq.desktop() {
 				top: 15px;
 				width: 26px;
 			}
@@ -221,7 +221,7 @@
 	&__button {
 		margin: 0 auto;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			margin: 0;
 		}
 	}
@@ -235,17 +235,17 @@
 		margin-right: auto;
 		position: relative;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			margin-right: 24px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			width: 120px;
 			height: 39px;
 			margin-right: auto;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			width: 152px;
 			height: 49px;
 		}
@@ -259,12 +259,12 @@
 		position: relative;
 		width: 77px;
 		height: 29px;
-		border: 1px solid var.$color-green;
+		border: 1px solid color.$color-green;
 		border-radius: 3px;
 		display: flex;
 		align-items: center;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			display: none;
 		}
 	}
@@ -278,13 +278,13 @@
 		z-index: 110;
 		visibility: hidden;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			visibility: visible;
 			position: static;
 			width: 345px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			width: 427px;
 		}
 
@@ -304,17 +304,17 @@
 		top: 0;
 		left: 0;
 		z-index: 111;
-		background-color: var.$color-font-black-two;
-		border-right: 5px solid var.$color-green;
+		background-color: color.$color-font-black-two;
+		border-right: 5px solid color.$color-green;
 		transform: translateX(-100%);
 		transition: transform 0.6s,
-		visibility 0.6s;
+			visibility 0.6s;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			width: 230px;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			position: static;
 			width: 100%;
 			height: auto;
@@ -329,20 +329,20 @@
 		display: none;
 		position: relative;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			display: block;
 			margin-left: auto;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			margin: 19px 0px 0px 67px;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			margin: 22px 0px 0px 86px;
 		}
-		
-		@include mixins.desktop() {
+
+		@include mq.desktop() {
 			margin: 22px 0px 0px 83px;
 		}
 	}
@@ -350,24 +350,24 @@
 	&__contacts::after {
 		content: attr(data-timetable);
 		position: absolute;
-		color: var.$color-font-dark-grey;
+		color: color.$color-font-dark-grey;
 		display: block;
 
-		@include mixins.mobile() {
+		@include mq.mobile() {
 			font-size: 9px;
 			line-height: 11px;
 			top: 18px;
 			right: 0;
 		}
-		
-		@include mixins.tablet() {
+
+		@include mq.tablet() {
 			font-size: 11px;
 			line-height: 13px;
 			top: 23px;
 			right: 0;
 		}
-		
-		@include mixins.laptop() {
+
+		@include mq.laptop() {
 			font-size: 13px;
 			line-height: 15px;
 			top: 29px;
@@ -385,7 +385,7 @@
 	&__name {
 		font-size: 15px;
 		line-height: 16px;
-		color: var.$color-font-black;
+		color: color.$color-font-black;
 	}
 }
 
@@ -394,7 +394,7 @@
 	margin-bottom: 2px;
 	width: 10px;
 	height: 2px;
-	background-color: var.$color-green;
+	background-color: color.$color-green;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -411,7 +411,7 @@
 		top: 16px;
 		right: 21px;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			display: none;
 		}
 	}
@@ -419,17 +419,17 @@
 	&__nav-container {
 		margin-top: 50px;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			margin-top: 7px;
 		}
 
-		@include mixins.laptop() {
+		@include mq.laptop() {
 			margin-top: 15px;
 		}
 	}
 
 	&__nav {
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
@@ -443,7 +443,7 @@
 	top: 50%;
 	width: 17px;
 	height: 1px;
-	background-color: var.$color-white;
+	background-color: color.$color-white;
 	transform: rotate(135deg);
 
 	&:nth-child(1) {
@@ -456,18 +456,18 @@
 	width: 100%;
 	font-size: 15px;
 	padding: 17.5px 15px;
-	color: var.$color-white;
+	color: color.$color-white;
 	text-transform: uppercase;
 	text-align: center;
 
-	@include mixins.tablet() {
+	@include mq.tablet() {
 		font-size: 11px;
 		line-height: 13px;
-		color: var.$color-font-black;
+		color: color.$color-font-black;
 		padding: 12px 5px;
 	}
-	
-	@include mixins.laptop() {
+
+	@include mq.laptop() {
 		font-size: 13px;
 		line-height: 15px;
 		padding: 10px 5px;
@@ -476,15 +476,15 @@
 	&:hover {
 		text-decoration-line: underline;
 
-		@include mixins.tablet() {
+		@include mq.tablet() {
 			text-decoration-line: none;
-			border-bottom: 1px solid var.$color-green;
+			border-bottom: 1px solid color.$color-green;
 		}
 	}
 }
 
 .contacts__tel-number {
-	color: var.$color-font-black;
+	color: color.$color-font-black;
 	font-weight: 700;
 	font-size: 11px;
 	line-height: 13px;
@@ -493,14 +493,14 @@
 	height: 10px;
 	gap: 2px;
 
-	@include mixins.tablet() {
+	@include mq.tablet() {
 		font-size: 14px;
 		line-height: 16px;
 		height: 13px;
 		gap: 5px;
 	}
-	
-	@include mixins.laptop() {
+
+	@include mq.laptop() {
 		font-size: 18px;
 		line-height: 21px;
 		height: 16px;
