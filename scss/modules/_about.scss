@@ -4,8 +4,6 @@
 
 .about {
 
-	//.about__container
-
 	&__container {
 		max-width: 320px;
 		width: 100%;
@@ -32,8 +30,6 @@
 		}
 	}
 
-	//.about__title
-
 	&__title {
 		margin-bottom: 35px;
 
@@ -54,8 +50,6 @@
 		}
 	}
 
-	//.about__content
-
 	&__content {
 		@include mixins.desktop() {
 			position: relative;
@@ -64,8 +58,6 @@
 }
 
 .content {
-
-	//content__image-container
 
 	&__image-container {
 		display: none;
@@ -87,13 +79,9 @@
 		}
 	}
 
-	//content__image
-
 	&__image {
 		@extend %image_inner;
 	}
-
-	//content__text
 
 	&__text {
 		display: inline-block;
@@ -113,8 +101,6 @@
 			vertical-align: top;
 		}
 	}
-
-	//content__subtext
 
 	&__subtext {
 		font-size: 12px;
@@ -143,8 +129,6 @@
 
 .text {
 
-	// .text__bonus-row
-
 	&__bonus-row {
 		display: flex;
 		flex-wrap: wrap;
@@ -170,8 +154,6 @@
 		}
 	}
 
-	// .text__bonus-row:first-child
-
 	&__bonus-row:first-child {
 		margin-bottom: 35px;
 
@@ -184,8 +166,6 @@
 		}
 	}
 
-	// .text__bonus-block
-
 	&__bonus-block {
 		width: 220px;
 
@@ -196,8 +176,6 @@
 }
 
 .bonus-block {
-
-	// .bonus-block__title
 
 	&__title {
 		font-family: 'Philosopher';
@@ -216,8 +194,6 @@
 			font-size: 42px;
 		}
 	}
-
-	// .bonus-block__text
 
 	&__text {
 		font-weight: 500;

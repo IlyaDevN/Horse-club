@@ -4,7 +4,6 @@
 .questions {
 	position: relative;
 
-	// .questions__background-container
 	&__background-container {
 		position: absolute;
 		left: 0;
@@ -13,16 +12,13 @@
 		height: 100%;
 	}
 
-	// .questions__background
 	&__background {
 
-		// .questions__background_forest
 		&_forest {
 			width: 100%;
 			height: 100%;
 		}
 
-		// .questions__background_cloudsTop
 		&_cloudsTop {
 			position: absolute;
 			left: 0;
@@ -31,7 +27,6 @@
 			z-index: 5;
 		}
 
-		// .questions__background_cloudsBottom
 		&_cloudsBottom {
 			position: absolute;
 			left: 0;
@@ -41,7 +36,6 @@
 		}
 	}
 
-	// .questions__container
 	&__container {
 		position: relative;
 		max-width: 320px;
@@ -72,8 +66,6 @@
 		}
 	}
 
-	// .questions__girl-with-horse
-
 	&__girl-with-horse {
 		position: absolute;
 		width: 100%;
@@ -91,7 +83,6 @@
 		}
 	}
 
-	// .questions__bush
 	&__bush {
 		position: absolute;
 		z-index: 15;
@@ -109,7 +100,6 @@
 		}
 	}
 
-	// .questions__form-background
 	&__form-background {
 		position: absolute;
 		width: 300px;
@@ -147,7 +137,6 @@
 		}
 	}
 
-	// .questions__form-container
 	&__form-container {
 		position: absolute;
 		width: 300px;
@@ -186,7 +175,6 @@
 		}
 	}
 
-	// .questions__form
 	&__form {
 		display: flex;
 		flex-direction: column;
@@ -200,7 +188,6 @@
 
 .form {
 
-	// .form__header
 	&__header {
 		font-family: 'Philosopher';
 		font-size: 22px;
@@ -223,7 +210,6 @@
 		}
 	}
 
-	// .form__description
 	&__description {
 		color: var.$color-dark-grey;
 		font-size: 13px;
@@ -244,7 +230,6 @@
 		}
 	}
 
-	// .form__input
 	&__input {
 		background: var.$color-white;
 		border: 1px solid var.$color-light-grey;
@@ -272,7 +257,6 @@
 		}
 	}
 
-	// .form__button
 	&__button {
 		width: 225px;
 		height: 45px;
@@ -300,7 +284,6 @@
 		}
 	}
 
-	// .form__checkbox-container.input-container
 	&__checkbox-container.input-container {
 		padding: 0 0 10px;
 		align-self: flex-start;
@@ -311,7 +294,6 @@
 		}
 	}
 
-	// .form__checkbox
 	&__checkbox {
 		position: absolute;
 		z-index: -1;
@@ -326,7 +308,6 @@
 		}
 	}
 
-	// .form__label-checkbox
 	&__label-checkbox {
 		font-size: 13px;
 		line-height: 15px;

@@ -5,8 +5,6 @@
 .club-directions {
 	position: relative;
 
-	// .club-directions__container
-
 	&__container {
 		max-width: 320px;
 		height: 2328px;
@@ -39,8 +37,6 @@
 		}
 	}
 
-	// .club-directions__title
-
 	&__title {
 		margin-bottom: 80px;
 
@@ -61,8 +57,6 @@
 		}
 	}
 
-	// .club-directions__galery
-
 	&__galery {
 		@include mixins.mobile() {
 			width: 100%;
@@ -81,8 +75,6 @@
 			gap: 0;
 		}
 	}
-
-	// .club-directions__button
 
 	&__button {
 		margin: 30px auto 0;
@@ -106,8 +98,6 @@
 }
 .background {
 
-	// .background__sky
-
 	&__sky {
 		position: absolute;
 		bottom: 52px;
@@ -127,8 +117,6 @@
 			bottom: 91px;
 		}
 	}
-
-	// .background__grass
 
 	&__grass {
 		position: absolute;
@@ -153,8 +141,6 @@
 		}
 	}
 
-	// .background__clouds-botom
-
 	&__clouds-botom {
 		position: absolute;
 		bottom: 39px;
@@ -175,8 +161,6 @@
 		}
 	}
 
-	// .background__horses-container
-
 	&__horses-container {
 		@include mixins.desktop() {
 			position: absolute;
@@ -187,8 +171,6 @@
 			margin: auto;
 		}
 	}
-
-	// .background__horse-left
 
 	&__horse-left {
 		position: absolute;
@@ -226,8 +208,6 @@
 		}
 	}
 
-	// .background__horse-right
-
 	&__horse-right {
 		position: absolute;
 		z-index: 1;
@@ -264,7 +244,6 @@
 }
 
 .horse-left {
-	// .horse-left__img
 
 	&__img {
 		@extend %image_inner;
@@ -272,7 +251,6 @@
 }
 
 .horse-right {
-	// .horse-right__img
 
 	&__img {
 		@extend %image_inner;
@@ -280,7 +258,6 @@
 }
 
 .galery {
-	// .galery__first-row
 
 	&__first-row {
 		@include mixins.laptop() {
@@ -295,8 +272,6 @@
 			margin-bottom: 0;
 		}
 	}
-
-	// .galery__card
 
 	&__card {
 		width: 300px;
@@ -340,9 +315,8 @@
 		}
 	}
 
-	// .galery__second-row
-
 	&__second-row {
+
 		.galery__card:last-child {
 			margin-bottom: 0;
 		}
@@ -360,7 +334,6 @@
 	}
 }
 .card {
-	// .card__image-container
 
 	&__image-container {
 		width: 100%;
@@ -395,13 +368,9 @@
 		}
 	}
 
-	// .card__image
-
 	&__image {
 		@extend %image_inner;
 	}
-
-	// .card__title
 
 	&__title {
 		font-weight: 500;
@@ -426,8 +395,6 @@
 		}
 	}
 
-	// .card__row
-
 	&__row {
 		background-color: var.$color-green;
 		width: 26px;
@@ -442,8 +409,6 @@
 			margin: 0 auto 25px;
 		}
 	}
-
-	// .card__text
 
 	&__text {
 		font-size: 13px;

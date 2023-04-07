@@ -4,8 +4,6 @@
 
 .benefits {
 
-	// .benefits__container
-
 	&__container {
 		max-width: 320px;
 		margin: 0 auto 103px;
@@ -36,8 +34,6 @@
 		}
 	}
 
-	// .benefits__title
-
 	&__title {
 		margin-bottom: 57px;
 
@@ -57,8 +53,6 @@
 			margin-bottom: 108px;
 		}
 	}
-
-	// .benefits__table
 
 	&__table {
 		display: flex;
@@ -86,8 +80,6 @@
 		}
 	}
 
-	// .benefits__card
-
 	&__card {
 		max-width: 300px;
 
@@ -106,8 +98,6 @@
 		}
 	}
 
-	// .benefits__image-container
-
 	&__image-container {
 		margin: 0 auto;
 		width: 102px;
@@ -124,13 +114,9 @@
 		}
 	}
 
-	// .benefits__image
-
 	&__image {
 		@extend %image_inner;
 	}
-
-	// .benefits__subtitle
 
 	&__subtitle {
 		font-weight: 500;
@@ -160,8 +146,6 @@
 			margin: 10px auto 0;
 		}
 	}
-
-	// .benefits__text
 
 	&__text {
 		font-size: 13px;

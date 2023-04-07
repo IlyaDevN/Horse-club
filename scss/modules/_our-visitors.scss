@@ -8,7 +8,6 @@
 		overflow: visible;
 	}
 
-	// .our-visitors__container
 	&__container {
 		margin: 0 auto 70px;
 		width: 320px;
@@ -35,7 +34,6 @@
 		}
 	}
 
-	// .our-visitors__title
 	&__title {
 		margin-bottom: 35px;
 
@@ -48,7 +46,6 @@
 		}
 	}
 
-	// .our-visitors__photo-container
 	&__photo-container {
 		margin-bottom: 30px;
 		display: flex;
@@ -79,7 +76,6 @@
 		}
 	}
 
-	// .our-visitors__photo
 	&__photo {
 		display: flex;
 		flex-wrap: wrap;
@@ -102,7 +98,6 @@
 		}
 	}
 
-	// .our-visitors__pagination-container
 	&__pagination-container {
 		padding: 0 18.5px;
 		display: none;

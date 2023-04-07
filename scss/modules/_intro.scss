@@ -5,7 +5,6 @@
 .intro {
 	position: relative;
 
-	// .intro__background-container
 	&__background-container {
 		position: absolute;
 		width: 100%;
@@ -14,10 +13,8 @@
 		left: 0;
 	}
 
-	// .intro__image
 	&__image {
 
-		// .intro__image_bg
 		&_bg {
 			width: 100%;
 			height: 100%;
@@ -33,7 +30,6 @@
 			}
 		}
 
-		// .intro__image_bushLeft
 		&_bushLeft {
 			position: absolute;
 			left: 0;
@@ -41,7 +37,6 @@
 			z-index: 5;
 		}
 
-		// .intro__image_bushRight
 		&_bushRight {
 			position: absolute;
 			right: 0;
@@ -50,7 +45,6 @@
 		}
 	}
 
-	// .intro__container
 	&__container {
 		max-width: 320px;
 		height: 558px;
@@ -84,7 +78,6 @@
 		}
 	}
 
-	// .intro__header
 	&__header {
 		margin: 15px auto 97px;
 		width: 100%;
@@ -108,12 +101,10 @@
 		}
 	}
 
-	// .intro__content
 	&__content {
 		min-width: 100%;
 	}
 
-	// .intro__invitation
 	&__invitation {
 		position: relative;
 		text-align: center;
@@ -155,7 +146,6 @@
 		}
 	}
 
-	// .intro__advertising
 	&__advertising {
 		position: relative;
 		font-family: 'Alegreya Sans', sans-serif;
@@ -228,7 +218,6 @@
 		}
 	}
 
-	// .intro__button
 	&__button {
 		margin: 0 auto;
 
@@ -240,7 +229,6 @@
 
 .header {
 
-	// .header__logo
 	&__logo {
 		width: 89px;
 		height: 29px;
@@ -263,12 +251,10 @@
 		}
 	}
 
-	// .header__logo-img
 	&__logo-img {
 		@extend %image_inner;
 	}
 
-	// .header__menu-burger-button
 	&__menu-burger-button {
 		position: relative;
 		width: 77px;
@@ -283,7 +269,6 @@
 		}
 	}
 
-	// .header__menu-overlay
 	&__menu-overlay {
 		position: fixed;
 		width: 100%;
@@ -303,18 +288,15 @@
 			width: 427px;
 		}
 
-		// .header__menu-overlay.active
 		&.active {
 			visibility: visible;
 		}
 
-		// .header__menu-overlay.active .header__menu
 		&.active .header__menu {
 			transform: translateX(0);
 		}
 	}
 
-	// .header__menu
 	&__menu {
 		position: fixed;
 		width: 100%;
@@ -343,7 +325,6 @@
 		}
 	}
 
-	// .header__contacts
 	&__contacts {
 		display: none;
 		position: relative;
@@ -396,13 +377,11 @@
 
 .menu-burger-button {
 
-	// .menu-burger-button__icon
 	&__icon {
 		display: block;
 		padding: 0 5px 0 10px;
 	}
 
-	// .menu-burger-button__name
 	&__name {
 		font-size: 15px;
 		line-height: 16px;
@@ -424,7 +403,6 @@
 
 .menu {
 
-	// .menu__close-button
 	&__close-button {
 		position: absolute;
 		width: 16px;
@@ -438,7 +416,6 @@
 		}
 	}
 
-	// .menu__nav-container
 	&__nav-container {
 		margin-top: 50px;
 
@@ -451,7 +428,6 @@
 		}
 	}
 
-	// .menu__nav
 	&__nav {
 		@include mixins.tablet() {
 			display: flex;

@@ -3,8 +3,6 @@
 
 .comments {
 
-	// .comments__container
-
 	&__container {
 		max-width: 100%;
 		overflow: hidden;
@@ -31,8 +29,6 @@
 		}
 	}
 
-	// .comments__title
-
 	&__title {
 		margin-bottom: 30px;
 
@@ -48,8 +44,6 @@
 			margin-bottom: 40px;
 		}
 	}
-
-	// .comments__slider-container
 
 	&__slider-container {
 		padding: 0 10px;
@@ -71,8 +65,6 @@
 		}
 	}
 
-	// .comments__card-container
-
 	&__card-container {
 		padding: 18.5px;
 		width: 300px;
@@ -81,18 +73,17 @@
 		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
 		border-radius: 5px;
 		
-		//.comments__card-container.transitioned
 		&.transitioned {
 			transition: transform 1s,
 			opacity 1s;
 		}
 
 		&.activeSlides {
-			//.comments__card-container.activeSlides .comments__card-unwrap-button
+
 			.comments__card-unwrap-button {
 				pointer-events: none;
 			}
-			//.comments__card-container.activeSlides .cocial-network-link__ref
+
 			.cocial-network-link__ref {
 				pointer-events: none;
 			}
@@ -122,7 +113,6 @@
 		}
 	}
 
-	// .comments__card-text
 	&__card-text {
 		--height: auto;
 		font-size: 13px;
@@ -138,7 +128,6 @@
 		-webkit-box-orient: vertical;
 		transition: height 0.5s;
 
-		//.comments__card-text.opened
 		&.opened {
 			display: block;
 		}
@@ -164,7 +153,6 @@
 		}
 	}
 
-	// .comments__card-unwrap-button
 	&__card-unwrap-button {
 		display: flex;
 		align-items: center;
@@ -192,24 +180,22 @@
 			padding: 8px 0 6px;
 		}
 
-		// .comments__card-unwrap-button.visible
 		&.visible {
 			visibility: visible;
 		}
 
 		&.opened {
-			// .comments__card-unwrap-button.opened .card-unwrap-button__span.first
+
 			.card-unwrap-button__span.first {
 				transform: translate(2px, 1px) rotate(-45deg);
 			}
-			// .comments__card-unwrap-button.opened .card-unwrap-button__span.second
+
 			.card-unwrap-button__span.second {
 				transform: translate(-1px, 1px) rotate(45deg);
 			}
 		}
 	}
 
-	// .comments__card-author
 	&__card-author {
 		display: flex;
 		justify-content: flex-start;
@@ -228,7 +214,6 @@
 
 .card-unwrap-button {
 
-	// .card-unwrap-button__span
 	&__span {
 		display: inline-block;
 		height: 1px;
@@ -236,12 +221,10 @@
 		background-color: var.$color-green;
 		transition: transform 0.5s;
 
-		// .card-unwrap-button__span.first
 		&.first {
 			transform: translate(2px, 1px) rotate(45deg);
 		}
 
-		// .card-unwrap-button__span.second
 		&.second {
 			transform: translate(-1px, 1px) rotate(-45deg);
 		}
@@ -250,7 +233,6 @@
 
 .card-author {
 
-	// .card-author__photo
 	&__photo {
 		margin-right: 10px;
 
@@ -259,7 +241,6 @@
 		}
 	}
 
-	// .card-author__cocial-network-link
 	&__cocial-network-link {
 		flex: 1 1 auto;
 	}
@@ -267,7 +248,6 @@
 
 .cocial-network-link {
 
-	// .cocial-network-link__name
 	&__name {
 		font-size: 14px;
 		line-height: 21px;

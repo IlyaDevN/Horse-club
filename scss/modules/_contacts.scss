@@ -17,7 +17,6 @@
 		height: 650px;
 	}
 
-	// .contacts__background-map
 	&__background-map {
 		position: absolute;
 		width: 100%;
@@ -37,7 +36,6 @@
 		}
 	}
 
-	// .contacts__background-left-tree
 	&__background-left-tree {
 		display: none;
 
@@ -50,7 +48,6 @@
 		}
 	}
 
-	// .contacts__background-right-tree
 	&__background-right-tree {
 		display: none;
 
@@ -63,7 +60,6 @@
 		}
 	}
 
-	// .contacts__container
 	&__container {
 		max-width: 320px;
 		height: 748px;
@@ -90,7 +86,6 @@
 		}
 	}
 
-	// .contacts__square
 	&__square {
 		position: absolute;
 		width: 300px;
@@ -126,7 +121,6 @@
 
 .square {
 
-	// .square__container
 	&__container {
 		padding: 30px 65px;
 		text-align: center;
@@ -145,7 +139,6 @@
 		}
 	}
 
-	// .square__title
 	&__title {
 		font-family: 'Philosopher';
 		font-size: 24px;
@@ -162,7 +155,6 @@
 		}
 	}
 
-	// .square__row
 	&__row {
 		width: 26px;
 		height: 1px;
@@ -178,7 +170,6 @@
 		}
 	}
 
-	// .square__item-map
 	&__item-map {
 		display: flex;
 		align-items: center;
@@ -189,7 +180,6 @@
 		}
 	}
 
-	// .square__item-tel
 	&__item-tel {
 		display: flex;
 		align-items: center;
@@ -200,7 +190,6 @@
 		}
 	}
 
-	// .square__item-mail
 	&__item-mail {
 		display: flex;
 		align-items: center;
@@ -211,7 +200,6 @@
 		}
 	}
 
-	// .square__item-timetable
 	&__item-timetable {
 		display: flex;
 		align-items: flex-start;
@@ -229,7 +217,6 @@
 
 .item-map {
 
-	// .item-map__svg
 	&__svg {
 		width: 11px;
 		height: 17px;
@@ -240,7 +227,6 @@
 		}
 	}
 
-	// .item-map__ref
 	&__ref {
 		margin-left: 12px;
 
@@ -268,7 +254,6 @@
 
 .item-tel {
 
-	// .item-tel__svg
 	&__svg {
 		width: 13px;
 		height: 13px;
@@ -279,7 +264,6 @@
 		}
 	}
 
-	// .item-tel__ref
 	&__ref {
 		margin-left: 10px;
 
@@ -291,7 +275,6 @@
 
 .item-mail {
 
-	// .item-mail__svg
 	&__svg {
 		width: 15px;
 		height: 11px;
@@ -302,7 +285,6 @@
 		}
 	}
 
-	// .item-mail__ref
 	&__ref {
 		margin-left: 10px;
 
@@ -314,7 +296,6 @@
 
 .item-timetable {
 
-	// .item-timetable__svg
 	&__svg {
 		width: 14px;
 		height: 14px;
@@ -327,7 +308,6 @@
 		}
 	}
 
-	// .item-timetable__ref
 	&__ref {
 		line-height: 25px;
 		margin-left: 10px;
