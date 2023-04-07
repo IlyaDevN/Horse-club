@@ -1,0 +1,78 @@
+@use "../common/media-queries" as mq;
+@use "../common/colors" as color;
+
+.button {
+	position: relative;
+	display: block;
+	width: 170px;
+	height: 43px;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 10px;
+	line-height: 10px;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	color: color.$color-dark-orange;
+	background: color.$gradient-yellow;
+	box-shadow: 0px 4px 0px color.$color-light-orange;
+	z-index: 100;
+
+	@include mq.mobile() {
+		width: 180px;
+		height: 45px;
+	}
+
+	@include mq.tablet() {
+		line-height: 32px;
+	}
+
+	@include mq.laptop() {
+		width: 218px;
+		height: 60px;
+		font-size: 13px;
+	}
+
+	@include mq.desktop() {
+		width: 270px;
+		height: 70px;
+		font-size: 15px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: color.$gradient-yellow-dark;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+		z-index: -100;
+	}
+
+	&:hover::before {
+		opacity: 1;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: color.$gradient-yellow-dark;
+		transform: matrix(1, 0, 0, -1, 0, 0);
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
+		z-index: -100;
+	}
+
+	&:active::after {
+		opacity: 1;
+	}
+}

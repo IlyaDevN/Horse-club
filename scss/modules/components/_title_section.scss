@@ -1,0 +1,25 @@
+@use "../common/media-queries" as mq;
+@use "../common/colors" as color;
+
+.title_section {
+	font-family: 'Philosopher', sans-serif;
+	font-size: 21px;
+	line-height: 21px;
+	color: color.$color-brown;
+	text-align: center;
+
+	@include mq.mobile() {
+		font-size: 27px;
+		line-height: 27px;
+	}
+
+	@include mq.laptop() {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	@include mq.desktop() {
+		font-size: 40px;
+		line-height: 36px;
+	}
+}

@@ -1,0 +1,57 @@
+@use "../common/media-queries" as mq;
+@use "../common/colors" as color;
+
+.scroll-bar {
+	position: static;
+	width: 96px;
+	height: 8px;
+	margin: 0 27px;
+	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
+	border-radius: 10px;
+
+	@include mq.desktop() {
+		display: none;
+	}
+
+	.swiper-scrollbar-drag {
+		height: 8px;
+		background: color.$gradient-yellow-thumb;
+		border-radius: 10px;
+	}
+}
+
+.swiper-wrapper {
+	.swiper-slide.activeSlides {
+		transform: translateY(-40px);
+		opacity: 0.4;
+	}
+
+	.swiper-button-disabled.slider-control__button {
+		opacity: 0.4;
+		cursor: auto;
+
+		&:hover::before {
+			opacity: 0;
+			cursor: auto;
+		}
+	}
+}
+
+.slider-control {
+
+	.swiper-pagination.pagination {
+		display: none;
+
+		@include mq.desktop() {
+			display: block;
+			position: static;
+			width: auto;
+			margin: 0 18.5px;
+			--swiper-theme-color: #FFC700;
+		}
+
+		.swiper-pagination-bullet {
+			margin: auto 7.5px;
+		}
+	}
+}

@@ -1,6 +1,14 @@
 @use "./modules/common/reset";
 @use "./modules/common/fonts";
-@use "./modules/common/components";
+@use "./modules/components/button";
+@use "./modules/components/close-button";
+@use "./modules/components/form-components";
+@use "./modules/components/modal-gratitude";
+@use "./modules/components/modal-overlay";
+@use "./modules/components/register-modal";
+@use "./modules/components/title_section";
+@use "./modules/components/slider-own";
+@use "./modules/components/slider-swiper";
 @use "./modules/intro";
 @use "./modules/common/swiper-bundle.8.4.5.min";
 @use "./modules/about";

@@ -1,0 +1,124 @@
+@use "../common/media-queries" as mq;
+@use "../common/colors" as color;
+
+.register-modal__content {
+	width: 300px;
+	height: 300px;
+	background-color: color.$color-white;
+	border-radius: 5px;
+	padding: 28.5px 27.5px;
+	transform: perspective(300px) translateY(-100%) rotateX(45deg);
+	transition: transform 0.8s;
+
+	@include mq.mobile() {
+		width: 375px;
+		height: 375px;
+		padding: 54px 46px;
+		transform: perspective(375px) translateY(-100%) rotateX(45deg);
+	}
+
+	@include mq.laptop() {
+		width: 405px;
+		height: 380px;
+		padding: 42.5px;
+		transform: perspective(380px) translateY(-100%) rotateX(45deg);
+	}
+
+	&.open {
+		transform: perspective(380px) translateY(0) rotateX(0);
+	}
+}
+
+.register-modal {
+
+	&__form {
+
+		.form-input {
+			background: color.$color-white;
+			border: 1px solid color.$color-light-grey;
+			border-radius: 5px;
+			font-size: 13px;
+			line-height: 13px;
+			width: 100%;
+			height: 50px;
+			padding-left: 14px;
+
+			@include mq.mobile() {
+				font-size: 15px;
+				line-height: 18px;
+				height: 55px;
+				padding-left: 19px;
+			}
+
+			@include mq.laptop() {
+				font-size: 18px;
+				line-height: 21px;
+				height: 61px;
+				padding-left: 21px;
+			}
+
+			.register-modal__checkbox {
+				height: auto;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__form-button {
+		width: 100%;
+		height: 45px;
+		font-size: 10px;
+		line-height: 10px;
+		margin: 15px 0 25px;
+		display: inline-block;
+
+		@include mq.mobile() {
+			height: 64px;
+			font-size: 13px;
+			line-height: 15px;
+			margin: 10px 0 20px;
+		}
+
+		@include mq.tablet() {
+			font-size: 15px;
+		}
+
+		@include mq.laptop() {
+			height: 70px;
+		}
+	}
+
+	&__checkbox-container.input-container {
+		align-self: flex-start;
+		padding: 0 0 10px;
+	}
+
+
+	&__checkbox {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		width: 1.5em;
+		height: 1.5em;
+
+		&+label {
+			font-size: 13px;
+			line-height: 15px;
+			color: color.$color-font-grey;
+			display: inline-flex;
+			align-items: center;
+
+			@include mq.mobile() {
+				font-size: 15px;
+				line-height: 18px;
+			}
+		}
+
+		&:checked+label {
+			.checkbox-svg__path {
+				visibility: visible;
+			}
+		}
+	}
+}
+

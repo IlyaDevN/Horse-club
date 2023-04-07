@@ -1,0 +1,52 @@
+@use "../common/media-queries" as mq;
+@use "../common/colors" as color;
+
+.close-button {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 8px;
+	right: 8px;
+	background-color: color.$color-white;
+
+	@include mq.mobile() {
+		top: 20px;
+		right: 20px;
+	}
+
+	@include mq.laptop() {
+		top: 17px;
+		right: 17px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 200%;
+		height: 200%;
+		left: -50%;
+		top: -50%;
+	}
+
+	.close-button__span {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 17px;
+		height: 1px;
+		background-color: color.$color-black;
+		transform: rotate(135deg);
+		transition: background-color 0.3s;
+
+		&:nth-child(1) {
+			transform: rotate(-135deg);
+		}
+	}
+
+	&:hover {
+		.close-button__span {
+			background-color: color.$color-orange;
+		}
+	}
+
+}

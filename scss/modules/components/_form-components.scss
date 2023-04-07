@@ -1,0 +1,88 @@
+@use "../common/media-queries" as mq;
+@use "../common/colors" as color;
+
+
+.form__agreement-link {
+	text-decoration: underline;
+	color: inherit;
+}
+
+.checkbox-svg {
+	width: 15px;
+	height: 15px;
+
+	@include mq.mobile() {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__rect {
+		stroke-width: 1px;
+		stroke: color.$color-yellow;
+		fill: color.$color-white;
+
+		@include mq.mobile() {
+			stroke-width: 2px;
+		}
+	}
+
+	&__path {
+		transform: translate(4px, 4px);
+		stroke: color.$color-green;
+		fill: color.$color-green;
+		visibility: hidden;
+	}
+}
+
+.label-checkbox__ref {
+	margin-left: 10px;
+}
+
+.input-container.error {
+
+	.checkbox-svg__rect {
+		stroke: color.$color-orange;
+	}
+
+	.valid-tooltip {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	[data-to-validate] {
+		border-color: color.$color-orange;
+	}
+}
+
+.input-container {
+	position: relative;
+	padding: 10px 0 5px;
+	width: 100%;
+
+	@include mq.laptop() {
+		padding: 10px 0 10px;
+	}
+}
+
+.valid-tooltip {
+	position: absolute;
+	color: color.$color-orange;
+	font-size: 10px;
+	line-height: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s,
+		visibility 0.3s;
+}
+
+.letters {
+	top: 0;
+}
+
+.figures {
+	top: 0;
+}
+
+.checkes {
+	bottom: 0;
+}
