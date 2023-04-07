@@ -111,28 +111,20 @@
 .photo__item {
 	padding: 1px 0px;
 
-	&:nth-child(n+9) {
-		display: none;
-	}
+	&:nth-child(5n) {
+		@include mq.tablet() {
+			display: none;
+		}
 
-	@include mq.mobile() {
-		&:nth-child(n+9) {
+		@include mq.desktop() {
 			display: inline;
 		}
 	}
 
-	@include mq.tablet() {
-		&:nth-child(5n) {
-			display: none;
-		}
+	&:nth-child(n+9) {
+		display: none;
 
-		&:nth-child(n+10) {
-			display: none;
-		}
-	}
-
-	@include mq.desktop() {
-		&:nth-child(5n) {
+		@include mq.mobile() {
 			display: inline;
 		}
 	}

@@ -2924,24 +2924,21 @@ button.swiper-pagination-bullet {
 .photo__item {
   padding: 1px 0px;
 }
-.photo__item:nth-child(n+9) {
-  display: none;
-}
-@media (min-width: 480px) {
-  .photo__item:nth-child(n+9) {
-    display: inline;
-  }
-}
 @media (min-width: 768px) {
   .photo__item:nth-child(5n) {
-    display: none;
-  }
-  .photo__item:nth-child(n+10) {
     display: none;
   }
 }
 @media (min-width: 1920px) {
   .photo__item:nth-child(5n) {
+    display: inline;
+  }
+}
+.photo__item:nth-child(n+9) {
+  display: none;
+}
+@media (min-width: 480px) {
+  .photo__item:nth-child(n+9) {
     display: inline;
   }
 }
