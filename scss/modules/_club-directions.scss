@@ -289,10 +289,6 @@
 			min-height: 290px;
 			margin: 0 0 40px;
 			padding: 0 14px 22px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
 		}
 
 		@include mixins.tablet() {
@@ -312,6 +308,12 @@
 			width: 370px;
 			min-height: 399px;
 			padding: 0 24px 44px;
+		}
+	}
+
+	&__card:last-child {
+		@include mixins.mobile() {
+			margin-bottom: 0;
 		}
 	}
 
