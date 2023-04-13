@@ -1,5 +1,6 @@
 @use "./modules/common/reset";
 @use "./modules/common/fonts";
+@use "./modules/common/typography";
 @use "./modules/components/button";
 @use "./modules/components/close-button";
 @use "./modules/components/form-components";
@@ -20,13 +21,3 @@
 @use "./modules/comments";
 @use "./modules/contacts";
 @use "./modules/footer";
-
-
-body {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-}
-
-body.stopPageScroll {
-	overflow-y: hidden;
-}

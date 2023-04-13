@@ -142,6 +142,15 @@ h6 {
   font-style: normal;
   font-display: swap;
 }
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body.stopPageScroll {
+  overflow-y: hidden;
+}
+
 .logo__image, .horse-left__img, .horse-right__img, .card__image, .benefits__image, .content__image, .header__logo-img {
   display: block;
   width: 100%;
@@ -4352,13 +4361,4 @@ button.swiper-pagination-bullet {
   .year {
     display: none;
   }
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-body.stopPageScroll {
-  overflow-y: hidden;
 }/*# sourceMappingURL=index.css.map */
