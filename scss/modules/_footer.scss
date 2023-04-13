@@ -1,4 +1,4 @@
-@use "./common/forwarded" as helpers;
+@use "../common/forwarded" as helpers;
 
 .footer {
 	background-color: helpers.$color-font-black-one;
