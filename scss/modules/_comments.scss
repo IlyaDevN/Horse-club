@@ -1,7 +1,6 @@
 @use "./common/forwarded" as helpers;
 
 .comments {
-
 	&__container {
 		max-width: 100%;
 		overflow: hidden;
@@ -101,7 +100,6 @@
 		}
 
 		&.activeSlides {
-
 			.comments__card-unwrap-button {
 				pointer-events: none;
 			}
@@ -184,7 +182,6 @@
 		}
 
 		&.opened {
-
 			.card-unwrap-button__span.first {
 				transform: translate(2px, 1px) rotate(-45deg);
 			}
@@ -212,7 +209,6 @@
 }
 
 .card-unwrap-button {
-
 	&__span {
 		display: inline-block;
 		height: 1px;
@@ -231,7 +227,6 @@
 }
 
 .card-author {
-
 	&__photo {
 		margin-right: 10px;
 
@@ -246,7 +241,6 @@
 }
 
 .cocial-network-link {
-
 	&__name {
 		font-size: 14px;
 		line-height: 21px;

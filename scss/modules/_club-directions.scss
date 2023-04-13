@@ -96,7 +96,6 @@
 }
 
 .background {
-
 	&__sky {
 		position: absolute;
 		bottom: 52px;
@@ -243,21 +242,18 @@
 }
 
 .horse-left {
-
 	&__img {
 		@extend %image_inner;
 	}
 }
 
 .horse-right {
-
 	&__img {
 		@extend %image_inner;
 	}
 }
 
 .galery {
-
 	&__first-row {
 		@include helpers.laptop() {
 			display: flex;
@@ -335,7 +331,6 @@
 }
 
 .card {
-
 	&__image-container {
 		width: 100%;
 		aspect-ratio: 5/3;

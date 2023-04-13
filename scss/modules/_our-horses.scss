@@ -1,7 +1,6 @@
 @use "./common/forwarded" as helpers;
 
 .our-horses {
-
 	&__container {
 		max-width: 100%;
 		margin: 0 auto 70px;
@@ -62,7 +61,6 @@
 }
 
 .galary {
-
 	&__row {
 		display: flex;
 		justify-content: flex-start;
@@ -115,7 +113,6 @@
 }
 
 .item {
-
 	&__image {
 		margin: -20px 0 19px;
 		width: 100%;
