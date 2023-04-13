@@ -1,24 +1,23 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
+@use "../common/forwarded" as helpers;
 
 .title_section {
 	font-family: 'Philosopher', sans-serif;
 	font-size: 21px;
 	line-height: 21px;
-	color: color.$color-brown;
+	color: helpers.$color-brown;
 	text-align: center;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		font-size: 27px;
 		line-height: 27px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		font-size: 30px;
 		line-height: 36px;
 	}
 
-	@include mq.desktop() {
+	@include helpers.desktop() {
 		font-size: 40px;
 		line-height: 36px;
 	}

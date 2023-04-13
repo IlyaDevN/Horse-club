@@ -1,5 +1,4 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
+@use "../common/forwarded" as helpers;
 
 .slider-control {
 	display: flex;
@@ -11,10 +10,10 @@
 		position: relative;
 		width: 40px;
 		height: 40px;
-		background: color.$gradient-slide-button;
+		background: helpers.$gradient-slide-button;
 		border-radius: 50%;
 		transition: opacity 1s ease-in-out;
-		box-shadow: 0px 1px 0px color.$color-light-orange;
+		box-shadow: 0px 1px 0px helpers.$color-light-orange;
 
 		&::before {
 			content: "";
@@ -25,7 +24,7 @@
 			height: 100%;
 			border-radius: 50%;
 			opacity: 0;
-			background: color.$gradient-yellow-dark;
+			background: helpers.$gradient-yellow-dark;
 			transition: opacity 0.2s ease-in-out;
 		}
 
@@ -49,8 +48,8 @@
 	display: block;
 	width: 10px;
 	height: 10px;
-	border-left: 3px solid color.$color-dark-orange;
-	border-bottom: 3px solid color.$color-dark-orange;
+	border-left: 3px solid helpers.$color-dark-orange;
+	border-bottom: 3px solid helpers.$color-dark-orange;
 	margin: 0 auto;
 
 	&.button__arrow_prev {
@@ -69,7 +68,7 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 
-	@include mq.desktop() {
+	@include helpers.desktop() {
 		display: none;
 	}
 }
@@ -77,11 +76,11 @@
 .slider-control__thumb {
 	/* width took from JS*/
 	height: 8px;
-	background: color.$gradient-yellow-thumb;
+	background: helpers.$gradient-yellow-thumb;
 	border-radius: 10px;
 	transition: transform 0.6s ease-in-out 0s;
 
-	@include mq.tablet() {
+	@include helpers.tablet() {
 		transition: transform 1s ease-in-out 0s;
 	}
 }

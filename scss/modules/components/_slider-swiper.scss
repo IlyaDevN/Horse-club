@@ -1,5 +1,4 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
+@use "../common/forwarded" as helpers;
 
 .scroll-bar {
 	position: static;
@@ -9,13 +8,13 @@
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.17);
 	border-radius: 10px;
 
-	@include mq.desktop() {
+	@include helpers.desktop() {
 		display: none;
 	}
 
 	.swiper-scrollbar-drag {
 		height: 8px;
-		background: color.$gradient-yellow-thumb;
+		background: helpers.$gradient-yellow-thumb;
 		border-radius: 10px;
 	}
 }
@@ -42,12 +41,12 @@
 	.swiper-pagination.pagination {
 		display: none;
 
-		@include mq.desktop() {
+		@include helpers.desktop() {
 			display: block;
 			position: static;
 			width: auto;
 			margin: 0 18.5px;
-			--swiper-theme-color: #FFC700;
+			--swiper-theme-color: #{helpers.$color-yellow};
 		}
 
 		.swiper-pagination-bullet {

@@ -1,5 +1,4 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
+@use "../common/forwarded" as helpers;
 
 .modal-overlay {
 	position: fixed;
@@ -11,7 +10,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: helpers.$color-black-semi-transparent;
 	transition: opacity 0.8s,
 	visibility 0.8s;
 	opacity: 0;

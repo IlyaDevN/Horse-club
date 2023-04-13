@@ -1,5 +1,4 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
+@use "../common/forwarded" as helpers;
 
 .close-button {
 	position: absolute;
@@ -7,14 +6,14 @@
 	height: 16px;
 	top: 8px;
 	right: 8px;
-	background-color: color.$color-white;
+	background-color: helpers.$color-white;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		top: 20px;
 		right: 20px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		top: 17px;
 		right: 17px;
 	}
@@ -34,7 +33,7 @@
 		top: 50%;
 		width: 17px;
 		height: 1px;
-		background-color: color.$color-black;
+		background-color: helpers.$color-black;
 		transform: rotate(135deg);
 		transition: background-color 0.3s;
 
@@ -45,7 +44,7 @@
 
 	&:hover {
 		.close-button__span {
-			background-color: color.$color-orange;
+			background-color: helpers.$color-orange;
 		}
 	}
 

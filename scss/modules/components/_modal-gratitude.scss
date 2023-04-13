@@ -1,11 +1,10 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
+@use "../common/forwarded" as helpers;
 
 .modal-gratitude {
 	position: absolute;
 	width: 300px;
 	height: 300px;
-	background-color: color.$color-white;
+	background-color: helpers.$color-white;
 	border-radius: 5px;
 	padding: 30px;
 	display: flex;
@@ -19,12 +18,12 @@
 	visibility: hidden;
 	opacity: 0;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		width: 375px;
 		height: 375px;
 	}
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		width: 380px;
 		height: 380px;
 	}
@@ -41,7 +40,7 @@
 		line-height: 50px;
 		text-align: center;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			font-size: 50px;
 			line-height: 60px;
 			text-align: center;
@@ -53,7 +52,7 @@
 		line-height: 30px;
 		text-align: center;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			font-size: 30px;
 			line-height: 50px;
 			text-align: center;
@@ -63,7 +62,7 @@
 	&__image-container {
 		width: 250px;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			width: 270px;
 		}
 	}

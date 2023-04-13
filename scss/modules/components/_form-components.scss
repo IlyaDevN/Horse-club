@@ -1,6 +1,4 @@
-@use "../common/media-queries" as mq;
-@use "../common/colors" as color;
-
+@use "../common/forwarded" as helpers;
 
 .form__agreement-link {
 	text-decoration: underline;
@@ -11,25 +9,25 @@
 	width: 15px;
 	height: 15px;
 
-	@include mq.mobile() {
+	@include helpers.mobile() {
 		width: 20px;
 		height: 20px;
 	}
 
 	&__rect {
 		stroke-width: 1px;
-		stroke: color.$color-yellow;
-		fill: color.$color-white;
+		stroke: helpers.$color-yellow;
+		fill: helpers.$color-white;
 
-		@include mq.mobile() {
+		@include helpers.mobile() {
 			stroke-width: 2px;
 		}
 	}
 
 	&__path {
 		transform: translate(4px, 4px);
-		stroke: color.$color-green;
-		fill: color.$color-green;
+		stroke: helpers.$color-green;
+		fill: helpers.$color-green;
 		visibility: hidden;
 	}
 }
@@ -41,7 +39,7 @@
 .input-container.error {
 
 	.checkbox-svg__rect {
-		stroke: color.$color-orange;
+		stroke: helpers.$color-orange;
 	}
 
 	.valid-tooltip {
@@ -50,7 +48,7 @@
 	}
 
 	[data-to-validate] {
-		border-color: color.$color-orange;
+		border-color: helpers.$color-orange;
 	}
 }
 
@@ -59,14 +57,14 @@
 	padding: 10px 0 5px;
 	width: 100%;
 
-	@include mq.laptop() {
+	@include helpers.laptop() {
 		padding: 10px 0 10px;
 	}
 }
 
 .valid-tooltip {
 	position: absolute;
-	color: color.$color-orange;
+	color: helpers.$color-orange;
 	font-size: 10px;
 	line-height: 10px;
 	visibility: hidden;
