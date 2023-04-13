@@ -144,7 +144,7 @@
 		bottom: 39px;
 		left: 0;
 		width: 100%;
-		z-index: 5;
+		@include helpers.zIndex(layer_middle);
 
 		@include helpers.mobile() {
 			bottom: 46px;
@@ -172,7 +172,7 @@
 
 	&__horse-left {
 		position: absolute;
-		z-index: 1;
+		@include helpers.zIndex(layer_base);
 		left: 0;
 		bottom: 69px;
 		width: 63px;
@@ -208,7 +208,7 @@
 
 	&__horse-right {
 		position: absolute;
-		z-index: 1;
+		@include helpers.zIndex(layer_base);
 		right: 0;
 		bottom: 77px;
 		width: 66px;

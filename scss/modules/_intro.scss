@@ -31,14 +31,14 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			z-index: 5;
+			@include helpers.zIndex(layer_base);
 		}
 
 		&_bushRight {
 			position: absolute;
 			right: 0;
 			bottom: 0;
-			z-index: 5;
+			@include helpers.zIndex(layer_base);
 		}
 	}
 
@@ -271,7 +271,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: 110;
+		@include helpers.zIndex(layer_overlay);
 		visibility: hidden;
 
 		@include helpers.tablet() {
@@ -299,7 +299,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: 111;
+		@include helpers.zIndex(layer_top);
 		background-color: helpers.$color-font-black-two;
 		border-right: 5px solid helpers.$color-green;
 		transform: translateX(-100%);

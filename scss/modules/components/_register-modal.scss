@@ -93,7 +93,7 @@
 
 	&__checkbox {
 		position: absolute;
-		z-index: -1;
+		@include helpers.zIndex(layer_negative_highest);
 		opacity: 0;
 		width: 1.5em;
 		height: 1.5em;

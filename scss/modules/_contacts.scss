@@ -19,7 +19,7 @@
 	&__background-map {
 		position: absolute;
 		width: 100%;
-		z-index: -1000;
+		@include helpers.zIndex(layer_negative_lowest);
 		height: 748px;
 
 		@include helpers.mobile() {
@@ -43,7 +43,7 @@
 			position: absolute;
 			top: 365px;
 			left: 0;
-			z-index: 5;
+			@include helpers.zIndex(layer_base);
 		}
 	}
 
@@ -55,7 +55,7 @@
 			position: absolute;
 			top: 58px;
 			right: 0;
-			z-index: 5;
+			@include helpers.zIndex(layer_base);
 		}
 	}
 
