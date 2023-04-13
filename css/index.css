@@ -147,10 +147,6 @@ body {
   font-weight: 400;
 }
 
-body.stopPageScroll {
-  overflow-y: hidden;
-}
-
 .logo__image, .horse-left__img, .horse-right__img, .card__image, .benefits__image, .content__image, .header__logo-img {
   display: block;
   width: 100%;
@@ -450,6 +446,10 @@ body.stopPageScroll {
 .modal-overlay.open {
   opacity: 1;
   visibility: visible;
+}
+
+body.stopPageScroll {
+  overflow-y: hidden;
 }
 
 .register-modal__content {

@@ -21,3 +21,7 @@
 		visibility: visible;
 	}
 }
+
+body.stopPageScroll {
+	overflow-y: hidden;
+}
