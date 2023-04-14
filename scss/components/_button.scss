@@ -15,7 +15,6 @@
 	color: helpers.$color-dark-orange;
 	background: helpers.$gradient-yellow;
 	box-shadow: 0px 4px 0px helpers.$color-light-orange;
-	@include helpers.zIndex(layer_middle);
 
 	@include helpers.mobile() {
 		width: 180px;

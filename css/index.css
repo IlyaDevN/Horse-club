@@ -896,7 +896,6 @@ button.swiper-pagination-bullet {
   color: #6A5300;
   background: linear-gradient(180deg, #9BCFFF 0%, #FFF383 0.01%, #FFC700 100%);
   box-shadow: 0px 4px 0px #C89C00;
-  z-index: 100;
 }
 @media (min-width: 480px) {
   .button {
