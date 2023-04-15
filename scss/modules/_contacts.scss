@@ -19,7 +19,7 @@
 	&__background-map {
 		position: absolute;
 		width: 100%;
-		@include helpers.zIndex(layer_negative_lowest);
+		@include helpers.zIndex(layer_negative);
 		height: 748px;
 
 		@include helpers.mobile() {

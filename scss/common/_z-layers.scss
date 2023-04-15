@@ -6,9 +6,7 @@ $z-layers: (
 	layer_middle: 100,
 	layer_overlay: 150,
 	layer_top: 500,
-	layer_negative_highest: -1,
-	layer_negative_middle: -100,
-	layer_negative_lowest: -200
+	layer_negative: -1,
 );
 
 @mixin zIndex ($layer: layer_null, $extra: 0) {

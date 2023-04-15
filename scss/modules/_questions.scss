@@ -83,7 +83,7 @@
 
 	&__bush {
 		position: absolute;
-		@include helpers.zIndex(layer_null, 40);
+		@include helpers.zIndex(layer_null, 70);
 		display: none;
 
 		@media (min-width: 1171px) {
@@ -293,7 +293,7 @@
 
 	&__checkbox {
 		position: absolute;
-		@include helpers.zIndex(layer_negative_highest);
+		@include helpers.zIndex(layer_negative);
 		opacity: 0;
 		width: 1.5em;
 		height: 1.5em;
