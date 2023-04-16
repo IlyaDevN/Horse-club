@@ -122,8 +122,20 @@
 
 	&:nth-child(n+9) {
 		display: none;
-
 		@include helpers.mobile() {
+			display: inline;
+		}
+		
+	}
+
+	&:nth-child(n+10) {
+		@include helpers.tablet() {
+			display: none;
+		}
+	}
+
+	&:nth-child(10) {
+		@include helpers.desktop() {
 			display: inline;
 		}
 	}
