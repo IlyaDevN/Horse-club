@@ -1,0 +1,91 @@
+{% set comments__card_container = [
+	{
+		"card_text": "Развивает силу, гибкость и координацию всадника; Выпрямляется осанка и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения. Развивает силу, гибкость и координацию всадника; Выпрямляется осанка и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения. Общение с лошадью лечит умственные отклонения.",
+		"photo": "img/comments/cardAuthor/photo/Syutkin.png",
+		"name": "Константин Сюткин",
+		"ref_instagram": "#",
+		"ref_vk": "#"
+	},
+	{
+		"card_text": "Развивает силу, гибкость и координацию всадника; Выпрямляется осанка и повышается стрессоустойчивость; Общение с лошадью лечит умственные отклонения. Общение с лошадью лечит умственные отклонения. Развивает силу, гибкость и координацию всадника; Развивает силу, гибкость и координацию всадника;",
+		"photo": "img/comments/cardAuthor/photo/Syutkin.png",
+		"name": "Константин Сюткин",
+		"ref_instagram": "#",
+		"ref_vk": "#"
+	},
+	{
+		"card_text": "Позитивные эмоции, расслабление, чувство ответственности и даже некоторой сказочности, сразу появляется красивая осанка, работают все группы мышц. Развивает силу, гибкость и координацию всадника;",
+		"photo": "img/comments/cardAuthor/photo/Sorokina.png",
+		"name": "Валентина Сорокина",
+		"ref_instagram": "#",
+		"ref_vk": "#"
+	},
+	{
+		"card_text": "Плюсов до безумия много! Реакция, общение с животным, любовь, понимание, взаимопонимание, терпение, здесь можно перечислять и перечислять очень много всего!",
+		"photo": "img/comments/cardAuthor/photo/Mirnaya.png",
+		"name": "Светлана Мирная",
+		"ref_instagram": "#",
+		"ref_vk": "#"
+	},
+	{
+		"card_text": "Плюсов до безумия много! Реакция, общение с животным, любовь, понимание, взаимопонимание, терпение.",
+		"photo": "img/comments/cardAuthor/photo/Mirnaya.png",
+		"name": "Светлана Мирная",
+		"ref_instagram": "#",
+		"ref_vk": "#"
+	},
+	{
+		"card_text": "Плюсов до безумия много!",
+		"photo": "img/comments/cardAuthor/photo/Mirnaya.png",
+		"name": "Светлана Мирная",
+		"ref_instagram": "#",
+		"ref_vk": "#"
+	}
+] %}
+
+<section class="comments">
+	<div class="comments__container">
+		<div class="comments__title title_section">
+			<h2>О нас говорят клиенты</h2>
+		</div>
+		<div class="comments__slider-container">
+			<div class="comments__slider-wrapper swiper-wrapper">
+				{% for item in comments__card_container %}
+				<div class="comments__card-container transitioned swiper-slide">
+					<div class="comments__card-text">{{item.card_text}}</div>
+					<button class="comments__card-unwrap-button">
+						<span>Подробнее</span>
+						<span class="card-unwrap-button__span first"></span>
+						<span class="card-unwrap-button__span second"></span>
+					</button>
+					<div class="comments__card-author">
+						<div class="card-author__photo"><img src={{item.photo}}
+								alt="Фото автора отзыва"></div>
+						<div class="card-author__cocial-network-link">
+							<div class="cocial-network-link__name">{{item.name}}</div>
+							<a class="cocial-network-link__ref" href={{item.ref_instagram}}><img class="link_icon"
+									src="img/comments/cardAuthor/cocialNetworkIcons/instagram.png"
+									alt="Иконка Instagram"></a>
+							<a class="cocial-network-link__ref" href={{item.ref_vk}}><img class="link_icon"
+									src="img/comments/cardAuthor/cocialNetworkIcons/vk.png"
+									alt="Иконка Вконтакте"></a>
+						</div>
+						<div class="quotes"><img src="img/comments/cardAuthor/quotes/quote.png" alt="Кавычки">
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="comments__slider-control slider-control">
+			<button class="comments__swiper-button-prev slider-control__button">
+				<span class="button__arrow button__arrow_prev"></span>
+			</button>
+			<div class="comments__swiper-scroll-bar scroll-bar"></div>
+			<div class="comments__swiper-pagination swiper-pagination pagination"></div>
+			<button class="comments__swiper-button-next slider-control__button">
+				<span class="button__arrow button__arrow_next"></span>
+			</button>
+		</div>
+	</div>
+</section>

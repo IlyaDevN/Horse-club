@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+	<title>Horse club</title>
+	<link rel="shortcut icon" href="img/favIcon/favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/index.css">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	{% include 'html/components/register-modal.html' %}
+	<div class="wrapper">
+		{% include 'html/sections/intro.html' %}
+		{% include 'html/sections/about.html' %}
+		{% include 'html/sections/benefits.html' %}
+		{% include 'html/sections/club-directions.html' %}
+		{% include 'html/sections/our-visitors.html' %}
+		{% include 'html/sections/our-horses.html' %}
+		{% include 'html/sections/questions.html' %}
+		{% include 'html/sections/comments.html' %}
+		{% include 'html/sections/contacts.html' %}
+		{% include 'html/sections/footer.html' %}
+	</div>
+	<script type="module" src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+{% set galary__item = [
+	{
+		"img_path": "img/our-horses/horse_1.jpg",
+		"item__title": "Жазель",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_2.jpg",
+		"item__title": "Юджин",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_3.jpg",
+		"item__title": "Мелисса",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_4.jpg",
+		"item__title": "Циан",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_5.jpg",
+		"item__title": "Хесана",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_6.jpg",
+		"item__title": "Буцефал",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_7.jpg",
+		"item__title": "Ежевика",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_8.jpg",
+		"item__title": "Кондор",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_9.jpg",
+		"item__title": "Обсидиан",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_10.jpg",
+		"item__title": "Тень",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_11.jpg",
+		"item__title": "Икра",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_12.jpg",
+		"item__title": "Бархат",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_13.jpg",
+		"item__title": "Ворон",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_14.jpg",
+		"item__title": "Моргана",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	},
+	{
+		"img_path": "img/our-horses/horse_15.jpg",
+		"item__title": "Сильвер",
+		"item__text": "Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих Уроки профессиональной верховой езды для любителей и начинающих"
+	}
+] %}
+
+<section class="our-horses">
+	<div class="our-horses__container">
+		<div class="our-horses__title title_section">
+			<h2>Наши лошади</h2>
+		</div>
+		<div class="our-horses__galary our-horses__swiper-container">
+			<div class="galary__row swiper-wrapper">
+				{% for item in galary__item %}
+				<div class="galary__item swiper-slide">
+					<div class="item__image">
+						<img class="image-horse" src={{item.img_path}} alt="Лошадь">
+					</div>
+					<p class="item__title">
+						{{item.item__title}}
+					</p>
+					<div class="item__line"></div>
+					<p class="item__text">
+						{{item.item__text}}
+					</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="our-horses__slider-control slider-control">
+			<button class="our-horses__button-prev slider-control__button">
+				<span class="button__arrow button__arrow_prev"></span>
+			</button>
+			<div class="scroll-bar our-horses__swiper-scroll-bar"></div>
+			<div class="swiper-pagination pagination swiper_pagination_ourHorses"></div>
+			<button class="our-horses__button-next slider-control__button">
+				<span class="button__arrow button__arrow_next"></span>
+			</button>
+		</div>
+	</div>
+</section>

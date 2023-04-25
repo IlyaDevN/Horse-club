@@ -1,0 +1,41 @@
+{% set benefits_content = [
+	{
+		"img_path": "img/benefits/map.jpg",
+		"subtitle": "Удобное расположение",
+		"text": "Мы находимся недалеко от автостанции «Восточный» чтобы вам было удобно добираться"
+	},
+	{
+		"img_path": "img/benefits/desk.jpg",
+		"subtitle": "Обеденная зона",
+		"text": "Имеется столовая, чтобы Вы могли перекусить и немного отдохнуть. Бесплатно чай, кофе, печенки."
+	},
+	{
+		"img_path": "img/benefits/clock.jpg",
+		"subtitle": "Профессиональные тренера",
+		"text": "Наши преподаватели имеют награды в конном спорте, и отличные отзывы среди учеников"
+	},
+	{
+		"img_path": "img/benefits/car.jpg",
+		"subtitle": "Бесплатная парковка",
+		"text": "Наши преподаватели имеют награды в конном спорте, и отличные отзывы среди учеников"
+	}
+] %}
+
+<section class="benefits">
+	<div class="benefits__container">
+		<div class="benefits__title title_section">
+			<h2>Почему нас выбирают</h2>
+		</div>
+		<div class="benefits__table">
+			{% for item in benefits_content %}
+				<div class="benefits__card">
+					<div class="benefits__image-container">
+						<img class="benefits__image" src={{item.img_path}} alt="Маршрут">
+					</div>
+					<h3 class="benefits__subtitle">{{item.subtitle}}</h3>
+					<p class="benefits__text">{{item.text}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
