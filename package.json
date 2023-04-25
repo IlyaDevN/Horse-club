@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build",
-    "deployGIT": "gulp deployGIT"
+    "build": "gulp build --build"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +17,6 @@
     "gulp-autoprefixer": "8.0.0",
     "gulp-clean-css": "4.3.0",
     "gulp-fonter": "0.3.0",
-    "gulp-gh-pages": "0.5.4",
     "gulp-group-css-media-queries": "1.2.2",
     "gulp-if": "3.0.0",
     "gulp-imagemin": "8.0.0",
