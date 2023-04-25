@@ -1,3 +1,4 @@
+import "./modules/webp.js";
 import "./modules/mobileMenu.js";
 import "./modules/popupRegistration.js";
 import "./modules/swiperOurHorsesFunctionality.js";
