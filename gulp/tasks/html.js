@@ -10,6 +10,7 @@ export const html = () => {
 				message: "Error: <%= error.message %>"
 			})
 		))
+		.pipe(nunjucks.compile())
 		.pipe(app.plugins.replace(/@img\//g, "img/"))
 		.pipe(
 			app.plugins.if(
@@ -17,7 +18,6 @@ export const html = () => {
 				webpHtmlNosvg()
 			)
 		)
-		.pipe(nunjucks.compile())
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
