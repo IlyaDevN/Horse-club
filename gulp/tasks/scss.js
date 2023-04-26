@@ -2,10 +2,10 @@ import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename"
 
-import cleanCss from "gulp-clean-css" //Сжатие CSS файла
-import webpcss from "gulp-webpcss" //Вывод WEBP изображений
-import autoprefixer from "gulp-autoprefixer"; //Добавление вендорных префиксов
-import groupCssMediaQueries from "gulp-group-css-media-queries"; //Группировка медиа запросов
+import cleanCss from "gulp-clean-css" //Compressing CSS file
+import webpcss from "gulp-webpcss" //Publishing WEBP images
+import autoprefixer from "gulp-autoprefixer"; //Adding of vendor prefixes
+import groupCssMediaQueries from "gulp-group-css-media-queries"; //Add media to groups
 
 const sass = gulpSass(dartSass);
 

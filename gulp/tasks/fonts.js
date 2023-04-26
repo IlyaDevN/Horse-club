@@ -1,10 +1,10 @@
 export const copyFonts = () => {
-			//Ищем файлы шрифтов .woff
+			//Searching for fonts .woff
 			return app.gulp.src(`${app.path.srcFolder}/fonts/*.woff`)
-			//Выгружаем в папку с результатом
+			//Move to folder with results
 			.pipe(app.gulp.dest(`${app.path.build.fonts}`))
-			//Ищем файлы шрифтов .woff2
+			//Searching for fonts .woff2
 			.pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.woff2`))
-			//Выгружаем в папку с результатом
+			//Move to folder with results
 			.pipe(app.gulp.dest(`${app.path.build.fonts}`))
 }

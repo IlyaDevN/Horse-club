@@ -1,13 +1,9 @@
-//основной модуль
 import gulp from "gulp";
 
-//импорт путей
 import { path } from "./gulp/config/path.js";
 
-//импорт общих плагинов
 import { plugins } from "./gulp/config/plugins.js";
 
-//передаем значение в глобальную переменную
 global.app = {
 	isBuild: process.argv.includes("--build"),
 	isDev: !process.argv.includes("--build"),
@@ -16,7 +12,6 @@ global.app = {
 	plugins: plugins
 }
 
-//импорт задач
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
@@ -26,7 +21,6 @@ import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { copyFonts } from "./gulp/tasks/fonts.js";
 
-//наблюдатель за измемениями в файлах
 function watcher() {
 	gulp.watch(path.watch.files, copy);
 	gulp.watch(path.watch.html, html);
@@ -35,16 +29,12 @@ function watcher() {
 	gulp.watch(path.watch.images, images);
 }
 
-//Основные задачи
 const mainTasks = gulp.series(copyFonts, gulp.parallel(copy, html, scss, js, images));
 
-//построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 
-//Экспорт сценариев
 export { dev }
 export { build }
 
-//выполнение сценария по умолчанию
 gulp.task("default", dev);
