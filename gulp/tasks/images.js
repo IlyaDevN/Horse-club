@@ -1,14 +1,14 @@
 import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
-export function prepareImages() {
+export async function prepareImages() {
 	if(app.isBuild){
 		convertToWebp();
 		compress();
 	} else {
+		copyToDist();
 		browsersync();
 	}
-	return copyToDist();
 }
 
 function convertToWebp() {
@@ -44,15 +44,13 @@ function compress() {
 }
 
 function copyToDist() {
-	return(app.gulp.src(app.path.src.svg))
+	return(app.gulp.src(app.path.src.images))
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
 				title: "copyImg",
 				message: "Error: <%= error.message %>"
 			})
 		))
-		.pipe(app.gulp.dest(app.path.build.images))
-		.pipe(app.gulp.src(app.path.src.images))
 		.pipe(app.gulp.dest(app.path.build.images));
 }
 
