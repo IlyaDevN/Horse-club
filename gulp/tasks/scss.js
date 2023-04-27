@@ -3,7 +3,6 @@ import gulpSass from "gulp-sass";
 import rename from "gulp-rename"
 
 import cleanCss from "gulp-clean-css" //Compressing CSS file
-import webpcss from "gulp-webpcss" //Publishing WEBP images
 import autoprefixer from "gulp-autoprefixer"; //Adding of vendor prefixes
 import groupCssMediaQueries from "gulp-group-css-media-queries"; //Add media to groups
 
@@ -24,15 +23,6 @@ export const scss = () => {
 			app.plugins.if(
 				app.isBuild,
 				groupCssMediaQueries()
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				webpcss({
-					webpClass: ".webp",
-					noWebpClass: ".no-webp"
-				})
 			)
 		)
 		.pipe(
