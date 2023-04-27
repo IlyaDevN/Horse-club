@@ -1,53 +1,61 @@
 import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
-export const images = () => {
+export function prepareImages() {
+	if(app.isBuild){
+		convertToWebp();
+		compress();
+	} else {
+		browsersync();
+	}
+	return copyToDist();
+}
+
+function convertToWebp() {
 	return app.gulp.src(app.path.src.images)
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
-				title: "IMAGES",
+				title: "imagesToWebp",
 				message: "Error: <%= error.message %>"
 			})
 		))
 		.pipe(app.plugins.newer(app.path.build.images))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				webp()
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				app.gulp.dest(app.path.build.images)
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				app.gulp.src(app.path.src.images)
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				app.plugins.newer(app.path.build.images)
-			)
-		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				imagemin({
+		.pipe(webp())
+		.pipe(app.gulp.dest(app.path.build.images));
+}
+
+function compress() {
+	return app.gulp.src(app.path.src.images)
+		.pipe(app.plugins.plumber(
+			app.plugins.notify.onError({
+				title: "imagesCompress",
+				message: "Error: <%= error.message %>"
+			})
+		))
+		.pipe(app.plugins.newer(app.path.build.images))
+		.pipe(imagemin({
 				progressive: true,
 				svgoPlugins: [{removeViewBox: false}],
 				interlaced: true,
 				optimizationLevel: 3 // 0 to 7
-				})
-			)
+			})
 		)
+		.pipe(app.gulp.dest(app.path.build.images));
+}
 
+function copyToDist() {
+	return(app.gulp.src(app.path.src.svg))
+		.pipe(app.plugins.plumber(
+			app.plugins.notify.onError({
+				title: "copyImg",
+				message: "Error: <%= error.message %>"
+			})
+		))
 		.pipe(app.gulp.dest(app.path.build.images))
-		.pipe(app.gulp.src(app.path.src.svg))
-		.pipe(app.gulp.dest(app.path.build.images))
-		.pipe(app.plugins.browsersync.stream());
+		.pipe(app.gulp.src(app.path.src.images))
+		.pipe(app.gulp.dest(app.path.build.images));
+}
+
+function browsersync() {
+	return app.plugins.browsersync.stream();
 }

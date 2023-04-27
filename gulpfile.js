@@ -18,7 +18,7 @@ import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
-import { images } from "./gulp/tasks/images.js";
+import { prepareImages } from "./gulp/tasks/images.js";
 import { copyFonts } from "./gulp/tasks/fonts.js";
 
 function watcher() {
@@ -26,10 +26,10 @@ function watcher() {
 	gulp.watch(path.watch.html, html);
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.js, js);
-	gulp.watch(path.watch.images, images);
+	gulp.watch(path.watch.images, prepareImages);
 }
 
-const mainTasks = gulp.series(copyFonts, gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(copyFonts, gulp.parallel(copy, html, scss, js, prepareImages));
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
