@@ -1,7 +1,7 @@
 import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
-export async function prepareImages() {
+export function prepareImages(err) {
 	if(app.isBuild){
 		convertToWebp();
 		compress();
@@ -9,6 +9,7 @@ export async function prepareImages() {
 		copyToDist();
 		browsersync();
 	}
+	err();
 }
 
 function convertToWebp() {
