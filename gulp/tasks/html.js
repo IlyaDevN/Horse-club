@@ -1,6 +1,6 @@
-import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
 import nunjucks from "gulp-nunjucks"
+import gulpHtmlImgWrapper from "gulp-html-img-wrapper"
 
 export const html = () => {
 	return app.gulp.src(app.path.src.html)
@@ -14,7 +14,10 @@ export const html = () => {
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
-				webpHtmlNosvg()
+				gulpHtmlImgWrapper({
+					logger: true, // false for not showing message with amount of wrapped img tags for each file
+					extensions: ['.jpg', '.png', '.jpeg'], // write your own extensions pack (case insensitive)
+				})
 			)
 		)
 		.pipe(
