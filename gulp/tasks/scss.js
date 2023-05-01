@@ -16,9 +16,7 @@ export const scss = () => {
 				message: "Error: <%= error.message %>"
 			})
 		))
-		.pipe(sass({
-			outputStyle: "expanded"
-		}))
+		.pipe(sass())
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
