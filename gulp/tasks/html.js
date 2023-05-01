@@ -30,5 +30,9 @@ export function html() {
 			)
 		)
 		.pipe(app.gulp.dest(app.path.build.html))
-		.pipe(app.plugins.browsersync.stream());
+		.pipe(
+			app.plugins.if(
+				app.isDev,
+				app.plugins.browsersync.stream())
+		);
 }
