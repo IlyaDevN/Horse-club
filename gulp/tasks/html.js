@@ -2,7 +2,7 @@ import versionNumber from "gulp-version-number";
 import nunjucks from "gulp-nunjucks"
 import gulpHtmlImgWrapper from "gulp-html-img-wrapper"
 
-export const html = () => {
+export function html() {
 	return app.gulp.src(app.path.src.html)
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
