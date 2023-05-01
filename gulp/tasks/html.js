@@ -22,9 +22,6 @@ export function html() {
 							"css",
 							"js"
 						] 
-					},
-					"output": {
-						"file": "gulp/version.json"
 					}
 				})
 			)
