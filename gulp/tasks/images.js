@@ -1,28 +1,13 @@
-import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
 export function prepareImages(err) {
 	if(app.isBuild){
-		convertToWebp();
 		compress();
 	} else {
 		copyToDist();
 		browsersync();
 	}
 	err();
-}
-
-function convertToWebp() {
-	return app.gulp.src(app.path.src.images)
-		.pipe(app.plugins.plumber(
-			app.plugins.notify.onError({
-				title: "imagesToWebp",
-				message: "Error: <%= error.message %>"
-			})
-		))
-		.pipe(app.plugins.newer(app.path.build.images))
-		.pipe(webp())
-		.pipe(app.gulp.dest(app.path.build.images));
 }
 
 function compress() {

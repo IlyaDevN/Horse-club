@@ -1,6 +1,5 @@
 import versionNumber from "gulp-version-number";
 import nunjucks from "gulp-nunjucks"
-import gulpHtmlImgWrapper from "gulp-html-img-wrapper"
 
 export function html() {
 	return app.gulp.src(app.path.src.html)
@@ -11,15 +10,6 @@ export function html() {
 			})
 		))
 		.pipe(nunjucks.compile())
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				gulpHtmlImgWrapper({
-					logger: true, // false for not showing message with amount of wrapped img tags for each file
-					extensions: ['.jpg', '.png', '.jpeg'], // write your own extensions pack (case insensitive)
-				})
-			)
-		)
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
