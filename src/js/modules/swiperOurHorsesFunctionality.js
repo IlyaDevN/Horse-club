@@ -1,9 +1,10 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
-import Swiper from "./swiper-bundle.8.4.5.esm.browser.min.js";
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 const swiper = new Swiper(".our-horses__swiper-container", {
+	modules: [Navigation, Pagination],
 	navigation: {
 		nextEl: '.our-horses__button-next',
 		prevEl: '.our-horses__button-prev',
