@@ -1,10 +1,10 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 const swiper = new Swiper(".our-horses__swiper-container", {
-	modules: [Navigation, Pagination],
+	modules: [Navigation, Pagination, Scrollbar],
 	navigation: {
 		nextEl: '.our-horses__button-next',
 		prevEl: '.our-horses__button-prev',

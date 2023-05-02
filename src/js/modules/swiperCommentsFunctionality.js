@@ -2,10 +2,10 @@ import { setSlidesState } from "./swiperHelpers.js";
 import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "./helpers.js";
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 const swiperComments = new Swiper(".comments__slider-container", {
-	modules: [Navigation, Pagination],
+	modules: [Navigation, Pagination, Scrollbar],
 	navigation: {
 		nextEl: '.comments__swiper-button-next',
 		prevEl: '.comments__swiper-button-prev',
