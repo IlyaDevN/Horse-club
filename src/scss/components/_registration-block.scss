@@ -1,0 +1,133 @@
+@use "../common/forwarded" as helpers;
+
+.registration-block {
+	width: 245px;
+	margin: 0 auto;
+	text-align: center;
+
+	@include helpers.mobile() {
+		width: 300px;
+	}
+
+
+	@include helpers.laptop() {
+		width: 330px;
+	}
+
+	.registration-block__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.input-container {
+			width: auto;
+		}
+
+		.form {
+		
+			&__input {
+				background: helpers.$color-white;
+				border: 1px solid helpers.$color-light-grey;
+				border-radius: 5px;
+				font-size: 13px;
+				line-height: 13px;
+				width: 225px;
+				height: 50px;
+				padding-left: 14px;
+		
+				@include helpers.mobile() {
+					font-size: 15px;
+					line-height: 18px;
+					width: 300px;
+					height: 55px;
+					padding-left: 19px;
+				}
+		
+				@include helpers.laptop() {
+					font-size: 18px;
+					line-height: 21px;
+					width: 330px;
+					height: 61px;
+					padding-left: 21px;
+				}
+			}
+		
+			&__button {
+				width: 225px;
+				height: 45px;
+				font-size: 10px;
+				line-height: 10px;
+				margin: 15px auto 25px;
+				align-self: center;
+		
+				@include helpers.mobile() {
+					width: 300px;
+					height: 64px;
+					font-size: 13px;
+					line-height: 15px;
+					margin: 20px 0 20px;
+				}
+		
+				@include helpers.tablet() {
+					font-size: 15px;
+				}
+		
+				@include helpers.laptop() {
+					width: 330px;
+					height: 70px;
+					margin: 11px auto 20px;
+				}
+			}
+		
+			&__checkbox-container.input-container {
+				padding: 0 0 10px;
+				align-self: flex-start;
+		
+				@include helpers.tablet() {
+					text-align: left;
+					padding-left: 5px;
+				}
+			}
+		
+			&__checkbox {
+				position: absolute;
+				@include helpers.zIndex(layer_negative);
+				opacity: 0;
+				width: 1.5em;
+				height: 1.5em;
+		
+				&:checked+label {
+					.checkbox-svg__path {
+						visibility: visible;
+					}
+				}
+			}
+		
+			&__label-checkbox {
+				font-size: 13px;
+				line-height: 15px;
+				color: helpers.$color-font-grey;
+				display: inline-flex;
+				align-items: center;
+				user-select: none;
+		
+				@include helpers.mobile() {
+					font-size: 15px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+}
+
+.write-letters {
+	top: 0;
+}
+
+.write-figures {
+	top: 0;
+}
+
+.confirm-agreement {
+	bottom: 0;
+}

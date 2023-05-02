@@ -46,7 +46,7 @@
 		opacity: 1;
 	}
 
-	[data-to-validate] {
+	input[data-to-validate] {
 		border-color: helpers.$color-orange;
 	}
 }

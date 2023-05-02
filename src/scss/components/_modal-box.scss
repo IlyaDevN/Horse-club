@@ -31,21 +31,25 @@ body.stopPageScroll {
 	height: 300px;
 	background-color: helpers.$color-white;
 	border-radius: 5px;
-	padding: 28.5px 27.5px;
+	padding-top: 30px;
 	transform: perspective(300px) translateY(-100%) rotateX(45deg);
 	transition: transform 0.8s;
 
 	@include helpers.mobile() {
 		width: 375px;
 		height: 375px;
-		padding: 54px 46px;
+		padding-top: 54px;
 		transform: perspective(375px) translateY(-100%) rotateX(45deg);
+	}
+
+	@include helpers.tablet() {
+		padding-top: 50px;
 	}
 
 	@include helpers.laptop() {
 		width: 405px;
 		height: 380px;
-		padding: 42.5px;
+		padding-top: 42.5px;
 		transform: perspective(380px) translateY(-100%) rotateX(45deg);
 	}
 

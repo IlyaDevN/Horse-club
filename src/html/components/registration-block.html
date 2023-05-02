@@ -1,0 +1,27 @@
+<div class="registration-block">
+	<form class="registration-block__form">
+		<div class="input-container">
+			<p class="valid-tooltip write-letters">Вводите буквы</p>
+			<input class="form__input" type="text" placeholder="Ваше имя" data-name data-to-validate>
+		</div>
+		<div class="input-container">
+			<p class="valid-tooltip write-figures">Вводите цифры</p>
+			<input class="form__input" type="tel" placeholder="Ваш телефон" data-phone data-to-validate>
+		</div>
+		<button class="form__button button" type="submit">Задать вопрос</button>
+		<div class="form__checkbox-container input-container">
+			<p class="valid-tooltip confirm-agreement">Подтвердите согласие</p>
+			<input class="form__checkbox" id="questions-form-checkbox" type="checkbox" data-checkbox data-to-validate>
+			<label class="form__label-checkbox" for="questions-form-checkbox">
+				<svg class="checkbox-svg" viewBox="0 0 20 20">
+					<rect class="checkbox-svg__rect" width="18" height="18" x="1" y="1" rx="1" />
+					<path class="checkbox-svg__path"
+						d="M11.0134 0L4.5134 7.44671L1.9867 4.55229L0 6.8288L4.51343 12L13 2.27656L11.0134 0Z" />
+				</svg>
+				<span class="label-checkbox__ref">Даю согласие на&nbsp;</span>
+				<a class="form__agreement-link" href="agreement.html" target="_blank">обработку
+					данных</a>
+			</label>
+		</div>
+	</form>
+</div>
