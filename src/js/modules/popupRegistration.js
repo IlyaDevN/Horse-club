@@ -25,20 +25,17 @@ function popupOpen() {
 
 function emptyPlaceCloseHandler(event) {
 	if (event.target === registerModalOverlay) {
-		popupClose(registerModalContent);
-		popupClose(registerModalGratitude);
+		allPopupsClose();
 	}
 }
 
 function closeBtnHandler() {
-	popupClose(registerModalContent);
-	popupClose(registerModalGratitude);
+	allPopupsClose();
 }
 
 function keyDownHandler(event) {
 	if (event.code === KEYCODE.ESC) {
-		popupClose(registerModalContent);
-		popupClose(registerModalGratitude);
+		allPopupsClose();
 	}
 }
 
@@ -59,6 +56,11 @@ function popupClose(popupContent) {
 	popupContent.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
 	registerModalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
+}
+
+function allPopupsClose() {
+	popupClose(registerModalContent);
+	popupClose(registerModalGratitude);
 }
 
 function disablePageScroll() {
