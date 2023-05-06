@@ -57,14 +57,10 @@ function modalClose() {
 	registerModalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
 }
 
-function popupContentClose(popupContent) {
-	popupContent.classList.remove("open");
-}
-
 function popupsClose() {
 	modalClose();
-	popupContentClose(registerModalContent);
-	popupContentClose(registerModalGratitude);
+	registerModalContent.classList.remove("open");
+	registerModalGratitude.classList.remove("open");
 }
 
 function disablePageScroll() {
