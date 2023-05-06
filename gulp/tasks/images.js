@@ -1,5 +1,4 @@
 import imagemin from "gulp-imagemin";
-import newer from "gulp-newer";
 
 export function prepareImages() {
 	return app.gulp.src(app.path.src.images)
@@ -12,7 +11,7 @@ export function prepareImages() {
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
-				newer(app.path.build.images)
+				app.plugins.newer(app.path.build.images)
 			)
 		)
 		.pipe(
