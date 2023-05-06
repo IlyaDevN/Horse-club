@@ -51,14 +51,10 @@ function gratitudeOpen() {
 	registerModalGratitude.classList.add("open");
 }
 
-function modalClose() {
+function popupsClose() {
 	registerModalOverlay.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
 	registerModalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
-}
-
-function popupsClose() {
-	modalClose();
 	registerModalContent.classList.remove("open");
 	registerModalGratitude.classList.remove("open");
 }
