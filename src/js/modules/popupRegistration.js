@@ -12,7 +12,7 @@ for (let form of forms) {
 	form.addEventListener("submitSuccess", submitHandler);
 }
 registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
-closeBtns.forEach((button) => button.addEventListener("click", closeBtnHandler));
+closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
 popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
 
 function popupOpen() {
@@ -29,10 +29,6 @@ function emptyPlaceCloseHandler(event) {
 	}
 }
 
-function closeBtnHandler() {
-	popupsClose();
-}
-
 function keyDownHandler(event) {
 	if (event.code === KEYCODE.ESC) {
 		popupsClose();
@@ -44,10 +40,6 @@ function submitHandler() {
 	if (!registerModalOverlay.classList.contains("open")) {
 		registerModalOverlay.classList.add("open");
 	}
-	gratitudeOpen();
-}
-
-function gratitudeOpen() {
 	registerModalGratitude.classList.add("open");
 }
 
