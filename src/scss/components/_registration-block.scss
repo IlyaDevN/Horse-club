@@ -1,17 +1,17 @@
 @use "../common/forwarded" as helpers;
 
 .registration-block {
-	width: 245px;
+	width: 100%;
 	margin: 0 auto;
 	text-align: center;
 
 	@include helpers.mobile() {
-		width: 300px;
+		// width: 300px;
 	}
 
 
 	@include helpers.laptop() {
-		width: 330px;
+		// width: 330px;
 	}
 
 	.registration-block__form {
@@ -20,7 +20,7 @@
 		align-items: center;
 
 		.input-container {
-			width: auto;
+			width: 100%;
 		}
 
 		.form {
@@ -31,14 +31,13 @@
 				border-radius: 5px;
 				font-size: 13px;
 				line-height: 13px;
-				width: 225px;
+				width: 100%;
 				height: 50px;
 				padding-left: 14px;
 		
 				@include helpers.mobile() {
 					font-size: 15px;
 					line-height: 18px;
-					width: 300px;
 					height: 55px;
 					padding-left: 19px;
 				}
@@ -46,14 +45,13 @@
 				@include helpers.laptop() {
 					font-size: 18px;
 					line-height: 21px;
-					width: 330px;
 					height: 61px;
 					padding-left: 21px;
 				}
 			}
 		
 			&__button {
-				width: 225px;
+				width: 100%;
 				height: 45px;
 				font-size: 10px;
 				line-height: 10px;
@@ -61,7 +59,6 @@
 				align-self: center;
 		
 				@include helpers.mobile() {
-					width: 300px;
 					height: 64px;
 					font-size: 13px;
 					line-height: 15px;
@@ -73,7 +70,6 @@
 				}
 		
 				@include helpers.laptop() {
-					width: 330px;
 					height: 70px;
 					margin: 11px auto 20px;
 				}
@@ -81,11 +77,10 @@
 		
 			&__checkbox-container.input-container {
 				padding: 0 0 10px;
-				align-self: flex-start;
+				text-align: left;
 		
 				@include helpers.tablet() {
 					text-align: left;
-					padding-left: 5px;
 				}
 			}
 		

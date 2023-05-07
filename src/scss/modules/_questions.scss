@@ -198,18 +198,15 @@
 			color: helpers.$color-dark-grey;
 			font-size: 13px;
 			line-height: 21px;
-			width: 230px;
 			padding-bottom: 10px;
 			text-align: center;
 			margin: 0 auto;
 	
 			@include helpers.mobile() {
-					width: 300px;
 					padding-bottom: 15px;
 				}
 		
 				@include helpers.laptop() {
-					width: 340px;
 					font-size: 15px;
 					padding-bottom: 20px;
 				}
