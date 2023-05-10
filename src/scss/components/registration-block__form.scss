@@ -138,6 +138,7 @@
 
 		.valid-tooltip {
 			position: absolute;
+			top: 0;
 			color: helpers.$color-orange;
 			font-size: 10px;
 			line-height: 10px;
@@ -146,16 +147,9 @@
 			transition: opacity 0.3s,
 				visibility 0.3s;
 		}
-
-		.write-letters {
-			top: 0;
-		}
 		
-		.write-figures {
-			top: 0;
-		}
-		
-		.confirm-agreement {
+		.valid-tooltip.confirm-agreement {
+			top: auto;
 			bottom: 0;
 		}
 	}
