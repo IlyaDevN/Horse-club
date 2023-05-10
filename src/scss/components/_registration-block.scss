@@ -10,6 +10,131 @@
 		flex-direction: column;
 		align-items: center;
 
+		.form {
+			&__input {
+				background: helpers.$color-white;
+				border: 1px solid helpers.$color-light-grey;
+				border-radius: 5px;
+				font-size: 13px;
+				line-height: 13px;
+				width: 100%;
+				height: 50px;
+				padding-left: 14px;
+		
+				@include helpers.mobile() {
+					font-size: 15px;
+					line-height: 18px;
+					height: 55px;
+					padding-left: 19px;
+				}
+		
+				@include helpers.laptop() {
+					font-size: 18px;
+					line-height: 21px;
+					height: 61px;
+					padding-left: 21px;
+				}
+			}
+		
+			&__button {
+				width: 100%;
+				height: 45px;
+				font-size: 10px;
+				line-height: 10px;
+				margin: 15px auto 25px;
+				align-self: center;
+		
+				@include helpers.mobile() {
+					height: 64px;
+					font-size: 13px;
+					line-height: 15px;
+					margin: 20px 0 20px;
+				}
+		
+				@include helpers.tablet() {
+					font-size: 15px;
+				}
+		
+				@include helpers.laptop() {
+					height: 70px;
+					margin: 11px auto 20px;
+				}
+			}
+		
+			&__checkbox-container.input-container {
+				padding: 0 0 10px;
+				text-align: left;
+		
+				@include helpers.tablet() {
+					text-align: left;
+				}
+			}
+		
+			&__checkbox {
+				position: absolute;
+				@include helpers.zIndex(layer_negative);
+				opacity: 0;
+				width: 1.5em;
+				height: 1.5em;
+		
+				&:checked+svg {
+					.checkbox-svg__path {
+						visibility: visible;
+					}
+				}
+			}
+		
+			&__label-checkbox {
+				font-size: 13px;
+				line-height: 15px;
+				color: helpers.$color-font-grey;
+				display: inline-flex;
+				align-items: center;
+				user-select: none;
+		
+				@include helpers.mobile() {
+					font-size: 15px;
+					line-height: 18px;
+				}
+		
+				.checkbox-svg {
+					width: 15px;
+					height: 15px;
+				
+					@include helpers.mobile() {
+						width: 20px;
+						height: 20px;
+					}
+				
+					&__rect {
+						stroke-width: 1px;
+						stroke: helpers.$color-yellow;
+						fill: helpers.$color-white;
+				
+						@include helpers.mobile() {
+							stroke-width: 2px;
+						}
+					}
+				
+					&__path {
+						transform: translate(4px, 4px);
+						stroke: helpers.$color-green;
+						fill: helpers.$color-green;
+						visibility: hidden;
+					}
+				}
+		
+				.label-checkbox__ref {
+					margin-left: 10px;
+				}
+		
+				.form__agreement-link {
+					text-decoration: underline;
+					color: inherit;
+				}
+			}
+		}
+		
 		.input-container {
 			position: relative;
 			padding: 10px 0 5px;
@@ -56,131 +181,6 @@
 			input.form__input {
 				border-color: helpers.$color-orange;
 			}
-		}
-	}
-}
-
-.form {
-	&__input {
-		background: helpers.$color-white;
-		border: 1px solid helpers.$color-light-grey;
-		border-radius: 5px;
-		font-size: 13px;
-		line-height: 13px;
-		width: 100%;
-		height: 50px;
-		padding-left: 14px;
-
-		@include helpers.mobile() {
-			font-size: 15px;
-			line-height: 18px;
-			height: 55px;
-			padding-left: 19px;
-		}
-
-		@include helpers.laptop() {
-			font-size: 18px;
-			line-height: 21px;
-			height: 61px;
-			padding-left: 21px;
-		}
-	}
-
-	&__button {
-		width: 100%;
-		height: 45px;
-		font-size: 10px;
-		line-height: 10px;
-		margin: 15px auto 25px;
-		align-self: center;
-
-		@include helpers.mobile() {
-			height: 64px;
-			font-size: 13px;
-			line-height: 15px;
-			margin: 20px 0 20px;
-		}
-
-		@include helpers.tablet() {
-			font-size: 15px;
-		}
-
-		@include helpers.laptop() {
-			height: 70px;
-			margin: 11px auto 20px;
-		}
-	}
-
-	&__checkbox-container.input-container {
-		padding: 0 0 10px;
-		text-align: left;
-
-		@include helpers.tablet() {
-			text-align: left;
-		}
-	}
-
-	&__checkbox {
-		position: absolute;
-		@include helpers.zIndex(layer_negative);
-		opacity: 0;
-		width: 1.5em;
-		height: 1.5em;
-
-		&:checked+svg {
-			.checkbox-svg__path {
-				visibility: visible;
-			}
-		}
-	}
-
-	&__label-checkbox {
-		font-size: 13px;
-		line-height: 15px;
-		color: helpers.$color-font-grey;
-		display: inline-flex;
-		align-items: center;
-		user-select: none;
-
-		@include helpers.mobile() {
-			font-size: 15px;
-			line-height: 18px;
-		}
-
-		.checkbox-svg {
-			width: 15px;
-			height: 15px;
-		
-			@include helpers.mobile() {
-				width: 20px;
-				height: 20px;
-			}
-		
-			&__rect {
-				stroke-width: 1px;
-				stroke: helpers.$color-yellow;
-				fill: helpers.$color-white;
-		
-				@include helpers.mobile() {
-					stroke-width: 2px;
-				}
-			}
-		
-			&__path {
-				transform: translate(4px, 4px);
-				stroke: helpers.$color-green;
-				fill: helpers.$color-green;
-				visibility: hidden;
-			}
-		}
-
-		.label-checkbox__ref {
-			margin-left: 10px;
-		}
-
-		.form__agreement-link {
-			text-decoration: underline;
-			color: inherit;
 		}
 	}
 }
