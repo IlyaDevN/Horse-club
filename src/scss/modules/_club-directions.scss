@@ -55,7 +55,7 @@
 		}
 	}
 
-	&__galery {
+	&__gallery {
 		@include helpers.mobile() {
 			width: 100%;
 			display: flex;
@@ -253,7 +253,7 @@
 	}
 }
 
-.galery {
+.gallery {
 	&__first-row {
 		@include helpers.laptop() {
 			display: flex;
@@ -324,7 +324,7 @@
 			margin-top: -20px;
 		}
 
-		.galery__card:last-child {
+		.gallery__card:last-child {
 			margin-bottom: 0;
 		}
 	}
