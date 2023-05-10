@@ -62,6 +62,6 @@
 
 	.button-content {
 		position: relative;
-		@include helpers.zIndex(layer_middle);
+		@include helpers.zIndex(layer_base);
 	}
 }
