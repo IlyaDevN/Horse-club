@@ -30,20 +30,19 @@ body.stopPageScroll {
 	width: 300px;
 	background-color: helpers.$color-white;
 	border-radius: 5px;
-	padding: 29px 26px;
-	transform: perspective(300px) translateY(-100%) rotateX(45deg);
+	padding: 26px;
+	transform: perspective(295px) translateY(-100%) rotateX(45deg);
 	transition: transform 0.8s;
 
 	@include helpers.mobile() {
 		width: 375px;
-		padding: 49px 46px;
-		transform: perspective(375px) translateY(-100%) rotateX(45deg);
+		padding: 40px;
+		transform: perspective(357px) translateY(-100%) rotateX(45deg);
 	}
 
 	@include helpers.laptop() {
 		width: 405px;
-		padding: 49px;
-		transform: perspective(380px) translateY(-100%) rotateX(45deg);
+		transform: perspective(376px) translateY(-100%) rotateX(45deg);
 	}
 
 	&.open {
