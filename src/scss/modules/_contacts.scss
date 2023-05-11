@@ -217,6 +217,7 @@
 	&__svg {
 		width: 11px;
 		height: 17px;
+		fill: helpers.$color-yellow;
 
 		@include helpers.laptop() {
 			width: 14px;
@@ -253,6 +254,7 @@
 	&__svg {
 		width: 13px;
 		height: 13px;
+		fill: helpers.$color-yellow;
 
 		@include helpers.laptop() {
 			width: 19px;
@@ -273,6 +275,7 @@
 	&__svg {
 		width: 15px;
 		height: 11px;
+		fill: helpers.$color-yellow;
 
 		@include helpers.laptop() {
 			width: 22px;
@@ -294,6 +297,7 @@
 		width: 14px;
 		height: 14px;
 		margin-top: 5px;
+		fill: helpers.$color-yellow;
 
 		@include helpers.laptop() {
 			width: 20px;
