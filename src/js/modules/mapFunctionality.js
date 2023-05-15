@@ -1,4 +1,4 @@
-import { throttle } from "./helpers.js";
+import { throttle } from "throttle-debounce";
 
 const TABLET_SCREEN_RESOLUTION = 768;
 const ZOOM_LEVEL = 16;
@@ -38,7 +38,7 @@ const mapSrc = document.getElementById("contacts__background-map").dataset.mapSr
 const SCROLL_BEFORE_LOAD = 1000;
 const loadPointCoords = loadPoint.getBoundingClientRect().top + window.scrollY - SCROLL_BEFORE_LOAD;
 
-const throttledScrollHandler = throttle(scrollHandler, SCROLL_DELAY);
+const throttledScrollHandler = throttle(SCROLL_DELAY, scrollHandler);
 window.addEventListener("scroll", throttledScrollHandler);
 scrollHandler();
 

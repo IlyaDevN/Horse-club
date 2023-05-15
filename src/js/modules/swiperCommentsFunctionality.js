@@ -1,8 +1,10 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
-import { debounce } from "./helpers.js";
+import { debounce } from "throttle-debounce";
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+
+const RESIZE_DELAY = 250;
 
 const swiperComments = new Swiper(".comments__slider-container", {
 	modules: [Navigation, Pagination, Scrollbar],
@@ -55,7 +57,7 @@ const slides = swiperComments.slides.map((slide) => {
 	}
 });
 
-const debouncedOnResize = debounce(onResize, 240);
+const debouncedOnResize = debounce(RESIZE_DELAY, onResize);
 window.addEventListener("resize", debouncedOnResize);
 
 slides.forEach((slide) => {
