@@ -168,7 +168,7 @@
 		}
 	}
 
-	&__item-map {
+	&__icon-map {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
@@ -176,9 +176,28 @@
 		@include helpers.laptop() {
 			margin-bottom: 28px;
 		}
+
+		.icon-map {
+			width: 11px;
+			height: 17px;
+			fill: helpers.$color-yellow;
+		
+			@include helpers.laptop() {
+				width: 14px;
+				height: 22px;
+			}
+		}
+		
+		.icon-map__ref {
+			margin-left: 12px;
+		
+			@include helpers.laptop() {
+				margin-left: 22px;
+			}
+		}
 	}
 
-	&__item-tel {
+	&__icon-tel {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
@@ -186,9 +205,28 @@
 		@include helpers.laptop() {
 			margin-bottom: 28px;
 		}
+
+		.icon-tel {
+			width: 13px;
+			height: 13px;
+			fill: helpers.$color-yellow;
+		
+			@include helpers.laptop() {
+				width: 19px;
+				height: 19px;
+			}
+		}
+		
+		.icon-tel__ref {
+			margin-left: 10px;
+		
+			@include helpers.laptop() {
+				margin-left: 20px;
+			}
+		}
 	}
 
-	&__item-mail {
+	&__icon-mail {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
@@ -196,9 +234,28 @@
 		@include helpers.laptop() {
 			margin-bottom: 26px;
 		}
+
+		.icon-mail {
+			width: 15px;
+			height: 11px;
+			fill: helpers.$color-yellow;
+		
+			@include helpers.laptop() {
+				width: 22px;
+				height: 16px;
+			}
+		}
+		
+		.icon-mail__ref {
+			margin-left: 10px;
+		
+			@include helpers.laptop() {
+				margin-left: 18px;
+			}
+		}
 	}
 
-	&__item-timetable {
+	&__icon-timetable {
 		display: flex;
 		align-items: flex-start;
 		margin-bottom: 25px;
@@ -210,31 +267,37 @@
 		@include helpers.laptop() {
 			margin-bottom: 30px;
 		}
-	}
-}
 
-.item-map {
-	&__svg {
-		width: 11px;
-		height: 17px;
-		fill: helpers.$color-yellow;
-
-		@include helpers.laptop() {
+		.icon-timetable {
 			width: 14px;
-			height: 22px;
+			height: 14px;
+			margin-top: 5px;
+			fill: helpers.$color-yellow;
+		
+			@include helpers.laptop() {
+				width: 20px;
+				height: 20px;
+				margin-top: 3px;
+			}
 		}
-	}
-
-	&__ref {
-		margin-left: 12px;
-
-		@include helpers.laptop() {
-			margin-left: 22px;
+		
+		.icon-timetable__ref {
+			line-height: 25px;
+			margin-left: 10px;
+		
+			@include helpers.mobile() {
+				margin-left: 11px;
+			}
+		
+			@include helpers.laptop() {
+				line-height: 28px;
+				margin-left: 19px;
+			}
 		}
 	}
 }
 
-.item_every {
+.icon_every {
 	font-size: 13px;
 	line-height: 25px;
 	color: helpers.$color-brown;
@@ -250,77 +313,6 @@
 	}
 }
 
-.item-tel {
-	&__svg {
-		width: 13px;
-		height: 13px;
-		fill: helpers.$color-yellow;
-
-		@include helpers.laptop() {
-			width: 19px;
-			height: 19px;
-		}
-	}
-
-	&__ref {
-		margin-left: 10px;
-
-		@include helpers.laptop() {
-			margin-left: 20px;
-		}
-	}
-}
-
-.item-mail {
-	&__svg {
-		width: 15px;
-		height: 11px;
-		fill: helpers.$color-yellow;
-
-		@include helpers.laptop() {
-			width: 22px;
-			height: 16px;
-		}
-	}
-
-	&__ref {
-		margin-left: 10px;
-
-		@include helpers.laptop() {
-			margin-left: 18px;
-		}
-	}
-}
-
-.item-timetable {
-	&__svg {
-		width: 14px;
-		height: 14px;
-		margin-top: 5px;
-		fill: helpers.$color-yellow;
-
-		@include helpers.laptop() {
-			width: 20px;
-			height: 20px;
-			margin-top: 3px;
-		}
-	}
-
-	&__ref {
-		line-height: 25px;
-		margin-left: 10px;
-
-		@include helpers.mobile() {
-			margin-left: 11px;
-		}
-
-		@include helpers.laptop() {
-			line-height: 28px;
-			margin-left: 19px;
-		}
-	}
-}
-
 .social-network-icon-container {
 	display: flex;
 	justify-content: space-between;
@@ -329,15 +321,15 @@
 	@include helpers.mobile() {
 		justify-content: flex-end;
 	}
-}
 
-.social-network-icon {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	opacity: 0.8;
-
-	&:hover {
-		opacity: 1;
+	.social-network-icon {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		opacity: 0.8;
+	
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
