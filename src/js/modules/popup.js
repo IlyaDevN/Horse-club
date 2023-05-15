@@ -19,7 +19,6 @@ function popupOpen() {
 	modalOverlay.classList.add("open");
 	modalContent.classList.add("open");
 	disablePageScroll();
-
 	document.addEventListener("keydown", keyDownHandler);
 }
 
@@ -41,6 +40,7 @@ function submitHandler() {
 		modalOverlay.classList.add("open");
 	}
 	gratitude.classList.add("open");
+	document.addEventListener("keydown", keyDownHandler);
 }
 
 function popupsClose() {
