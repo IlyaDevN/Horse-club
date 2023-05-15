@@ -1,6 +1,6 @@
 @use "../common/forwarded" as helpers;
 
-.close-button {
+.modal-close-button {
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -27,7 +27,7 @@
 		top: -50%;
 	}
 
-	.close-button__span {
+	.modal-close-button__span {
 		position: absolute;
 		left: 0;
 		top: 50%;
@@ -43,7 +43,7 @@
 	}
 
 	&:hover {
-		.close-button__span {
+		.modal-close-button__span {
 			background-color: helpers.$color-orange;
 		}
 	}

@@ -1,8 +1,8 @@
 const popupLinks = document.querySelectorAll(".popup-link");
-const registerModalOverlay = document.querySelector(".register-modal__overlay");
-const registerModalContent = registerModalOverlay.querySelector(".register-modal__content");
-const registerModalGratitude = registerModalOverlay.querySelector(".register-modal__gratitude");
-const closeBtns = registerModalOverlay.querySelectorAll(".register-modal__close-button");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalContent = modalOverlay.querySelector(".modal-content");
+const gratitude = modalOverlay.querySelector(".modal-gratitude");
+const closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
 const forms = document.forms;
 const KEYCODE = {
 	ESC: "Escape"
@@ -11,20 +11,20 @@ const KEYCODE = {
 for (let form of forms) {
 	form.addEventListener("submitSuccess", submitHandler);
 }
-registerModalOverlay.addEventListener("click", emptyPlaceCloseHandler);
+modalOverlay.addEventListener("click", emptyPlaceCloseHandler);
 closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
 popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
 
 function popupOpen() {
-	registerModalOverlay.classList.add("open");
-	registerModalContent.classList.add("open");
+	modalOverlay.classList.add("open");
+	modalContent.classList.add("open");
 	disablePageScroll();
 
 	document.addEventListener("keydown", keyDownHandler);
 }
 
 function emptyPlaceCloseHandler(event) {
-	if (event.target === registerModalOverlay) {
+	if (event.target === modalOverlay) {
 		popupsClose();
 	}
 }
@@ -36,19 +36,19 @@ function keyDownHandler(event) {
 }
 
 function submitHandler() {
-	registerModalContent.classList.remove("open");
-	if (!registerModalOverlay.classList.contains("open")) {
-		registerModalOverlay.classList.add("open");
+	modalContent.classList.remove("open");
+	if (!modalOverlay.classList.contains("open")) {
+		modalOverlay.classList.add("open");
 	}
-	registerModalGratitude.classList.add("open");
+	gratitude.classList.add("open");
 }
 
 function popupsClose() {
-	registerModalOverlay.classList.remove("open");
+	modalOverlay.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
-	registerModalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
-	registerModalContent.classList.remove("open");
-	registerModalGratitude.classList.remove("open");
+	modalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
+	modalContent.classList.remove("open");
+	gratitude.classList.remove("open");
 }
 
 function disablePageScroll() {

@@ -26,7 +26,7 @@ body.stopPageScroll {
 	overflow-y: hidden;
 }
 
-.register-modal__content {
+.modal-content {
 	width: 300px;
 	background-color: helpers.$color-white;
 	border-radius: 5px;
@@ -50,100 +50,7 @@ body.stopPageScroll {
 	}
 }
 
-.register-modal {
-	&__form {
-		.form-input {
-			background: helpers.$color-white;
-			border: 1px solid helpers.$color-light-grey;
-			border-radius: 5px;
-			font-size: 13px;
-			line-height: 13px;
-			width: 100%;
-			height: 50px;
-			padding-left: 14px;
-
-			@include helpers.mobile() {
-				font-size: 15px;
-				line-height: 18px;
-				height: 55px;
-				padding-left: 19px;
-			}
-
-			@include helpers.laptop() {
-				font-size: 18px;
-				line-height: 21px;
-				height: 61px;
-				padding-left: 21px;
-			}
-
-			.register-modal__checkbox {
-				height: auto;
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	&__checkbox-container.input-container {
-		align-self: flex-start;
-		padding: 0 0 10px;
-	}
-
-
-	&__checkbox {
-		position: absolute;
-		@include helpers.zIndex(layer_negative);
-		opacity: 0;
-		width: 1.5em;
-		height: 1.5em;
-
-		&+label {
-			font-size: 13px;
-			line-height: 15px;
-			color: helpers.$color-font-grey;
-			display: inline-flex;
-			align-items: center;
-
-			@include helpers.mobile() {
-				font-size: 15px;
-				line-height: 18px;
-			}
-		}
-
-		&:checked+label {
-			.checkbox-svg__path {
-				visibility: visible;
-			}
-		}
-	}
-}
-
-.register-modal__form {
-	.register-modal__form-button {
-		width: 100%;
-		height: 45px;
-		font-size: 10px;
-		line-height: 10px;
-		margin: 15px 0 25px;
-		display: inline-block;
-
-		@include helpers.mobile() {
-			height: 64px;
-			font-size: 13px;
-			line-height: 15px;
-			margin: 10px 0 20px;
-		}
-
-		@include helpers.tablet() {
-			font-size: 15px;
-		}
-
-		@include helpers.laptop() {
-			height: 70px;
-		}
-	}
-}
-
-.modal-gratitude {
+.gratitude {
 	position: absolute;
 	width: 300px;
 	height: 300px;
