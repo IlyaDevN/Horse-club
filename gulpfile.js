@@ -27,7 +27,7 @@ function watcher() {
 	gulp.watch(path.watch.images, prepareImages);
 }
 
-const mainTasks = gulp.series(copyFonts, gulp.parallel(html, scss, js, prepareImages));
+const mainTasks = gulp.parallel(copyFonts, html, scss, js, prepareImages);
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
