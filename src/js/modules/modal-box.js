@@ -1,21 +1,35 @@
 const popupLinks = document.querySelectorAll(".popup-link");
-const modalOverlay = document.querySelector(".modal-overlay");
-const modalContent = modalOverlay.querySelector(".modal-content");
-const gratitude = modalOverlay.querySelector(".modal-gratitude");
-const closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
+const modalOverlays = document.querySelectorAll(".modal-overlay");
 const forms = document.forms;
 const KEYCODE = {
 	ESC: "Escape"
 };
+let modalOverlay;
+let modalContent;
+let gratitude;
+let closeBtns;
+
+popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
 
 for (let form of forms) {
 	form.addEventListener("submitSuccess", submitHandler);
 }
-modalOverlay.addEventListener("click", emptyPlaceCloseHandler);
-closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
-popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
+for(let overlay of modalOverlays) {
+	overlay.addEventListener("click", emptyPlaceCloseHandler);
+}
 
-function popupOpen() {
+function defineModal(event) {
+	if(Object.hasOwn(event.target.dataset, "for")) {
+		modalOverlay = document.getElementById(event.target.dataset.for);
+		modalContent = modalOverlay.querySelector(".modal-content");
+		gratitude = modalOverlay.querySelector(".modal-gratitude");
+		closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
+		closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
+	}
+}
+
+function popupOpen(event) {
+	defineModal(event);
 	modalOverlay.classList.add("open");
 	modalContent.classList.add("open");
 	disablePageScroll();
