@@ -1,7 +1,7 @@
 @use "../common/forwarded" as helpers;
 
 
-.form__input {
+.form-input {
 	background: helpers.$color-white;
 	border: 1px solid helpers.$color-light-grey;
 	border-radius: 5px;
@@ -26,7 +26,7 @@
 	}
 }
 
-button.form__button{
+button.form-button{
 	width: 100%;
 	height: 45px;
 	font-size: 10px;
@@ -51,7 +51,7 @@ button.form__button{
 	}
 }
 
-.form__checkbox-container.input-container {
+.checkbox-container.input-container {
 	padding: 0 0 10px;
 	text-align: left;
 
@@ -60,7 +60,7 @@ button.form__button{
 	}
 }
 
-.form__checkbox {
+.checkbox {
 	position: absolute;
 	@include helpers.zIndex(layer_negative);
 	opacity: 0;
@@ -74,7 +74,7 @@ button.form__button{
 	}
 }
 
-.form__label-checkbox {
+.label-checkbox {
 	font-size: 13px;
 	line-height: 15px;
 	color: helpers.$color-font-grey;
@@ -118,7 +118,7 @@ button.form__button{
 		margin-left: 10px;
 	}
 
-	.form__agreement-link {
+	.agreement-link {
 		text-decoration: underline;
 		color: inherit;
 	}
@@ -162,7 +162,7 @@ button.form__button{
 		opacity: 1;
 	}
 
-	input.form__input {
+	input.form-input {
 		border-color: helpers.$color-orange;
 	}
 }
