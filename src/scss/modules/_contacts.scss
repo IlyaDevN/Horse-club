@@ -168,7 +168,7 @@
 		}
 	}
 
-	&__icon-map {
+	&__map {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
@@ -177,7 +177,7 @@
 			margin-bottom: 28px;
 		}
 
-		.icon-map {
+		.map-icon {
 			width: 11px;
 			height: 17px;
 			fill: helpers.$color-yellow;
@@ -188,7 +188,7 @@
 			}
 		}
 		
-		.icon-map__ref {
+		.map-icon__ref {
 			margin-left: 12px;
 		
 			@include helpers.laptop() {
@@ -197,7 +197,7 @@
 		}
 	}
 
-	&__icon-tel {
+	&__tel {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
@@ -206,7 +206,7 @@
 			margin-bottom: 28px;
 		}
 
-		.icon-tel {
+		.tel-icon {
 			width: 13px;
 			height: 13px;
 			fill: helpers.$color-yellow;
@@ -217,7 +217,7 @@
 			}
 		}
 		
-		.icon-tel__ref {
+		.tel-icon__ref {
 			margin-left: 10px;
 		
 			@include helpers.laptop() {
@@ -226,7 +226,7 @@
 		}
 	}
 
-	&__icon-mail {
+	&__mail {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
@@ -235,7 +235,7 @@
 			margin-bottom: 26px;
 		}
 
-		.icon-mail {
+		.mail-icon {
 			width: 15px;
 			height: 11px;
 			fill: helpers.$color-yellow;
@@ -246,7 +246,7 @@
 			}
 		}
 		
-		.icon-mail__ref {
+		.mail-icon__ref {
 			margin-left: 10px;
 		
 			@include helpers.laptop() {
@@ -255,7 +255,7 @@
 		}
 	}
 
-	&__icon-timetable {
+	&__timetable {
 		display: flex;
 		align-items: flex-start;
 		margin-bottom: 25px;
@@ -268,7 +268,7 @@
 			margin-bottom: 30px;
 		}
 
-		.icon-timetable {
+		.timetable-icon {
 			width: 14px;
 			height: 14px;
 			margin-top: 5px;
@@ -281,7 +281,7 @@
 			}
 		}
 		
-		.icon-timetable__ref {
+		.timetable-icon__ref {
 			line-height: 25px;
 			margin-left: 10px;
 		
