@@ -22,7 +22,7 @@ function defineModal(event) {
 	const currentBtn = event.target.closest(".popup-link");
 	modalOverlay = document.querySelector(currentBtn.getAttribute("href"));
 	modalContent = modalOverlay.querySelector(".modal-content");
-	gratitude = modalOverlay.querySelector(".modal-gratitude");
+	gratitude = modalOverlay.querySelector(".gratitude");
 	closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
 	closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
 }
