@@ -1,12 +1,12 @@
 @use "sass:map";
 
 $z-layers: (
+	layer_negative: -1,
 	layer_min: 1,
 	layer_base: 10,
 	layer_middle: 100,
 	layer_overlay: 150,
-	layer_top: 500,
-	layer_negative: -1,
+	layer_top: 500
 );
 
 @mixin zIndex ($layer: layer_min, $extra: 0) {
