@@ -64,8 +64,6 @@ button.form-button{
 	position: absolute;
 	@include helpers.zIndex(layer_negative);
 	opacity: 0;
-	width: 1.5em;
-	height: 1.5em;
 
 	&:checked+svg {
 		.checkbox-svg__path {
