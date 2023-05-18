@@ -177,7 +177,7 @@
 			font-size: 22px;
 			line-height: 22px;
 			color: helpers.$color-brown;
-			padding-bottom: 15px;
+			margin-bottom: 15px;
 			text-align: center;
 	
 			@include helpers.mobile() {
@@ -198,17 +198,16 @@
 			color: helpers.$color-dark-grey;
 			font-size: 13px;
 			line-height: 21px;
-			padding-bottom: 10px;
 			text-align: center;
-			margin: 0 auto;
+			margin: 0 auto 10px;
 	
 			@include helpers.mobile() {
-					padding-bottom: 15px;
+					margin: 0 auto 15px;
 				}
 		
 				@include helpers.laptop() {
 					font-size: 15px;
-					padding-bottom: 20px;
+					margin: 0 auto 20px;
 				}
 			}
 	}
