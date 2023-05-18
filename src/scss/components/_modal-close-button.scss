@@ -27,7 +27,7 @@
 		top: -50%;
 	}
 
-	.modal-close-button__row {
+	.modal-close-button__line {
 		position: absolute;
 		left: 0;
 		top: 50%;
@@ -43,7 +43,7 @@
 	}
 
 	&:hover {
-		.modal-close-button__row {
+		.modal-close-button__line {
 			background-color: helpers.$color-orange;
 		}
 	}
