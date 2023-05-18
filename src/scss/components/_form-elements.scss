@@ -148,19 +148,19 @@ button.form-button{
 			bottom: 0;
 		}
 	}
-}
 
-.input-container.error {
-	.checkbox-svg__rect {
-		stroke: helpers.$color-orange;
-	}
-
-	.valid-tooltip {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	input.form-input {
-		border-color: helpers.$color-orange;
+	&.error {
+		.checkbox-svg__rect {
+			stroke: helpers.$color-orange;
+		}
+	
+		.valid-tooltip {
+			visibility: visible;
+			opacity: 1;
+		}
+	
+		input.form-input {
+			border-color: helpers.$color-orange;
+		}
 	}
 }
