@@ -8,6 +8,7 @@ let modalOverlay;
 let modalContent;
 let gratitude;
 let closeBtns;
+let currentBtn;
 
 popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
 
@@ -19,7 +20,12 @@ for (let overlay of modalOverlays) {
 }
 
 function defineModal(event) {
-	const currentBtn = event.target.closest(".popup-link");
+	if (event.target.tagName == "FORM") {
+		currentBtn = event.target.querySelector("button");
+	} else {
+		currentBtn = event.target.closest("button");
+	}
+
 	modalOverlay = document.querySelector(currentBtn.getAttribute("href"));
 	modalContent = modalOverlay.querySelector(".modal-content");
 	gratitude = modalOverlay.querySelector(".gratitude");
