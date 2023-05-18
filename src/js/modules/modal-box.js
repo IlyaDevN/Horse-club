@@ -10,7 +10,7 @@ let gratitude;
 let closeBtns;
 let currentBtn;
 
-popupLinks.forEach((popupLink) => popupLink.addEventListener("click", popupOpen));
+popupLinks.forEach((popupLink) => popupLink.addEventListener("click", openModal));
 
 for (let form of forms) {
 	form.addEventListener("submitSuccess", submitHandler);
@@ -30,10 +30,10 @@ function defineModal(event) {
 	modalContent = modalOverlay.querySelector(".modal-content");
 	gratitude = modalOverlay.querySelector(".gratitude");
 	closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
-	closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
+	closeBtns.forEach((button) => button.addEventListener("click", closeModal));
 }
 
-function popupOpen(event) {
+function openModal(event) {
 	defineModal(event);
 	modalOverlay.classList.add("open");
 	modalContent.classList.add("open");
@@ -43,13 +43,13 @@ function popupOpen(event) {
 
 function emptyPlaceCloseHandler(event) {
 	if (event.target === modalOverlay) {
-		popupsClose();
+		closeModal();
 	}
 }
 
 function keyDownHandler(event) {
 	if (event.code === KEYCODE.ESC) {
-		popupsClose();
+		closeModal();
 	}
 }
 
@@ -70,7 +70,7 @@ function submitHandler(event) {
 	document.addEventListener("keydown", keyDownHandler);
 }
 
-function popupsClose() {
+function closeModal() {
 	modalOverlay.classList.remove("open");
 	document.removeEventListener("keydown", keyDownHandler);
 	modalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
