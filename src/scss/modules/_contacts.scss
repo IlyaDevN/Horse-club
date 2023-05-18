@@ -121,11 +121,9 @@
 .square {
 	&__container {
 		padding: 30px 65px;
-		text-align: center;
 
 		@include helpers.mobile() {
 			padding: 40px;
-			text-align: left;
 		}
 
 		@include helpers.laptop() {
@@ -142,10 +140,12 @@
 		font-size: 24px;
 		line-height: 21px;
 		color: helpers.$color-black;
+		text-align: center;
 
 		@include helpers.mobile() {
 			font-size: 27px;
 			line-height: 36px;
+			text-align: left;
 		}
 
 		@include helpers.laptop() {
