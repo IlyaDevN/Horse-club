@@ -67,7 +67,7 @@ button.form-button{
 
 	&:checked+svg {
 		.checkbox-svg__path {
-			visibility: visible;
+			display: block;
 		}
 	}
 }
@@ -108,7 +108,7 @@ button.form-button{
 			transform: translate(4px, 4px);
 			stroke: helpers.$color-green;
 			fill: helpers.$color-green;
-			visibility: hidden;
+			display: none;
 		}
 	}
 
