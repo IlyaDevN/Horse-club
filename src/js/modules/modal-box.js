@@ -19,13 +19,11 @@ for(let overlay of modalOverlays) {
 }
 
 function defineModal(event) {
-	if(Object.hasOwn(event.target.dataset, "for")) {
-		modalOverlay = document.getElementById(event.target.dataset.for);
-		modalContent = modalOverlay.querySelector(".modal-content");
-		gratitude = modalOverlay.querySelector(".modal-gratitude");
-		closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
-		closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
-	}
+	modalOverlay = document.getElementById(event.target.dataset.for);
+	modalContent = modalOverlay.querySelector(".modal-content");
+	gratitude = modalOverlay.querySelector(".modal-gratitude");
+	closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
+	closeBtns.forEach((button) => button.addEventListener("click", popupsClose));
 }
 
 function popupOpen(event) {
@@ -48,12 +46,20 @@ function keyDownHandler(event) {
 	}
 }
 
-function submitHandler() {
-	modalContent.classList.remove("open");
+function submitHandler(event) {
+	if(!modalOverlay) {
+		defineModal(event);
+	}
+	if(modalContent.classList.contains("open")){
+		modalContent.classList.remove("open");
+	}
+	
 	if (!modalOverlay.classList.contains("open")) {
 		modalOverlay.classList.add("open");
 	}
-	gratitude.classList.add("open");
+	if(gratitude) {
+		gratitude.classList.add("open");
+	}
 	document.addEventListener("keydown", keyDownHandler);
 }
 
@@ -62,7 +68,9 @@ function popupsClose() {
 	document.removeEventListener("keydown", keyDownHandler);
 	modalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
 	modalContent.classList.remove("open");
-	gratitude.classList.remove("open");
+	if(gratitude) {
+		gratitude.classList.remove("open");
+	}
 }
 
 function disablePageScroll() {
