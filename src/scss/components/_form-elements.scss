@@ -53,11 +53,6 @@ button.form-button{
 
 .checkbox-container.input-container {
 	padding: 0 0 10px;
-	text-align: left;
-
-	@include helpers.tablet() {
-		text-align: left;
-	}
 }
 
 .checkbox {
