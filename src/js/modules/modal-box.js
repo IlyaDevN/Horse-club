@@ -66,6 +66,7 @@ function submitHandler(event) {
 	}
 	if (gratitude) {
 		gratitude.classList.add("open");
+		disablePageScroll();
 	}
 	document.addEventListener("keydown", keyDownHandler);
 }
