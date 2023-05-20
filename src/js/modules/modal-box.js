@@ -7,8 +7,7 @@ const KEYCODE = {
 let modalOverlay;
 let modalContent;
 let gratitude;
-let closeBtns;
-let currentBtn;
+let openButton;
 
 popupLinks.forEach((popupLink) => popupLink.addEventListener("click", openModal));
 
@@ -21,24 +20,40 @@ for (let overlay of modalOverlays) {
 
 function defineModal(event) {
 	if (event.target.tagName == "FORM") {
-		currentBtn = event.target.querySelector("button");
+		openButton = event.target.querySelector("button");
 	} else {
-		currentBtn = event.target.closest("button");
+		openButton = event.target.closest("button");
 	}
 
-	modalOverlay = document.querySelector(currentBtn.getAttribute("href"));
+	modalOverlay = document.querySelector(openButton.getAttribute("href"));
 	modalContent = modalOverlay.querySelector(".modal-content");
 	gratitude = modalOverlay.querySelector(".gratitude");
-	closeBtns = modalOverlay.querySelectorAll(".modal-close-button");
-	closeBtns.forEach((button) => button.addEventListener("click", closeModal));
+	const closeButton = modalOverlay.querySelector(".modal-close-button");
+	closeButton.addEventListener("click", closeModal);
 }
 
 function openModal(event) {
 	defineModal(event);
-	modalOverlay.classList.add("open");
+	openOverlay();
 	modalContent.classList.add("open");
+}
+
+function openOverlay() {
+	modalOverlay.classList.add("open");
 	disablePageScroll();
 	document.addEventListener("keydown", keyDownHandler);
+}
+
+function openGratitude(gratitude) {
+	if(gratitude) {
+		gratitude.classList.add("open");
+	}
+}
+
+function closeGratitude(gratitude) {
+	if(gratitude) {
+		gratitude.classList.remove("open");
+	}
 }
 
 function emptyPlaceCloseHandler(event) {
@@ -62,12 +77,9 @@ function submitHandler(event) {
 	}
 
 	if (!modalOverlay.classList.contains("open")) {
-		modalOverlay.classList.add("open");
+		openOverlay();
 	}
-	if (gratitude) {
-		gratitude.classList.add("open");
-		disablePageScroll();
-	}
+	openGratitude(gratitude);
 	document.addEventListener("keydown", keyDownHandler);
 }
 
@@ -76,9 +88,7 @@ function closeModal() {
 	document.removeEventListener("keydown", keyDownHandler);
 	modalOverlay.addEventListener("transitionend", enablePageScroll, { once: true });
 	modalContent.classList.remove("open");
-	if (gratitude) {
-		gratitude.classList.remove("open");
-	}
+	closeGratitude(gratitude);
 }
 
 function disablePageScroll() {
