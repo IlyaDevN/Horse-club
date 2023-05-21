@@ -31,13 +31,13 @@ body.stopPageScroll {
 	background-color: helpers.$color-white;
 	border-radius: 5px;
 	padding: 26px;
-	transform: perspective(295px) translateY(-100%) rotateX(45deg);
+	transform: perspective(300px) translateY(-100%) rotateX(45deg);
 	transition: transform 0.8s;
 
 	@include helpers.mobile() {
 		width: 375px;
 		padding: 40px;
-		transform: perspective(357px) translateY(-100%) rotateX(45deg);
+		transform: perspective(352px) translateY(-100%) rotateX(45deg);
 	}
 
 	@include helpers.laptop() {
