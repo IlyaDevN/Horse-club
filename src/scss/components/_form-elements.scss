@@ -32,7 +32,6 @@ button.form-button{
 	font-size: 10px;
 	line-height: 10px;
 	margin: 15px auto 25px;
-	align-self: center;
 
 	@include helpers.mobile() {
 		height: 64px;
