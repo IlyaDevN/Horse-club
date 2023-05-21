@@ -25,7 +25,7 @@ function defineModal(event) {
 		openButton = event.target.closest("button");
 	}
 
-	modalOverlay = document.querySelector(openButton.getAttribute("href"));
+	modalOverlay = document.querySelector(openButton.dataset.modalLink);
 	modalContent = modalOverlay.querySelector(".modal-content");
 	gratitude = modalOverlay.querySelector(".gratitude");
 	const closeButtons = modalOverlay.querySelectorAll(".modal-close-button");
