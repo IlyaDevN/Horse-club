@@ -55,10 +55,8 @@ button.form-button{
 	@include helpers.zIndex(layer_negative);
 	opacity: 0;
 
-	&:checked+svg {
-		.checkbox-svg__path {
-			display: block;
-		}
+	&:checked+svg .checkbox-svg__path {
+		display: block;
 	}
 }
 
