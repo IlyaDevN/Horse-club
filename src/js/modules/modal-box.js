@@ -28,8 +28,8 @@ function defineModal(event) {
 	modalOverlay = document.querySelector(openButton.getAttribute("href"));
 	modalContent = modalOverlay.querySelector(".modal-content");
 	gratitude = modalOverlay.querySelector(".gratitude");
-	const closeButton = modalOverlay.querySelector(".modal-close-button");
-	closeButton.addEventListener("click", closeModal);
+	const closeButtons = modalOverlay.querySelectorAll(".modal-close-button");
+	closeButtons.forEach((button) => button.addEventListener("click", closeModal));
 }
 
 function openModal(event) {
