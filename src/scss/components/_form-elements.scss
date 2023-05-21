@@ -117,7 +117,6 @@ button.form-button{
 .input-container {
 	position: relative;
 	padding: 10px 0 5px;
-	width: 100%;
 
 	@include helpers.laptop() {
 		padding: 10px 0 10px;
