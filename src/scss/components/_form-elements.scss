@@ -38,7 +38,7 @@ button.form-button{
 		height: 64px;
 		font-size: 13px;
 		line-height: 15px;
-		margin: 20px 0 20px;
+		margin: 20px 0 10px;
 	}
 
 	@include helpers.tablet() {
@@ -47,12 +47,8 @@ button.form-button{
 
 	@include helpers.laptop() {
 		height: 70px;
-		margin: 11px auto 20px;
+		margin: 11px auto 10px;
 	}
-}
-
-.checkbox-container.input-container {
-	padding: 0 0 10px;
 }
 
 .checkbox {
@@ -140,7 +136,7 @@ button.form-button{
 
 		&.confirm-agreement {
 			top: auto;
-			bottom: 0;
+			bottom: -3px;
 		}
 	}
 
