@@ -58,7 +58,7 @@
 			@include helpers.zIndex(layer_base);
 		}
 	}
-
+	
 	&__container {
 		max-width: 320px;
 		height: 748px;
@@ -85,7 +85,7 @@
 		}
 	}
 
-	&__square {
+	&__frame {
 		position: absolute;
 		width: 300px;
 		top: 320px;
@@ -115,183 +115,160 @@
 			left: 375px;
 			width: 521px;
 		}
-	}
-}
 
-.square {
-	&__container {
-		padding: 30px 65px;
-
-		@include helpers.mobile() {
-			padding: 40px;
-		}
-
-		@include helpers.laptop() {
-			padding: 50px 72px;
-		}
-
-		@include helpers.desktop() {
-			padding: 50px 72px 70px;
-		}
-	}
-
-	&__title {
-		font-family: 'Philosopher';
-		font-size: 24px;
-		line-height: 21px;
-		color: helpers.$color-black;
-		text-align: center;
-
-		@include helpers.mobile() {
-			font-size: 27px;
-			line-height: 36px;
-			text-align: left;
-		}
-
-		@include helpers.laptop() {
-			font-size: 40px;
-		}
-	}
-
-	&__row {
-		width: 26px;
-		height: 1px;
-		background-color: helpers.$color-green;
-		margin: 20px auto;
-
-		@include helpers.mobile() {
-			margin: 20px 0 24px;
-		}
-
-		@include helpers.laptop() {
-			margin: 30px 0 40px;
-		}
-	}
-
-	&__map {
-		display: flex;
-		align-items: center;
-		margin-bottom: 10px;
-
-		@include helpers.laptop() {
-			margin-bottom: 28px;
-		}
-
-		.map-icon {
-			width: 11px;
-			height: 17px;
-			fill: helpers.$color-yellow;
-		
-			@include helpers.laptop() {
-				width: 14px;
-				height: 22px;
-			}
-		}
-		
-		.map-icon__ref {
-			margin-left: 12px;
-		
-			@include helpers.laptop() {
-				margin-left: 22px;
-			}
-		}
-	}
-
-	&__tel {
-		display: flex;
-		align-items: center;
-		margin-bottom: 10px;
-
-		@include helpers.laptop() {
-			margin-bottom: 28px;
-		}
-
-		.tel-icon {
-			width: 13px;
-			height: 13px;
-			fill: helpers.$color-yellow;
-		
-			@include helpers.laptop() {
-				width: 19px;
-				height: 19px;
-			}
-		}
-		
-		.tel-icon__ref {
-			margin-left: 10px;
-		
-			@include helpers.laptop() {
-				margin-left: 20px;
-			}
-		}
-	}
-
-	&__mail {
-		display: flex;
-		align-items: center;
-		margin-bottom: 10px;
-
-		@include helpers.laptop() {
-			margin-bottom: 26px;
-		}
-
-		.mail-icon {
-			width: 15px;
-			height: 11px;
-			fill: helpers.$color-yellow;
-		
-			@include helpers.laptop() {
-				width: 22px;
-				height: 16px;
-			}
-		}
-		
-		.mail-icon__ref {
-			margin-left: 10px;
-		
-			@include helpers.laptop() {
-				margin-left: 18px;
-			}
-		}
-	}
-
-	&__timetable {
-		display: flex;
-		align-items: flex-start;
-		margin-bottom: 25px;
-
-		@include helpers.mobile() {
-			margin-bottom: 41px;
-		}
-
-		@include helpers.laptop() {
-			margin-bottom: 30px;
-		}
-
-		.timetable-icon {
-			width: 14px;
-			height: 14px;
-			margin-top: 5px;
-			fill: helpers.$color-yellow;
-		
-			@include helpers.laptop() {
-				width: 20px;
-				height: 20px;
-				margin-top: 3px;
-			}
-		}
-		
-		.timetable-icon__ref {
-			line-height: 25px;
-			margin-left: 10px;
+		.contacts__list {
+			padding: 30px 65px;
 		
 			@include helpers.mobile() {
-				margin-left: 11px;
+				padding: 40px;
 			}
 		
 			@include helpers.laptop() {
-				line-height: 28px;
-				margin-left: 19px;
+				padding: 50px 72px;
+			}
+		
+			@include helpers.desktop() {
+				padding: 50px 72px 70px;
+			}
+		
+			.list__title {
+				font-family: 'Philosopher';
+				font-size: 24px;
+				line-height: 21px;
+				color: helpers.$color-black;
+				text-align: center;
+		
+				@include helpers.mobile() {
+					font-size: 27px;
+					line-height: 36px;
+					text-align: left;
+				}
+		
+				@include helpers.laptop() {
+					font-size: 40px;
+				}
+			}
+		
+			.list__row {
+				width: 26px;
+				height: 1px;
+				background-color: helpers.$color-green;
+				margin: 20px auto;
+		
+				@include helpers.mobile() {
+					margin: 20px 0 24px;
+				}
+		
+				@include helpers.laptop() {
+					margin: 30px 0 40px;
+				}
+			}
+		
+			.list__item {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+		
+				@include helpers.laptop() {
+					margin-bottom: 28px;
+				}
+		
+				.map-icon {
+					width: 11px;
+					height: 17px;
+					fill: helpers.$color-yellow;
+				
+					@include helpers.laptop() {
+						width: 14px;
+						height: 22px;
+					}
+				}
+				
+				.map-icon__ref {
+					margin-left: 12px;
+				
+					@include helpers.laptop() {
+						margin-left: 22px;
+					}
+				}
+		
+				.tel-icon {
+					width: 13px;
+					height: 13px;
+					fill: helpers.$color-yellow;
+				
+					@include helpers.laptop() {
+						width: 19px;
+						height: 19px;
+					}
+				}
+				
+				.tel-icon__ref {
+					margin-left: 10px;
+				
+					@include helpers.laptop() {
+						margin-left: 20px;
+					}
+				}
+		
+				.mail-icon {
+					width: 15px;
+					height: 11px;
+					fill: helpers.$color-yellow;
+				
+					@include helpers.laptop() {
+						width: 22px;
+						height: 16px;
+					}
+				}
+				
+				.mail-icon__ref {
+					margin-left: 10px;
+				
+					@include helpers.laptop() {
+						margin-left: 18px;
+					}
+				}
+			}
+		
+			.list__item.last-list-ietm {
+				align-items:flex-start;
+				margin-bottom: 25px;
+		
+				@include helpers.mobile() {
+					margin-bottom: 41px;
+				}
+		
+				@include helpers.laptop() {
+					margin-bottom: 30px;
+				}
+
+				.timetable-icon {
+					width: 14px;
+					height: 14px;
+					margin-top: 5px;
+					fill: helpers.$color-yellow;
+				
+					@include helpers.laptop() {
+						width: 20px;
+						height: 20px;
+						margin-top: 3px;
+					}
+				}
+				
+				.timetable-icon__ref {
+					line-height: 25px;
+					margin-left: 10px;
+				
+					@include helpers.mobile() {
+						margin-left: 11px;
+					}
+				
+					@include helpers.laptop() {
+						line-height: 28px;
+						margin-left: 19px;
+					}
+				}
 			}
 		}
 	}
