@@ -129,7 +129,6 @@ body.stopPageScroll {
 	height: 16px;
 	top: 8px;
 	right: 8px;
-	background-color: helpers.$color-white;
 
 	@include helpers.mobile() {
 		top: 20px;
