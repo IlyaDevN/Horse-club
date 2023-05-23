@@ -165,10 +165,7 @@ body.stopPageScroll {
 		}
 	}
 
-	&:hover {
-		.modal-close-button__line {
-			background-color: helpers.$color-orange;
-		}
+	&:hover &__line {
+		background-color: helpers.$color-orange;
 	}
-
 }
