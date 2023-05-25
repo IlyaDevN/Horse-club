@@ -1,6 +1,6 @@
 const popupLinks = document.querySelectorAll(".popup-link");
 const modalOverlays = document.querySelectorAll(".modal-overlay");
-const forms = document.forms;
+const forms = Array.from(document.forms);
 const KEYCODE = {
 	ESC: "Escape"
 };
@@ -10,13 +10,8 @@ let gratitude;
 let openButton;
 
 popupLinks.forEach((popupLink) => popupLink.addEventListener("click", openModal));
-
-for (let form of forms) {
-	form.addEventListener("submitSuccess", submitHandler);
-}
-for (let overlay of modalOverlays) {
-	overlay.addEventListener("click", emptyPlaceCloseHandler);
-}
+forms.forEach((form) => form.addEventListener("submitSuccess", submitHandler));
+modalOverlays.forEach((overlay) => overlay.addEventListener("click", emptyPlaceCloseHandler));
 
 function defineModal(event) {
 	if (event.target.tagName == "FORM") {
