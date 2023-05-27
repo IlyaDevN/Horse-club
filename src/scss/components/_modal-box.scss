@@ -124,6 +124,9 @@ body.stopPageScroll {
 }
 
 .modal-close-button {
+
+	$root: &;
+
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -162,9 +165,9 @@ body.stopPageScroll {
 		&:nth-child(1) {
 			transform: rotate(-135deg);
 		}
-	}
 
-	&:hover &__line {
-		background-color: helpers.$color-orange;
+		#{$root}:hover & {
+			background-color: helpers.$color-orange;
+		}
 	}
 }
