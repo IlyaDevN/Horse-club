@@ -83,11 +83,11 @@ function addInputHandler(input) {
 }
 
 function showError(input) {
-	const inputContainer = input.closest(".input-container");
+	const inputContainer = input.closest("[data-error-message]");
 	inputContainer.classList.add("error");
 }
 
 function hideError(input) {
-	const inputContainer = input.closest(".input-container");
+	const inputContainer = input.closest("[data-error-message]");
 	inputContainer.classList.remove("error");
 }
