@@ -172,60 +172,39 @@
 				@include helpers.laptop() {
 					margin-bottom: 28px;
 				}
-		
-				.map-icon {
-					width: 11px;
-					height: 17px;
-					fill: helpers.$color-yellow;
 				
+				.icon-container {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 15px;
+					height: 17px;
+
 					@include helpers.laptop() {
-						width: 14px;
+						width: 22px;
 						height: 22px;
 					}
 				}
-				
-				.map-icon__ref {
-					margin-left: 12px;
-				
-					@include helpers.laptop() {
-						margin-left: 22px;
-					}
-				}
-		
-				.tel-icon {
-					width: 13px;
-					height: 13px;
+
+				.icon {
+					height: 100%;
 					fill: helpers.$color-yellow;
-				
-					@include helpers.laptop() {
-						width: 19px;
-						height: 19px;
-					}
 				}
-				
-				.tel-icon__ref {
+
+				.item-text {
+					font-size: 13px;
+					line-height: 25px;
+					color: helpers.$color-brown;
+					display: block;
 					margin-left: 10px;
 				
-					@include helpers.laptop() {
-						margin-left: 20px;
+					@include helpers.mobile() {
+						font-size: 16px;
 					}
-				}
-		
-				.mail-icon {
-					width: 15px;
-					height: 11px;
-					fill: helpers.$color-yellow;
 				
 					@include helpers.laptop() {
-						width: 22px;
-						height: 16px;
-					}
-				}
-				
-				.mail-icon__ref {
-					margin-left: 10px;
-				
-					@include helpers.laptop() {
+						font-size: 18px;
+						line-height: 18px;
 						margin-left: 18px;
 					}
 				}
@@ -242,51 +221,14 @@
 				@include helpers.laptop() {
 					margin-bottom: 30px;
 				}
-
-				.timetable-icon {
-					width: 14px;
-					height: 14px;
-					margin-top: 5px;
-					fill: helpers.$color-yellow;
 				
-					@include helpers.laptop() {
-						width: 20px;
-						height: 20px;
-						margin-top: 3px;
-					}
-				}
-				
-				.timetable-icon__ref {
-					line-height: 25px;
-					margin-left: 10px;
-				
-					@include helpers.mobile() {
-						margin-left: 11px;
-					}
-				
+				.timetable-item-text {
 					@include helpers.laptop() {
 						line-height: 28px;
-						margin-left: 19px;
 					}
 				}
 			}
 		}
-	}
-}
-
-.icon_every {
-	font-size: 13px;
-	line-height: 25px;
-	color: helpers.$color-brown;
-	display: block;
-
-	@include helpers.mobile() {
-		font-size: 16px;
-	}
-
-	@include helpers.laptop() {
-		font-size: 18px;
-		line-height: 18px;
 	}
 }
 
