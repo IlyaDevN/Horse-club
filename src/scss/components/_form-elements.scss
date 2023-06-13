@@ -64,11 +64,7 @@
 
 	&__checkbox {
 		position: relative;
-		padding: 10px 0 5px;
-	
-		@include helpers.laptop() {
-			padding: 10px 0 10px;
-		}
+		padding: 10px 0 10px;
 
 		&.error {
 			.checkbox-svg__rect {
