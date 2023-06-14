@@ -1,0 +1,173 @@
+@use "../common/forwarded" as helpers;
+
+.modal-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include helpers.zIndex(layer_overlay);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: helpers.$color-black-semi-transparent;
+	transition: opacity 0.8s,
+	visibility 0.8s;
+	opacity: 0;
+	visibility: hidden;
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+body.stopPageScroll {
+	overflow-y: hidden;
+}
+
+.modal-content {
+	width: 300px;
+	background-color: helpers.$color-white;
+	border-radius: 5px;
+	padding: 26px;
+	transform: perspective(300px) translateY(-100%) rotateX(45deg);
+	transition: transform 0.8s;
+
+	@include helpers.mobile() {
+		width: 375px;
+		padding: 40px;
+		transform: perspective(352px) translateY(-100%) rotateX(45deg);
+	}
+
+	@include helpers.laptop() {
+		width: 405px;
+		transform: perspective(376px) translateY(-100%) rotateX(45deg);
+	}
+
+	&.open {
+		transform: perspective(380px) translateY(0) rotateX(0);
+	}
+}
+
+.gratitude {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background-color: helpers.$color-white;
+	border-radius: 5px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: perspective(600px) translateY(100%) rotateX(45deg);
+	transition: transform 0.8s,
+		opacity 0.8s,
+		visibility 0.8s;
+	visibility: hidden;
+	opacity: 0;
+
+	@include helpers.mobile() {
+		width: 375px;
+		height: 375px;
+	}
+
+	@include helpers.laptop() {
+		width: 380px;
+		height: 380px;
+	}
+
+	&.open {
+		position: absolute;
+		visibility: visible;
+		opacity: 1;
+		transform: perspective(600px) translateY(0) rotateX(0);
+	}
+
+	&__line-first {
+		font-size: 40px;
+		line-height: 50px;
+		text-align: center;
+
+		@include helpers.mobile() {
+			font-size: 50px;
+			line-height: 60px;
+			text-align: center;
+		}
+	}
+
+	&__line-second {
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+
+		@include helpers.mobile() {
+			font-size: 30px;
+			line-height: 50px;
+			text-align: center;
+		}
+	}
+
+	&__image-container {
+		width: 250px;
+
+		@include helpers.mobile() {
+			width: 270px;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		object-fit: contain;
+	}
+}
+
+.modal-close-button {
+
+	$root: &;
+
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 8px;
+	right: 8px;
+
+	@include helpers.mobile() {
+		top: 20px;
+		right: 20px;
+	}
+
+	@include helpers.laptop() {
+		top: 17px;
+		right: 17px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 200%;
+		height: 200%;
+		left: -50%;
+		top: -50%;
+	}
+
+	&__line {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 17px;
+		height: 1px;
+		background-color: helpers.$color-black;
+		transform: rotate(135deg);
+		transition: background-color 0.3s;
+
+		&:nth-child(1) {
+			transform: rotate(-135deg);
+		}
+
+		#{$root}:hover & {
+			background-color: helpers.$color-orange;
+		}
+	}
+}

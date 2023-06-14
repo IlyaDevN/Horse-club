@@ -1,0 +1,71 @@
+<section class="our-visitors">
+	<div class="our-visitors__container">
+		<div class="our-visitors__title title_section">
+			<h2>Наши посетители</h2>
+		</div>
+		<div class="our-visitors__photo-container">
+			<div class="our-visitors__photo">
+				{% for i in range(1, 13) -%}
+				<div class="photo__item">
+					<picture>
+						<source srcset="img/our-visitors/x1920/container_1/photo{{i}}_x1920.jpg" type="image/jpeg"
+							media="(min-width:1920px)">
+						<source srcset="img/our-visitors/x1000/container_1/photo{{i}}_x1000.jpg" type="image/jpeg"
+							media="(min-width:1000px)">
+						<source srcset="img/our-visitors/x768/container_1/photo{{i}}_x768.jpg" type="image/jpeg"
+							media="(min-width:768px)">
+						<source srcset="img/our-visitors/x480/container_1/photo{{i}}_x480.jpg" type="image/jpeg"
+							media="(min-width:480px)">
+						<img class="photo" src="img/our-visitors/x320/container_1/photo{{i}}_x320.jpg"
+							alt="Клиент на лошади">
+					</picture>
+				</div>
+				{%- endfor %}
+			</div>
+			<div class="our-visitors__photo">
+				{% for i in range(13, 25) -%}
+				<div class="photo__item">
+					<picture>
+						<source srcset="img/our-visitors/x1920/container_2/photo{{i}}_x1920.jpg" type="image/jpeg"
+							media="(min-width:1920px)">
+						<source srcset="img/our-visitors/x1000/container_2/photo{{i}}_x1000.jpg" type="image/jpeg"
+							media="(min-width:1000px)">
+						<source srcset="img/our-visitors/x768/container_2/photo{{i}}_x768.jpg" type="image/jpeg"
+							media="(min-width:768px)">
+						<img class="photo" src="img/our-visitors/x320/container_2/photo{{i}}_x320.jpg"
+							alt="Клиент на лошади">
+					</picture>
+				</div>
+				{%- endfor %}
+			</div>
+			<div class="our-visitors__photo">
+				{% for i in range(25, 37) -%}
+				<div class="photo__item">
+					<picture>
+						<source srcset="img/our-visitors/x1920/container_3/photo{{i}}_x1920.jpg" type="image/jpeg"
+							media="(min-width:1920px)">
+						<source srcset="img/our-visitors/x1000/container_3/photo{{i}}_x1000.jpg" type="image/jpeg"
+							media="(min-width:1000px)">
+						<source srcset="img/our-visitors/x768/container_3/photo{{i}}_x768.jpg" type="image/jpeg"
+							media="(min-width:768px)">
+						<img class="photo" src="img/our-visitors/x320/container_3/photo{{i}}_x320.jpg"
+							alt="Клиент на лошади">
+					</picture>
+				</div>
+				{%- endfor %}
+			</div>
+		</div>
+		<div class="our-visitors__slider-control slider-control">
+			<button id="our-visitors__button-prev" class="slider-control__button" disabled>
+				<span class="button__arrow button__arrow_prev"></span>
+			</button>
+			<div id="our-visitors__slider-control-range" class="slider-control__range">
+				<div id="our-visitors__slider-control-thumb" class="slider-control__thumb"></div>
+			</div>
+			<div class="our-visitors__pagination-container"></div>
+			<button id="our-visitors__button-next" class="slider-control__button">
+				<span class="button__arrow button__arrow_next"></span>
+			</button>
+		</div>
+	</div>
+</section>

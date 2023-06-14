@@ -1,0 +1,433 @@
+@use "../common/forwarded" as helpers;
+
+.club-directions {
+	position: relative;
+
+	&__container {
+		max-width: 320px;
+		height: 2328px;
+		margin: 0 auto 29px;
+		position: relative;
+
+		@include helpers.mobile() {
+			max-width: 460px;
+			height: 1321px;
+			margin: 0 auto;
+		}
+
+		@include helpers.tablet() {
+			max-width: 748px;
+			height: 1407px;
+			margin: 0 auto 30px;
+		}
+
+		@include helpers.laptop() {
+			max-width: 1000px;
+			height: 1223px;
+			margin: 0 auto 107px;
+		}
+
+		@include helpers.desktop() {
+			max-width: 1200px;
+			height: 1602px;
+			padding-top: 100px;
+			margin: 0 auto 51px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 80px;
+
+		@include helpers.mobile() {
+			margin-bottom: 90px;
+		}
+
+		@include helpers.tablet() {
+			margin-bottom: 100px;
+		}
+
+		@include helpers.laptop() {
+			margin-bottom: 105px;
+		}
+
+		@include helpers.desktop() {
+			margin-bottom: 143px;
+		}
+	}
+
+	&__gallery {
+		@include helpers.mobile() {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			gap: 4px;
+			padding: 0 3px;
+		}
+
+		@include helpers.tablet() {
+			gap: 20px;
+		}
+
+		@include helpers.laptop() {
+			display: block;
+			gap: 0;
+		}
+	}
+
+	&__button {
+		margin: 30px auto 0;
+
+		@include helpers.mobile() {
+			margin: 37px auto 0;
+		}
+
+		@include helpers.tablet() {
+			margin: 40px auto 0;
+		}
+
+		@include helpers.laptop() {
+			margin: 40px auto 0;
+		}
+
+		@include helpers.desktop() {
+			margin: 50px auto 0;
+		}
+	}
+}
+
+.background {
+	&__sky {
+		position: absolute;
+		bottom: 52px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		@include helpers.mobile() {
+			bottom: 58px;
+		}
+
+		@include helpers.tablet() {
+			bottom: 68px;
+		}
+
+		@include helpers.desktop() {
+			bottom: 91px;
+		}
+	}
+
+	&__grass {
+		position: absolute;
+		bottom: 41px;
+		left: 0;
+		width: 100%;
+
+		@include helpers.mobile() {
+			bottom: 46px;
+		}
+
+		@include helpers.tablet() {
+			bottom: 4px;
+		}
+
+		@include helpers.laptop() {
+			bottom: 7px;
+		}
+
+		@include helpers.desktop() {
+			bottom: 8px;
+		}
+	}
+
+	&__clouds-botom {
+		position: absolute;
+		bottom: 39px;
+		left: 0;
+		width: 100%;
+		@include helpers.zIndex(layer_middle);
+
+		@include helpers.mobile() {
+			bottom: 46px;
+		}
+
+		@include helpers.tablet() {
+			bottom: 4px;
+		}
+
+		@include helpers.laptop() {
+			bottom: 0;
+		}
+	}
+
+	&__horses-container {
+		@include helpers.desktop() {
+			position: absolute;
+			width: 1900px;
+			height: 100%;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+
+	&__horse-left {
+		position: absolute;
+		@include helpers.zIndex(layer_base);
+		left: 0;
+		bottom: 69px;
+		width: 63px;
+		height: 149px;
+
+		@include helpers.mobile() {
+			bottom: 66px;
+			width: 107px;
+			height: 196px;
+		}
+
+		@include helpers.tablet() {
+			left: 7px;
+			bottom: 25px;
+			width: 157px;
+			height: 272px;
+		}
+
+		@include helpers.laptop() {
+			left: 0;
+			bottom: 20px;
+			width: 202px;
+			height: 350px;
+		}
+
+		@include helpers.desktop() {
+			left: 138px;
+			bottom: 39px;
+			width: 305px;
+			height: 530px;
+		}
+	}
+
+	&__horse-right {
+		position: absolute;
+		@include helpers.zIndex(layer_base);
+		right: 0;
+		bottom: 77px;
+		width: 66px;
+		height: 141px;
+
+		@include helpers.mobile() {
+			bottom: 63px;
+			width: 93px;
+			height: 199px;
+		}
+
+		@include helpers.tablet() {
+			bottom: 37px;
+			width: 174px;
+			height: 270px;
+		}
+
+		@include helpers.laptop() {
+			bottom: 28px;
+			width: 224px;
+			height: 342px;
+		}
+
+		@include helpers.desktop() {
+			right: 83px;
+			bottom: 30px;
+			width: 372px;
+			height: 532px;
+		}
+	}
+}
+
+.horse-left {
+	&__img {
+		@extend %image_inner;
+	}
+}
+
+.horse-right {
+	&__img {
+		@extend %image_inner;
+	}
+}
+
+.gallery {
+	&__first-row {
+		@include helpers.laptop() {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			margin-bottom: 39px;
+			gap: 30px;
+		}
+
+		@include helpers.desktop() {
+			margin-bottom: 0;
+		}
+	}
+
+	&__card {
+		width: 300px;
+		min-height: 260px;
+		background-color: helpers.$color-white;
+		border: 1px solid helpers.$color-border-white;
+		box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.07);
+		border-radius: 5px;
+		margin: 0 auto 60px;
+		padding: 0 24px 22px;
+
+		@include helpers.mobile() {
+			box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
+			width: 225px;
+			min-height: 290px;
+			margin: 0 0 40px;
+			padding: 0 14px 22px;
+		}
+
+		@include helpers.tablet() {
+			width: 354px;
+			min-height: 300px;
+			margin-bottom: 45px;
+			padding: 0 24px 21px;
+		}
+
+		@include helpers.laptop() {
+			width: 300px;
+			margin-bottom: 0;
+			padding: 0 24px 32px;
+		}
+
+		@include helpers.desktop() {
+			width: 370px;
+			min-height: 399px;
+			padding: 0 24px 44px;
+		}
+	}
+
+	&__card:last-child {
+		@include helpers.mobile() {
+			margin-bottom: 0;
+		}
+	}
+
+	&__second-row {
+		@include helpers.laptop() {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			gap: 30px;
+		}
+
+		@include helpers.desktop() {
+			margin-top: -20px;
+		}
+
+		.gallery__card:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.card {
+	&__image-container {
+		width: 100%;
+		aspect-ratio: 5/3;
+		margin: -20px auto 15px;
+		overflow: hidden;
+		border: 1px transparent;
+		border-radius: 5px;
+		transition: transform 0.5s;
+
+		@include helpers.mobile() {
+			aspect-ratio: 20/13;
+			margin: -20px auto 10px;
+		}
+
+		@include helpers.tablet() {
+			aspect-ratio: 304/181;
+			margin: -25px auto 20px;
+		}
+
+		@include helpers.laptop() {
+			aspect-ratio: 25/18;
+		}
+
+		@include helpers.desktop() {
+			aspect-ratio: 16/11;
+			margin: -25px auto 45px;
+		}
+
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+
+	&__image {
+		@extend %image_inner;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+		color: helpers.$color-brown;
+		margin-bottom: 10px;
+
+		@include helpers.tablet() {
+			font-size: 15px;
+		}
+
+		@include helpers.laptop() {
+			margin-bottom: 15px;
+		}
+
+		@include helpers.desktop() {
+			font-size: 23px;
+			margin: 0 auto 25px;
+			width: 236px;
+		}
+	}
+
+	&__row {
+		background-color: helpers.$color-green;
+		width: 26px;
+		height: 1px;
+		margin: 0 auto 10px;
+
+		@include helpers.laptop() {
+			margin: 0 auto 15px;
+		}
+
+		@include helpers.desktop() {
+			margin: 0 auto 25px;
+		}
+	}
+
+	&__text {
+		font-size: 13px;
+		line-height: 20px;
+		text-align: center;
+		color: helpers.$color-dark-grey;
+
+		@include helpers.mobile() {
+			text-align: left;
+		}
+
+		@include helpers.tablet() {
+			text-align: center;
+		}
+
+		@include helpers.laptop() {
+			font-size: 13px;
+			line-height: 20px;
+		}
+
+		@include helpers.desktop() {
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+}

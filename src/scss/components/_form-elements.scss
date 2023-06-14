@@ -1,0 +1,179 @@
+@use "../common/forwarded" as helpers;
+
+.form {
+
+	&__field {
+		$root: &;
+
+		position: relative;
+		padding: 10px 0 5px;
+	
+		@include helpers.laptop() {
+			padding: 10px 0 10px;
+		}
+
+		input {
+			background: helpers.$color-white;
+			border: 1px solid helpers.$color-light-grey;
+			border-radius: 5px;
+			font-size: 13px;
+			line-height: 13px;
+			width: 100%;
+			height: 50px;
+			padding-left: 14px;
+		
+			@include helpers.mobile() {
+				font-size: 15px;
+				line-height: 18px;
+				height: 55px;
+				padding-left: 19px;
+			}
+		
+			@include helpers.laptop() {
+				font-size: 18px;
+				line-height: 21px;
+				height: 61px;
+				padding-left: 21px;
+			}
+		}
+
+		&::before {
+			content: attr(data-error-message);
+			position: absolute;
+			top: 0;
+			color: helpers.$color-orange;
+			font-size: 10px;
+			line-height: 10px;
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.3s,
+				visibility 0.3s;
+		}
+
+		&.error {
+			input {
+				border-color: helpers.$color-orange;
+			}
+		}
+
+		&.error::before {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&__checkbox {
+		position: relative;
+		padding: 10px 0;
+
+		&.error {
+			.checkbox-svg__rect {
+				stroke: helpers.$color-orange;
+			}
+		}
+
+		&::after {
+			content: attr(data-error-message);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			color: helpers.$color-orange;
+			font-size: 10px;
+			line-height: 10px;
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.3s,
+				visibility 0.3s;
+		}
+
+		&.error::after {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		label {
+			font-size: 13px;
+			line-height: 15px;
+			color: helpers.$color-font-grey;
+			display: inline-flex;
+			align-items: center;
+			user-select: none;
+		
+			@include helpers.mobile() {
+				font-size: 15px;
+				line-height: 18px;
+			}
+
+			input {
+				position: absolute;
+				@include helpers.zIndex(layer_negative);
+				opacity: 0;
+
+				&:checked+svg .checkbox-svg__path {
+					display: block;
+				}
+			}
+
+			.checkbox-svg {
+				width: 15px;
+				height: 15px;
+			
+				@include helpers.mobile() {
+					width: 20px;
+					height: 20px;
+				}
+			
+				&__rect {
+					stroke-width: 1px;
+					stroke: helpers.$color-yellow;
+					fill: helpers.$color-white;
+			
+					@include helpers.mobile() {
+						stroke-width: 2px;
+					}
+				}
+			
+				&__path {
+					transform: translate(4px, 4px);
+					stroke: helpers.$color-green;
+					fill: helpers.$color-green;
+					display: none;
+				}
+			}
+
+			.checkbox-ref {
+				margin-left: 10px;
+			}
+		
+			.agreement-link {
+				text-decoration: underline;
+				color: inherit;
+			}
+		}
+	}
+}
+
+button.form-button {
+	width: 100%;
+	height: 45px;
+	font-size: 10px;
+	line-height: 10px;
+	margin: 15px auto 25px;
+
+	@include helpers.mobile() {
+		height: 64px;
+		font-size: 13px;
+		line-height: 15px;
+		margin: 20px 0 10px;
+	}
+
+	@include helpers.tablet() {
+		font-size: 15px;
+	}
+
+	@include helpers.laptop() {
+		height: 70px;
+		margin: 11px auto 10px;
+	}
+}
+

@@ -1,0 +1,20 @@
+<form class="registration-block">
+	<div class="form__field" data-error-message="Вводите буквы">
+		<input type="text" placeholder="Ваше имя" data-name data-to-validate>
+	</div>
+	<div class="form__field" data-error-message="Вводите цифры">
+		<input type="tel" placeholder="Ваш телефон" data-phone data-to-validate>
+	</div>
+	<button class="form-button button" type="submit">
+		<span class="button-content">Задать вопрос</span>
+	</button>
+	<div class="form__checkbox" data-error-message="Подтвердите согласие">
+		<label>
+			<input type="checkbox" data-checkbox data-to-validate>
+			{% include "html/icons_svg/checkbox-svg.html"%}
+			<span class="checkbox-ref">Даю согласие на&nbsp;</span>
+			<a class="agreement-link" href="agreement.html" target="_blank">обработку
+				данных</a>
+		</label>
+	</div>
+</form>

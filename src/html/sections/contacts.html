@@ -1,0 +1,59 @@
+<section class="contacts">
+	<div id="contacts__background-map" class="contacts__background-map"
+		data-map-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmG1etT32VWFNUpBDm_VF648uvsnDFxco&callback=initMap"
+		data-marker-Image-Src="img/contacts/icons/pin_green.svg"></div>
+	<div class="contacts__background-left-tree">
+		<img src="img/contacts/background/leftTree.png" alt="Дерево слева">
+	</div>
+	<div class="contacts__background-right-tree">
+		<img src="img/contacts/background/right_tree.png" alt="Дерево справа">
+	</div>
+	<div class="contacts__container">
+		<div class="contacts__frame">
+			<div class="contacts__list">
+				<div class="list__title">
+					<h2>Контакты</h2>
+				</div>
+				<div class="list__row"></div>
+				<div class="list__item">
+					<div class="icon-container">
+						{% include "html/icons_svg/icon-map.html"%}
+					</div>
+					<a href="https://goo.gl/maps/iGA47fqxnXoLWfgWA" class="item-text"
+						target="_blank">ул. Васи Пупкина</a>
+				</div>
+				<div class="list__item">
+					<div class="icon-container">
+						{% include "html/icons_svg/icon-tel.html"%}
+					</div>
+					<a href="tel:+38(000)0000000" class="item-text">+38 (000) 000-00-00</a>
+				</div>
+				<div class="list__item">
+					<div class="icon-container">
+						{% include "html/icons_svg/icon-mail.html"%}
+					</div>
+					<a href="mailto:mail@somemail.com" class="item-text">mail@somemail.com</a>
+				</div>
+				<div class="list__item list__item_last">
+					<div class="icon-container">
+						{% include "html/icons_svg/icon-timetable.html"%}
+					</div>
+					<p class="timetable-item-text item-text">Пн-Пт: 10:00 - 19:00 <br>Сб: 10:00 - 17:00
+						<br>Вс:
+						выходной
+					</p>
+				</div>
+				<div class="social-network-icon-container">
+					<a class="social-network-icon" href="#"><img
+							src="img/contacts/icons/instagram.svg" alt="Иконка Instagram"></a>
+					<a class="social-network-icon" href="#"><img
+							src="img/contacts/icons/youtube.svg" alt="Иконка YouTube"></a>
+					<a class="social-network-icon" href="#"><img
+							src="img/contacts/icons/whatsUp.svg" alt="Иконка WhatsApp"></a>
+					<a class="social-network-icon" href="#"><img
+							src="img/contacts/icons/vk.svg" alt="Иконка Вконтакте"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

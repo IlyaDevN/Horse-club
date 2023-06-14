@@ -1,0 +1,52 @@
+
+<section class="intro">
+	<div class="intro__background-container">
+		<picture>
+			<source srcset="img/intro/background/x1920/bgIntroFull_x1920.jpg" type="image/jpeg"
+				media="(min-width:1920px)">
+			<source srcset="img/intro/background/x1000/bgIntroFull_x1000.jpg" type="image/jpeg"
+				media="(min-width:1000px)">
+			<source srcset="img/intro/background/x768/bgIntroFull_x768.jpg" type="image/jpeg"
+				media="(min-width:768px)">
+			<source srcset="img/intro/background/x480/bgIntroFull_x480.jpg" type="image/jpeg"
+				media="(min-width:480px)">
+			<img class="intro__image_bg" src="img/intro/background/x320/bgIntroFull_x320.jpg" alt="Фон">
+		</picture>
+		<picture>
+			<source srcset="img/intro/background/x1920/bushLeft_x1920.png" type="image/jpeg"
+				media="(min-width:1920px)">
+			<source srcset="img/intro/background/x1000/bushLeft_x1000.png" type="image/jpeg"
+				media="(min-width:1000px)">
+			<source srcset="img/intro/background/x768/bushLeft_x768.png" type="image/jpeg"
+				media="(min-width:768px)">
+			<source srcset="img/intro/background/x480/bushLeft_x480.png" type="image/jpeg"
+				media="(min-width:480px)">
+			<img class="intro__image_bushLeft" src="img/intro/background/x320/bushLeft_x320.png"
+				alt="Куст слева">
+		</picture>
+		<picture>
+			<source srcset="img/intro/background/x1920/bushRight_x1920.png" type="image/jpeg"
+				media="(min-width:1920px)">
+			<source srcset="img/intro/background/x1000/bushRight_x1000.png" type="image/jpeg"
+				media="(min-width:1000px)">
+			<source srcset="img/intro/background/x768/bushRight_x768.png" type="image/jpeg"
+				media="(min-width:768px)">
+			<source srcset="img/intro/background/x480/bushRight_x480.png" type="image/jpeg"
+				media="(min-width:480px)">
+			<img class="intro__image_bushRight" src="img/intro/background/x320/bushRight_x320.png"
+				alt="Куст справа">
+		</picture>
+	</div>
+	<div class="intro__container">
+		{% include "html/components/header.html" %}
+		<div class="intro__content">
+			<h1 class="intro__invitation">Окунитесь в мир лошадей вместе с нами</h1>
+			<div class="intro__advertising">
+				<p>Уроки верховой езды, фотосессии и мероприятия в частном конном клубе <b>г. Киев</b> </p>
+			</div>
+			<button class="intro__button button" data-modal-link="modal-main">
+				<span class="button-content">записаться</span>
+			</button>
+		</div>
+	</div>
+</section>
