@@ -17,7 +17,7 @@ function closeMenuByOverlay(event) {
 	}
 }
 
-function closeMenu() {
+export function closeMenu() {
 	menuOverlay.classList.remove("active");
 	document.body.classList.remove("stopPageScroll");
 }
