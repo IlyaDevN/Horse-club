@@ -1,6 +1,5 @@
 import "./modules/mobileMenu.js";
 import "./modules/modal-box.js";
-import "./modules/scrollToAnchor.js"
 import "./modules/swiperOurHorsesFunctionality.js";
 import "./modules/swiperCommentsFunctionality.js";
 import "./modules/sliderOurVisitors.js";
