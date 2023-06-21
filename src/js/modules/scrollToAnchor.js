@@ -1,22 +1,25 @@
 import { closeMenu } from './mobileMenu.js';
 
-const anchors = Array.from(document.querySelectorAll("a[href*='#']"));
+const anchors = document.querySelectorAll("a[href*='#']");
+const menuOverlay = document.body.querySelector(".header__menu-overlay");
+const headerMenu = document.querySelector(".header__menu");
 
 anchors.forEach((anchor) => {
 	anchor.addEventListener("click", (event) => {
 		event.preventDefault();
-		closeMobileMenu();
-		const blockID = anchor.getAttribute("href");
-		document.querySelector(`${blockID}`).scrollIntoView({
-			behavior: "smooth",
-			block: "start"
-		})
+		if(menuOverlay.classList.contains("active")) {
+			headerMenu.addEventListener("transitionend", () => scrollToSection(anchor), {once:true});
+			closeMenu();
+		} else {
+			scrollToSection(anchor);
+		}
 	})
 })
 
-function closeMobileMenu() {
-	const menuOverlay = document.body.querySelector(".header__menu-overlay");
-	if (menuOverlay.classList.contains("active")) {
-		closeMenu();
-	}
+function scrollToSection(anchor) {
+	const blockID = anchor.getAttribute("href");
+	document.querySelector(`${blockID}`).scrollIntoView({
+		behavior: "smooth",
+		block: "start"
+	})
 }
