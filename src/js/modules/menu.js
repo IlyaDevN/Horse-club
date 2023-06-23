@@ -38,7 +38,7 @@ function closeMenu() {
 
 function scrollToSection(anchor) {
 	const blockID = anchor.getAttribute("href").slice(1);
-	document.getElementById(`${blockID}`).scrollIntoView({
+	document.getElementById(blockID).scrollIntoView({
 		behavior: "smooth",
 		block: "start"
 	})
