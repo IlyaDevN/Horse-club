@@ -2,7 +2,9 @@ const menuOverlay = document.body.querySelector(".header__menu-overlay");
 const burgerBtn = document.body.querySelector(".header__menu-burger-button");
 const menuCloseBtn = menuOverlay.querySelector(".menu__close-button");
 const headerMenu = document.querySelector(".header__menu");
-const anchors = document.querySelectorAll("a[href*='#']");
+const headerMenuLinks = headerMenu.querySelectorAll(".nav__link");
+const footerMenuLinks = document.querySelectorAll(".nav__link-footer");
+const anchors = [...headerMenuLinks, ...footerMenuLinks];
 
 burgerBtn.addEventListener("click", openMenu);
 menuOverlay.addEventListener("click", closeMenuByOverlay);
