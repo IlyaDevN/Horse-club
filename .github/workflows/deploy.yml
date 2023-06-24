@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: [master, gulp-implantation]
+    branches: [master, smooth_scrolling_chapter]
   workflow_dispatch:
 
 jobs:
