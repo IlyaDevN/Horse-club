@@ -13,7 +13,7 @@ button.addEventListener("click", ()=> window.scrollTo({
 const throttledMoveToTop = throttle(SCROLL_DELAY, moveToTop);
 
 function moveToTop() {
-	const scrollHeight = window.pageYOffset;
+	const scrollHeight = window.scrollY;
 
 	if(scrollHeight > viewportHeight) {
 		button.style.opacity = "0.7";
