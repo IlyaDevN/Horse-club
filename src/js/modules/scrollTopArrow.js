@@ -3,7 +3,6 @@ import { throttle } from "throttle-debounce";
 const SCROLL_DELAY = 250;
 const PAGE_TOP = 0;
 const button = document.getElementById("buttonScrollTop");
-let viewportHeight = document.documentElement.clientHeight;
 
 button.addEventListener("click", ()=> window.scrollTo({
 	top: PAGE_TOP,
@@ -14,6 +13,7 @@ const throttledMoveToTop = throttle(SCROLL_DELAY, moveToTop);
 
 function moveToTop() {
 	const scrollHeight = window.scrollY;
+	const viewportHeight = document.documentElement.clientHeight;
 
 	if(scrollHeight > viewportHeight) {
 		button.disabled = false;
@@ -23,3 +23,4 @@ function moveToTop() {
 }
 
 window.addEventListener("scroll", throttledMoveToTop);
+window.addEventListener("resize", throttledMoveToTop);
