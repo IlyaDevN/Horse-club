@@ -1,4 +1,4 @@
-import "./modules/mobileMenu.js";
+import "./modules/menu.js";
 import "./modules/modal-box.js";
 import "./modules/scrollTopArrow.js"
 import "./modules/swiperOurHorsesFunctionality.js";
