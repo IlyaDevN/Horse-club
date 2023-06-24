@@ -16,10 +16,8 @@ function moveToTop() {
 	const scrollHeight = window.scrollY;
 
 	if(scrollHeight > viewportHeight) {
-		button.style.opacity = "0.7";
 		button.disabled = false;
 	} else {
-		button.style.opacity = "0";
 		button.disabled = true;
 	}
 }
