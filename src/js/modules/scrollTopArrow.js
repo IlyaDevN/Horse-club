@@ -2,7 +2,7 @@ import { throttle } from "throttle-debounce";
 
 const SCROLL_DELAY = 250;
 const PAGE_TOP = 0;
-let button = document.getElementById("buttonScrollTop");
+const button = document.getElementById("buttonScrollTop");
 let viewportHeight = document.documentElement.clientHeight;
 
 button.addEventListener("click", ()=> window.scrollTo({
