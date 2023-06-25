@@ -1,4 +1,5 @@
 import { throttle } from "throttle-debounce";
+import {scrollBarWidth} from './modal-box.js';
 
 const SCROLL_DELAY = 250;
 const PAGE_TOP = 0;
@@ -24,3 +25,16 @@ function moveToTop() {
 
 window.addEventListener("scroll", throttledMoveToTop);
 window.addEventListener("resize", throttledMoveToTop);
+
+let observer = new MutationObserver(() => {
+	if(document.body.classList.contains("stopPageScroll")) {
+		button.style.marginRight = scrollBarWidth + "px";
+	} else {
+		button.style.marginRight = "";
+	}
+})
+
+observer.observe(document.body, {
+	attributes : true,
+	attributeFilter: ["class"]
+})

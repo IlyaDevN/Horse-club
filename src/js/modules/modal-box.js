@@ -1,3 +1,5 @@
+export let scrollBarWidth = null;
+
 const modals = document.querySelectorAll(".modal-overlay");
 const modalGratitude = document.getElementById("modal-gratitude");
 const forms = Array.from(document.forms);
@@ -72,7 +74,7 @@ function closeByOverlay(event){
 }
 
 function disablePageScroll() {
-	const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+	scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 	document.body.classList.add("stopPageScroll");
 	document.body.style.paddingRight = scrollBarWidth + "px";
 }
