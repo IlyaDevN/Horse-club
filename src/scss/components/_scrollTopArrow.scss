@@ -1,0 +1,17 @@
+@use "../common/forwarded" as helpers;
+
+.slider-control__button.button-scroll-top {
+	position: fixed;
+	top: 50vh;
+	right: 1vh;
+	@include helpers.zIndex(layer_middle, 10);
+	opacity: 0.7;
+}
+
+.slider-control__button.button-scroll-top:disabled {
+	opacity: 0;
+}
+
+.button__arrow_top {
+	transform: translateY(25%) rotate(135deg);
+}
