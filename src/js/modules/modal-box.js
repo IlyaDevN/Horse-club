@@ -1,5 +1,3 @@
-export let scrollBarWidth = null;
-
 const modals = document.querySelectorAll(".modal-overlay");
 const modalGratitude = document.getElementById("modal-gratitude");
 const forms = Array.from(document.forms);
@@ -74,12 +72,12 @@ function closeByOverlay(event){
 }
 
 function disablePageScroll() {
-	scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+	const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 	document.body.classList.add("stopPageScroll");
-	document.body.style.paddingRight = scrollBarWidth + "px";
+	document.documentElement.style.setProperty("--stop-scroll-padding", scrollBarWidth + "px");
 }
 
 function enablePageScroll() {
 	document.body.classList.remove("stopPageScroll");
-	document.body.style.paddingRight = "";
+	document.documentElement.style.setProperty("--stop-scroll-padding", 0);
 }

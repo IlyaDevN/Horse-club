@@ -6,6 +6,7 @@
 	right: 1vw;
 	@include helpers.zIndex(layer_middle, 10);
 	opacity: 0.7;
+	margin-right: var(--stop-scroll-padding);
 }
 
 .slider-control__button.button-scroll-top:disabled {
