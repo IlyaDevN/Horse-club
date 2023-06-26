@@ -1,5 +1,9 @@
 @use "../common/forwarded" as helpers;
 
+:root{
+	--stop-scroll-padding: 0;
+}
+
 .modal-overlay {
 	position: fixed;
 	width: 100%;
