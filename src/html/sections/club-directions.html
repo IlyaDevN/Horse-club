@@ -1,16 +1,19 @@
 {% set gallery__first_row_cards = [
 	{
 		image_src: "img/club-directions/club-directions-gallery/gallery_img_1.jpg",
+		image_alt: "Девушка на лошади на уроке верховой езды",
 		card_title: "Уроки верховой езды",
 		card_text: "Уроки профессиональной верховой езды для любителей и начинающих"
 	},
 	{
 		image_src: "img/club-directions/club-directions-gallery/gallery_img_2.jpg",
+		image_alt: "Всадник на лошади прыгает через барьер",
 		card_title: "Прогулки верхом с тренером",
-		card_text: "Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под руководством опытных теннеров"
+		card_text: "Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под руководством опытных тренеров"
 	},
 	{
 		image_src: "img/club-directions/club-directions-gallery/gallery_img_3.jpg",
+		image_alt: "Девушка на лошади на поляне в лесу",
 		card_title: "Фотосессии",
 		card_text: "Уроки профессиональной верховой езды для любителей и начинающих"
 	}
@@ -19,18 +22,21 @@
 {% set gallery__second_row_cards = [
 	{
 		image_src: "img/club-directions/club-directions-gallery/gallery_img_4.jpg",
+		image_alt: "Девушка на лошади на уроке верховой езды",
 		card_title: "Прогулки верхом с тренером",
-		card_text: "Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под руководством опытных теннеров"
+		card_text: "Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под руководством опытных тренеров"
 	},
 	{
 		image_src: "img/club-directions/club-directions-gallery/gallery_img_5.jpg",
+		image_alt: "Девушка смеется, держась за гриву своей лошади",
 		card_title: "Фотосессии",
 		card_text: "Уроки профессиональной верховой езды для любителей и начинающих"
 	},
 	{
 		image_src: "img/club-directions/club-directions-gallery/gallery_img_6.jpg",
+		image_alt: "Девушка, держащая лошадь за поводья у водоема в лесу",
 		card_title: "Прогулки верхом с тренером",
-		card_text: "Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под руководством опытных теннеров"
+		card_text: "Тренировка клиентов, подготовка к занятиям конным спортом на профессиональном уровне под руководством опытных тренеров"
 	}
 ] %}
 
@@ -46,7 +52,7 @@
 			<source srcset="img/club-directions/club-directions-background/x480/sky_x480.png" type="image/jpeg"
 				media="(min-width:480px)">
 			<img class="background__sky" src="img/club-directions/club-directions-background/x320/sky_x320.png"
-				alt="Небо">
+				alt="Фоновое изображение: небо с облаками">
 		</picture>
 		<picture>
 			<source srcset="img/club-directions/club-directions-background/x1920/grass_x1920.png" type="image/jpeg"
@@ -58,7 +64,7 @@
 			<source srcset="img/club-directions/club-directions-background/x480/grass_x480.png" type="image/jpeg"
 				media="(min-width:480px)">
 			<img class="background__grass" src="img/club-directions/club-directions-background/x320/grass_x320.png"
-				alt="Трава">
+				alt="Фоновое изображение: зеленый луг с деревьями ">
 		</picture>
 		<picture>
 			<source srcset="img/club-directions/club-directions-background/x1920/clouds_bottom_x1920.png"
@@ -70,7 +76,7 @@
 			<source srcset="img/club-directions/club-directions-background/x480/clouds_bottom_x480.png"
 				type="image/jpeg" media="(min-width:480px)">
 			<img class="background__clouds-botom"
-				src="img/club-directions/club-directions-background/x320/clouds_bottom_x320.png" alt="Облака снизу">
+				src="img/club-directions/club-directions-background/x320/clouds_bottom_x320.png" alt="Фоновое изображение: дымка над лугом">
 		</picture>
 		<div class="background__horses-container">
 			<div class="background__horse-left">
@@ -100,7 +106,7 @@
 						type="image/jpeg" media="(min-width:480px)">
 					<img class="horse-right__img"
 						src="img/club-directions/club-directions-background/x320/boyOnHorseRight_x320.png"
-						alt="Мальчик на лошади">
+						alt="Мальчик держит лошадь за поводья">
 				</picture>
 			</div>
 		</div>
@@ -114,7 +120,7 @@
 				{% for item in gallery__first_row_cards %}
 				<div class="gallery__card">
 					<div class="card__image-container">
-						<img class="card__image" src={{item.image_src}} alt="Лошадь">
+						<img class="card__image" src={{item.image_src}} alt="{{item.image_alt}}">
 					</div>
 					<h3 class="card__title">{{item.card_title}}</h3>
 					<div class="card__row"></div>
@@ -126,7 +132,7 @@
 				{% for item in gallery__second_row_cards %}
 				<div class="gallery__card">
 					<div class="card__image-container">
-						<img class="card__image" src={{item.image_src}} alt="Лошадь">
+						<img class="card__image" src={{item.image_src}} alt="{{item.image_alt}}">
 					</div>
 					<h3 class="card__title">{{item.card_title}}</h3>
 					<div class="card__row"></div>
