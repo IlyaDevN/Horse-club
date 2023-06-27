@@ -36,7 +36,7 @@
 				padding-left: 21px;
 			}
 
-			&:focus {
+			&:focus-visible {
 				outline: 4px ridge helpers.$color-light-yellow;
 				outline-offset: -1px;
 			}
@@ -118,7 +118,7 @@
 					display: block;
 				}
 
-				&:focus+svg {
+				&:focus-visible+svg {
 					outline: 4px ridge helpers.$color-light-yellow; border-radius: 3px;
 					outline-offset: -2px;
 				}
@@ -159,7 +159,7 @@
 				text-decoration: underline;
 				color: inherit;
 
-				&:focus {
+				&:focus-visible {
 					outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
 				}
 			}

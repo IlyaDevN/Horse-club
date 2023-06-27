@@ -208,7 +208,7 @@
 						margin-left: 18px;
 					}
 
-					&:focus {
+					&:focus-visible {
 						outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
 						outline-offset: 4px;
 					}
@@ -256,7 +256,7 @@
 			opacity: 1;
 		}
 
-		&:focus {
+		&:focus-visible {
 			outline: 4px ridge helpers.$color-light-yellow; border-radius: 50%;
 			outline-offset: 5px;
 		}

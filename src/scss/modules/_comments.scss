@@ -107,7 +107,7 @@
 			.cocial-network-link__ref {
 				pointer-events: none;
 
-				&:focus {
+				&:focus-visible {
 					outline: none;
 				}
 			}
@@ -203,7 +203,7 @@
 			}
 		}
 
-		&:focus {
+		&:focus-visible {
 			outline: 4px ridge helpers.$color-light-yellow;
 		}
 	}
