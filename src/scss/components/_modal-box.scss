@@ -1,11 +1,11 @@
 @use "../common/forwarded" as helpers;
 
-:root{
-	--stop-scroll-padding: 0;
+:root {
+	--stop-scroll-indent-right: 0;
 }
 
-body{
-	padding-right: var(--stop-scroll-padding);
+body {
+	padding-right: var(--stop-scroll-indent-right);
 }
 
 body.stopPageScroll {
@@ -24,7 +24,7 @@ body.stopPageScroll {
 	justify-content: center;
 	background-color: helpers.$color-black-semi-transparent;
 	transition: opacity 0.8s,
-	visibility 0.8s;
+		visibility 0.8s;
 	opacity: 0;
 	visibility: hidden;
 
