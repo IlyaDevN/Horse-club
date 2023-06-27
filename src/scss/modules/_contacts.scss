@@ -207,6 +207,11 @@
 						line-height: 18px;
 						margin-left: 18px;
 					}
+
+					&:focus {
+						outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
+						outline-offset: 4px;
+					}
 				}
 
 				&.list__item_last {
@@ -249,6 +254,11 @@
 	
 		&:hover {
 			opacity: 1;
+		}
+
+		&:focus {
+			outline: 4px ridge helpers.$color-light-yellow; border-radius: 50%;
+			outline-offset: 5px;
 		}
 	}
 }

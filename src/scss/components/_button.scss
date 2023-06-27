@@ -64,4 +64,9 @@
 		position: relative;
 		@include helpers.zIndex(layer_base);
 	}
+
+	&:focus {
+		outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+		outline-offset: 2px;
+	}
 }

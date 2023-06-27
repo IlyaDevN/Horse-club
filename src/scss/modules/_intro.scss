@@ -245,6 +245,10 @@
 			width: 152px;
 			height: 49px;
 		}
+
+		&:focus {
+			outline: 4px ridge helpers.$color-light-yellow; border-radius: 28px;
+		}
 	}
 
 	&__logo-img {
@@ -475,6 +479,10 @@
 			border-bottom: 1px solid helpers.$color-green;
 		}
 	}
+
+	&:focus {
+		outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+	}
 }
 
 .contacts__tel-number {
@@ -499,6 +507,11 @@
 		line-height: 21px;
 		height: 16px;
 		gap: 10px;
+	}
+
+	&:focus {
+		outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+		outline-offset: 8px;
 	}
 }
 

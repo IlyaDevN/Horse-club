@@ -125,6 +125,10 @@
 		@include helpers.desktop() {
 			margin: 0 0 0 24px;
 		}
+
+		&:focus {
+			outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+		}
 	}
 
 	&__logo {
@@ -142,6 +146,10 @@
 			width: 159px;
 			height: 48px;
 		}
+
+		&:focus {
+			outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+		}
 	}
 }
 
@@ -157,6 +165,10 @@
 
 	&:hover {
 		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
 	}
 }
 
@@ -202,6 +214,11 @@
 		@include helpers.tablet() {
 			margin: 0;
 		}
+	}
+
+	&:focus {
+		outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
+		outline-offset: 5px;
 	}
 }
 

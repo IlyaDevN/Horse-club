@@ -106,7 +106,19 @@
 
 			.cocial-network-link__ref {
 				pointer-events: none;
+
+				&:focus {
+					outline: none;
+				}
 			}
+		}
+
+		.cocial-network-link__ref:focus {
+			.link_icon {
+				outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
+				outline-offset: 2px;
+			}
+			
 		}
 	}
 
@@ -189,6 +201,10 @@
 			.card-unwrap-button__span.second {
 				transform: translate(-1px, 1px) rotate(45deg);
 			}
+		}
+
+		&:focus {
+			outline: 4px ridge helpers.$color-light-yellow;
 		}
 	}
 
