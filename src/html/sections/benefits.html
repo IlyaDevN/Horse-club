@@ -30,7 +30,7 @@
 			{% for item in benefits_content %}
 				<div class="benefits__card">
 					<div class="benefits__image-container">
-						<img class="benefits__image" src={{item.img_path}} alt="Маршрут">
+						<img class="benefits__image" src={{item.img_path}} alt="Маршрут" loading="lazy">
 					</div>
 					<h3 class="benefits__subtitle">{{item.subtitle}}</h3>
 					<p class="benefits__text">{{item.text}}</p>
