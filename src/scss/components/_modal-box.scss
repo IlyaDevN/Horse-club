@@ -4,6 +4,14 @@
 	--stop-scroll-padding: 0;
 }
 
+body{
+	padding-right: var(--stop-scroll-padding);
+}
+
+body.stopPageScroll {
+	overflow-y: hidden;
+}
+
 .modal-overlay {
 	position: fixed;
 	width: 100%;
@@ -24,10 +32,6 @@
 		opacity: 1;
 		visibility: visible;
 	}
-}
-
-body.stopPageScroll {
-	overflow-y: hidden;
 }
 
 .modal-content {
