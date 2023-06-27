@@ -21,7 +21,7 @@ modals.forEach((modal) => {
 function openModal(modal, isGratitude = false) {
 	modal.classList.add("open");
 
-	if(isGratitude) {
+	if (isGratitude) {
 		modal.querySelector(".gratitude").classList.add("open");
 	} else {
 		modal.querySelector(".modal-content").classList.add("open");
@@ -36,10 +36,10 @@ function closeModal(modal) {
 	const content = modal.querySelector(".modal-content");
 	const gratitude = modal.querySelector(".gratitude");
 
-	if(content){
+	if (content) {
 		content.classList.remove("open");
 	}
-	if(gratitude){
+	if (gratitude) {
 		gratitude.classList.remove("open");
 	}
 
@@ -50,7 +50,7 @@ function closeModal(modal) {
 }
 
 function openGratitude() {
-	if(activeModal) {
+	if (activeModal) {
 		activeModal.querySelector(".modal-content").classList.remove("open");
 		activeModal.querySelector(".gratitude").classList.add("open");
 	} else {
@@ -58,15 +58,15 @@ function openGratitude() {
 	}
 }
 
-function closeByEscape(event){
+function closeByEscape(event) {
 	if (event.code === KEYCODE.ESC) {
 		closeModal(activeModal);
 	}
 }
 
-function closeByOverlay(event){
+function closeByOverlay(event) {
 	const modal = this;
-	if(event.target === modal){
+	if (event.target === modal) {
 		closeModal(modal);
 	}
 }
@@ -74,10 +74,10 @@ function closeByOverlay(event){
 function disablePageScroll() {
 	const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 	document.body.classList.add("stopPageScroll");
-	document.body.style.paddingRight = scrollBarWidth + "px";
+	document.documentElement.style.setProperty("--stop-scroll-indent-right", scrollBarWidth + "px");
 }
 
 function enablePageScroll() {
 	document.body.classList.remove("stopPageScroll");
-	document.body.style.paddingRight = "";
+	document.documentElement.style.setProperty("--stop-scroll-indent-right", 0);
 }
