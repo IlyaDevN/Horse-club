@@ -6,10 +6,10 @@
 
 body {
 	padding-right: var(--width-of-scrollbar);
-}
 
-body.stopPageScroll {
-	overflow-y: hidden;
+	&.stopPageScroll {
+		overflow-y: hidden;
+	}
 }
 
 .modal-overlay {
