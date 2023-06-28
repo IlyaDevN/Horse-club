@@ -6,7 +6,7 @@ button.addEventListener("click", ()=> window.scrollTo({
 	behavior: "smooth"
 }));
 
-let buttonObserver = new IntersectionObserver(([entry]) => {
+const buttonObserver = new IntersectionObserver(([entry]) => {
 	if(!entry.isIntersecting) {
 		button.disabled = false;
 	} else {

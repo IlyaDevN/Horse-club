@@ -37,7 +37,7 @@ function loadScript() {
 	document.body.append(script);
 }
 
-let mapObserver = new IntersectionObserver(([entry], observer) => {
+const mapObserver = new IntersectionObserver(([entry], observer) => {
 	if(entry.isIntersecting) {
 		loadScript();
 		observer.unobserve(entry.target);
