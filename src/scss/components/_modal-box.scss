@@ -1,11 +1,11 @@
 @use "../common/forwarded" as helpers;
 
 :root {
-	--stop-scroll-indent-right: 0;
+	--width-of-scrollbar: 0;
 }
 
 body {
-	padding-right: var(--stop-scroll-indent-right);
+	padding-right: var(--width-of-scrollbar);
 }
 
 body.stopPageScroll {
