@@ -1,5 +1,17 @@
 @use "../common/forwarded" as helpers;
 
+:root {
+	--width-of-scrollbar: 0;
+}
+
+body {
+	padding-right: var(--width-of-scrollbar);
+
+	&.stopPageScroll {
+		overflow-y: hidden;
+	}
+}
+
 .modal-overlay {
 	position: fixed;
 	width: 100%;
@@ -12,7 +24,7 @@
 	justify-content: center;
 	background-color: helpers.$color-black-semi-transparent;
 	transition: opacity 0.8s,
-	visibility 0.8s;
+		visibility 0.8s;
 	opacity: 0;
 	visibility: hidden;
 
@@ -20,10 +32,6 @@
 		opacity: 1;
 		visibility: visible;
 	}
-}
-
-body.stopPageScroll {
-	overflow-y: hidden;
 }
 
 .modal-content {
