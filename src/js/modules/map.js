@@ -31,15 +31,15 @@ function initMap() {
 
 window.initMap = initMap;
 
-function loadScript() {
+function loadScript(src) {
 	const script = document.createElement("script");
-	script.src = mapSrc;
+	script.src = src;
 	document.body.append(script);
 }
 
 const mapObserver = new IntersectionObserver(([entry], observer) => {
 	if(entry.isIntersecting) {
-		loadScript();
+		loadScript(mapSrc);
 		observer.unobserve(entry.target);
 	}
 });
