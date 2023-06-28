@@ -74,10 +74,10 @@ function closeByOverlay(event) {
 function disablePageScroll() {
 	const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 	document.body.classList.add("stopPageScroll");
-	document.documentElement.style.setProperty("--stop-scroll-indent-right", scrollBarWidth + "px");
+	document.documentElement.style.setProperty("--width-of-scrollbar", scrollBarWidth + "px");
 }
 
 function enablePageScroll() {
 	document.body.classList.remove("stopPageScroll");
-	document.documentElement.style.setProperty("--stop-scroll-indent-right", 0);
+	document.documentElement.style.setProperty("--width-of-scrollbar", 0);
 }

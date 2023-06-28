@@ -52,7 +52,7 @@
 			<source srcset="img/club-directions/club-directions-background/x480/sky_x480.png" type="image/jpeg"
 				media="(min-width:480px)">
 			<img class="background__sky" src="img/club-directions/club-directions-background/x320/sky_x320.png"
-				alt="Фоновое изображение: небо с облаками">
+				alt="Фоновое изображение: небо с облаками" loading="lazy">
 		</picture>
 		<picture>
 			<source srcset="img/club-directions/club-directions-background/x1920/grass_x1920.png" type="image/jpeg"
@@ -64,7 +64,7 @@
 			<source srcset="img/club-directions/club-directions-background/x480/grass_x480.png" type="image/jpeg"
 				media="(min-width:480px)">
 			<img class="background__grass" src="img/club-directions/club-directions-background/x320/grass_x320.png"
-				alt="Фоновое изображение: зеленый луг с деревьями ">
+				alt="Фоновое изображение: зеленый луг с деревьями" loading="lazy">
 		</picture>
 		<picture>
 			<source srcset="img/club-directions/club-directions-background/x1920/clouds_bottom_x1920.png"
@@ -76,7 +76,7 @@
 			<source srcset="img/club-directions/club-directions-background/x480/clouds_bottom_x480.png"
 				type="image/jpeg" media="(min-width:480px)">
 			<img class="background__clouds-botom"
-				src="img/club-directions/club-directions-background/x320/clouds_bottom_x320.png" alt="Фоновое изображение: дымка над лугом">
+				src="img/club-directions/club-directions-background/x320/clouds_bottom_x320.png" alt="Фоновое изображение: дымка над лугом" loading="lazy">
 		</picture>
 		<div class="background__horses-container">
 			<div class="background__horse-left">
@@ -91,7 +91,7 @@
 						type="image/jpeg" media="(min-width:480px)">
 					<img class="horse-left__img"
 						src="img/club-directions/club-directions-background/x320/girlOnHorseLeft_x320.png"
-						alt="Девушка на лошади">
+						alt="Девушка на лошади" loading="lazy">
 				</picture>
 			</div>
 			<div class="background__horse-right">
@@ -106,7 +106,7 @@
 						type="image/jpeg" media="(min-width:480px)">
 					<img class="horse-right__img"
 						src="img/club-directions/club-directions-background/x320/boyOnHorseRight_x320.png"
-						alt="Мальчик держит лошадь за поводья">
+						alt="Мальчик держит лошадь за поводья" loading="lazy">
 				</picture>
 			</div>
 		</div>
@@ -120,7 +120,7 @@
 				{% for item in gallery__first_row_cards %}
 				<div class="gallery__card">
 					<div class="card__image-container">
-						<img class="card__image" src={{item.image_src}} alt="{{item.image_alt}}">
+						<img class="card__image" src={{item.image_src}} alt="{{item.image_alt}}" loading="lazy">
 					</div>
 					<h3 class="card__title">{{item.card_title}}</h3>
 					<div class="card__row"></div>
@@ -132,7 +132,7 @@
 				{% for item in gallery__second_row_cards %}
 				<div class="gallery__card">
 					<div class="card__image-container">
-						<img class="card__image" src={{item.image_src}} alt="{{item.image_alt}}">
+						<img class="card__image" src={{item.image_src}} alt="{{item.image_alt}}" loading="lazy">
 					</div>
 					<h3 class="card__title">{{item.card_title}}</h3>
 					<div class="card__row"></div>
