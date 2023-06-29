@@ -104,7 +104,7 @@
 				pointer-events: none;
 			}
 
-			.cocial-network-link__ref {
+			.social-network-link__ref {
 				pointer-events: none;
 
 				&:focus-visible {
@@ -113,7 +113,7 @@
 			}
 		}
 
-		.cocial-network-link__ref:focus {
+		.social-network-link__ref:focus {
 			.link_icon {
 				outline: 4px ridge helpers.$color-light-yellow;
 				outline-offset: 2px;
@@ -252,12 +252,12 @@
 		}
 	}
 
-	&__cocial-network-link {
+	&__social-network-link {
 		flex: 1 1 auto;
 	}
 }
 
-.cocial-network-link {
+.social-network-link {
 	&__name {
 		font-size: 14px;
 		line-height: 21px;
