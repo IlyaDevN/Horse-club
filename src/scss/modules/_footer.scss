@@ -127,7 +127,7 @@
 		}
 
 		&:focus-visible {
-			outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+			outline: 4px ridge helpers.$color-light-yellow;
 		}
 	}
 
@@ -148,7 +148,8 @@
 		}
 
 		&:focus-visible {
-			outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+			outline: 4px ridge helpers.$color-light-yellow;
+			border-radius: 30px;
 		}
 	}
 }
@@ -168,7 +169,8 @@
 	}
 
 	&:focus-visible {
-		outline: 4px ridge helpers.$color-light-yellow; border-radius: 5px;
+		outline: 4px ridge helpers.$color-light-yellow;
+		border-radius: 5px;
 	}
 }
 
@@ -217,8 +219,9 @@
 	}
 
 	&:focus-visible {
-		outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
+		outline: 4px ridge helpers.$color-light-yellow;
 		outline-offset: 5px;
+		border-radius: 2px;
 	}
 }
 

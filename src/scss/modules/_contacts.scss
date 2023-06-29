@@ -209,8 +209,9 @@
 					}
 
 					&:focus-visible {
-						outline: 4px ridge helpers.$color-light-yellow; border-radius: 2px;
+						outline: 4px ridge helpers.$color-light-yellow;
 						outline-offset: 4px;
+						border-radius: 2px;
 					}
 				}
 
@@ -257,8 +258,9 @@
 		}
 
 		&:focus-visible {
-			outline: 4px ridge helpers.$color-light-yellow; border-radius: 50%;
+			outline: 4px ridge helpers.$color-light-yellow;
 			outline-offset: 5px;
+			border-radius: 50%;
 		}
 	}
 }
