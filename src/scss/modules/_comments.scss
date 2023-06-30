@@ -99,7 +99,7 @@
 				opacity 1s;
 		}
 
-		&.activeSlides {
+		&.inactiveSlide {
 			.comments__card-unwrap-button {
 				pointer-events: none;
 			}
