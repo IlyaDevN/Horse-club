@@ -125,3 +125,20 @@ function selectNextBullet() {
 	bullets[bulletCurrentPosition].classList.add("active");
 	activeBullet = bullets[bulletCurrentPosition];
 }
+
+let ourVisitorsObserver = new IntersectionObserver(([entry], observer)=>{
+	if(entry.isIntersecting) {
+		removeLazyLoading();
+		observer.unobserve(entry.target);
+	}
+});
+
+ourVisitorsObserver.observe(document.querySelector(".our-visitors"));
+
+function removeLazyLoading() {
+	let photos = document.querySelectorAll('.photo');
+
+	photos.forEach((photo)=> {
+		photo.setAttribute("loading", "eager");
+	})
+}
