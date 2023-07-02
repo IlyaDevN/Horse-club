@@ -112,3 +112,21 @@ function onResize() {
 		slide.button.classList.remove("opened");
 	});
 }
+
+let ourVisitorsObserver = new IntersectionObserver(([entry], observer)=>{
+	if(entry.isIntersecting) {
+		removeLazyLoading();
+		observer.unobserve(entry.target);
+	}
+});
+
+ourVisitorsObserver.observe(document.querySelector(".comments"));
+
+function removeLazyLoading() {
+	let comments = document.querySelector('.comments');
+	let images = comments.querySelectorAll("[loading='lazy']");
+
+	images.forEach((image)=> {
+		image.setAttribute("loading", "eager");
+	})
+}
