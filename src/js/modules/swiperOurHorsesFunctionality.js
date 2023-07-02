@@ -39,3 +39,20 @@ const swiper = new Swiper(".our-horses__swiper-container", {
 
 updateSwiperOnMediaQuery(swiper, mql1920);
 mql1920.addEventListener("change", () => updateSwiperOnMediaQuery(swiper, mql1920));
+
+let ourHorsesObserver = new IntersectionObserver(([entry], observer)=>{
+	if(entry.isIntersecting) {
+		removeLazyLoading();
+		observer.unobserve(entry.target);
+	}
+});
+
+ourHorsesObserver.observe(document.querySelector(".our-horses"));
+
+function removeLazyLoading() {
+	let photos = document.querySelectorAll('.image-horse');
+
+	photos.forEach((photo)=> {
+		photo.setAttribute("loading", "eager");
+	})
+}
