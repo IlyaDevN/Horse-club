@@ -1,9 +1,6 @@
 const modals = document.querySelectorAll(".modal-overlay");
 const modalGratitude = document.getElementById("modal-gratitude");
 const forms = Array.from(document.forms);
-const KEYCODE = {
-	ESC: "Escape"
-};
 let activeModal = null;
 
 forms.forEach((form) => form.addEventListener("submitSuccess", openGratitude));
@@ -19,22 +16,23 @@ modals.forEach((modal) => {
 })
 
 function openModal(modal, isGratitude = false) {
-	modal.classList.add("open");
+	activeModal = modal;
+	
+	activeModal.showModal();
 
 	if (isGratitude) {
-		modal.querySelector(".gratitude").classList.add("open");
+		activeModal.querySelector(".gratitude").classList.add("open");
 	} else {
-		modal.querySelector(".modal-content").classList.add("open");
+		activeModal.querySelector(".modal-content").classList.add("open");
 	}
 
-	activeModal = modal;
 	disablePageScroll();
-	document.addEventListener("keydown", closeByEscape);
+	activeModal.addEventListener("cancel", closeModal);
 }
 
-function closeModal(modal) {
-	const content = modal.querySelector(".modal-content");
-	const gratitude = modal.querySelector(".gratitude");
+function closeModal() {
+	const content = activeModal.querySelector(".modal-content");
+	const gratitude = activeModal.querySelector(".gratitude");
 
 	if (content) {
 		content.classList.remove("open");
@@ -43,10 +41,10 @@ function closeModal(modal) {
 		gratitude.classList.remove("open");
 	}
 
-	modal.classList.remove("open");
-	document.removeEventListener("keydown", closeByEscape);
+	activeModal.close();
+	activeModal.removeEventListener("cancel", closeModal);
+	activeModal.addEventListener("transitionend", enablePageScroll, { once: true });
 	activeModal = null;
-	modal.addEventListener("transitionend", enablePageScroll, { once: true });
 }
 
 function openGratitude() {
@@ -58,16 +56,9 @@ function openGratitude() {
 	}
 }
 
-function closeByEscape(event) {
-	if (event.code === KEYCODE.ESC) {
-		closeModal(activeModal);
-	}
-}
-
 function closeByOverlay(event) {
-	const modal = this;
-	if (event.target === modal) {
-		closeModal(modal);
+	if (event.target === activeModal) {
+		closeModal();
 	}
 }
 
