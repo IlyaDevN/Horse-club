@@ -126,8 +126,8 @@ function selectNextBullet() {
 	activeBullet = bullets[bulletCurrentPosition];
 }
 
-const ourVisitorsObserver = new IntersectionObserver(([entry], observer)=>{
-	if(entry.isIntersecting) {
+const ourVisitorsObserver = new IntersectionObserver(([entry], observer) => {
+	if (entry.isIntersecting) {
 		removeLazyLoading();
 		observer.unobserve(entry.target);
 	}
@@ -137,8 +137,5 @@ ourVisitorsObserver.observe(document.querySelector(".our-visitors"));
 
 function removeLazyLoading() {
 	const photos = document.querySelectorAll('.photo');
-
-	photos.forEach((photo)=> {
-		photo.setAttribute("loading", "eager");
-	})
+	photos.forEach((photo) => photo.setAttribute("loading", "eager"));
 }
