@@ -2,6 +2,7 @@ import { setSlidesState } from "./swiperHelpers.js";
 import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "throttle-debounce";
+import { loadAllSliderImages } from "./helpers.js";
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 const RESIZE_DELAY = 250;
@@ -113,20 +114,4 @@ function onResize() {
 	});
 }
 
-let ourVisitorsObserver = new IntersectionObserver(([entry], observer)=>{
-	if(entry.isIntersecting) {
-		removeLazyLoading();
-		observer.unobserve(entry.target);
-	}
-});
-
-ourVisitorsObserver.observe(document.querySelector(".comments"));
-
-function removeLazyLoading() {
-	let comments = document.querySelector('.comments');
-	let images = comments.querySelectorAll("[loading='lazy']");
-
-	images.forEach((image)=> {
-		image.setAttribute("loading", "eager");
-	})
-}
+loadAllSliderImages(".comments");

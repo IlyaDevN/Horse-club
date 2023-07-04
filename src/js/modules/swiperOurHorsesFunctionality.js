@@ -1,6 +1,7 @@
 import { setSlidesState } from "./swiperHelpers.js";
 import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
+import { loadAllSliderImages } from "./helpers.js";
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 const swiper = new Swiper(".our-horses__swiper-container", {
@@ -40,19 +41,4 @@ const swiper = new Swiper(".our-horses__swiper-container", {
 updateSwiperOnMediaQuery(swiper, mql1920);
 mql1920.addEventListener("change", () => updateSwiperOnMediaQuery(swiper, mql1920));
 
-let ourHorsesObserver = new IntersectionObserver(([entry], observer)=>{
-	if(entry.isIntersecting) {
-		removeLazyLoading();
-		observer.unobserve(entry.target);
-	}
-});
-
-ourHorsesObserver.observe(document.querySelector(".our-horses"));
-
-function removeLazyLoading() {
-	let photos = document.querySelectorAll('.image-horse');
-
-	photos.forEach((photo)=> {
-		photo.setAttribute("loading", "eager");
-	})
-}
+loadAllSliderImages(".our-horses");
