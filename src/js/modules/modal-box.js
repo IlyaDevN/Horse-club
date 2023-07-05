@@ -13,6 +13,7 @@ modals.forEach((modal) => {
 	closeButtons.forEach((button) => button.addEventListener(("click"), () => closeModal(modal)));
 
 	modal.addEventListener("click", closeByOverlay);
+	modal.addEventListener("cancel", closeModal);
 })
 
 function openModal(modal, isGratitude = false) {
@@ -27,7 +28,6 @@ function openModal(modal, isGratitude = false) {
 	}
 
 	disablePageScroll();
-	activeModal.addEventListener("cancel", closeModal);
 }
 
 function closeModal() {
@@ -42,7 +42,6 @@ function closeModal() {
 	}
 
 	activeModal.close();
-	activeModal.removeEventListener("cancel", closeModal);
 	activeModal.addEventListener("transitionend", enablePageScroll, { once: true });
 	activeModal = null;
 }
