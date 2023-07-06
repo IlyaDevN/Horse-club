@@ -1,5 +1,4 @@
-import { setSlidesState } from "./swiperHelpers.js";
-import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
+import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "throttle-debounce";
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
@@ -112,3 +111,5 @@ function onResize() {
 		slide.button.classList.remove("opened");
 	});
 }
+
+loadAllSliderImages(".comments");

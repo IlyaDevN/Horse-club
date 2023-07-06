@@ -1,4 +1,5 @@
 import { mql1920 } from "./mediaQueries.js";
+import { loadAllSliderImages } from "./swiperHelpers.js";
 
 const slidesContainer = document.querySelector(".our-visitors__photo-container");
 const slidesQuantity = slidesContainer.querySelectorAll(".our-visitors__photo").length;
@@ -125,3 +126,5 @@ function selectNextBullet() {
 	bullets[bulletCurrentPosition].classList.add("active");
 	activeBullet = bullets[bulletCurrentPosition];
 }
+
+loadAllSliderImages(".our-visitors");
