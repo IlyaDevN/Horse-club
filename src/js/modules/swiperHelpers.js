@@ -52,3 +52,25 @@ export function loadAllSliderImages(sectionClass) {
 
 	observer.observe(section);
 }
+
+export function disableFocusInInactiveSlides(swiper, swiperContainerSelector) {
+	const swiperContainer = document.querySelector(swiperContainerSelector);
+
+	const slidesObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+	
+			const focusableElements = entry.target.querySelectorAll("button, a");
+	
+			if (entry.isIntersecting) {
+				focusableElements.forEach((element) => element.setAttribute("tabindex", "0"));
+			} else {
+				focusableElements.forEach((element) => element.setAttribute("tabindex", "-1"));
+			}
+			
+		})
+	}, {root: swiperContainer, threshold: 1.0})
+	
+	swiper.slides.forEach((slide) => {
+		slidesObserver.observe(slide);
+	})
+}

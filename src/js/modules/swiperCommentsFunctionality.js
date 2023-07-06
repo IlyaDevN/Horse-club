@@ -1,4 +1,4 @@
-import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery } from "./swiperHelpers.js";
+import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery, disableFocusInInactiveSlides } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "throttle-debounce";
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
@@ -113,3 +113,4 @@ function onResize() {
 }
 
 loadAllSliderImages(".comments");
+disableFocusInInactiveSlides(swiperComments, ".comments__slider-container");
