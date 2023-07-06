@@ -1,5 +1,4 @@
-import { setSlidesState } from "./swiperHelpers.js";
-import { updateSwiperOnMediaQuery } from "./swiperHelpers.js";
+import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
@@ -39,3 +38,5 @@ const swiper = new Swiper(".our-horses__swiper-container", {
 
 updateSwiperOnMediaQuery(swiper, mql1920);
 mql1920.addEventListener("change", () => updateSwiperOnMediaQuery(swiper, mql1920));
+
+loadAllSliderImages(".our-horses");
