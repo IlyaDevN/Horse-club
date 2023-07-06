@@ -64,4 +64,9 @@
 		position: relative;
 		@include helpers.zIndex(layer_base);
 	}
+
+	&:focus-visible {
+		outline: 4px ridge helpers.$color-light-yellow; 
+		outline-offset: 2px;
+	}
 }

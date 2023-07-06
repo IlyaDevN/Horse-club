@@ -207,6 +207,12 @@
 						line-height: 18px;
 						margin-left: 18px;
 					}
+
+					&:focus-visible {
+						outline: 4px ridge helpers.$color-light-yellow;
+						outline-offset: 4px;
+						border-radius: 2px;
+					}
 				}
 
 				&.list__item_last {
@@ -249,6 +255,12 @@
 	
 		&:hover {
 			opacity: 1;
+		}
+
+		&:focus-visible {
+			outline: 4px ridge helpers.$color-light-yellow;
+			outline-offset: 5px;
+			border-radius: 50%;
 		}
 	}
 }

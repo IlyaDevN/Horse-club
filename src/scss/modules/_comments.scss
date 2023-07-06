@@ -101,14 +101,27 @@
 				opacity 1s;
 		}
 
-		&.activeSlides {
+		&.inactiveSlide {
 			.comments__card-unwrap-button {
 				pointer-events: none;
 			}
 
-			.cocial-network-link__ref {
+			.social-network-link__ref {
 				pointer-events: none;
+
+				&:focus-visible {
+					outline: none;
+				}
 			}
+		}
+
+		.social-network-link__ref:focus {
+			.link_icon {
+				outline: 4px ridge helpers.$color-light-yellow;
+				outline-offset: 2px;
+				border-radius: 2px;
+			}
+			
 		}
 	}
 
@@ -194,6 +207,10 @@
 				transform: translate(-1px, 1px) rotate(45deg);
 			}
 		}
+
+		&:focus-visible {
+			outline: 4px ridge helpers.$color-light-yellow;
+		}
 	}
 
 	&__card-author {
@@ -231,12 +248,12 @@
 		}
 	}
 
-	&__cocial-network-link {
+	&__social-network-link {
 		flex: 1 1 auto;
 	}
 }
 
-.cocial-network-link {
+.social-network-link {
 	&__name {
 		font-size: 14px;
 		line-height: 21px;

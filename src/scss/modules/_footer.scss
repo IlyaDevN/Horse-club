@@ -125,6 +125,10 @@
 		@include helpers.desktop() {
 			margin: 0 0 0 24px;
 		}
+
+		&:focus-visible {
+			outline: 4px ridge helpers.$color-light-yellow;
+		}
 	}
 
 	&__logo {
@@ -142,6 +146,11 @@
 			width: 159px;
 			height: 48px;
 		}
+
+		&:focus-visible {
+			outline: 4px ridge helpers.$color-light-yellow;
+			border-radius: 30px;
+		}
 	}
 }
 
@@ -157,6 +166,11 @@
 
 	&:hover {
 		text-decoration: underline;
+	}
+
+	&:focus-visible {
+		outline: 4px ridge helpers.$color-light-yellow;
+		border-radius: 5px;
 	}
 }
 
@@ -202,6 +216,12 @@
 		@include helpers.tablet() {
 			margin: 0;
 		}
+	}
+
+	&:focus-visible {
+		outline: 4px ridge helpers.$color-light-yellow;
+		outline-offset: 5px;
+		border-radius: 2px;
 	}
 }
 

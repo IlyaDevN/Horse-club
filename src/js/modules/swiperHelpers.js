@@ -15,16 +15,16 @@ export function setSlidesState(swiper){
 
 	swiper.slides.forEach((elem, index) => {
 		if(activeIndexes.includes(index)){
-			elem.classList.remove("activeSlides");
+			elem.classList.remove("inactiveSlide");
 		}
 		else{
-			elem.classList.add("activeSlides");
+			elem.classList.add("inactiveSlide");
 		}
 	});
 }
 
 function cleanSlidesState(slider){
-	slider.slides.forEach(slide => slide.classList.remove("activeSlides"));
+	slider.slides.forEach(slide => slide.classList.remove("inactiveSlide"));
 }
 
 function getActiveIndexes(slider){
