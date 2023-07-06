@@ -20,7 +20,7 @@
 }
 
 .swiper-wrapper {
-	.swiper-slide.activeSlides {
+	.swiper-slide.inactiveSlide {
 		transform: translateY(-40px);
 		opacity: 0.4;
 	}

@@ -35,6 +35,11 @@
 				height: 61px;
 				padding-left: 21px;
 			}
+
+			&:focus-visible {
+				outline: 4px ridge helpers.$color-light-yellow;
+				outline-offset: -1px;
+			}
 		}
 
 		&::before {
@@ -112,6 +117,12 @@
 				&:checked+svg .checkbox-svg__path {
 					display: block;
 				}
+
+				&:focus-visible+svg {
+					outline: 4px ridge helpers.$color-light-yellow;
+					outline-offset: -2px;
+					border-radius: 3px;
+				}
 			}
 
 			.checkbox-svg {
@@ -148,6 +159,11 @@
 			.agreement-link {
 				text-decoration: underline;
 				color: inherit;
+
+				&:focus-visible {
+					outline: 4px ridge helpers.$color-light-yellow;
+					border-radius: 2px;
+				}
 			}
 		}
 	}

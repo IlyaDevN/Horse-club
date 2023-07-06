@@ -7,6 +7,9 @@
 	@include helpers.zIndex(layer_middle, 10);
 	opacity: 0.7;
 	margin-right: var(--width-of-scrollbar);
+	&:focus-visible {
+		outline: 8px ridge helpers.$color-light-yellow;
+	}
 }
 
 .slider-control__button.button-scroll-top:disabled {
