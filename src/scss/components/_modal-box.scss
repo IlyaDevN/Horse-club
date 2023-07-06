@@ -154,6 +154,11 @@ body {
 		right: 17px;
 	}
 
+	&:focus-visible {
+		outline: 4px ridge helpers.$color-light-yellow;
+		border-radius: 2px;
+	}
+
 	&::after {
 		content: "";
 		position: absolute;
