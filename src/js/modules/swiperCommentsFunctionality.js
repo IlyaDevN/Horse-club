@@ -1,7 +1,8 @@
 import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery, disableFocusInInactiveSlides } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "throttle-debounce";
-import Swiper, { Navigation, Pagination, Scrollbar, Mousewheel } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Scrollbar, Mousewheel } from 'swiper/modules';
 
 const RESIZE_DELAY = 250;
 
