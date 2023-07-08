@@ -1,9 +1,9 @@
 import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery } from "./swiperHelpers.js";
 import { mql1920 } from "./mediaQueries.js";
-import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar, Mousewheel } from 'swiper';
 
 const swiper = new Swiper(".our-horses__swiper-container", {
-	modules: [Navigation, Pagination, Scrollbar],
+	modules: [Navigation, Pagination, Scrollbar, Mousewheel],
 	navigation: {
 		nextEl: '.our-horses__button-next',
 		prevEl: '.our-horses__button-prev',
@@ -15,6 +15,7 @@ const swiper = new Swiper(".our-horses__swiper-container", {
 	pagination: {
 		el: ".swiper_pagination_ourHorses",
 	},
+	mousewheel: true,
 	slidesPerView: "auto",
 	slidesPerGroup: 1,
 	spaceBetween: 10,
