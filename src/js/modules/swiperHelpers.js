@@ -1,10 +1,10 @@
 export function updateSwiperOnMediaQuery(swiper, mediaQuery){
+	swiper.update();
+
 	if(mediaQuery.matches){
-		swiper.update();
 		swiper.on("slideChange", setSlidesState);
 		setSlidesState(swiper);
 	} else {
-		swiper.update();
 		swiper.off("slideChange", setSlidesState);
 		cleanSlidesState(swiper);
 	}
