@@ -42,13 +42,15 @@ body {
 	background-color: helpers.$color-white;
 	border-radius: 5px;
 	padding: 26px;
-	transform: perspective(300px) translateY(-100%) rotateX(45deg);
-	transition: transform 0.8s;
+	transform: perspective(305px) translateY(-100%) rotateX(45deg);
+	transition: transform 0.8s,
+		visibility 0.8s;
+	visibility: hidden;
 
 	@include helpers.mobile() {
 		width: 375px;
 		padding: 40px;
-		transform: perspective(352px) translateY(-100%) rotateX(45deg);
+		transform: perspective(357px) translateY(-100%) rotateX(45deg);
 	}
 
 	@include helpers.laptop() {
@@ -58,6 +60,7 @@ body {
 
 	&.open {
 		transform: perspective(380px) translateY(0) rotateX(0);
+		visibility: visible;
 	}
 }
 
@@ -152,6 +155,11 @@ body {
 	@include helpers.laptop() {
 		top: 17px;
 		right: 17px;
+	}
+
+	&:focus-visible {
+		outline: 4px ridge helpers.$color-light-yellow;
+		border-radius: 2px;
 	}
 
 	&::after {
