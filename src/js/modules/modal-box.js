@@ -41,12 +41,8 @@ function closeModal() {
 		gratitude.classList.remove("open");
 	}
 
-	const focusableElements = activeModal.querySelectorAll("input, button");
-	focusableElements.forEach((element) => {
-		element.removeAttribute("tabindex");
-	})
-
 	activeModal.close();
+	activeModal.querySelector(".modal-content").inert = false;
 	activeModal.addEventListener("transitionend", enablePageScroll, { once: true });
 	activeModal = null;
 }
@@ -54,17 +50,8 @@ function closeModal() {
 function openGratitude() {
 	if (activeModal) {
 		activeModal.querySelector(".modal-content").classList.remove("open");
+		activeModal.querySelector(".modal-content").inert = true;
 		activeModal.querySelector(".gratitude").classList.add("open");
-
-		const activeGratitude = activeModal.querySelector(".gratitude.open");
-		const gratitudeCloseButton = activeGratitude.querySelector(".modal-close-button");
-		const focusableElements = activeModal.querySelectorAll("input, button, a");
-		focusableElements.forEach((element) => {
-			if(element != gratitudeCloseButton) {
-				element.setAttribute("tabindex", "-1");
-			}
-		})
-		
 	} else {
 		openModal(modalGratitude, true);
 	}
