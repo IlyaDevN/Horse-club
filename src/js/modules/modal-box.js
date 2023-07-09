@@ -42,7 +42,6 @@ function closeModal() {
 	}
 
 	activeModal.close();
-	activeModal.querySelector(".modal-content").inert = false;
 	activeModal.addEventListener("transitionend", enablePageScroll, { once: true });
 	activeModal = null;
 }
@@ -50,7 +49,6 @@ function closeModal() {
 function openGratitude() {
 	if (activeModal) {
 		activeModal.querySelector(".modal-content").classList.remove("open");
-		activeModal.querySelector(".modal-content").inert = true;
 		activeModal.querySelector(".gratitude").classList.add("open");
 	} else {
 		openModal(modalGratitude, true);

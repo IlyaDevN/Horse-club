@@ -43,7 +43,9 @@ body {
 	border-radius: 5px;
 	padding: 26px;
 	transform: perspective(305px) translateY(-100%) rotateX(45deg);
-	transition: transform 0.8s;
+	transition: transform 0.8s,
+		visibility 0.8s;
+	visibility: hidden;
 
 	@include helpers.mobile() {
 		width: 375px;
@@ -58,6 +60,7 @@ body {
 
 	&.open {
 		transform: perspective(380px) translateY(0) rotateX(0);
+		visibility: visible;
 	}
 }
 
