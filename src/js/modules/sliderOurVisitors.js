@@ -1,4 +1,4 @@
-//====== FIRST EXPERIMENTAL SLIDER ======// 
+//This slider was done manually for training
 
 import { mql1920 } from "./mediaQueries.js";
 import { loadAllSliderImages } from "./swiperHelpers.js";
