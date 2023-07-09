@@ -28,6 +28,7 @@
 		}
 
 		&_bushLeft {
+			aspect-ratio: 56/141;
 			position: absolute;
 			left: 0;
 			bottom: 0;
@@ -35,6 +36,7 @@
 		}
 
 		&_bushRight {
+			aspect-ratio: 21/80;
 			position: absolute;
 			right: 0;
 			bottom: 0;
@@ -529,5 +531,14 @@
 }
 
 .tel-number__img {
-	height: inherit;
+	height: 10px;
+	aspect-ratio: 1/1;
+
+	@include helpers.tablet() {
+		height: 13px;
+	}
+
+	@include helpers.laptop() {
+		height: 16px;
+	}
 }
