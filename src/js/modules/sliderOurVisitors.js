@@ -1,3 +1,5 @@
+//====== FIRST EXPERIMENTAL SLIDER ======// 
+
 import { mql1920 } from "./mediaQueries.js";
 import { loadAllSliderImages } from "./swiperHelpers.js";
 
