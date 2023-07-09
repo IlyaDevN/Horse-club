@@ -53,7 +53,7 @@
 				{% for item in comments__card_container %}
 				<div class="comments__card-container transitioned swiper-slide">
 					<div class="comments__card-text">{{item.card_text}}</div>
-					<button class="comments__card-unwrap-button">
+					<button class="comments__card-unwrap-button" aria-label="Кнопка для открытия полного текса коментария">
 						<span>Подробнее</span>
 						<span class="card-unwrap-button__span first"></span>
 						<span class="card-unwrap-button__span second"></span>
