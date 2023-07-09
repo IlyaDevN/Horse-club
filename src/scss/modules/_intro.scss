@@ -417,6 +417,12 @@
 		@include helpers.tablet() {
 			display: none;
 		}
+
+		&:focus-visible {
+			outline: 4px ridge helpers.$color-light-yellow;
+			border-radius: 8px;
+			outline-offset: -6px;
+		}
 	}
 
 	&__nav-container {
