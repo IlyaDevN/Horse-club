@@ -11,7 +11,7 @@ menuCloseBtn.addEventListener("click", closeMenu);
 anchors.forEach((anchor) => {
 	anchor.addEventListener("click", (event) => {
 		event.preventDefault();
-		if(menuOverlay.classList.contains("active")) {
+		if(menuOverlay.hasAttribute("open")) {
 			headerMenu.addEventListener("transitionend", () => scrollToSection(anchor), {once:true});
 			closeMenu();
 		} else {
@@ -21,7 +21,7 @@ anchors.forEach((anchor) => {
 })
 
 function openMenu() {
-	menuOverlay.classList.add("active");
+	menuOverlay.showModal();
 	document.body.classList.add("stopPageScroll");
 }
 
@@ -32,8 +32,8 @@ function closeMenuByOverlay(event) {
 }
 
 function closeMenu() {
-	menuOverlay.classList.remove("active");
 	document.body.classList.remove("stopPageScroll");
+	menuOverlay.close();
 }
 
 function scrollToSection(anchor) {
