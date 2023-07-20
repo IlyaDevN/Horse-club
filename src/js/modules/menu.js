@@ -1,3 +1,4 @@
+import { mql768 } from "./mediaQueries.js";
 const menuOverlay = document.body.querySelector(".header__menu-overlay");
 const burgerBtn = document.body.querySelector(".header__menu-burger-button");
 const menuCloseBtn = menuOverlay.querySelector(".menu__close-button");
@@ -18,6 +19,12 @@ anchors.forEach((anchor) => {
 			scrollToSection(anchor);
 		}
 	})
+})
+
+mql768.addEventListener("change", (event) => {
+	if(event.matches) {
+		closeMenu();
+	}
 })
 
 function openMenu() {
