@@ -1,3 +1,4 @@
+import { mql768 } from "./mediaQueries.js";
 const menuOverlay = document.body.querySelector(".header__menu-overlay");
 const burgerBtn = document.body.querySelector(".header__menu-burger-button");
 const menuCloseBtn = menuOverlay.querySelector(".menu__close-button");
@@ -11,7 +12,7 @@ menuCloseBtn.addEventListener("click", closeMenu);
 anchors.forEach((anchor) => {
 	anchor.addEventListener("click", (event) => {
 		event.preventDefault();
-		if(menuOverlay.classList.contains("active")) {
+		if(menuOverlay.hasAttribute("open")) {
 			headerMenu.addEventListener("transitionend", () => scrollToSection(anchor), {once:true});
 			closeMenu();
 		} else {
@@ -20,8 +21,14 @@ anchors.forEach((anchor) => {
 	})
 })
 
+mql768.addEventListener("change", (event) => {
+	if(event.matches) {
+		closeMenu();
+	}
+})
+
 function openMenu() {
-	menuOverlay.classList.add("active");
+	menuOverlay.showModal();
 	document.body.classList.add("stopPageScroll");
 }
 
@@ -32,8 +39,8 @@ function closeMenuByOverlay(event) {
 }
 
 function closeMenu() {
-	menuOverlay.classList.remove("active");
 	document.body.classList.remove("stopPageScroll");
+	menuOverlay.close();
 }
 
 function scrollToSection(anchor) {

@@ -1,16 +1,16 @@
 <form class="registration-block">
 	<div class="form__field" data-error-message="Вводите буквы">
-		<input type="text" placeholder="Ваше имя" aria-label="Только буквы" data-name data-to-validate>
+		<input type="text" placeholder="Ваше имя" data-name data-to-validate aria-label="Только буквы" aria-required="true">
 	</div>
 	<div class="form__field" data-error-message="Вводите цифры">
-		<input type="tel" placeholder="Ваш телефон" aria-label="Только цифры" data-phone data-to-validate>
+		<input type="tel" placeholder="Ваш телефон" data-phone data-to-validate aria-label="Только цифры" aria-required="true">
 	</div>
 	<button class="form-button button" type="submit" aria-label="Отправка формы, перед активацией подтвердите согласие на обработку персональных данных на следующей строке">
 		<span class="button-content">Задать вопрос</span>
 	</button>
 	<div class="form__checkbox" data-error-message="Подтвердите согласие">
 		<label>
-			<input type="checkbox" data-checkbox data-to-validate>
+			<input type="checkbox" data-checkbox data-to-validate aria-required="true">
 			{% include "html/icons_svg/checkbox-svg.html"%}
 			<span class="checkbox-ref">Даю согласие на&nbsp;</span>
 			<a class="agreement-link" href="agreement.html" target="_blank" aria-label="Обработка персональных данных">обработку

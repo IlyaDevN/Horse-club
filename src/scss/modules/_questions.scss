@@ -22,7 +22,16 @@
 			left: 0;
 			top: 0;
 			width: 100%;
+			height: 51px;
 			@include helpers.zIndex(layer_base);
+
+			@include helpers.mobile() {
+				height: 110px;
+			}
+	
+			@include helpers.desktop() {
+				height: 212px;
+			}
 		}
 
 		&_cloudsBottom {
@@ -30,7 +39,16 @@
 			left: 0;
 			bottom: 0;
 			width: 100%;
+			height: 50px;
 			@include helpers.zIndex(layer_min, 80);
+
+			@include helpers.mobile() {
+				height: 132px;
+			}
+	
+			@include helpers.desktop() {
+				height: 194px;
+			}
 		}
 	}
 
@@ -67,17 +85,24 @@
 	&__girl-with-horse {
 		position: absolute;
 		width: 100%;
+		height: 309px;
 		@include helpers.zIndex(layer_min, 60);
 		bottom: 2px;
 		left: 0;
 
 		@include helpers.mobile() {
 			bottom: 0;
+			height: 490px;
+		}
+
+		@include helpers.tablet() {
+			height: 538px;
 		}
 
 		@include helpers.desktop() {
 			width: auto;
 			left: 99px;
+			height: 644px;
 		}
 	}
 

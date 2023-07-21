@@ -53,7 +53,7 @@
 				{% for item in comments__card_container %}
 				<div class="comments__card-container transitioned swiper-slide">
 					<div class="comments__card-text">{{item.card_text}}</div>
-					<button class="comments__card-unwrap-button">
+					<button class="comments__card-unwrap-button" aria-label="Кнопка для открытия полного текса коментария">
 						<span>Подробнее</span>
 						<span class="card-unwrap-button__span first"></span>
 						<span class="card-unwrap-button__span second"></span>
@@ -78,12 +78,12 @@
 			</div>
 		</div>
 		<div class="comments__slider-control slider-control">
-			<button class="comments__swiper-button-prev slider-control__button" name="Предыдущий слайд">
+			<button class="comments__swiper-button-prev slider-control__button" aria-label="Предыдущий слайд">
 				<span class="button__arrow button__arrow_prev"></span>
 			</button>
 			<div class="comments__swiper-scroll-bar scroll-bar"></div>
 			<div class="comments__swiper-pagination swiper-pagination pagination"></div>
-			<button class="comments__swiper-button-next slider-control__button" name="Следующий слайд">
+			<button class="comments__swiper-button-next slider-control__button" aria-label="Следующий слайд">
 				<span class="button__arrow button__arrow_next"></span>
 			</button>
 		</div>

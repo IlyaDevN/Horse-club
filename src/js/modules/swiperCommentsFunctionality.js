@@ -2,12 +2,12 @@ import { setSlidesState, loadAllSliderImages, updateSwiperOnMediaQuery } from ".
 import { mql1920 } from "./mediaQueries.js";
 import { debounce } from "throttle-debounce";
 import Swiper from 'swiper';
-import { Navigation, Pagination, Scrollbar, Mousewheel, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 const RESIZE_DELAY = 250;
 
 const swiperComments = new Swiper(".comments__slider-container", {
-	modules: [Navigation, Pagination, Scrollbar, Mousewheel, A11y],
+	modules: [Navigation, Pagination, Scrollbar, A11y],
 	navigation: {
 		nextEl: '.comments__swiper-button-next',
 		prevEl: '.comments__swiper-button-prev',

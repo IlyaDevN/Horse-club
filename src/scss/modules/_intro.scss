@@ -28,17 +28,53 @@
 		}
 
 		&_bushLeft {
+			aspect-ratio: 56/141;
 			position: absolute;
 			left: 0;
 			bottom: 0;
+			width: 44px;
+			height: 93px;
 			@include helpers.zIndex(layer_base);
+	
+			@include helpers.tablet() {
+				width: 56px;
+				height: 141px;
+			}
+	
+			@include helpers.laptop() {
+				width: 85px;
+				height: 207px;
+			}
+	
+			@include helpers.desktop() {
+				width: 212px;
+				height: 435px;
+			}
 		}
 
 		&_bushRight {
+			aspect-ratio: 21/80;
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			width: 34px;
+			height: 131px;
 			@include helpers.zIndex(layer_base);
+
+			@include helpers.tablet() {
+				width: 42px;
+				height: 160px;
+			}
+	
+			@include helpers.laptop() {
+				width: 50px;
+				height: 229px;
+			}
+	
+			@include helpers.desktop() {
+				width: 168px;
+				height: 632px;
+			}
 		}
 	}
 
@@ -275,11 +311,8 @@
 	}
 
 	&__menu-overlay {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
+		display: block;
+		background-color: transparent;
 		@include helpers.zIndex(layer_overlay);
 		visibility: hidden;
 
@@ -293,11 +326,11 @@
 			width: 427px;
 		}
 
-		&.active {
+		&[open] {
 			visibility: visible;
 		}
 
-		&.active .header__menu {
+		&[open] .header__menu {
 			transform: translateX(0);
 		}
 	}
@@ -529,5 +562,14 @@
 }
 
 .tel-number__img {
-	height: inherit;
+	height: 10px;
+	aspect-ratio: 1/1;
+
+	@include helpers.tablet() {
+		height: 13px;
+	}
+
+	@include helpers.laptop() {
+		height: 16px;
+	}
 }
